@@ -15,7 +15,7 @@
    		'htmlOptions' => array('class' => 'well-small',), // for inset effect
    ));
 ?>		
-	<div style=" width: 400px; margin: 0; padding:0; float: left; margin-left:-50px;">
+	<div style=" width: 400px; margin: 0; padding:0; float: left; margin-left:-20px; border: 1px solid;">
 		<?php echo $form->hiddenField($model, 'id'); ?>
 		<?php echo $form->textFieldRow($model, 'firstName', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'lastName', array('placeholder' => '')); ?>
@@ -33,11 +33,15 @@
 		<?php echo $form->textAreaRow($model, 'descr', array('class' => 'company-address')); ?>
 	</div>
 	
-	<div style="width: 350px; margin: 0; padding:0; float: left; margin-left: -90px;">
-		<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '')); ?>
-		
+	<div style="width: 320px; margin: 0; padding:0; float: left;border: 1px solid;">
+		<div style="margin-left: -20px;">
+			<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '')); ?>
+		</div>
 	</div>
 <?php    
     $this->endWidget();
     unset($form);
 ?>
+<style>
+	
+</style>

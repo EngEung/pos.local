@@ -38,7 +38,7 @@
 			<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '')); ?>
 			<div class="fileinput fileinput-new" data-provides="fileinput">
 			  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-			    <img data-src="holder.js/100%x100%" alt="...">
+			    <img data-src="http://placehold.it/135x450" alt="">
 			  </div>
 			  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 			  <div>

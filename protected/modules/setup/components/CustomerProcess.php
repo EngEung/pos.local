@@ -27,7 +27,7 @@ class CustomerProcess extends CApplicationComponent {
     		$dataReader = $cmd->query();
 			foreach($dataReader as $row){
 				$arr[]= array('id'=> $row['id'], 'first_name'=>$row['first_name'], 'last_name'=>$row['last_name'],
-				'titile' => $row['title'], 'customer_type_id' => $row['customer_type_id'], 'phone1' => $row['phone1'],
+				'title' => $row['title'], 'customer_type_id' => $row['customer_type_id'], 'phone1' => $row['phone1'],
 				'phone2'=> $row['phone2'], 'email1' => $row['email1'], 'email2'=> $row['email2'], 'location_id' => $row['location_id'],
 				'location_name' => $row['locaiton_name'], 'customer_type_name'=> $row['customer_type_name']);
 			}
@@ -35,6 +35,21 @@ class CustomerProcess extends CApplicationComponent {
     		//$this->_error->insert($ex, $desc);
     	}
     	return $dataReader;
+	}
+
+	public function create($model){
+		if($model == null) return null;
+		$c = new Customers();
+		$c->setAttributes(array(
+			'first_name' => $model->firstName,
+			'last_name' => $model->lastName,
+			'title' => $model->title,
+			'phone1' => $model->phone1,
+			'phone2' => $model->phone1,
+			'email1' => $model->email1,
+			'email2' => $model->email2,
+			'location_id' => $model->locationId
+		));
 	}
 	
 	public function update($id, $statusId=null, $notified=null, $resolution=null, $userId=null) {

@@ -16,7 +16,6 @@
    ));
 ?>		
 	<div style=" width: 345px; margin: 0; padding:0; float: left;">
-
 		<?php echo $form->hiddenField($model, 'id'); ?>
 		<?php echo $form->textFieldRow($model, 'firstName', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'lastName', array('placeholder' => '')); ?>
@@ -34,30 +33,15 @@
 		<?php echo $form->textAreaRow($model, 'descr', array('class' => 'company-address')); ?>
 	</div>
 	
-	<div style="width: 320px; margin: 0; padding:0; float: left;border: 1px solid;">
-		<div style="margin-left: 10px;">
-			<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '')); ?>
-			<div class="fileinput fileinput-new" data-provides="fileinput">
-			  <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
-			    <img data-src="http://placehold.it/135x450" alt="">
-			  </div>
-			  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
-			  <div>
-			    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
-			    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-			  </div>
-			</div>
-
-		</div>
-
+	<div style="width: 350px; margin: 0; padding:0; float: left; margin-left: -10px;">
+		<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '')); ?>
+		
 	</div>
 <?php    
     $this->endWidget();
     unset($form);
 ?>
 <style>
-
 	.form-horizontal .control-label { width:100px;}
 	.form-horizontal .controls {margin-left: 120px;}
-
 </style>

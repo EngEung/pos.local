@@ -41,10 +41,11 @@
 		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left: 100px;">
 		  <div class="fileinput-new thumbnail" style="width: 200px; height: 145px;">
 		    <img data-src="http://placehold.it/135x450" alt="">
+		    <div id="output"></div> 
 		  </div>
 		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 		  <div>
-		    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input type="file" name="..."></span>
+		    <span class="btn btn-default btn-file"><span class="fileinput-new">Select image</span><span class="fileinput-exists">Change</span><input id="imageInput" type="file" name="..."></span>
 		    <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>
 		</div>

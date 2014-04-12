@@ -10,8 +10,7 @@ class CustomerForm extends CFormModel
 	public $id;
 	public $firstName;
 	public $lastName;
-	public $titles;
-	public $titleId;
+
 	public $customerTypeId;
 	public $customerTypes;
 	public $phone1;
@@ -19,6 +18,9 @@ class CustomerForm extends CFormModel
 	public $email1;
 	public $email2;
 	public $address;
+	
+	public $titles;
+	public $titleId;
 	
 	public $countries;
 	public $countryId;
@@ -36,9 +38,10 @@ class CustomerForm extends CFormModel
 	public $locationId;
 	public  $descr;
 	
-	public function __construction(){
+	public function __construct(){
 		$common = new Common();
 		$this->locations = CHtml::listData($common->getLocations(),'id', 'name');
+		$this->titles = CHtml::listData($common->getTitles(), 'id', 'name');
 	}
 	
 	/**

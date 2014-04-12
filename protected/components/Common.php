@@ -357,5 +357,13 @@ class Common extends CApplicationComponent {
 		$criteria->select="id,name";
 		return CHtml::listData(LocationTypes::model()->findAll(),"id","name");
 	} 
+	
+	
+	public function getTitles($order = 'asc'){
+		$criteria = new CDbCriteria(); 
+		$criteria->select = 'id, name';
+		$criteria->order = 'name ' . $order;
+		return Titles::model()->findAll($criteria);
+	}
 }
     

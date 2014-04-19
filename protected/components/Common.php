@@ -365,5 +365,12 @@ class Common extends CApplicationComponent {
 		$criteria->order = 'name ' . $order;
 		return Titles::model()->findAll($criteria);
 	}
+	
+	public function getCustomerTypes($order = 'asc'){
+		$criteria = new CDbCriteria(); 
+		$criteria->select = 'id, name';
+		$criteria->order = 'name ' . $order;
+		return CustomerTypes::model()->findAll($criteria);
+	}
 }
     

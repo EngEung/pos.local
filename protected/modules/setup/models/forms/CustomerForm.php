@@ -42,6 +42,7 @@ class CustomerForm extends CFormModel
 		$common = new Common();
 		$this->locations = CHtml::listData($common->getLocations(),'id', 'name');
 		$this->titles = CHtml::listData($common->getTitles(), 'id', 'name');
+		$this->customerTypes = CHtml::listData($common->getCustomerTypes(), 'id', 'name');
 	}
 	
 	/**
@@ -53,7 +54,7 @@ class CustomerForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('firstName, middleName', 'required', 'message'=>''),
+			array('firstName, lastName, locationId', 'required',),
 			// rememberMe needs to be a boolean
 			array('rememberMe', 'boolean'),
 		);
@@ -65,7 +66,9 @@ class CustomerForm extends CFormModel
 	public function attributeLabels(){
 		return array(
 			'locationId' => 'Location',
-			'titleId' => 'Title'
+			'titleId' => 'Title',
+			'customerTypeId' => '',
+			'descr' => ''
 		);
 	}
 

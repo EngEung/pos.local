@@ -43,26 +43,29 @@ class CustomerProcess extends CApplicationComponent {
 		$c->setAttributes(array(
 			'first_name' => $model->firstName,
 			'last_name' => $model->lastName,
-			'title' => $model->title,
+			'title' => $model->titleId,
 			'phone1' => $model->phone1,
 			'phone2' => $model->phone1,
 			'email1' => $model->email1,
 			'email2' => $model->email2,
 			'location_id' => $model->locationId
 		));
+		$c->save(false);
 	}
 	
-	public function update($id, $statusId=null, $notified=null, $resolution=null, $userId=null) {
-		if ($id == null && $statusId == null && $notified == null && $resolution == null && $userId == null)
-			return null;
-		$error = Errors::model()->findByPk($id);
-		if ($error == null ) return null;
-		if ($statusId != null) $error->error_status_id = $statusId;
-		if ($notified != null) $error->notified = $notified;
-		if ($resolution != null) $error->resolution = $resolution;
-		if ($userId != null) $error->user_id = $userId;	
+	public function update($model) {
+		if ($model == null) return null;
+		$c = Customers::model()->findByPk($model->id);
+		if ($c == null ) return null;
+		if ($model->firstName != null) $c->first_name = $model->first_name;
+		if ($model->lastName != null) $c->last_name = $model->last_name;
+		if ($model->titleId != null) $c->titleId = $model->titleId;
+		if ($model->phone1 != null) $c->phone1 = $model->phone1;
+		if($model->phone2 != null)	$c->phone2 = $model->phone2;
+		if($model->email1 != null)	$c->phone2 = $model->email1;
+		if($model->locationId != null)	$c->phone2 = $model->location_id;
 		$error->save(false);
-		$updatedError = Errors::model()->findByPk($id);
+		Pk($id);
 		return $updatedError;
 	}
 	

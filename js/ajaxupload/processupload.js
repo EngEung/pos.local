@@ -208,10 +208,10 @@ $(function(){
 				return false;
 			}
 			
-			$("#alerter .alert").alert("close");
-			var file = '<a target="_blank" id="file_link" href="/hr/staff/empTraining/viewFile/?id="><i class="icon-file"> </i>' + fileName +'</a>';
-			file = file + '<a id="file_delete" href="#" onclick="onDeleteFile()" ><i class="icon-remove"> </i></a>';
-			$("#output").html(file);
+			//$("#alerter .alert").alert("close");
+			//var file = '<a target="_blank" id="file_link" href="/hr/staff/empTraining/viewFile/?id="><i class="icon-file"> </i>' + fileName +'</a>';
+			//file = file + '<a id="file_delete" href="#" onclick="onDeleteFile()" ><i class="icon-remove"> </i></a>';
+			//$("#output").html(file);
 		}
 		else
 		{

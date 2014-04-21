@@ -1,7 +1,6 @@
 
 <?php 
     /** @var TbActiveForm $form */
-    
     $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',array(
     	'id' => 'customerForm',

@@ -3,122 +3,8 @@ $(function(){
 	var button ='btn-save';
 	
 	
-	/**
-	 * Traning Record
-	 */
-		$("#traingRecordForm").submit(function(e){
-			submitForm('traingRecordForm', button, $('#windowForm'), $("#dg"));
-			e.preventDefault(); //Prevent Default action.
-			$("#traingRecordForm").unbind;
-		});
 	
-		$('#btn-save').click(function(){
-			if(onVlidateFormTraining()){
-				button = 'btn-save';
-				$("#traingRecordForm").submit();
-			}
-		});
-		$('#btn-save-close').click(function(){
-			if(onVlidateFormTraining()){
-				button = 'btn-save-close';
-				$("#traingRecordForm").trigger('submit');
-			}
-		});
 	
-	/**
-	 * Work Experience
-	 * 
-	 */
-		$("#WorkExperienceForm").submit(function(e){
-			submitForm('WorkExperienceForm', button, $('#windowForm'), $("#dg"));
-			e.preventDefault(); //Prevent Default action.
-			$("#WorkExperienceForm").unbind;
-		});
-		
-		$('#btn-save-work').click(function(){
-			if(onValidateFormWorkExperience()){
-				button = 'btn-save';
-				$("#WorkExperienceForm").submit();
-			}
-		});
-		
-		$('#btn-save-close-work').click(function(){
-			if(onValidateFormWorkExperience()){
-				button = 'btn-save-close';
-				$("#WorkExperienceForm").submit();
-			}
-		});
-	
-	/**
-	 * Education 
-	 */
-		$("#educationForm").submit(function(e){
-			submitForm('educationForm', button, $('#windowForm'), $("#dg"));
-			e.preventDefault(); //Prevent Default action.
-			$("#educationForm").unbind;
-		});
-	
-		$('#btn-save-edu').click(function(){
-			if(onVlidateFormEducation()){
-				button = 'btn-save';
-				$("#educationForm").submit();
-			}
-		});
-		
-		$('#btn-save-close-edu').click(function(){
-			if(onVlidateFormEducation()){
-				button = 'btn-save-close';
-				$("#educationForm").submit();
-			}
-		});
-	
-	/**
-	 * Language
-	 */
-		$("#languageForm").submit(function(e){
-			submitForm('languageForm', button, $('#windowFormLang'), $("#dtlang"));
-			e.preventDefault(); //Prevent Default action.
-			$("#languageForm").unbind;
-		});
-	
-		$('#btn-save-lang').click(function(){
-			//if(onVlidateFormEducation()){
-				button = 'btn-save';
-				$("#languageForm").submit();
-			//}
-		});
-		
-		$('#btn-save-close-lang').click(function(){
-			//if(onVlidateFormEducation()){
-				button = 'btn-save-close';
-				$("#languageForm").submit();
-			//}
-		});
-		
-	/**
-	 * Language
-	 */
-		$("#awardForm").submit(function(e){
-			submitForm('awardForm', button, $('#windowFormAward'), $("#dgAward"));
-			e.preventDefault(); //Prevent Default action.
-			$("#awardForm").unbind;
-		});
-	
-		$('#btn-save-award').click(function(){
-			//if(onVlidateFormEducation()){
-				button = 'btn-save';
-				$("#awardForm").submit();
-			//}
-		});
-		
-		$('#btn-save-close-award').click(function(){
-			//if(onVlidateFormEducation()){
-				button = 'btn-save-close';
-				$("#awardForm").submit();
-			//}
-		});		
-		
-		
 
 	/**
 	 * Submit Form
@@ -205,6 +91,7 @@ $(function(){
 			if(fsize>1048576) 
 			{
 				$("#output").notice("<b>"+bytesToSize(fsize) +"</b> Too big Image file! <br />Please reduce the size of your photo using an image editor.");
+				$("#imageInput").val("");
 				return false;
 			}
 			

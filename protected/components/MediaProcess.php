@@ -42,57 +42,28 @@ class MediaProcess extends CApplicationComponent{
 	 * @param $ext 
 	 * @return boolean
 	 */
-	private function createFile($entry, $employeeId, $data = null, $fileName = null, $fielType =null, 
-	$mimeType = null, $size = null, $ext = null, $thumbnail = null){
+	private function createFile($entry, $name = null,  $descr = null, $data = null, $url = null,
+	 $size = null, $ext = null, $width= null, $height = null, $ratio = null,$mimeType = null, $pictureType =null ){
 		if($employeeId <0 && $employeeDocId < 0) return false;
 		
 		$entry->setAttributes(array(
-				'employee_id' => $employeeId,
+				'name' => $name,
+				'descr' => $descr,
 				'data' => $data,
-				'file_name' => $fileName,
-				'file_type' => $fielType,
-				'mime_type' => $mimeType,
+				'url' => $mimeType,
 				'size' => $size,
 				'ext' => $ext,
-				'thumbnail' => $thumbnail				
+				'width' => $width,
+				'height' => $height,
+				'ratio' => $ratio,
+				'mime_type' => $mimeType,
+				'picture_type_id' => $pictureType			
 		));
 		$entry->save(false);
 		return $entry->id;
 	}
 	
-	/**
-	 * Storing information of file in file_uplode_temp table when uploaded files.
-	 * @param int $employeeId
-	 * @param int $employeeDocId 
-	 * @param binary $data 
-	 * @param string $fileName 
-	 * @param string $fielType 
-	 * @param string $mimeType 
-	 * @param int $size 
-	 * @param string $ext 
-	 * @return boolean true or false
-	 */
-	public function createFileUploadTemp($employeeId, $data = null, $fileName = null, $fielType =null, 
-											$mimeType = null, $size = null, $ext = null, $thumbnail = null){
-		return $this->createFile(new FileUploadTemp(), $employeeId, $data, $fileName, $fielType, $mimeType, $size, $ext, $thumbnail);
-	}
-	
-	/**
-	 * Storing information of file in file_upload table when uploaded files.
-	 * @param int $employeeId
-	 * @param int $employeeDocId 
-	 * @param binary $data 
-	 * @param string $fileName 
-	 * @param string $fielType 
-	 * @param string $mimeType 
-	 * @param int $size 
-	 * @param string $ext 
-	 * @return boolean true or false
-	 */
-	public function createFileUpload($employeeId, $data = null, $fileName = null, $fielType =null, $mimeType = null, 
-									$size = null, $ext = null, $thumbnail = null){
-		return $this->createFile(new FileUpload, $employeeId, $data, $fileName, $fielType, $mimeType, $size, $ext, $thumbnail);
-	}
+
 	
 	/**
 	 * Delete File
@@ -108,29 +79,6 @@ class MediaProcess extends CApplicationComponent{
 	}
 	
 	/**
-	 * Delete File upload temporery
-	 * @param int $fileId
-	 * @return boolean true or false
-	 */
-	public function deleteFileTemp($fileId){
-		if($fileId <0 ) return false;
-		$model = FileUploadTemp::model()->findByPK($fileId);
-		return $this->deleteFile($model);
-	}
-	
-	/**
-	 * Delete File upload real
-	 * @param int $fileId
-	 * @return boolean true or false
-	 */
-	public function delteFileReal($fileId){
-		if($fileId < 0 ) return false;
-		$model = FileUpload::model()->findByPK($fileId);
-		return $this->deleteFile($model);
-	}
-	
-	
-	/**
 	 * Update File in databse when uploaded files.
 	 * @param $entry 
 	 * @param $employeeId 
@@ -143,50 +91,26 @@ class MediaProcess extends CApplicationComponent{
 	 * @param $ext 
 	 * @return int
 	 */
-	private function updateFile($entry, $data = null, $fileName = null, $fielType =null, 
-	$mimeType = null, $size = null, $ext = null, $thumbnail = null){
-		if($employeeId <0 && $employeeDocId < 0) return false;
+	private function updateFile($entry, $name = null, $descr = null, $data = null, $url = null,
+	 $size = null, $ext = null, $width= null, $height = null, $ratio = null,$mimeType = null, $pictureType =null){
 		
 		$entry->setAttributes(array(
+				'name' => $name,
+				'descr' => $descr,
 				'data' => $data,
-				'file_name' => $fileName,
-				'file_type' => $fielType,
-				'mime_type' => $mimeType,
+				'url' => $mimeType,
 				'size' => $size,
 				'ext' => $ext,
-				'thumbnail' => $thumbnail				
+				'width' => $width,
+				'height' => $height,
+				'ratio' => $ratio,
+				'mime_type' => $mimeType,
+				'picture_type_id' => $pictureType			
 		));
 		$entry->save(false);
 		return $entry->id;
 	}
-	
-	
-	/**
-	 * Update File upload real
-	 * @param int $fileId
-	 * @return boolean true or false
-	 */
-	public function updateFileReal($fileId, $data = null, $fileName = null, $fielType =null, 
-						$mimeType = null, $size = null, $ext = null, $thumbnail = null){
-		if($fileId < 0 ) return false;
-		$model = FileUpload::model()->findByPK($fileId);
-		return $this->updateFile($model, $data = null, $fileName = null, $fielType =null, 
-								$mimeType = null, $size = null, $ext = null, $thumbnail = null);
-	}
-	
-	/**
-	 * Update File upload real
-	 * @param int $fileId
-	 * @return boolean true or false
-	 */
-	public function updateFileTemp($fileId, $data = null, $fileName = null, $fielType =null, 
-						$mimeType = null, $size = null, $ext = null, $thumbnail = null){
-		if($fileId < 0 ) return false;
-		$model = FileUploadTemp::model()->findByPK($fileId);
-		return $this->updateFile($model, $data = null, $fileName = null, $fielType =null, 
-								$mimeType = null, $size = null, $ext = null, $thumbnail = null);
-	}
-		
+
 	/**
 	 * we do not need to store files in database, so just store in uploads folders
 	 * @param file upload $uploadedFile,
@@ -239,10 +163,9 @@ class MediaProcess extends CApplicationComponent{
 	 * @param file upload $uploadedFile,
 	 * @param string $fileType,
 	 * @param int $fileId,
-	 * @param int $employeeId
 	 * @return int file id
 	 */					
-	public function processFileUpload($uploadedFile, $fileType, $fileId = null, $employeeId = null){
+	public function processFileUpload($uploadedFile, $fileType, $fileId = null, $descr = null){
 		$file = new FileUploadForm();
 		$file->ext = $uploadedFile->extensionName;
 		$originalName = $uploadedFile->name;
@@ -250,9 +173,13 @@ class MediaProcess extends CApplicationComponent{
 		$name = $nameWithoutExt . '.' . $file->ext;
 		$file->mimeType = $uploadedFile->type;
 		$file->size = $uploadedFile->size;
-		$file->fileType = $fileType;
-		$file->fileName = $originalName;	
-						
+		$file->fileType = PictureTypes::model()->findByAttributes(array('name' => $fileType))->id;
+		$file->fileName = $originalName;
+		$file->width = $uploadedFile->width;
+		$file->height = $uploadedFile->height;	
+		$file->url = null;
+		$file->ratio = null;
+		$file->descr = 	$descr;			
 		# read content of file to binary for store content in database 
 		$fp = fopen($uploadedFile->tempName, 'r');
 		$content = fread($fp, filesize($uploadedFile->tempName));
@@ -261,15 +188,13 @@ class MediaProcess extends CApplicationComponent{
 		
 		if($fileId != null || $fileId>0){
 			#update file's info
-			$file->fileId = $this->updateFileTemp($fileId,$file->uploadedFile, $file->fileName, 
-									$file->fileType, $file->mimeType, $file->size, 
-									$file->ext); 
+			$entry = Pictures::model()->findByPK($fileId);
+			$file->fileId = $this->updateFile($entry, $file->fileName, $file->descr, $file->uploadedFile, 
+											$file->url, $file->size, $file->width, $file->height, $file->ratio,$file->ext, $file->mineType, $file->fileType);
 		}else{
 			#save file's info
-			$file->fileId = $this->createFileUploadTemp($employeeId,
-									$file->uploadedFile, $file->fileName, 
-									$file->fileType, $file->mimeType, $file->size, 
-									$file->ext);
+			$file->fileId = $this->createFile(new Pictures(), $file->fileName, $file->descr, $file->uploadedFile, 
+											$file->url, $file->size, $file->width, $file->height, $file->ratio,$file->ext, $file->mineType, $file->fileType);
 		}
 		
 		return $file->fileId;

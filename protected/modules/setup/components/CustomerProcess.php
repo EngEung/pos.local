@@ -45,12 +45,43 @@ class CustomerProcess extends CApplicationComponent {
 			'last_name' => $model->lastName,
 			'title' => $model->titleId,
 			'phone1' => $model->phone1,
-			'phone2' => $model->phone1,
+			'phone2' => $model->phone2,
 			'email1' => $model->email1,
-			'email2' => $model->email2,
-			'location_id' => $model->locationId
+			'country_id' => $model->countryId,
+			'province_id' => $model->provinceId,
+			'commune_id' => $model->communeId,
+			'district_id' => $model->districtId,
+			'customer_type' => $model->customerTypeId,
+			'address'=> $model->address,
+			'location_id' => $model->locationId,
+			'note' => $model->note,
+			'picture_id' => $model->pictureId
 		));
 		$c->save(false);
+	}
+	
+	/**
+	 * Create Customer
+	 * @param object $model,
+	 * @return boolean
+	 */
+	public function createCustomer($model){
+		$rc = false;
+		$media = new MediaProcess();	
+		$cnc = Yii::app()->db;	
+		$tran = $cnc->beginTransaction();
+		try{
+			if($model->picture != null){
+				$model->pictureId = $media->processFileUpload($model->picture, AppConstant::FILE_TYPE_PICTURE_CUSTOMER, null, $model->descr);
+			}
+			$rc =  $this->create($model);
+			$tran->commit();
+		}catch(CException $ex) {
+    		//$this->_error->insert($ex, $desc);
+    		echo $ex;
+			$tran->rollBack();
+    	}
+		return $rc;
 	}
 	
 	public function update($model) {
@@ -61,45 +92,34 @@ class CustomerProcess extends CApplicationComponent {
 		if ($model->lastName != null) $c->last_name = $model->last_name;
 		if ($model->titleId != null) $c->titleId = $model->titleId;
 		if ($model->phone1 != null) $c->phone1 = $model->phone1;
-		if($model->phone2 != null)	$c->phone2 = $model->phone2;
-		if($model->email1 != null)	$c->phone2 = $model->email1;
-		if($model->locationId != null)	$c->phone2 = $model->location_id;
-		$error->save(false);
-		Pk($id);
-		return $updatedError;
+		$c->phone2 = $model->phone2;
+		$c->email1 = $model->email1;
+		$c->fax = $model->fax;
+		$c->country_id = $model->countryId;
+		$c->province_id = $model->provinceId;
+		$c->commune_id = $model->communeId;
+		$c->district_id = $model->districtId;
+		$c->customer_type = $model->customerTypeId;
+		$c->address = $model->address;
+		if($model->locationId != null)	$c->location_id = $model->location_id;
+		$c->note = $model->note;
+		return $c->save(false);
 	}
 	
-	 public function getById($id) {
-	 	return Errors::model()->findByPk($id);	
-	 }
-	 
-	 public function getByUserId($userId) {
-	 	return Errors::model()->findAllByAttributes(array('user_id' => $userId));	
-	 }
-	 
-	 public function getAll() {
-	 	return Errors::model()->findAll();
-	 }
-	 
-	 public function assign($id, $userIds) {
-	 	if(!is_array($userIds) || $id < 0) return false;
-		if (count($userIds) < 1) return false;
-		$c = 0;
-		foreach($userIds as $userId) {
-			$assignments = new ErrorAssignments();
-			$assignments->setAttributes(
-				array(
-					'error_id' => $id,
-					'user_id' => $userId,
-				)
-			);
-			$assignments->save(false);
-			$c += $assignments->id;
-		}	
-		return $c > 0;
-	 }
-	 
-	 public function getErrorAssignments($userId) {
-	 	return ErrorAssignments::model()->findAllByAttributes(array('user_id'=>$userId));	
-	 }
+	public function updateCustomer($model, $fileId){
+		$rc = false;
+		$media = new MediaProcess();	
+		$cnc = Yii::app()->db;	
+		$tran = $cnc->beginTransaction();
+		try{
+			$fileId = $media->processFileUpload($model->picture, AppConstant::FILE_TYPE_PICTURE_CUSTOMER, $fileId, $model->descr);
+			$rc =  $this->update($model);
+			$tran->commit();
+		}catch(CException $ex) {
+    		//$this->_error->insert($ex, $desc);
+    		echo $ex;
+			$tran->rollBack();
+    	}
+		return $rc;
+	}
 }

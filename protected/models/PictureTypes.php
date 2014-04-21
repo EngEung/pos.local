@@ -1,9 +1,9 @@
 <?php
 
 /**
- * This is the model class for table "titles".
+ * This is the model class for table "picture_types".
  *
- * The followings are the available columns in table 'titles':
+ * The followings are the available columns in table 'picture_types':
  * @property integer $id
  * @property string $name
  * @property string $descr
@@ -13,11 +13,11 @@
  * @property string $modified_by
  * @property integer $active
  */
-class Titles extends CActiveRecord
+class PictureTypes extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return Titles the static model class
+	 * @return PictureTypes the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -29,7 +29,7 @@ class Titles extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'titles';
+		return 'picture_types';
 	}
 
 	/**
@@ -107,7 +107,7 @@ class Titles extends CActiveRecord
 
 		$criteria->compare('active',$this->active);
 
-		return new CActiveDataProvider('Titles', array(
+		return new CActiveDataProvider('PictureTypes', array(
 			'criteria'=>$criteria,
 		));
 	}

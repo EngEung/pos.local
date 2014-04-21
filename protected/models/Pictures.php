@@ -1,23 +1,32 @@
 <?php
 
 /**
- * This is the model class for table "titles".
+ * This is the model class for table "pictures".
  *
- * The followings are the available columns in table 'titles':
+ * The followings are the available columns in table 'pictures':
  * @property integer $id
  * @property string $name
  * @property string $descr
+ * @property string $data
+ * @property string $url
+ * @property integer $size
+ * @property integer $width
+ * @property integer $height
+ * @property double $ratio
+ * @property string $ext
+ * @property string $mime_type
+ * @property integer $picture_type_id
  * @property string $created_at
  * @property string $modified_at
  * @property string $created_by
  * @property string $modified_by
  * @property integer $active
  */
-class Titles extends CActiveRecord
+class Pictures extends CActiveRecord
 {
 	/**
 	 * Returns the static model of the specified AR class.
-	 * @return Titles the static model class
+	 * @return Pictures the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{
@@ -29,7 +38,7 @@ class Titles extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'titles';
+		return 'pictures';
 	}
 
 	/**
@@ -40,15 +49,18 @@ class Titles extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, created_at', 'required'),
-			array('active', 'numerical', 'integerOnly'=>true),
+			array('picture_type_id, created_at', 'required'),
+			array('size, width, height, picture_type_id, active', 'numerical', 'integerOnly'=>true),
+			array('ratio', 'numerical'),
 			array('name', 'length', 'max'=>50),
-			array('descr', 'length', 'max'=>255),
+			array('descr, url', 'length', 'max'=>255),
+			array('ext', 'length', 'max'=>10),
+			array('mime_type', 'length', 'max'=>20),
 			array('created_by, modified_by', 'length', 'max'=>30),
-			array('modified_at', 'safe'),
+			array('data, modified_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, name, descr, created_at, modified_at, created_by, modified_by, active', 'safe', 'on'=>'search'),
+			array('id, name, descr, data, url, size, width, height, ratio, ext, mime_type, picture_type_id, created_at, modified_at, created_by, modified_by, active', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,6 +84,15 @@ class Titles extends CActiveRecord
 			'id' => 'Id',
 			'name' => 'Name',
 			'descr' => 'Descr',
+			'data' => 'Data',
+			'url' => 'Url',
+			'size' => 'Size',
+			'width' => 'Width',
+			'height' => 'Height',
+			'ratio' => 'Ratio',
+			'ext' => 'Ext',
+			'mime_type' => 'Mime Type',
+			'picture_type_id' => 'Picture Type',
 			'created_at' => 'Created At',
 			'modified_at' => 'Modified At',
 			'created_by' => 'Created By',
@@ -97,6 +118,24 @@ class Titles extends CActiveRecord
 
 		$criteria->compare('descr',$this->descr,true);
 
+		$criteria->compare('data',$this->data,true);
+
+		$criteria->compare('url',$this->url,true);
+
+		$criteria->compare('size',$this->size);
+
+		$criteria->compare('width',$this->width);
+
+		$criteria->compare('height',$this->height);
+
+		$criteria->compare('ratio',$this->ratio);
+
+		$criteria->compare('ext',$this->ext,true);
+
+		$criteria->compare('mime_type',$this->mime_type,true);
+
+		$criteria->compare('picture_type_id',$this->picture_type_id);
+
 		$criteria->compare('created_at',$this->created_at,true);
 
 		$criteria->compare('modified_at',$this->modified_at,true);
@@ -107,7 +146,7 @@ class Titles extends CActiveRecord
 
 		$criteria->compare('active',$this->active);
 
-		return new CActiveDataProvider('Titles', array(
+		return new CActiveDataProvider('Pictures', array(
 			'criteria'=>$criteria,
 		));
 	}

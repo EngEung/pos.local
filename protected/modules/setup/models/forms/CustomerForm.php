@@ -36,7 +36,11 @@ class CustomerForm extends CFormModel
 	
 	public $locations;
 	public $locationId;
-	public  $descr;
+	public $note;
+	public $fax;
+	public $picture;
+	public $pictureId;
+	
 	
 	public function __construct(){
 		$common = new Common();
@@ -54,9 +58,8 @@ class CustomerForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('firstName, lastName, locationId', 'required',),
-			// rememberMe needs to be a boolean
-			array('rememberMe', 'boolean'),
+			array('firstName, lastName, locationId, phone1', 'required',),
+		
 		);
 	}
 
@@ -68,7 +71,8 @@ class CustomerForm extends CFormModel
 			'locationId' => 'Location',
 			'titleId' => 'Title',
 			'customerTypeId' => '',
-			'descr' => ''
+			'descr' => '',
+			'note' => ''
 		);
 	}
 

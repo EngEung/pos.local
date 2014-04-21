@@ -26,6 +26,7 @@
 		<br />
 		<?php echo $form->textFieldRow($model, 'phone1', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'phone2', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'fax', array('placeholder' => '')); ?>
 		
 		<span style="margin-left:10px; color: #003BB3; font-weight: bold;">Address</span><hr style="margin:-8px 0 0 70px;">
 		<br />
@@ -45,7 +46,8 @@
 		  </div>
 		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 		  <div>
-		    <span class="btn btn-default btn-file"><span class="fileinput-new">Select picture</span><span class="fileinput-exists">Change</span><input id="imageInput" type="file" name="..."></span>
+		    <span class="btn btn-default btn-file"><span class="fileinput-new">Select picture</span><span class="fileinput-exists">Change</span>
+		    <input id="imageInput" type="file" name="CustomerForm[picture]"></span>
 		    <a id="remove_image" onclick="onRemoveImage();" href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>
 		</div>
@@ -56,15 +58,11 @@
 		
 		<span style="margin-left:25px; color: #003BB3; font-weight: bold;">Note</span><hr style="margin:-8px 0 0 60px;">
 		<br />
-		<?php echo $form->textAreaRow($model, 'descr', array('style' => 'width:250px;', 'divOptions'=>array('class'=>'div-customer-note'))); ?>
+		<?php echo $form->textAreaRow($model, 'note', array('style' => 'width:250px;', 'divOptions'=>array('class'=>'div-customer-note'))); ?>
 		
 	</div>
 	<div style="clear:both;"></div>
 	
-<?php    
-    $this->endWidget();
-    unset($form);
-?>
 	<div id="dlg-buttons" class="dialog-button" style=" margin-top: 15px;">
 		 <?php 	
 			  $this->widget('bootstrap.widgets.TbButton',array(
@@ -91,6 +89,10 @@
 				));
 		?>
 	</div>
+<?php    
+    $this->endWidget();
+    unset($form);
+?>
 <style>
 
 	.form-horizontal #left_col .control-label { width:80px;}

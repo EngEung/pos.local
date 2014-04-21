@@ -38,7 +38,7 @@ class CustomerProcess extends CApplicationComponent {
 	}
 
 	public function create($model){
-		if($model == null) return null;
+		if($model->firstName == null || $model->lastName == null) return null;
 		$c = new Customers();
 		$c->setAttributes(array(
 			'first_name' => $model->firstName,
@@ -55,7 +55,8 @@ class CustomerProcess extends CApplicationComponent {
 			'address'=> $model->address,
 			'location_id' => $model->locationId,
 			'note' => $model->note,
-			'picture_id' => $model->pictureId
+			'picture_id' => $model->pictureId,
+			'note' => $model->note
 		));
 		$c->save(false);
 	}
@@ -71,7 +72,7 @@ class CustomerProcess extends CApplicationComponent {
 		$cnc = Yii::app()->db;	
 		$tran = $cnc->beginTransaction();
 		try{
-			if($model->picture != null){
+			if($model->picture !== null){
 				$model->pictureId = $media->processFileUpload($model->picture, AppConstant::FILE_TYPE_PICTURE_CUSTOMER, null, $model->descr);
 			}
 			$rc =  $this->create($model);

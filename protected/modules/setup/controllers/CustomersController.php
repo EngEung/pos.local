@@ -13,12 +13,12 @@ class CustomersController extends Controller{
 	
 	public function actionCreate(){
 		$model = new CustomerForm();
+		$cp = new CustomerProcess();
 		if(isset($_POST['CustomerForm'])){
 			$model->attributes = $_POST['CustomerForm'];
 			$validated=$model->validate();
 			if($validated){
-				
-				$cp = new CustomerProcess();
+					
 				$model->firstName = $_POST['CustomerForm']['firstName'];
 				$model->lastName = $_POST['CustomerForm']['lastName'];
 				$model->titleId = $_POST['CustomerForm']['titleId'];
@@ -28,10 +28,11 @@ class CustomersController extends Controller{
 				$model->email1 = $_POST['CustomerForm']['email1'];
 				$model->locationId = $_POST['CustomerForm']['locationId'];
 				$model->address = $_POST['CustomerForm']['address'];
-				$model->picture = CUploadedFile::getInstance($model, 'picture');
 				$model->note = $_POST['CustomerForm']['note'];
 				$model->customerTypeId = $_POST['CustomerForm']['customerTypeId'];
 				
+				$model->picture = CUploadedFile::getInstance($model, 'picture');
+				var_dump($model->picture);
 				$rc = $cp->createCustomer($model);
 			}
 		}

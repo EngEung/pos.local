@@ -47,7 +47,7 @@
 		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 		  <div>
 		    <span class="btn btn-default btn-file"><span class="fileinput-new">Select picture</span><span class="fileinput-exists">Change</span>
-		    <input id="imageInput" type="file" name="CustomerForm[picture]"></span>
+		    <?php echo $form->fileField($model,'picture',array('id'=>'imageInput', 'style' => 'width:300px;')); ?></span>
 		    <a id="remove_image" onclick="onRemoveImage();" href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>
 		</div>
@@ -109,4 +109,12 @@
 	function onRemoveImage(){
 		$("#output").html("");
 	}
+	
+	var defaultReload = function(){
+		$.mask.definitions['e']='[0-9]{1}';
+		$("#CustomerForm_phone1").mask("(999) 999-999?e");
+		$("#CustomerForm_phone2").mask("(999) 999-999?e");
+		$("#CustomerForm_fax").mask("(999) 999-999?e");
+	} 
+	defaultReload();
 </script>

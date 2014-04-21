@@ -26,7 +26,7 @@ class CustomerForm extends CFormModel
 	public $countryId;
 	
 	public $provinces;
-	public $provoinceId;
+	public $provinceId;
 
 	public $communeId;
 	public $communes;
@@ -47,6 +47,7 @@ class CustomerForm extends CFormModel
 		$this->locations = CHtml::listData($common->getLocations(),'id', 'name');
 		$this->titles = CHtml::listData($common->getTitles(), 'id', 'name');
 		$this->customerTypes = CHtml::listData($common->getCustomerTypes(), 'id', 'name');
+		$this->customerTypeId = 1;
 	}
 	
 	/**
@@ -58,7 +59,7 @@ class CustomerForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('firstName, lastName, locationId, phone1', 'required',),
+			//array('firstName, lastName, locationId, phone1, address', 'required',),
 		
 		);
 	}

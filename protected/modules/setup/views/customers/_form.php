@@ -40,12 +40,12 @@
 		<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '', 'labelOptions'=>array('id'=>'label_'))); ?>
 		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left: 100px; padding-bottom: 5px;">
 		  <div class="fileinput-new thumbnail" style="width: 205px; height: 145px;">
-		    <img data-src="http://placehold.it/135x450" alt="">
+		    <img  alt="">
 		    <div id="output"></div> 
 		  </div>
 		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
 		  <div>
-		    <span class="btn btn-default btn-file"><span class="fileinput-new">Select picture</span><span class="fileinput-exists">Change</span>
+		    <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="icon-picture"></i> Select picture</span><span class="fileinput-exists">Change</span>
 		    <?php echo $form->fileField($model,'picture',array('id'=>'imageInput', 'style' => 'width:300px;')); ?></span>
 		    <a id="remove_image" onclick="onRemoveImage();" href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
 		  </div>

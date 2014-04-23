@@ -32,7 +32,7 @@
 		<?php echo $form->dropDownListRow($model,'locationId', $model->locations,
 						array('empty'=>'--Select--','style'=>'margin-left:00px;')); 
 				?>
-		<?php echo $form->textAreaRow($model, 'address', array('placeholder' => '', 'style' => 'width:210px; height:90px;')); ?>
+		<?php echo $form->textAreaRow($model, 'address', array('placeholder' => '', 'style' => 'width:210px; height:48px;')); ?>
 	</div>
 	
 

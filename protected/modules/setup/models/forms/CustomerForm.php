@@ -40,7 +40,7 @@ class CustomerForm extends CFormModel
 	public $fax;
 	public $picture;
 	public $pictureId;
-	
+	public $descr;
 	
 	public function __construct(){
 		$common = new Common();

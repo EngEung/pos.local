@@ -3048,3 +3048,597 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/04/22 01:11:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "picture" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:00 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:31:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:33:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:34:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:40:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:55 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:40:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:42:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:43:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:33 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:43:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:44:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:07 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 01:45:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:01:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:01:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:04 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:02:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:05:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:15 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:05:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:05:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:06:08 [error] [php] Undefined variable: employeeId (D:\wamp\www\pos.local\protected\components\MediaProcess.php:47)
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(36): CustomerProcess->createCustomer()
+#1 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#2 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#4 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#5 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#6 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create
+in D:\wamp\www\pos.local\protected\components\MediaProcess.php (47)
+in D:\wamp\www\pos.local\protected\components\MediaProcess.php (197)
+in D:\wamp\www\pos.local\protected\modules\setup\components\CustomerProcess.php (76)
+2014/04/22 02:06:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:01 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:07:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:08:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:42 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:10:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "id" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "firstName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "lastName" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "titleId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "phone1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "phone2" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "fax" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "locationId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "address" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "email1" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "customerTypeId" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:11 [warning] [application] Failed to set unsafe attribute "note" of "CustomerForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (18)
+in D:\wamp\www\pos.local\index.php (13)
+2014/04/22 02:15:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/22 02:19:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

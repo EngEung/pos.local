@@ -32,7 +32,6 @@ class CustomersController extends Controller{
 				$model->customerTypeId = $_POST['CustomerForm']['customerTypeId'];
 				
 				$model->picture = CUploadedFile::getInstance($model, 'picture');
-				var_dump($model->picture);
 				$rc = $cp->createCustomer($model);
 			}
 		}

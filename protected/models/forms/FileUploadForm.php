@@ -19,6 +19,7 @@ class FileUploadForm extends CFormModel
 	public $data;
 	public $size;
 	public $mimeType;
+	public $fileId;
 	
 	
 	

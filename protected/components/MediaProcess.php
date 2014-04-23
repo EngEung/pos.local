@@ -44,13 +44,11 @@ class MediaProcess extends CApplicationComponent{
 	 */
 	private function createFile($entry, $name = null,  $descr = null, $data = null, $url = null,
 	 $size = null, $ext = null, $width= null, $height = null, $ratio = null,$mimeType = null, $pictureType =null ){
-		if($employeeId <0 && $employeeDocId < 0) return false;
-		
 		$entry->setAttributes(array(
 				'name' => $name,
 				'descr' => $descr,
 				'data' => $data,
-				'url' => $mimeType,
+				'url' => $url,
 				'size' => $size,
 				'ext' => $ext,
 				'width' => $width,
@@ -98,7 +96,7 @@ class MediaProcess extends CApplicationComponent{
 				'name' => $name,
 				'descr' => $descr,
 				'data' => $data,
-				'url' => $mimeType,
+				'url' => $url,
 				'size' => $size,
 				'ext' => $ext,
 				'width' => $width,
@@ -174,12 +172,14 @@ class MediaProcess extends CApplicationComponent{
 		$file->mimeType = $uploadedFile->type;
 		$file->size = $uploadedFile->size;
 		$file->fileType = PictureTypes::model()->findByAttributes(array('name' => $fileType))->id;
-		$file->fileName = $originalName;
-		$file->width = $uploadedFile->width;
-		$file->height = $uploadedFile->height;	
+		$file->name = $originalName;
+		//$file->width = $uploadedFile->width;
+		//$file->height = $uploadedFile->height;	
 		$file->url = null;
 		$file->ratio = null;
-		$file->descr = 	$descr;			
+		$file->descr = 	$descr;
+		
+					
 		# read content of file to binary for store content in database 
 		$fp = fopen($uploadedFile->tempName, 'r');
 		$content = fread($fp, filesize($uploadedFile->tempName));
@@ -190,11 +190,11 @@ class MediaProcess extends CApplicationComponent{
 			#update file's info
 			$entry = Pictures::model()->findByPK($fileId);
 			$file->fileId = $this->updateFile($entry, $file->fileName, $file->descr, $file->uploadedFile, 
-											$file->url, $file->size, $file->width, $file->height, $file->ratio,$file->ext, $file->mineType, $file->fileType);
+											$file->url, $file->size, $file->ext, $file->width, $file->height, $file->ratio, $file->mineType, $file->fileType);
 		}else{
 			#save file's info
-			$file->fileId = $this->createFile(new Pictures(), $file->fileName, $file->descr, $file->uploadedFile, 
-											$file->url, $file->size, $file->width, $file->height, $file->ratio,$file->ext, $file->mineType, $file->fileType);
+			$file->fileId= $this->createFile(new Pictures(), $file->name, $file->descr, $file->uploadedFile, $file->url, $file->size, $file->ext, 
+											$file->width, $file->height, $file->ratio, $file->mimeType, $file->fileType);
 		}
 		
 		return $file->fileId;

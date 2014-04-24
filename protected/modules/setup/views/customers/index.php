@@ -18,7 +18,7 @@
 ?>
 
 <div style="margin-bottom:10px">
-		<a href="#" class="easyui-linkbutton" onclick="addTab('google','<?php echo $this->createUrl('create')?>')">google</a>
+		<a href="#" class="easyui-linkbutton" onclick="addTab('General','<?php echo $this->createUrl('create')?>')">google</a>
 		<a href="#" class="easyui-linkbutton" onclick="addTab('jquery','http://jquery.com/')">jquery</a>
 		<a href="#" class="easyui-linkbutton" onclick="addTab('easyui','http://jeasyui.com/')">easyui</a>
 		<a href="#" class="easyui-linkbutton" onclick="addTab('twitter','http://twitter.com/')">easyui</a>
@@ -29,7 +29,7 @@
     <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
     <div data-options="region:'west',title:'Managin Customers',split:true" style="width:200px;"></div>
     <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
-    	<div id="tt" class="easyui-tabs" style="width:auto;height:450px;">
+    	<div id="tt" class="easyui-tabs" style="width:auto;height:600px;">
 			
 		</div>
     </div>

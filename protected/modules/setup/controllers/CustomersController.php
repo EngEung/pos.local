@@ -12,6 +12,7 @@ class CustomersController extends Controller{
 	}
 	
 	public function actionCreate(){
+		$this->layout = '//layouts/setup_layout';
 		$model = new CustomerForm();
 		$cp = new CustomerProcess();
 		if(isset($_POST['CustomerForm'])){

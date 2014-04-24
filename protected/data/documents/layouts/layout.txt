@@ -1,0 +1,3 @@
+http://stackoverflow.com/questions/9106940/link-ad-new-jquery-tab-and-specify-tab-title-and-ajax-url-to-load
+http://stackoverflow.com/questions/14366863/jquery-easyui-load-link-in-same-opened-tab-from-where-it-was-clicked
+http://www.jeasyui.com/tutorial/layout/tabs2.php

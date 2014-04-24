@@ -59,7 +59,7 @@ class CustomerForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			//array('firstName, lastName, locationId, phone1, address', 'required',),
+			array('firstName, lastName, locationId, phone1, address', 'required',),
 		
 		);
 	}

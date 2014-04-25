@@ -26,7 +26,7 @@
 		<a href="#" class="easyui-linkbutton" onclick="addTab('dd','http://fb.com/')">easyui</a>
 	</div>
 <div id="cc" class="easyui-layout" style="width:1200px;height:500px;">
-    <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>
+   <!-- <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>-->
     <div data-options="region:'west',title:'Managin Customers',split:true" style="width:200px;"></div>
     <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
     	<div id="tt" class="easyui-tabs" style="width:auto;height:600px;">

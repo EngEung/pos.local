@@ -12,14 +12,12 @@ class UserInterface extends CApplicationComponent{
     	try {
     		$cnc = Yii::app()->db;
     		$cmd = new CDbCommand($cnc);
-    		/*$sql = "select m.* from tbl_menus m
-    		join tlkp_menu_types mt on m.menu_type_id=mt.id
-    		where mt.name = :name and m.active = true order by m.order_num asc";*/
 			$sql = "select m.*,mr.role_id 
-					from tbl_menus m
-					inner join tbl_menu_role mr on m.id=mr.menu_id
+					from menus m
+					inner join menu_roles mr on m.id = mr.menu_id
+					inner join menu_types mt on m.menu_type_id = mt.id
 		    		where m.parent_id = :parentId and mr.role_id= :roleId 
-					and m.active = true and mr.active= true and m.name = :menuTypeId
+					and m.active = true and mr.active= true and m.name = :menuType
 					order by m.order_num asc";
 			
     		$cmd = $cnc->createCommand($sql);
@@ -103,16 +101,17 @@ class UserInterface extends CApplicationComponent{
 	 */
 	public function getTopMenu($roleId, $module){
 		$session = Yii::app()->session;
+		
     	$isAuthenticated = (bool)$session->get('is_authenticated');
-    	
+    	var_dump($isAuthenticated);
     	$fullName = '';
     	
     	if($isAuthenticated)
     		$fullName 	= $session->get('full_name');
+		
 			$roleId 	= $session->get('roleid');
-			$parentId	= 0;
-		$dataReader = $this->getMenu(0, $roleId, AppConstant::MENU_HORIZONTAL_MENU);
-    	$menuArray;
+		$dataReader = $this->getMenu(0, 1, AppConstant::MENU_HORIZONTAL_MENU);
+    	$menuArray = array();
     	if(strlen($fullName) != 0 && $isAuthenticated == true){
     		
     		#menu top the right such as fullname and signout
@@ -137,7 +136,10 @@ class UserInterface extends CApplicationComponent{
 			$menuArray = array($menuArrayLeft,$menuArrayRight);
 		}else{
 			# Interface for user login in web application
-			$menuArray = array('label'=>'Sign in', 'url' => $this->createUrl('/sec/signin'));
+			$menuArray = array(array('class'=>'bootstrap.widgets.TbMenu',
+								'htmlOptions' => array('class' => 'pull-right'),
+								'items'=>array(
+								array('label'=>'Sign in', 'url' => Yii::app()->baseUrl.'/home/'))));
 		}
     	return $menuArray;
 	}	

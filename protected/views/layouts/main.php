@@ -23,7 +23,7 @@
 		    'fixed' =>'top',
 		    'fluid'=>true,
 		    'htmlOptions'=>array('class' =>'header'),
-		    'items'=>/*array(
+		    'items'=> $this->getTopMenu()/*array(
 				array(
 					'class'=>'bootstrap.widgets.TbMenu',
 					'items'=>array(
@@ -34,8 +34,8 @@
 							array('label'=>'Mission Management', 'icon'=>'ok','url'=>'#'),
 							array('label'=>'User Management','icon'=>'user', 'url'=>'#'),
 						)),*/
-					),
-				),
+				//	),
+			//	),*/
 			/*	array(
 					'class'=>'bootstrap.widgets.TbMenu',
 					'htmlOptions' => array('class' => 'pull-right'),
@@ -44,7 +44,7 @@
 					),
 				),	       
 		    ),*/
-		    $this->
+		    
 		)); ?>
 	
 	<!--End header-->

@@ -31,7 +31,11 @@ class Controller extends CController
 		}
 	}
 	
-	public function getMenu(){
-		
+	public function getTopMenu(){
+		$ui = new UserInterface();
+		$module = null;
+		if(isset($this->module))
+			$module = $this->module->getName();
+		return $ui->getTopMenu(0, $module);
 	}
 }

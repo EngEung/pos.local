@@ -4488,3 +4488,875 @@ HTTP_REFERER=http://pos.local/css/style.css
 	`modified_by` varchar(30),
 	`active` tinyint(1) default true
 ).
+2014/04/25 17:22:55 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:22:55 [error] [exception.CException] exception 'CException' with message 'UserInterface and its behaviors do not have a method or closure named "createUrl".' in C:\xampp\htdocs\www\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php(140): CComponent->__call('createUrl', Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php(140): UserInterface->createUrl('/sec/signin')
+#2 C:\xampp\htdocs\www\pos.local\protected\components\Controller.php(38): UserInterface->getTopMenu(0, 'setup')
+#3 C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php(26): Controller->getTopMenu()
+#4 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#5 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#6 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#7 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate('?<div class="pa...')
+#8 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput('?<div class="pa...')
+#9 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): COutputProcessor->run()
+#10 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): CBaseController->endContent()
+#12 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#13 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\www\framework\web\CController.php(784): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#15 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(5): CController->render('index')
+#16 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#17 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('')
+#21 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers')
+#22 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/setup/customers/
+---
+2014/04/25 17:24:09 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:24:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 17:24:14 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:26:45 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 17:26:49 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:26:56 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:26:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 17:27:01 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:27:25 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:27:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 17:27:29 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:52:38 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:52:38 [error] [php] Undefined variable: row (C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php:143)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#2 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): CustomersController->renderFile()
+#3 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#4 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#6 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): CustomersController->endWidget()
+#7 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): CustomersController->endContent()
+#8 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#9 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#10 C:\xampp\htdocs\www\framework\web\CController.php(784): CustomersController->renderFile()
+#11 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(5): CustomersController->render()
+#12 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#13 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\www\framework\web\CController.php(286): CustomersController->runAction()
+#15 C:\xampp\htdocs\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#16 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#17 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/customers/
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (143)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (26)
+2014/04/25 17:54:01 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:54:01 [error] [php] include(pull-right.php): failed to open stream: No such file or directory (C:\xampp\htdocs\www\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWidgetFactory.php(146): import()
+#1 C:\xampp\htdocs\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\www\framework\web\CBaseController.php(172): CustomersController->createWidget()
+#3 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbNavbar.php(147): CustomersController->widget()
+#4 C:\xampp\htdocs\www\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php(48): CustomersController->widget()
+#6 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#8 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): CustomersController->renderFile()
+#9 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#10 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#11 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#12 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): CustomersController->endWidget()
+#13 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): CustomersController->endContent()
+#14 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#15 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#16 C:\xampp\htdocs\www\framework\web\CController.php(784): CustomersController->renderFile()
+#17 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(5): CustomersController->render()
+#18 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#19 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\xampp\htdocs\www\framework\web\CController.php(286): CustomersController->runAction()
+#21 C:\xampp\htdocs\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#22 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#23 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/customers/
+in C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbNavbar.php (147)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (48)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php (15)
+2014/04/25 17:54:47 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:54:47 [error] [php] include(pull-right.php): failed to open stream: No such file or directory (C:\xampp\htdocs\www\framework\YiiBase.php:421)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWidgetFactory.php(146): import()
+#1 C:\xampp\htdocs\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget()
+#2 C:\xampp\htdocs\www\framework\web\CBaseController.php(172): CustomersController->createWidget()
+#3 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbNavbar.php(147): CustomersController->widget()
+#4 C:\xampp\htdocs\www\framework\web\CBaseController.php(173): TbNavbar->run()
+#5 C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php(48): CustomersController->widget()
+#6 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#7 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#8 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): CustomersController->renderFile()
+#9 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#10 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#11 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#12 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): CustomersController->endWidget()
+#13 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): CustomersController->endContent()
+#14 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#15 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#16 C:\xampp\htdocs\www\framework\web\CController.php(784): CustomersController->renderFile()
+#17 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(5): CustomersController->render()
+#18 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#19 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#20 C:\xampp\htdocs\www\framework\web\CController.php(286): CustomersController->runAction()
+#21 C:\xampp\htdocs\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#22 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#23 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#24 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#25 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/customers/
+in C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbNavbar.php (147)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (48)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php (15)
+2014/04/25 17:55:28 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:55:28 [error] [php] Undefined variable: menuArray (C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php:145)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#2 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): CustomersController->renderFile()
+#3 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#4 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#6 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): CustomersController->endWidget()
+#7 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): CustomersController->endContent()
+#8 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#9 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#10 C:\xampp\htdocs\www\framework\web\CController.php(784): CustomersController->renderFile()
+#11 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(5): CustomersController->render()
+#12 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#13 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\www\framework\web\CController.php(286): CustomersController->runAction()
+#15 C:\xampp\htdocs\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#16 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#17 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/customers/
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (145)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (26)
+2014/04/25 17:58:26 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:58:26 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbNavbar.php:136)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#2 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): CustomersController->renderFile()
+#3 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#4 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#6 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): CustomersController->endWidget()
+#7 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): CustomersController->endContent()
+#8 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#9 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#10 C:\xampp\htdocs\www\framework\web\CController.php(784): CustomersController->renderFile()
+#11 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(5): CustomersController->render()
+#12 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#13 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\www\framework\web\CController.php(286): CustomersController->runAction()
+#15 C:\xampp\htdocs\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#16 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#17 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/customers/
+in C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbNavbar.php (136)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (48)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php (15)
+2014/04/25 17:58:48 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:58:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 17:58:52 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:59:18 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 17:59:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 17:59:26 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:00:30 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:00:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:00:59 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:03:28 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:03:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:03:35 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:03:57 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:03:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:04:03 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:05:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "assets".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('assets')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('assets')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('sec/assets/css/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/sec/assets/css/pages/login.css
+HTTP_REFERER=http://pos.local/sec/signin
+---
+2014/04/25 18:05:22 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:05:34 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:05:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:05:41 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+2014/04/25 18:06:33 [error] [php] Undefined variable: module (C:\xampp\htdocs\www\pos.local\protected\components\Controller.php:38)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#1 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): HomeController->renderFile()
+#2 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#3 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#4 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#5 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): HomeController->endWidget()
+#6 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): HomeController->endContent()
+#7 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): HomeController->renderInternal()
+#9 C:\xampp\htdocs\www\framework\web\CController.php(784): HomeController->renderFile()
+#10 C:\xampp\htdocs\www\pos.local\protected\controllers\HomeController.php(38): HomeController->render()
+#11 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): HomeController->actionIndex()
+#12 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#13 C:\xampp\htdocs\www\framework\web\CController.php(286): HomeController->runAction()
+#14 C:\xampp\htdocs\www\framework\web\CController.php(265): HomeController->runActionWithFilters()
+#15 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): HomeController->run()
+#16 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/home/
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (38)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (26)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php (15)
+2014/04/25 18:07:08 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:07:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:07:13 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:07:33 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:07:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:07:38 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:07:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/remove-icon-small.png
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:07:42 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:08:42 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:08:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:08:48 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:27:36 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:27:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:27:41 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:28:32 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:28:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:28:36 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:38:24 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (113)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:38:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:38:29 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (113)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:40:35 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (113)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:40:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:40:41 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (113)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:41:30 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:41:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:41:34 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:41:52 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (114)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:41:52 [error] [php] Invalid argument supplied for foreach() (C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php:127)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#1 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#2 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(76): DefaultController->renderFile()
+#3 C:\xampp\htdocs\www\framework\web\widgets\CContentDecorator.php(54): CContentDecorator->decorate()
+#4 C:\xampp\htdocs\www\framework\web\widgets\COutputProcessor.php(44): CContentDecorator->processOutput()
+#5 C:\xampp\htdocs\www\framework\web\CBaseController.php(206): CContentDecorator->run()
+#6 C:\xampp\htdocs\www\framework\web\CBaseController.php(300): DefaultController->endWidget()
+#7 C:\xampp\htdocs\www\pos.local\protected\views\layouts\column1.php(15): DefaultController->endContent()
+#8 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#9 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): DefaultController->renderInternal()
+#10 C:\xampp\htdocs\www\framework\web\CController.php(784): DefaultController->renderFile()
+#11 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\DefaultController.php(7): DefaultController->render()
+#12 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#13 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#14 C:\xampp\htdocs\www\framework\web\CController.php(286): DefaultController->runAction()
+#15 C:\xampp\htdocs\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#16 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#17 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#19 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (127)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+in C:\xampp\htdocs\www\pos.local\protected\views\layouts\main.php (26)
+2014/04/25 18:42:20 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (115)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:42:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:42:24 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (115)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:42:31 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (115)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:42:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/04/25 18:42:36 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc.
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (29)
+in C:\xampp\htdocs\www\pos.local\protected\components\UserInterface.php (115)
+in C:\xampp\htdocs\www\pos.local\protected\components\Controller.php (39)
+2014/04/25 18:47:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---

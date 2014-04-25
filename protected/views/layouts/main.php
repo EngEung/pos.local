@@ -40,7 +40,7 @@
 					'class'=>'bootstrap.widgets.TbMenu',
 					'htmlOptions' => array('class' => 'pull-right'),
 					'items'=>array(
-						array('label'=>'Sign in', 'icon'=> 'icon-log-in', 'url' => $this->createUrl('/sec/signin'))
+						array('label'=>'Sign in', 'url' => $this->createUrl('/sec/signin'))
 					),
 				),	       
 		    ),

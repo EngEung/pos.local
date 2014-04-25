@@ -103,13 +103,12 @@ class UserInterface extends CApplicationComponent{
 		$session = Yii::app()->session;
 		
     	$isAuthenticated = (bool)$session->get('is_authenticated');
-    	var_dump($isAuthenticated);
     	$fullName = '';
     	
-    	if($isAuthenticated)
+    	if($isAuthenticated){
     		$fullName 	= $session->get('full_name');
-		
-			$roleId 	= $session->get('roleid');
+			$roleId = $session->get('roleid');
+		}
 		$dataReader = $this->getMenu(0, 1, AppConstant::MENU_HORIZONTAL_MENU);
     	$menuArray = array();
     	if(strlen($fullName) != 0 && $isAuthenticated == true){

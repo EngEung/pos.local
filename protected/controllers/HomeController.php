@@ -18,6 +18,7 @@ class HomeController extends Controller{
                 //$session->getTimeout($timeToLive);
                 $session['message'] = $sec->getMessage();
                 Yii::app()->user->setFlash('auth_message', $sec->getMessage());
+					$session['flag'] = $flag;
                 if ($flag==1) {
                 	$session['first_name'] = $sec->getFirstName();
                 	$session['last_name'] = $sec->getLastName();

@@ -6,7 +6,7 @@ class UserInterface extends CApplicationComponent{
      * @param string $name - the menu type name
      * @return menu populated in the dataReader 
 	 */
-	public function getMenu($parentId,$roleId){
+	public function getMenu($parentId,$roleId, $menuType){
 		$dataReader = null;
     	$desc = "get menu by name";
     	try {
@@ -15,15 +15,17 @@ class UserInterface extends CApplicationComponent{
     		/*$sql = "select m.* from tbl_menus m
     		join tlkp_menu_types mt on m.menu_type_id=mt.id
     		where mt.name = :name and m.active = true order by m.order_num asc";*/
-			$sql = "select m.*,mr.role_id from tbl_menus m
-			inner join tbl_menu_role mr on m.id=mr.menu_id
-    		where m.parent_id = :parentId and mr.role_id= :roleId 
-			and m.active = true and mr.active= true
-			order by m.order_num asc";
+			$sql = "select m.*,mr.role_id 
+					from tbl_menus m
+					inner join tbl_menu_role mr on m.id=mr.menu_id
+		    		where m.parent_id = :parentId and mr.role_id= :roleId 
+					and m.active = true and mr.active= true and m.name = :menuTypeId
+					order by m.order_num asc";
 			
     		$cmd = $cnc->createCommand($sql);
     		$cmd->bindParam(":parentId", $parentId, PDO::PARAM_INT);
 			$cmd->bindParam(":roleId", $roleId, PDO::PARAM_INT);
+			$cmd->bindParam(":menuType", $menuType, PDO::PARAM_STR);
     		$dataReader = $cmd->query();
     	} catch(CException $ex) {
     		//$this->_error->insert($ex, $desc);
@@ -99,7 +101,7 @@ class UserInterface extends CApplicationComponent{
 	 * Get top menus
 	 * @return array 
 	 */
-	public function getTopMenu($modName){
+	public function getTopMenu($roleId, $module){
 		$session = Yii::app()->session;
     	$isAuthenticated = (bool)$session->get('is_authenticated');
     	
@@ -109,8 +111,7 @@ class UserInterface extends CApplicationComponent{
     		$fullName 	= $session->get('full_name');
 			$roleId 	= $session->get('roleid');
 			$parentId	= 0;
-    	//$dataReader = $this->getMenu('LEFT_TOP_MENU',$roleId);
-		$dataReader = $this->getMenu($parentId,$roleId);
+		$dataReader = $this->getMenu(0, $roleId, AppConstant::MENU_HORIZONTAL_MENU);
     	$menuArray;
     	if(strlen($fullName) != 0 && $isAuthenticated == true){
     		
@@ -129,21 +130,14 @@ class UserInterface extends CApplicationComponent{
 				$url 		= $row['url'];
 				$tooltip 	= $row['tooltip'];
 				$selected 	= false;
-				$menuInfo  	= Menus::model()->findByAttributes(array('module'=>$modName));
-				$menuId		= $menuInfo->id;
-				//if(isset($_GET['m_id'])){ if($id == $_GET['m_id']) $selected = true;}
-				if($id == $menuId) $selected = true;
+				if($module == $row['descr']) $selected = true;
 				$menuArrayLeft[] = array('label' => $name, 'url'=> Yii::app()->baseUrl.$url, 'active'=>$selected);
 		    }
 			$menuArrayLeft = array('class'=>'bootstrap.widgets.TbMenu', 'items'=>$menuArrayLeft);
 			$menuArray = array($menuArrayLeft,$menuArrayRight);
 		}else{
 			# Interface for user login in web application
-			$menuArray = array('<form id="SignInForm" class="form-inline pull-right" method="post" action="'. Yii::app()->request->baseUrl. '/home/">
-								<input id="SignInForm_username" type="text" name="SignInForm[username]" placeholder="Username">
-								<input id="SignInForm_password" type="password" value="" name="SignInForm[password]" placeholder="Password" autocomplete="off">
-								<button id="yw5" class="btn" name="yt0">Sign In</button>
-						 </form>');
+			$menuArray = array('label'=>'Sign in', 'url' => $this->createUrl('/sec/signin'));
 		}
     	return $menuArray;
 	}	

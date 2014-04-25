@@ -30,4 +30,8 @@ class Controller extends CController
 					array('q'=>'sign_in','auth'=>0,'q_url'=>$url)));
 		}
 	}
+	
+	public function getMenu(){
+		
+	}
 }

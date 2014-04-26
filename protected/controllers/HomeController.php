@@ -73,5 +73,10 @@ class HomeController extends Controller{
         }
 		$this->render('signIn', array('signInForm' => $signInForm));
 	}
+
+	public function actionSignOut(){
+		Yii::app()->session->clear();
+    	$this->redirect($this->createUrl('/home/?q=sign_in&sign_out=1'));
+	}
 }
 ?>

@@ -16,8 +16,8 @@ class UserInterface extends CApplicationComponent{
 					from menus m
 					inner join menu_roles mr on m.id = mr.menu_id
 					inner join menu_types mt on m.menu_type_id = mt.id
-		    		where m.parent_id = :parentId and mr.role_id= :roleId 
-					and m.active = true and mr.active= true and m.name = :menuType
+		    		where m.parent_id = :parentId and mr.role_id in (:roleId) 
+					and m.active = true and mr.active= true and mt.name = :menuType
 					order by m.order_num asc";
 			
     		$cmd = $cnc->createCommand($sql);
@@ -30,76 +30,12 @@ class UserInterface extends CApplicationComponent{
     	}
     	return $dataReader;
 	}
-	
-	
-	public function getMenuNode($menuId){
-		$dataReader = null;
-    	$desc = "get menu nodes by menu ID";
-    	try {
-    		$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$sql = "select mn.* from tbl_menu_nodes mn
-    		join tbl_menus m on mn.menu_id=m.id
-    		where mn.menu_id = :menuId and mn.active = true order by mn.order_num asc";
-    		$cmd = $cnc->createCommand($sql);
-    		$cmd->bindParam(":menuId", $menuId, PDO::PARAM_INT);
-    		$dataReader = $cmd->query();
-    	} catch(CException $ex) {
-    		$this->_error->insert($ex, $desc);
-    	}
-    	return $dataReader;
-	}
-		
-	/*
-	 * Get Menu Child Node by MenuNodeID 
-	 * @param interger $mNodeId 
-     * @return menu child nodes populated in the dataReader 
-	 */
-	public function getMenuChildNode($mNodeId){
-		$dataReader = null;
-    	$desc = "get menu child nodes by menu node ID";
-    	try {
-    		$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$sql = "select mcn.* from tbl_menu_child_nodes mcn
-    		join tbl_menu_nodes mn on mcn.menu_node_id=mn.id
-    		where mcn.menu_node_id = :mNodeId and mn.active = true order by mcn.order_num asc";
-    		$cmd = $cnc->createCommand($sql);
-    		$cmd->bindParam(":mNodeId", $mNodeId, PDO::PARAM_INT);
-    		$dataReader = $cmd->query();
-    	} catch(CException $ex) {
-    		$this->_error->insert($ex, $desc);
-    	}
-    	return $dataReader;
-	}
-	/*
-	 * Get Sub Menu Child Node by MenuChildNodeID 
-	 * @param interger $mChNodeId 
-     * @return sub menu child nodes populated in the dataReader 
-	 */
-	public function getSubMenuChildNode($mChNodId){
-		$dataReader = null;
-    	$desc = "get sub menu child nodes by menu child node ID";
-    	try {
-    		$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$sql = "select a.* from tbl_sub_menu_child_nodes a
-    		join tbl_menu_child_nodes b on a.menu_ch_node_id=b.id
-    		where a.menu_ch_node_id = :mChNodeId and a.active = true order by a.order_num asc";
-			$cmd = $cnc->createCommand($sql);
-    		$cmd->bindParam(":mChNodeId", $mChNodId, PDO::PARAM_INT);
-    		$dataReader = $cmd->query();
-    	} catch(CException $ex) {
-    		$this->_error->insert($ex, $desc);
-    	}
-    	return $dataReader;
-	}
-	
+
 	/**
 	 * Get top menus
 	 * @return array 
 	 */
-	public function getTopMenu($roleId, $module){
+	public function getTopMenu($module){
 		$session = Yii::app()->session;
 		
     	$isAuthenticated = (bool)$session->get('is_authenticated');
@@ -129,7 +65,8 @@ class UserInterface extends CApplicationComponent{
 				$tooltip 	= $row['tooltip'];
 				$selected 	= false;
 				if($module == $row['descr']) $selected = true;
-				$menuArrayLeft[] = array('label' => $name, 'url'=> Yii::app()->baseUrl.$url, 'active'=>$selected);
+				$menuArrayLeft[] = array('label' => $name, 'url'=> Yii::app()->baseUrl.$url, 'active'=>$selected,
+									'items' => $this->getSubHorizontalMenu($id, 1, ""));
 		    }
 			$menuArrayLeft = array('class'=>'bootstrap.widgets.TbMenu', 'items'=>$menuArrayLeft);
 			$menuArray = array($menuArrayLeft,$menuArrayRight);
@@ -143,6 +80,15 @@ class UserInterface extends CApplicationComponent{
     	return $menuArray;
 	}	
 	
+	
+	public function getSubHorizontalMenu($parentId, $roleId, $selected){
+		$dataReader = $this->getMenu($parentId, $roleId, AppConstant::MENU_SUB_HORIZONTAL_MENU);
+		$arr = array();
+		foreach($dataReader as $row){
+			$arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>Yii::app()->baseUrl.$row['url']);
+		}
+		return $arr;
+	}
 
  /* Get left menu
   * @return array 

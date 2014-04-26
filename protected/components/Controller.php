@@ -36,6 +36,6 @@ class Controller extends CController
 		$module = null;
 		if(isset($this->module))
 			$module = $this->module->getName();
-		return $ui->getTopMenu(0, $module);
+		return $ui->getTopMenu($module);
 	}
 }

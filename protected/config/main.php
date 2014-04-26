@@ -101,12 +101,12 @@ return array(
 		'session' => array (
 				//'sessionName' => 'possession',
 				'class'=> 'CDbHttpSession',
-				//'autoCreateSessionTable'=> false,
+				'autoCreateSessionTable'=> false,
 				'connectionID' => 'db',
 				'sessionTableName' => 'yii_sessions',
-				//'autoStart' => true,
-				//'cookieMode' => 'only',
-				//'timeout' => 1800, // 1800/60 = 30 minutes; timeout is in seconds
+				'autoStart' => true,
+				'cookieMode' => 'only',
+				'timeout' => 1800, // 1800/60 = 30 minutes; timeout is in seconds
 		),
 		
 		'errorHandler'=>array(

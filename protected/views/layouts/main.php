@@ -23,28 +23,7 @@
 		    'fixed' =>'top',
 		    'fluid'=>true,
 		    'htmlOptions'=>array('class' =>'header'),
-		    'items'=> $this->getTopMenu()/*array(
-				array(
-					'class'=>'bootstrap.widgets.TbMenu',
-					'items'=>array(
-						array('label'=>'Home', 'url' => '#', 'active' => true),
-						*//*array('label'=>'Staff', 'url'=>'#', 'items'=>array(
-							array('label'=>'Employee Management','icon'=>'home', 'url'=>'#'),
-							array('label'=>'Leve Management', 'icon'=>'calendar', 'url'=>'#'),
-							array('label'=>'Mission Management', 'icon'=>'ok','url'=>'#'),
-							array('label'=>'User Management','icon'=>'user', 'url'=>'#'),
-						)),*/
-				//	),
-			//	),*/
-			/*	array(
-					'class'=>'bootstrap.widgets.TbMenu',
-					'htmlOptions' => array('class' => 'pull-right'),
-					'items'=>array(
-						array('label'=>'Sign in', 'url' => $this->createUrl('/sec/signin'))
-					),
-				),	       
-		    ),*/
-		    
+		    'items'=> $this->getTopMenu()
 		)); ?>
 	
 	<!--End header-->

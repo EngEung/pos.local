@@ -13,7 +13,7 @@ class HomeController extends Controller{
             if ($signInForm->validate()) {
                 $sec = new Security();
                 $flag = $sec->signIn($signInForm->username, $signInForm->password);
-                //$timeToLive = $signInForm->rememberMe == '1' ? 604800 : 0; 
+                $timeToLive = $signInForm->rememberMe == '1' ? 604800 : 0; 
                 $session = new CDbHttpSession();
                 //$session->getTimeout($timeToLive);
                 $session['message'] = $sec->getMessage();

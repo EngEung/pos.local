@@ -37,7 +37,8 @@ return array(
 		),
 		*/
 		'saleOrder',
-		'setup'
+		'setup',
+		'dashboard',
 	),
 
 	// application components
@@ -98,14 +99,14 @@ return array(
 		*/
 		// Yii session
 		'session' => array (
-				'sessionName' => 'hrmsession',
+				//'sessionName' => 'possession',
 				'class'=> 'CDbHttpSession',
-				'autoCreateSessionTable'=> true,
+				//'autoCreateSessionTable'=> false,
 				'connectionID' => 'db',
 				'sessionTableName' => 'yii_sessions',
-				'autoStart' => true,
-				'cookieMode' => 'only',
-				'timeout' => 1800, // 1800/60 = 30 minutes; timeout is in seconds
+				//'autoStart' => true,
+				//'cookieMode' => 'only',
+				//'timeout' => 1800, // 1800/60 = 30 minutes; timeout is in seconds
 		),
 		
 		'errorHandler'=>array(

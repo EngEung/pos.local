@@ -11,4 +11,11 @@ The action belongs to the controller "<?php echo get_class($this); ?>" in the "<
 </p>
 <p>
 You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p> 
+</p>
+
+<?php 
+var_dump(Yii::app()->session['flag']);
+var_dump(23);
+$authenticated=(bool)Yii::app()->session->get('is_authenticated');
+var_dump($authenticated);
+?>

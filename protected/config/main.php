@@ -37,7 +37,8 @@ return array(
 		),
 		*/
 		'saleOrder',
-		'setup'
+		'setup',
+		'dashboard',
 	),
 
 	// application components
@@ -98,9 +99,9 @@ return array(
 		*/
 		// Yii session
 		'session' => array (
-				'sessionName' => 'hrmsession',
+				//'sessionName' => 'possession',
 				'class'=> 'CDbHttpSession',
-				'autoCreateSessionTable'=> true,
+				'autoCreateSessionTable'=> false,
 				'connectionID' => 'db',
 				'sessionTableName' => 'yii_sessions',
 				'autoStart' => true,

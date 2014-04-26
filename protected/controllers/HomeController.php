@@ -16,9 +16,9 @@ class HomeController extends Controller{
                 $timeToLive = $signInForm->rememberMe == '1' ? 604800 : 0; 
                 $session = new CDbHttpSession();
                 //$session->getTimeout($timeToLive);
-                $session['message'] = $sec->getMessage();
+                //$session['message'] = $sec->getMessage();
                 Yii::app()->user->setFlash('auth_message', $sec->getMessage());
-					$session['flag'] = $flag;
+				Yii::app()->session['flag'] = $flag;
                 if ($flag==1) {
                 	$session['first_name'] = $sec->getFirstName();
                 	$session['last_name'] = $sec->getLastName();
@@ -28,7 +28,7 @@ class HomeController extends Controller{
                     if (isset($_GET['q_url']))
                     	  $this->redirect($this->createUrl($_GET['q_url']));
      			    else 
-                   		$this->redirect($this->createUrl('/setup/'));
+                   		$this->redirect($this->createUrl('/dashboard/'));
                 } else {
                     $this->refresh();
                 }
@@ -72,6 +72,11 @@ class HomeController extends Controller{
             }
         }
 		$this->render('signIn', array('signInForm' => $signInForm));
+	}
+
+	public function actionSignOut(){
+		Yii::app()->session->clear();
+    	$this->redirect($this->createUrl('/home/?q=sign_in&sign_out=1'));
 	}
 }
 ?>

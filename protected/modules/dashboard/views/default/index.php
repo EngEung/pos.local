@@ -11,4 +11,4 @@ The action belongs to the controller "<?php echo get_class($this); ?>" in the "<
 </p>
 <p>
 You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p> 
+</p>

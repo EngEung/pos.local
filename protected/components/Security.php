@@ -746,9 +746,9 @@ class Security extends CApplicationComponent {
 					break;			
 				case 1: {
 					$msg = "You have signed in successfully.";
-					if ($this->_isAdmin) 
-						$this->_admin_authenticated = true;
-					else 
+					//if ($this->_isAdmin) 
+					//	$this->_admin_authenticated = true;
+					//else 
 						$this->_authenticated = true;
 					break;
 				}

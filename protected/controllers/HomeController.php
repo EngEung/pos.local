@@ -25,6 +25,7 @@ class HomeController extends Controller{
                 	$session['full_name'] = $sec->getFullName();
                 	$session['is_authenticated'] = $sec->getIsAuthenticated();
                 	$session['guid'] = $sec->getGuid();
+					$session['roles'] = $sec->getRoles();
                     if (isset($_GET['q_url']))
                     	  $this->redirect($this->createUrl($_GET['q_url']));
      			    else 

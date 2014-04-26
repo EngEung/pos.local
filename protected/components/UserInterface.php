@@ -43,9 +43,9 @@ class UserInterface extends CApplicationComponent{
     	
     	if($isAuthenticated){
     		$fullName 	= $session->get('full_name');
-			$roleId = $session->get('roleid');
+			$roleIds = $session->get('roles');
 		}
-		$dataReader = $this->getMenu(0, 1, AppConstant::MENU_HORIZONTAL_MENU);
+		$dataReader = $this->getMenu(0, $roleIds, AppConstant::MENU_HORIZONTAL_MENU);
     	$menuArray = array();
     	if(strlen($fullName) != 0 && $isAuthenticated == true){
     		
@@ -66,7 +66,7 @@ class UserInterface extends CApplicationComponent{
 				$selected 	= false;
 				if($module == $row['descr']) $selected = true;
 				$menuArrayLeft[] = array('label' => $name, 'url'=> Yii::app()->baseUrl.$url, 'active'=>$selected,
-									'items' => $this->getSubHorizontalMenu($id, 1, ""));
+									'items' => $this->getSubHorizontalMenu($id, $roleIds, ""));
 		    }
 			$menuArrayLeft = array('class'=>'bootstrap.widgets.TbMenu', 'items'=>$menuArrayLeft);
 			$menuArray = array($menuArrayLeft,$menuArrayRight);

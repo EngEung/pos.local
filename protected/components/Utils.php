@@ -135,8 +135,27 @@ class Utils extends CApplicationComponent {
        return strlen($formattedPhoneNum) > 0 ? $formattedPhoneNum : $phoneNum;
    }
    
-   public static function getConstantValue($constName) {
+   public static function getConstantValue($constName){
    		return defined($constName) ? constant($constName) : null;
+   }
+   
+   /**
+    * http://www.yiiframework.com/wiki/425
+    * Salted Password with crypt php buildin function
+    */
+   public static function createSaltedPassword($psswd){
+   	   $salt = openssl_random_pseudo_bytes(22);
+	   $salt = '$2b$%13$' . strtr($salt, array('_' => '.', '~' => '/'));
+	   $password_hash = crypt($psswd, $salt);
+	   return $password_hash;
+   }
+   
+   /**
+    * http://www.yiiframework.com/wiki/425
+    * Salted Password with crypt php buildin function
+    */
+   public static function getSaltedPasswd($passwd){
+   	return crypt($passwd, self::createSaltedPassword($passwd));
    }
 }
 

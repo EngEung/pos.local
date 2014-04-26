@@ -21,6 +21,11 @@ class Security extends CApplicationComponent {
 	 private $_admin_authenticated = false;
 	 private $_error;
 	 private $_isAdmin = false;
+	 private $_roles;
+	 
+	 public function getRoles(){
+	 	return $this->_roles;
+	 }
 	 
 	 public function getIsAdmin() {
 	 	return $this->_isAdmin;
@@ -306,7 +311,7 @@ class Security extends CApplicationComponent {
 		  		'email' => strtolower($email),
 		  		'username' => strtolower(substr($email, 0, strpos($email, '@'))),
 		  		'passwd' => md5($passwd),
-		  		'salted_passwd' => md5($passwd.$now),
+		  		'salted_passwd' => Utils::createSaltedPassword(md5($passwd)),
 		  		'person_id' => $person->id, 
 		  		'validation_code' => Utils::createGuid(false),
 		  		'guid' => Utils::createGuid(false),
@@ -519,6 +524,7 @@ class Security extends CApplicationComponent {
 		try {
 			$criteria = new CDbCriteria();
 			$criteria->condition = 'passwd=md5(:passwd) and (email = :username or username = :username)'; 
+			//$criteria->condition = 'salted_passwd=:passwd and (email = :username or username = :username)';
 			$criteria->params = array(':passwd'=>$passwd,':username'=>$username);
 			$user=Users::model()->find($criteria);
             $comments .= "attempt to unlock the locked account that has no attempt in the last 15 minutes\n";
@@ -558,6 +564,7 @@ class Security extends CApplicationComponent {
             	$this->_guid = $user->guid;
             	$this->_validated = $user->validated;
             	$this->_locked = $user->locked;
+				$this->_roles = $this->getRolesToString($user->id);
             	$person = People::model()->findByAttributes(array('id' => $user->person_id));
             	if ($person != null) {
             		$this->_firstName = ucfirst($person->first_name);
@@ -1077,6 +1084,28 @@ class Security extends CApplicationComponent {
         else 
             return null;
     }
+
+	public function getRolesByUserId($userId){
+		try{
+			return UserRoles::model()->findAll(
+			 array('condition' => 'user_id = :userId ',
+			 		'params' => array(':userId' => $userId)
+			 )
+			);
+		}catch(CExecption $e){
+			echo($e);
+		}
+	}
+	
+	public function getRolesToString($userId){
+		$dataReader = $this->getRolesByUserId($userId);
+		$str = "";
+		foreach($dataReader  as $row){
+			$str .="$row->role_id, ";
+		}
+		$str = substr($str, 0, -2);
+		return $str;
+	}
 }
 
 

@@ -35,12 +35,12 @@ class UserInterface extends CApplicationComponent{
 	 * Get top menus
 	 * @return array 
 	 */
-	public function getTopMenu($module){
+	public function getTopMenu($moduleSelected = null, $controllerSelected = null){
 		$session = Yii::app()->session;
 		
     	$isAuthenticated = (bool)$session->get('is_authenticated');
     	$fullName = '';
-    	
+    	$roleIds = 0;
     	if($isAuthenticated){
     		$fullName 	= $session->get('full_name');
 			$roleIds = $session->get('roles');
@@ -64,9 +64,9 @@ class UserInterface extends CApplicationComponent{
 				$url 		= $row['url'];
 				$tooltip 	= $row['tooltip'];
 				$selected 	= false;
-				if($module == $row['descr']) $selected = true;
+				if($moduleSelected == $row['descr']) $selected = true;
 				$menuArrayLeft[] = array('label' => $name, 'url'=> Yii::app()->baseUrl.$url, 'active'=>$selected,
-									'items' => $this->getSubHorizontalMenu($id, $roleIds, ""));
+									'items' => $this->getSubHorizontalMenu($id, $roleIds, $controllerSelected));
 		    }
 			$menuArrayLeft = array('class'=>'bootstrap.widgets.TbMenu', 'items'=>$menuArrayLeft);
 			$menuArray = array($menuArrayLeft,$menuArrayRight);
@@ -84,8 +84,11 @@ class UserInterface extends CApplicationComponent{
 	public function getSubHorizontalMenu($parentId, $roleId, $selected){
 		$dataReader = $this->getMenu($parentId, $roleId, AppConstant::MENU_SUB_HORIZONTAL_MENU);
 		$arr = array();
+		$help = false;
 		foreach($dataReader as $row){
-			$arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>Yii::app()->baseUrl.$row['url']);
+			if($selected == $row['descr'])
+				$help = true;
+			$arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>Yii::app()->baseUrl.$row['url'], 'active'=>$help);
 		}
 		return $arr;
 	}

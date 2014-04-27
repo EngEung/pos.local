@@ -36,6 +36,8 @@ class Controller extends CController
 		$module = null;
 		if(isset($this->module))
 			$module = $this->module->getName();
-		return $ui->getTopMenu($module);
+		# get controller name
+		$controller = get_class($this);
+		return $ui->getTopMenu($module, $controller);
 	}
 }

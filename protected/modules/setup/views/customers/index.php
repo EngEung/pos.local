@@ -16,7 +16,7 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/ajaxupload/style/style.css', CClientScript::POS_HEAD);
 	
 ?>
-
+<?php echo $this->uniqueId . '/' . $this->action->id; ?>
 <div style="margin-bottom:10px">
 		<!--
 		<a href="#" class="easyui-linkbutton" onclick="addTab('General','<?php echo $this->createUrl('create')?>')">google</a>

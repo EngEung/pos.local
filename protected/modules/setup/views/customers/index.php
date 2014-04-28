@@ -20,6 +20,8 @@
 <table id="dg"></table>
 
 <script>
+
+addTab('New Customer','/pos.local/setup/customers/create/');
 	/** easyui gridView Javascript */
 dg.datagrid({
 	title:'Education',
@@ -47,5 +49,4 @@ dg.datagrid({
 	]]
 });
 
-	
 </script>

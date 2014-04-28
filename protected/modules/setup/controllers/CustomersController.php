@@ -1,10 +1,8 @@
 <?php
 class CustomersController extends Controller{
 	
-	
-	
 	public function actionIndex(){
-		$this->layout = '//layouts/setup_layout';	
+		$this->layout = '//layouts/setup_layout_column1';	
 		$this->render('index');
 	}
 	

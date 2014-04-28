@@ -40,4 +40,12 @@ class Controller extends CController
 		$controller = get_class($this);
 		return $ui->getTopMenu($module, $controller);
 	}
+	
+	public function getLeftMenu(){
+		$ui = new UserInterface();
+		# get controller name
+		$controller = get_class($this);
+		$view = Yii::app()->controller->action->id;
+		return $ui->getLeftVerticalMenu($controller, $view);
+	}
 }

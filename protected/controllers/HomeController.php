@@ -27,7 +27,7 @@ class HomeController extends Controller{
                 	$session['guid'] = $sec->getGuid();
 					$session['roles'] = $sec->getRoles();
                     if (isset($_GET['q_url']))
-                    	  $this->redirect($this->createUrl($_GET['q_url']));
+                    	  $this->redirect($_GET['q_url']);
      			    else 
                    		$this->redirect($this->createUrl('/dashboard/'));
                 } else {

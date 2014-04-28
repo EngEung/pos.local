@@ -12,7 +12,7 @@ class UserInterface extends CApplicationComponent{
     	try {
     		$cnc = Yii::app()->db;
     		$cmd = new CDbCommand($cnc);
-			$sql = "select m.*,mr.role_id 
+			$sql = "select DISTINCT m.*,mr.role_id 
 					from menus m
 					inner join menu_roles mr on m.id = mr.menu_id
 					inner join menu_types mt on m.menu_type_id = mt.id
@@ -96,52 +96,31 @@ class UserInterface extends CApplicationComponent{
  /* Get left menu
   * @return array 
   */
-	public function getLeftMenu($parentId,$roleId){
-		$menuname 	  = Menus::model()->findByPk($parentId);
-		$module_name  = $menuname->module;
+	public function getLeftVerticalMenu($descr = null, $selected = null){
+		$session = Yii::app()->session;	
+		$model = Menus::model()->findByAttributes(array('descr'=> $descr));
 		$menu = array();
-		$menu[] 	= array(
-						      'name' => $menuname->name,
-						      'link' => '#',
-						      'class' =>'header_side_bar'
-				    		);
-		$dataReader = $this->getMenu($parentId,$roleId);
-		foreach($dataReader as $row){
-			$name 		= $row['name'];
-			$url 		= $row['url'];
-			if($module_name=="staff"){
-				$url = $url;
+		if($model != null){
+			$isAuthenticated = (bool)$session->get('is_authenticated');
+	    	$roleIds = 0;
+	    	if($isAuthenticated){
+				$roleIds = $session->get('roles');
 			}
-			else{
-				$url = Yii::app()->baseUrl.$url;
+			$dataReader = $this->getMenu($model->id, $roleIds, AppConstant::MENU_VERTICAL_MENU);
+			foreach($dataReader as $row){
+				$help = '';
+				if($row['descr'] == $selected)
+					$help = 'active'; 
+				$menu[] = array(
+							    'label' => $row['name'],
+							    'url' => "javascript:addTab('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');",
+							    'itemOptions' => array('class' => $help)
+							);
 			}
-			$icon 		= $row['icon_url'];
-			$mNodeId 	= $row['id'];
-			$submenu 	= NULL;
-			$dataReader1 = $this->getMenu($mNodeId,$roleId);
-			if(count($dataReader1)>0){
-				foreach($dataReader1 as $row1){
-				$mcnName 	= $row1['name'];
-				$mcnUrl  	= $row1['url'];
-				$submenu[] = array(
-			          'name' => $mcnName,
-			          'link' => Yii::app()->baseUrl.$mcnUrl,
-					  'icon' => 'list',
-			          'active' => 'documentation/feature',
-			        );
-				}
-			}
-		
-			$menu[] = array(
-				      		'name' => $name,
-				      		'link' => $url, 
-				      		'icon' => $icon,
-				      		'active' => 'Profile',  
-							'sub'=>$submenu
-						);
 		}
 		return $menu;
 	}
+	
 	public function getTabMenu($parentId,$menuId,$roleId,$empId){
 		$dataReader = $this->getMenu($parentId,$roleId);
 		$menu = array();

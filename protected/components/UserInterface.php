@@ -96,48 +96,14 @@ class UserInterface extends CApplicationComponent{
  /* Get left menu
   * @return array 
   */
-	public function getLeftMenu($parentId,$roleId){
-		$menuname 	  = Menus::model()->findByPk($parentId);
-		$module_name  = $menuname->module;
-		$menu = array();
-		$menu[] 	= array(
-						      'name' => $menuname->name,
-						      'link' => '#',
-						      'class' =>'header_side_bar'
-				    		);
+	public function getLeftVerticalMenu($parentId,$roleId, $selected){
+		
 		$dataReader = $this->getMenu($parentId,$roleId);
 		foreach($dataReader as $row){
-			$name 		= $row['name'];
-			$url 		= $row['url'];
-			if($module_name=="staff"){
-				$url = $url;
-			}
-			else{
-				$url = Yii::app()->baseUrl.$url;
-			}
-			$icon 		= $row['icon_url'];
-			$mNodeId 	= $row['id'];
-			$submenu 	= NULL;
-			$dataReader1 = $this->getMenu($mNodeId,$roleId);
-			if(count($dataReader1)>0){
-				foreach($dataReader1 as $row1){
-				$mcnName 	= $row1['name'];
-				$mcnUrl  	= $row1['url'];
-				$submenu[] = array(
-			          'name' => $mcnName,
-			          'link' => Yii::app()->baseUrl.$mcnUrl,
-					  'icon' => 'list',
-			          'active' => 'documentation/feature',
-			        );
-				}
-			}
-		
-			$menu[] = array(
-				      		'name' => $name,
-				      		'link' => $url, 
-				      		'icon' => $icon,
-				      		'active' => 'Profile',  
-							'sub'=>$submenu
+			$arr[] = array(
+						    'label' => $row['name'],
+						    'url' => "javascript:addTab('{$row['name']}',". Yii::app()->baseUrl.$row['url'] .");",
+						    'itemOptions' => array('class' => 'active')
 						);
 		}
 		return $menu;

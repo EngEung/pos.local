@@ -24,7 +24,36 @@
 		</div>
 <div id="cc" class="easyui-layout" style="width:1200px;height:500px;">
    <!-- <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>-->
-    <div data-options="region:'west',title:'Managin Customers',split:true" style="width:200px;"></div>
+    <div data-options="region:'west',title:'Managin Customers',split:true" style="width:200px;">
+    	<?php $this->widget('bootstrap.widgets.TbMenu',array(
+    		'type' => 'list',
+    		'items' => array(
+    					array(
+						    'label' => 'List header',
+						    'itemOptions' => array('class' => 'nav-header')
+						),
+    					array(
+						    'label' => 'Home',
+						    'url' => '#',
+						    'itemOptions' => array('class' => 'active')
+						),
+   						array('label' => 'Library', 'url' => '#'),
+					    array('label' => 'Applications', 'url' => '#', 'htmlOptions'=>array('onclick' => 'application();')),
+					    array(
+						    'label' => 'Another list header',
+						    'itemOptions' => array('class' => 'nav-header')
+					    ),
+					    array('label' => 'Profile', 'url' => '#'),
+					    array('label' => 'Settings', 'url' => '#'),
+					    '',
+					    array('label' => 'Help', 'url' => '#'),
+    	)));
+    	
+    ?>
+    	
+    	
+    	
+    </div>
     <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
     	<div id="tt" class="easyui-tabs" style="width:auto;height:480px;">
 			
@@ -45,4 +74,8 @@
 				});
 			}
 		}
-	</script>
+		
+		function application(){
+			alert('dsafd');
+		}
+</script>

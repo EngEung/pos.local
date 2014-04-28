@@ -12,7 +12,7 @@ class UserInterface extends CApplicationComponent{
     	try {
     		$cnc = Yii::app()->db;
     		$cmd = new CDbCommand($cnc);
-			$sql = "select m.*,mr.role_id 
+			$sql = "select DISTINCT m.*,mr.role_id 
 					from menus m
 					inner join menu_roles mr on m.id = mr.menu_id
 					inner join menu_types mt on m.menu_type_id = mt.id
@@ -96,18 +96,31 @@ class UserInterface extends CApplicationComponent{
  /* Get left menu
   * @return array 
   */
-	public function getLeftVerticalMenu($parentId,$roleId, $selected){
-		
-		$dataReader = $this->getMenu($parentId,$roleId);
-		foreach($dataReader as $row){
-			$arr[] = array(
-						    'label' => $row['name'],
-						    'url' => "javascript:addTab('{$row['name']}',". Yii::app()->baseUrl.$row['url'] .");",
-						    'itemOptions' => array('class' => 'active')
-						);
+	public function getLeftVerticalMenu($descr = null, $selected = null){
+		$session = Yii::app()->session;	
+		$model = Menus::model()->findByAttributes(array('descr'=> $descr));
+		$menu = array();
+		if($model != null){
+			$isAuthenticated = (bool)$session->get('is_authenticated');
+	    	$roleIds = 0;
+	    	if($isAuthenticated){
+				$roleIds = $session->get('roles');
+			}
+			$dataReader = $this->getMenu($model->id, $roleIds, AppConstant::MENU_VERTICAL_MENU);
+			foreach($dataReader as $row){
+				$help = '';
+				if($row['descr'] == $selected)
+					$help = 'active'; 
+				$menu[] = array(
+							    'label' => $row['name'],
+							    'url' => "javascript:addTab('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');",
+							    'itemOptions' => array('class' => $help)
+							);
+			}
 		}
 		return $menu;
 	}
+	
 	public function getTabMenu($parentId,$menuId,$roleId,$empId){
 		$dataReader = $this->getMenu($parentId,$roleId);
 		$menu = array();

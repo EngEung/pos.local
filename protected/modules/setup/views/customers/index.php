@@ -16,62 +16,36 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/ajaxupload/style/style.css', CClientScript::POS_HEAD);
 	
 ?>
-<?php $baseUrl = $this->createUrl('create');?>
-<div style="margin-bottom:10px">
-<!--
-		<a href="#" class="easyui-linkbutton" onclick="addTab('General','<?php echo $this->createUrl('create')?>')">google</a>
-		-->
-		</div>
-<div id="cc" class="easyui-layout" style="width:1200px;height:500px;">
-   <!-- <div data-options="region:'east',title:'East',split:true" style="width:100px;"></div>-->
-    <div data-options="region:'west',title:'Managin Customers',split:true" style="width:200px;">
-    	<?php $this->widget('bootstrap.widgets.TbMenu',array(
-    		'type' => 'list',
-    		'items' => array(
-    					array(
-						    'label' => 'Home',
-						    'url' => '#',
-						    'itemOptions' => array('class' => 'active')
-						),
-   						array('label' => 'Library', 'url' => '#'),
-					    array('label' => 'Applications', 'url' => "javascript:addTab('General', '$baseUrl')"),
-					    array(
-						    'label' => 'Another list header',
-						    'itemOptions' => array('class' => 'nav-header')
-					    ),
-					    array('label' => 'Profile', 'url' => '#'),
-					    array('label' => 'Settings', 'url' => '#'),
-					    '',
-					    array('label' => 'Help', 'url' => '#'),
-    	)));
-    	
-    ?>
-    	
-    	
-    	
-    </div>
-    <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
-    	<div id="tt" class="easyui-tabs" style="width:auto;height:480px;">
-			
-		</div>
-    </div>
-</div>
+
+<table id="dg"></table>
 
 <script>
-		function addTab(title, url){
-			if ($('#tt').tabs('exists', title)){
-				$('#tt').tabs('select', title);
-			} else {
-				var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
-				$('#tt').tabs('add',{
-					title:title,
-					content:content,
-					closable:true
-				});
+	/** easyui gridView Javascript */
+dg.datagrid({
+	title:'Education',
+	height:200,
+	singleSelect:true,
+	nowrap:false,
+	fitColumns:true,
+	url:<?php echo "'".$this->createUrl('getCustomerLists')."'"?>,
+	toolbar: '#tb',
+	idField: 'id',		
+	pagination: true,
+	rownumbers: true,
+	scrollbarSize: 5,
+	columns:[[
+		{title:"ID",field:"id",width:5,sortable:true},
+			formatter: function(value,row,index){
+				if(value != null){
+					var url = <?php echo "'".$this->createUrl('/staff/empEducation/viewFile/?id=')."'";?>;
+					return '<a target="_blank" id="file_link" href="'+url+row.file_id+'"><i class="icon-file"> </i></a>';
+				}else{
+					return 'N/A';
+				}
 			}
 		}
-		
-		function application(){
-			alert('dsafd');
-		}
+	]]
+});
+
+	
 </script>

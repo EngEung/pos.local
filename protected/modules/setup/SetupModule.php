@@ -13,7 +13,8 @@ class SetupModule extends CWebModule
 			'setup.components.*',
 		));
 	}
-
+	
+	public $layout= '//layouts/setup_layout_column1';
 	public function beforeControllerAction($controller, $action)
 	{
 		if(parent::beforeControllerAction($controller, $action))

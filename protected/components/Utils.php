@@ -157,6 +157,44 @@ class Utils extends CApplicationComponent {
    public static function getSaltedPasswd($passwd){
    	return crypt($passwd, self::createSaltedPassword($passwd));
    }
+   
+   
+   
+   /**
+	 * Applies LIMIT, OFFSET and ORDER to the specified query criteria.
+	 * @param CDbCriteria $criteria The query criteria that should be applied restrictions
+	 * @param CActiveRecord $model The model that will execute criteria 
+	 */
+	protected function prepareList()
+	{
+		$params = array();
+		if (isset($_REQUEST['rows']))
+		{
+			$limit = $_REQUEST['rows'];
+			$params = array('limit' => $limit, 'offset' => ($_REQUEST['page']-1) * limit);
+		}
+	
+		if (isset($_REQUEST['sort']))
+		{
+			$sort = $_REQUEST['sort'];
+			$direction = (isset($_REQUEST['order'])) ? $_REQUEST['order'] : "";
+			$params['order'] = $sort .' '. $direction;
+		}
+		return $params; 
+	}
+	
+	public function exprotData($sql){
+		if($sql == null) return null;
+		$data = null;
+		try{
+			
+		}catch(CException $e){
+			echo $e;
+		}	
+		
+		return data;
+	}
+	
 }
 
 

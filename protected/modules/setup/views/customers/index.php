@@ -17,36 +17,9 @@
 	
 ?>
 
-<table id="dg"></table>
+
 
 <script>
 
-addTab('New Customer','/pos.local/setup/customers/create/');
-	/** easyui gridView Javascript */
-dg.datagrid({
-	title:'Education',
-	height:200,
-	singleSelect:true,
-	nowrap:false,
-	fitColumns:true,
-	url:<?php echo "'".$this->createUrl('getCustomerLists')."'"?>,
-	toolbar: '#tb',
-	idField: 'id',		
-	pagination: true,
-	rownumbers: true,
-	scrollbarSize: 5,
-	columns:[[
-		{title:"ID",field:"id",width:5,sortable:true},
-			formatter: function(value,row,index){
-				if(value != null){
-					var url = <?php echo "'".$this->createUrl('/staff/empEducation/viewFile/?id=')."'";?>;
-					return '<a target="_blank" id="file_link" href="'+url+row.file_id+'"><i class="icon-file"> </i></a>';
-				}else{
-					return 'N/A';
-				}
-			}
-		}
-	]]
-});
 
 </script>

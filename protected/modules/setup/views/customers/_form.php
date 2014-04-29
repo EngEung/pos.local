@@ -53,7 +53,7 @@
 		<br/>
 		<span style="margin-left:25px; color: #003BB3; font-weight: bold;">Customer Options</span><hr style="margin:-8px 0 0 140px;">
 		<br />
-		 <?php echo $form->radioButtonListRow($model,'customerTypeId',$model->customerTypes, array('labelOptions'=>array('style'=> 'display:none;'), 'divOptions'=>array('class'=>'div-customer-type'))); ?>
+		 <?php echo $form->radioButtonListRow($model,'customerTypeId',$model->customerTypes, array('labelOptions'=>array('style'=> 'display:none;'), 'separator'=>'  ', 'divOptions'=>array('class'=>'div-customer-type'))); ?>
 		
 		<span style="margin-left:25px; color: #003BB3; font-weight: bold;">Note</span><hr style="margin:-8px 0 0 60px;">
 		<br />

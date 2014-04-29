@@ -8,7 +8,7 @@ class CustomersController extends Controller{
 	
 	public function actionGetCustomerLists(){
 		$cp = new CustomerProcess;
-		$lists = $cp->getCustomerLists();
+		$lists = $cp->exportData();
 		echo CJSON::encode($lists);
 	}
 	

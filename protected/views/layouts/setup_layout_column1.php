@@ -16,7 +16,9 @@
 				    </div>
 				    <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
 				    	<div id="tt" class="easyui-tabs" style="width:auto;height:480px;">
-							
+							<div title="Customer Lists">
+								<table id="dg"></table>
+							</div>
 						</div>
 				    </div>
 				</div>
@@ -27,6 +29,26 @@
 </div><!-- content -->
 <?php $this->endContent(); ?>
 <script>
+
+	/** easyui gridView Javascript */
+	dg = $("#dg");
+	dg.datagrid({
+		title:'',
+		height:200,
+		singleSelect:true,
+		nowrap:false,
+		fitColumns:true,
+		url:<?php echo "'".$this->createUrl('getCustomerLists')."'"?>,
+		toolbar: '#tb',
+		idField: 'id',		
+		pagination: true,
+		rownumbers: true,
+		scrollbarSize: 5,
+		columns:[[
+			{title:"ID",field:"id",width:5,sortable:true}
+		]]
+	});
+
 	function addTab(title, url){
 		if ($('#tt').tabs('exists', title)){
 			$('#tt').tabs('select', title);

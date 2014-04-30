@@ -3,7 +3,7 @@ class CustomersController extends Controller{
 	
 	public function actionIndex(){
 		$this->authenticate();
-		$this->layout = '//layouts/setup_layout_column1';	
+		$this->layout = 'setup_layout_column1';	
 		$this->render('index');
 	}
 	
@@ -16,7 +16,7 @@ class CustomersController extends Controller{
 	
 	public function actionCreate(){
 		$this->authenticate();
-		$this->layout = '//layouts/setup_layout';
+		$this->layout = 'setup_layout';
 		$model = new CustomerForm();
 		$cp = new CustomerProcess();
 		if(isset($_POST['CustomerForm'])){

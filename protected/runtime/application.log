@@ -9855,3 +9855,106 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/04/30 10:34:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/30 10:35:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/30 10:36:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/30 10:37:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/30 10:37:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/30 10:38:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/04/30 10:39:12 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc' at line 5. The SQL statement executed was: SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
+	    		FROM customers c 
+	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
+	    		INNER JOIN locations l ON l.id = c.location_id 
+	    		WHERE c.active = truelast_name asc.
+in D:\wamp\www\pos.local\protected\components\Utils.php (216)
+in D:\wamp\www\pos.local\protected\modules\setup\components\CustomerProcess.php (20)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (13)
+2014/04/30 10:39:14 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc' at line 5. The SQL statement executed was: SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
+	    		FROM customers c 
+	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
+	    		INNER JOIN locations l ON l.id = c.location_id 
+	    		WHERE c.active = truelast_name desc.
+in D:\wamp\www\pos.local\protected\components\Utils.php (216)
+in D:\wamp\www\pos.local\protected\modules\setup\components\CustomerProcess.php (20)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (13)
+2014/04/30 10:39:15 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc' at line 5. The SQL statement executed was: SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
+	    		FROM customers c 
+	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
+	    		INNER JOIN locations l ON l.id = c.location_id 
+	    		WHERE c.active = truelast_name asc.
+in D:\wamp\www\pos.local\protected\components\Utils.php (216)
+in D:\wamp\www\pos.local\protected\modules\setup\components\CustomerProcess.php (20)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (13)
+2014/04/30 10:39:16 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc' at line 5. The SQL statement executed was: SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
+	    		FROM customers c 
+	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
+	    		INNER JOIN locations l ON l.id = c.location_id 
+	    		WHERE c.active = truelast_name desc.
+in D:\wamp\www\pos.local\protected\components\Utils.php (216)
+in D:\wamp\www\pos.local\protected\modules\setup\components\CustomerProcess.php (20)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (13)
+2014/04/30 10:39:16 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'asc' at line 5. The SQL statement executed was: SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
+	    		FROM customers c 
+	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
+	    		INNER JOIN locations l ON l.id = c.location_id 
+	    		WHERE c.active = truelast_name asc.
+in D:\wamp\www\pos.local\protected\components\Utils.php (216)
+in D:\wamp\www\pos.local\protected\modules\setup\components\CustomerProcess.php (20)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (13)
+2014/04/30 10:40:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

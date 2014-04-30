@@ -204,7 +204,7 @@ class Utils extends CApplicationComponent {
 		
 		# query with order by
 		if(isset($params['order']))
-			$sql .= $params['order'];
+			$sql .= " order by ".$params['order'];
 		
 		# query with limit and offset
 		if($params['limit'] != null && $params['offset'] != null)
@@ -214,6 +214,7 @@ class Utils extends CApplicationComponent {
     		$cmd = new CDbCommand($cnc);
     		$cmd = $cnc->createCommand($sql);
     		$dataReader = $cmd->query();
+			$total = count($dataReader);
 			foreach($dataReader as $row ){
 				foreach($row as $key => $value){
 					$arr1 =array($key=> $value);

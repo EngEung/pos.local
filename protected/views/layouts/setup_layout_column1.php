@@ -45,7 +45,12 @@
 		rownumbers: true,
 		scrollbarSize: 5,
 		columns:[[
-			{title:"ID",field:"id",width:5,sortable:true}
+			{title:"ID",field:"id",width:5,sortable:true},
+			{title:"First Name",field:"first_name",width:100,sortable:true},
+			{title:"Last Name",field:"last_name",width:100,sortable:true},
+			{title:"Type",field:"customer_type_name",width:80,sortable:true},
+			{title:"Phone",field:"phone1",width:120,sortable:true},
+			
 		]]
 	});
 

@@ -2,17 +2,20 @@
 class CustomersController extends Controller{
 	
 	public function actionIndex(){
+		$this->authenticate();
 		$this->layout = '//layouts/setup_layout_column1';	
 		$this->render('index');
 	}
 	
 	public function actionGetCustomerLists(){
+		
 		$cp = new CustomerProcess;
-		$lists = $cp->exportData();
+		$lists = $cp->getCustomerLists();
 		echo CJSON::encode($lists);
 	}
 	
 	public function actionCreate(){
+		$this->authenticate();
 		$this->layout = '//layouts/setup_layout';
 		$model = new CustomerForm();
 		$cp = new CustomerProcess();

@@ -11,93 +11,14 @@ class CustomerProcess extends CApplicationComponent {
 		
 	}
 	
-	public function getCustomerLists($order = 'asc'){
-		$dataReader = null;
-    	$desc = "get customers";
-		$arr = array();
-    	try {
-    		$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$sql = "SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
-		    		FROM customers c 
-		    		INNER JOIN customer_types ct ON c.customer_type = ct.id
-		    		INNER JOIN locations l ON l.id = c.location_id 
-		    		WHERE c.active = true";
-    		$cmd = $cnc->createCommand($sql);
-    		$dataReader = $cmd->query();
-			foreach($dataReader as $row){
-				$arr[]= array('id'=> $row['id'], 'first_name'=>$row['first_name'], 'last_name'=>$row['last_name'],
-				'title' => $row['title'], 'customer_type' => $row['customer_type'], 'phone1' => $row['phone1'],
-				'phone2'=> $row['phone2'], 'email1' => $row['email1'], 'location_id' => $row['location_id'],
-				'location_name' => $row['location_name'], 'customer_type_name'=> $row['customer_type_name']);
-			}
-    	} catch(CException $ex) {
-    		//$this->_error->insert($ex, $desc);
-    	}
-    	return $arr;
-	}
-	
-	public function exportData(){
-		$sql = "SELECT count(*), c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
+	public function getCustomerLists(){
+		$sql = "SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
 	    		FROM customers c 
 	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
 	    		INNER JOIN locations l ON l.id = c.location_id 
 	    		WHERE c.active = true";
 		return Utils::exprotData($sql);
 	}
-	
-	public function getTestLists($order = 'asc'){
-		$dataReader = null;
-    	$desc = "get customers";
-		$arr = array();
-		$arr1 = array();
-		$str = array();
-    	try {
-    		$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$sql = "SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
-		    		FROM customers c 
-		    		INNER JOIN customer_types ct ON c.customer_type = ct.id
-		    		INNER JOIN locations l ON l.id = c.location_id 
-		    		WHERE c.active = true";
-    		$cmd = $cnc->createCommand($sql);
-    		$dataReader = $cmd->query();
-			foreach($dataReader as $row ){
-				foreach($row as $key => $value){
-					$arr1 =array($key=> $value);
-					$arr = array_merge($arr, $arr1);
-				}
-				$str[] = $arr;
-			}
-    	} catch(CException $ex) {
-    		//$this->_error->insert($ex, $desc);
-    	}
-    	return $str;
-	}
-	
-	public function getCount($order = 'asc'){
-		$dataReader = null;
-    	$desc = "get customers";
-		$arr = array();
-		$arr1 = array();
-		$str = array();
-    	try {
-    		$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$sql = "SELECT count(*), c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
-		    		FROM customers c 
-		    		INNER JOIN customer_types ct ON c.customer_type = ct.id
-		    		INNER JOIN locations l ON l.id = c.location_id 
-		    		WHERE c.active = true";
-    		$cmd = $cnc->createCommand($sql);
-    		$dataReader = $cmd->queryScalar();
-    	} catch(CException $ex) {
-    		//$this->_error->insert($ex, $desc);
-    	}
-    	return $dataReader;
-	}
-	
-	
 
 	public function create($model){
 		if($model->firstName == null || $model->lastName == null) return null;

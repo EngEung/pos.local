@@ -107,14 +107,11 @@ class UserInterface extends CApplicationComponent{
 				$roleIds = $session->get('roles');
 			}
 			$dataReader = $this->getMenu($model->id, $roleIds, AppConstant::MENU_VERTICAL_MENU);
-			foreach($dataReader as $row){
-				$help = '';
-				if($row['descr'] == $selected)
-					$help = 'active'; 
+			foreach($dataReader as $row){ 
 				$menu[] = array(
 							    'label' => $row['name'],
 							    'url' => "javascript:addTab('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');",
-							    'itemOptions' => array('class' => $help)
+							    'itemOptions' => array('class' => '')
 							);
 			}
 		}

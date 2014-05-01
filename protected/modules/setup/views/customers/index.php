@@ -16,4 +16,3 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/ajaxupload/style/style.css', CClientScript::POS_HEAD);
 	
 ?>
-<script>

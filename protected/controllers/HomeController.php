@@ -39,9 +39,9 @@ class HomeController extends Controller{
         }
 		$this->render('index', array('signInForm' => $signInForm));
 	}
-	
+
 	public function actionSignIn(){
-		
+		$this->layout='//layouts/login_layout';
 		$signInForm = new SignInForm();
 		# Collect Sign In Form input data
         if (isset($_POST['SignInForm'])) {
@@ -72,7 +72,7 @@ class HomeController extends Controller{
             	  Yii::app()->user->setFlash('auth_message', "Incorrect username and password.");
             }
         }
-		$this->render('signIn', array('signInForm' => $signInForm));
+		$this->render('signin', array('signInForm' => $signInForm));
 	}
 
 	public function actionSignOut(){

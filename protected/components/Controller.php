@@ -26,8 +26,10 @@ class Controller extends CController
 		$authenticated=(bool)Yii::app()->session->get('is_authenticated');
 		if(!$authenticated) {
 			$url = Yii::app()->getRequest()->requestUri;
-			$this->redirect($this->createUrl('/home/index',
-					array('q'=>'sign_in','auth'=>0,'q_url'=>$url)));
+			//$this->redirect($this->createUrl('/home/index1',
+				//	array('q'=>'sign_in','auth'=>0,'q_url'=>$url)));
+				$cs = Yii::app()->clientScript;
+  				$cs->registerScript('my_script', 'test();', CClientScript::POS_READY);
 		}
 	}
 	

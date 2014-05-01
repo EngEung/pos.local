@@ -45,4 +45,21 @@
 	<!-- END FOOTER -->
 
 </body>
+<script>
+	
+	function test(){
+		var url =  '../controllers/olt_tree_c1.php?method=onMove&onu_id='+onu_id +'&descr='+description+'&province_id='+province_id+'&number='+number +'&card_id='+card_id;
+		    var win = new Ext.Window({
+				  y:20,
+				  width: 630,
+				  id: 'winMove',                                  
+				  height: 300,
+				  title: 'ONU Move', 
+				  modal: true,
+				  html: '<iframe src="'+url+'" id="center-iframe-onu-detial" width="100%" height="100%" frameborder="0" scrolling="auto" style="border:0px none;"></iframe>'
+				});			
+			win.show();
+		alert("dsfsdf");
+	}
+</script>
 </html>

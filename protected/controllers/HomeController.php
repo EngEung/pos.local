@@ -49,7 +49,7 @@ class HomeController extends Controller{
             $flag=null;
             if ($signInForm->validate()) {
                 $sec = new Security();
-                $flag = $sec->signIn($signInForm->email, $signInForm->password);
+                $flag = $sec->signIn($signInForm->username, $signInForm->password);
                 //$timeToLive = $signInForm->rememberMe == '1' ? 604800 : 0; 
                 $session = new CDbHttpSession();
                 //$session->getTimeout($timeToLive);
@@ -61,11 +61,13 @@ class HomeController extends Controller{
                 	$session['full_name'] = $sec->getFullName();
                 	$session['is_authenticated'] = $sec->getIsAuthenticated();
                 	$session['guid'] = $sec->getGuid();
+                  /*
                     if (isset($_GET['q_url']))
-                    	  $this->redirect($this->createUrl($_GET['q_url']));
-     			    else 
-                   		$this->redirect($this->createUrl('/account/'));
-                } else {
+                                            $this->redirect($this->createUrl($_GET['q_url']));
+                                       else 
+                                             $this->redirect($this->createUrl('/account/'));
+                                  } else {*/
+                  
                     $this->refresh();
                 }
             }else{

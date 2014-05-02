@@ -1,0 +1,64 @@
+.iconblank{
+	background:url('icons/blank.gif') no-repeat center center;
+}
+.iconadd{
+	background:url('icons/edit_add.png') no-repeat center center;
+}
+.iconedit{
+	background:url('icons/pencil.png') no-repeat center center;
+}
+.iconremove{
+	background:url('icons/edit_remove.png') no-repeat center center;
+}
+.iconsave{
+	background:url('icons/filesave.png') no-repeat center center;
+}
+.iconcut{
+	background:url('icons/cut.png') no-repeat center center;
+}
+.iconok{
+	background:url('icons/ok.png') no-repeat center center;
+}
+.iconno{
+	background:url('icons/no.png') no-repeat center center;
+}
+.iconcancel{
+	background:url('icons/cancel.png') no-repeat center center;
+}
+.iconreload{
+	background:url('icons/reload.png') no-repeat center center;
+}
+.iconsearch{
+	background:url('icons/search.png') no-repeat center center;
+}
+.iconprint{
+	background:url('icons/print.png') no-repeat center center;
+}
+.iconhelp{
+	background:url('icons/help.png') no-repeat center center;
+}
+.iconundo{
+	background:url('icons/undo.png') no-repeat center center;
+}
+.iconredo{
+	background:url('icons/redo.png') no-repeat center center;
+}
+.iconback{
+	background:url('icons/back.png') no-repeat center center;
+}
+.iconsum{
+	background:url('icons/sum.png') no-repeat center center;
+}
+.icontip{
+	background:url('icons/tip.png') no-repeat center center;
+}
+
+.iconminiadd{
+	background:url('icons/mini_add.png') no-repeat center center;
+}
+.iconminiedit{
+	background:url('icons/mini_edit.png') no-repeat center center;
+}
+.iconminirefresh{
+	background:url('icons/mini_refresh.png') no-repeat center center;
+}

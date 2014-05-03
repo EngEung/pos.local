@@ -25,6 +25,7 @@ return array(
 		'application.modules.*',
 		'application.modules.setup.models.forms.*',
 		'application.modules.setup.components.*'
+
 	),
 
 	'modules'=>array(

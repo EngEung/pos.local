@@ -53,6 +53,7 @@
 		    modal:true,
 		    content: content
 	    });
+
 	}
 </script>
 </html>

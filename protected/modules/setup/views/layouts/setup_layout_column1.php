@@ -13,6 +13,7 @@
 				    	
 				   	 	?>
 				    </div>
+
 				    <div data-options="region:'center',title:'Welcome'" style="padding:5px;background:#eee;">
 				    	<div id="tt" class="easyui-tabs" style="width:auto; height:540px;">
 							<div title="Customer Lists">
@@ -72,7 +73,7 @@
 	/** easyui gridView Javascript */
 	dg = $("#dg");
 	dg.datagrid({
-		title:'',
+		title:'Customer List',
 		height:400,
 		singleSelect:true,
 		nowrap:false,
@@ -84,6 +85,7 @@
 		rownumbers: true,
 		scrollbarSize: 5,
 		ctrlSelect: true,
+		collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:10,sortable:true},
 			{title:"First Name",field:"first_name",width:100,sortable:true},

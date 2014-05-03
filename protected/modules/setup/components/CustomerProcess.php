@@ -20,6 +20,7 @@ class CustomerProcess extends CApplicationComponent {
 		return Utils::exprotData($sql);
 	}
 
+
 	public function create($model){
 		if($model->firstName == null || $model->lastName == null) return null;
 		$c = new Customers();

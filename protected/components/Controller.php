@@ -31,6 +31,7 @@ class Controller extends CController
 			//$urls = Yii::app()->getBaseUrl(true).'/home/signin/';	
 			//$cs = Yii::app()->clientScript;
 			//$cs->registerScript('my_script', "test('{$urls}');", CClientScript::POS_READY);
+
 		}
 	}
 	

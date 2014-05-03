@@ -19,8 +19,13 @@ class m140426_092448_create_customer_shipping extends CDbMigration
 		);
 		$this->addForeignKey('fk_customer_shipping__customers', 
 				         'customer_shipping', 
+<<<<<<< HEAD
+				         'user_id', 
+				         'users', 
+=======
 				         'customer_id', 
 				         'customers', 
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 				         'id');
 	}
 	

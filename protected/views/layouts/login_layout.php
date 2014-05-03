@@ -5,13 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
 	<?php Yii::app()->bootstrap->registerAssetCss("bootstrap.css");?>
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/pages/style-responsive.css" />
-	
+
 </head>
 
 <body>
-	<?php echo $content; ?>
+<iframe scrolling="auto" frameborder="0" src = "/pos.local/home/signin" style="width:100%;height:100%;">	
+</iframe>
 </body>
 </html>

@@ -204,7 +204,8 @@ class Utils extends CApplicationComponent {
 		
 		# query with order by
 		if(isset($params['order']))
-			$sql .= " order by ".$params['order'];
+			$sql .= " order by {$params['order']}";
+
 		
 		# query with limit and offset
 		if($params['limit'] != null && $params['offset'] != null)

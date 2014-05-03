@@ -12,11 +12,12 @@ class SetupModule extends CWebModule
 			'setup.models.*',
 			'setup.components.*',
 		));
-			
+	
 		$this->layoutPath = Yii::getPathOfAlias('setup.views.layouts');
 		$this->layout = 'setup_layout_column1';
 	}
 	
+
 	public function beforeControllerAction($controller, $action)
 	{
 		if(parent::beforeControllerAction($controller, $action))

@@ -107,6 +107,7 @@ class UserInterface extends CApplicationComponent{
 				$roleIds = $session->get('roles');
 			}
 			$dataReader = $this->getMenu($model->id, $roleIds, AppConstant::MENU_VERTICAL_MENU);
+
 			foreach($dataReader as $row){ 
 				$menu[] = array(
 							    'label' => $row['name'],

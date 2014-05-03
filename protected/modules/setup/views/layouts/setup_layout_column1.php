@@ -73,7 +73,7 @@
 	/** easyui gridView Javascript */
 	dg = $("#dg");
 	dg.datagrid({
-		title:'',
+		title:'Customer List',
 		height:400,
 		singleSelect:true,
 		nowrap:false,

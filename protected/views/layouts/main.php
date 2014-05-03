@@ -8,10 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/pages/style-responsive.css" />
-<<<<<<< HEAD
-	
-=======
->>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -46,24 +42,6 @@
 		</div>
 	</div>
 	<!-- END FOOTER -->
-<<<<<<< HEAD
-
-</body>
-<script>
-	var url =  '../controllers/olt_tree_c1.php?method=onMove&onu_id='+onu_id +'&descr='+description+'&province_id='+province_id+'&number='+number +'&card_id='+card_id;
-		    var win = new Ext.Window({
-				  y:20,
-				  width: 630,
-				  id: 'winMove',                                  
-				  height: 300,
-				  title: 'ONU Move', 
-				  modal: true,
-				  html: '<iframe src="'+url+'" id="center-iframe-onu-detial" width="100%" height="100%" frameborder="0" scrolling="auto" style="border:0px none;"></iframe>'
-				});			
-			win.show();
-	function test(){
-		alert("dsfsdf");
-=======
 <div id="win"></div>
 </body>
 <script>
@@ -75,7 +53,7 @@
 		    modal:true,
 		    content: content
 	    });
->>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
+
 	}
 </script>
 </html>

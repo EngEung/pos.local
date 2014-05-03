@@ -83,6 +83,7 @@
 		pagination: true,
 		rownumbers: true,
 		scrollbarSize: 5,
+		ctrlSelect: true,
 		columns:[[
 			{title:"ID",field:"id",width:10,sortable:true},
 			{title:"First Name",field:"first_name",width:100,sortable:true},

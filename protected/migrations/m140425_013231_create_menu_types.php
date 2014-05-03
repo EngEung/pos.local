@@ -8,7 +8,11 @@ class m140425_013231_create_menu_types extends CDbMigration
 			'id' => 'pk',
 			'name' => 'varchar(50) not null',
 			'descr' => 'varchar(255)',
+<<<<<<< HEAD
 			'created_at' => 'datetime not null default now()',
+=======
+			'created_at' => 'timestamp not null default now()',
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 			'modified_at' => 'datetime',
 			'created_by' => 'varchar(30)',
 			'modified_by' => 'varchar(30)',

@@ -1,16 +1,28 @@
 <?php 
 	$this->pageTitle=Yii::app()->name;
 
+<<<<<<< HEAD
+=======
+/*
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 	Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;
 						
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');	
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.crud.js');	
+<<<<<<< HEAD
 	
 ?>
 
 <?php 
+=======
+*/
+	
+?>
+
+<?php /*
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 $this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 	'title' => 'Sign In',
 	'id'=> 'login-win',
@@ -19,9 +31,15 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 	'collapsible' => true,
 	'iconCls'=> 'icon-lock',
 	'modal' => true,
+<<<<<<< HEAD
 	'shadow'=> false,
 	'buttons' => '#dlg-button'	
 ));?>
+=======
+	//'shadow'=> false,
+	'buttons' => '#dlg-button'	
+));*/?>
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 		<?php $form = $this->beginWidget('bootstrap.widgets.TbActiveForm',
 			   		array('id' => 'signInForm',
 			   			  'type' => 'horizontal',
@@ -63,7 +81,11 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 <?php 
 	$this->endWidget();
 	unset($form);	
+<<<<<<< HEAD
 	$this->endWidget();  
+=======
+	//$this->endWidget();  
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 ?>
 
 
@@ -71,6 +93,7 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 	.btn{margin-left: 5px;}
 	.form-horizontal .control-label{width: 110px;}
 	#signInForm{padding-top: 20px;}
+<<<<<<< HEAD
 </style>
 
 <script>
@@ -126,3 +149,6 @@ function onSaveTrainingRecor(button){
 	});
 } 
 </script>
+=======
+</style>
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6

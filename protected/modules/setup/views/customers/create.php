@@ -15,7 +15,16 @@
 	$cs->registerScriptFile(Yii::app()->baseUrl . '/js/masktextbox/masktextbox.js',CClientScript::POS_HEAD );
 ?>
 
+<<<<<<< HEAD
     	<div id="p" class="easyui-panel" title="Create a new customer" style="width:730px;height:545px;padding-top:10px;"
 			data-options="collapsible:true,minimizable:false,maximizable:true, closable:false, buttons:'#dlg-buttons'">
 			<?php echo $this->renderPartial('_form', array('model' => $model));?>
 		</div>
+=======
+    	<!--
+		<div id="p" class="easyui-panel" title="Create a new customer" style="width:730px;height:545px;padding-top:10px;"
+					data-options="collapsible:true,minimizable:false,maximizable:true, closable:false, buttons:'#dlg-buttons'">-->
+		
+			<?php echo $this->renderPartial('_form', array('model' => $model));?>
+		<!--</div> -->
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6

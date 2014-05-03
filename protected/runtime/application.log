@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 2014/04/12 09:35:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:26:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -8,6 +12,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 09:39:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
@@ -54,6 +59,25 @@ REQUEST_URI=/img/remove-icon-small.png
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:10:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:26:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/01 16:26:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/01 16:27:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -62,6 +86,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:10:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
@@ -72,6 +97,9 @@ REQUEST_URI=/img/remove-icon-small.png
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:10:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -80,6 +108,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:11:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
@@ -90,6 +119,9 @@ REQUEST_URI=/img/remove-icon-small.png
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:14:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:42:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -98,6 +130,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:14:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
@@ -108,6 +141,9 @@ REQUEST_URI=/img/remove-icon-small.png
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:16:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:43:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -116,7 +152,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:17:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:44:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -125,7 +165,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:17:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:47:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -134,6 +178,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:18:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -144,6 +189,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:18:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:47:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:47:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -152,7 +211,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:19:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:47:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -161,6 +224,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:19:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -171,6 +235,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:20:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:47:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -179,7 +257,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:22:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:48:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -188,7 +270,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:23:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:49:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -197,7 +283,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:26:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:50:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -206,6 +296,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:28:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -216,6 +307,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:29:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:51:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:51:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -224,7 +329,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:30:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:51:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -233,6 +342,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:32:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -243,6 +353,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:37:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:51:59 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:52:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -251,7 +375,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:52:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -260,6 +388,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:54:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -270,6 +399,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 10:55:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:52:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -278,7 +421,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:58:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -287,7 +434,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 10:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:53:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -296,7 +447,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:01:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:54:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -305,7 +460,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:03:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:55:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -314,6 +473,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:04:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -324,6 +484,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 11:04:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:55:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -332,7 +506,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:06:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:56:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -341,6 +519,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:06:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -351,6 +530,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 11:11:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 16:57:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 16:57:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -359,7 +552,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:11:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:00:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -368,7 +565,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:15:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:03:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -377,7 +578,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:20:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:03:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -386,7 +591,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:22:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:05:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -395,6 +604,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:25:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -405,6 +615,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 11:25:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:05:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:05:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -413,7 +637,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:31:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:07:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -422,6 +650,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/12 11:35:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
@@ -432,6 +661,20 @@ REQUEST_URI=/img/remove-icon-small.png
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/12 11:41:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:07:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:07:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -440,6 +683,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 15:25:31 [error] [exception.CDbException] exception 'CDbException' with message 'CDbConnection failed to open the DB connection: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
 ' in C:\xampp\htdocs\www\framework\db\CDbConnection.php:381
 Stack trace:
@@ -490,6 +734,20 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 ---
 2014/04/19 15:26:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:07:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:07:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -498,7 +756,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 15:28:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:30:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -507,6 +769,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 15:29:02 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pos_dev.customer_type' doesn't exist. The SQL statement executed was: select mn.*, l.name as 'location_name', ct.name as 'customer_type_name' 
     		from customers c 
     		inner join customer_type ct on c.customer_type_id = ct.id
@@ -516,6 +779,20 @@ in C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\CustomerProc
 in C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php (10)
 in C:\xampp\htdocs\www\pos.local\index.php (13)
 2014/04/19 15:33:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:31:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:31:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -524,7 +801,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 15:35:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:39:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -533,7 +814,22 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 15:47:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:39:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:39:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -542,7 +838,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 15:47:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -551,6 +851,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:12:00 [error] [exception.CException] exception 'CException' with message 'Property "CustomerForm.radioButtons" is not defined.' in C:\xampp\htdocs\www\framework\base\CComponent.php:130
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\helpers\CHtml.php(2255): CComponent->__get('radioButtons')
@@ -584,6 +885,20 @@ Stack trace:
 REQUEST_URI=/setup/customers/create/
 ---
 2014/04/19 16:16:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:39:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:39:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -592,7 +907,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:17:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:50:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -601,6 +920,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:18:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -611,6 +931,18 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:19:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:50:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/http://pos.local/home/index1".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/http://po...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/setup/http://pos.local/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:50:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -619,7 +951,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:20:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:53:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -628,6 +964,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:22:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -638,6 +975,18 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:28:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:53:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/http://pos.local/home/index1".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/http://po...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/setup/http://pos.local/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:53:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -646,7 +995,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:28:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:53:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -655,6 +1008,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:29:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -665,6 +1019,18 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:29:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:54:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/http://pos.local/home/index1".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/http://po...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/setup/http://pos.local/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 17:54:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -673,7 +1039,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:31:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:56:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -682,7 +1052,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:32:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 17:56:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -691,7 +1065,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:36:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:00:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -700,7 +1078,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:37:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:00:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -709,7 +1091,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:38:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:01:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -718,7 +1104,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -727,7 +1117,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:39:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:02:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -736,6 +1130,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:39:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -746,6 +1141,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:44:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:02:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 18:02:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -754,7 +1163,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:45:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:03:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -763,6 +1176,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:46:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -773,6 +1187,19 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:47:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:03:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+---
+2014/05/01 18:03:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -781,6 +1208,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:48:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -791,6 +1219,19 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:49:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:04:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+---
+2014/05/01 18:04:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -799,6 +1240,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:49:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -809,6 +1251,19 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:50:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:11:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+---
+2014/05/01 18:11:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -817,6 +1272,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:51:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -827,6 +1283,20 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 16:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:13:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index1".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('index1')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('index1')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/index1')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/home/index1
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/05/01 18:14:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -835,7 +1305,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:54:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:16:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -844,7 +1318,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:56:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:18:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -853,7 +1331,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:57:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:19:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -862,7 +1344,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:58:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:23:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -871,7 +1357,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:58:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:24:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -880,7 +1370,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 16:59:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:25:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -889,7 +1383,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:01:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:25:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -898,16 +1396,26 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:02:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:28:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:02:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/setup/customers
+---
+2014/05/01 18:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -916,6 +1424,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:15:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -926,15 +1435,32 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:17:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:28:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/01 18:31:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:18:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/setup/customers
+---
+2014/05/01 18:32:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -943,7 +1469,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:20:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:35:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -952,7 +1482,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:21:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:40:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -961,7 +1495,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:24:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:40:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -970,7 +1508,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:26:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:40:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -979,6 +1521,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:29:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -989,6 +1532,48 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:30:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:41:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/remove-icon-small.png
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/05/01 18:53:55 [error] [exception.CException] exception 'CException' with message 'Property "SignInForm.email" is not defined.' in C:\xampp\htdocs\www\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\www\pos.local\protected\controllers\HomeController.php(52): CComponent->__get('email')
+#1 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): HomeController->actionSignIn()
+#2 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('signin')
+#6 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/signin')
+#7 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/home/signin/
+HTTP_REFERER=http://pos.local/home/signin/
+---
+2014/05/01 18:54:26 [error] [exception.CException] exception 'CException' with message 'Property "SignInForm.email" is not defined.' in C:\xampp\htdocs\www\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\www\pos.local\protected\controllers\HomeController.php(52): CComponent->__get('email')
+#1 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): HomeController->actionSignIn()
+#2 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('signin')
+#6 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('home/signin')
+#7 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/home/signin
+HTTP_REFERER=http://pos.local/home/signin
+---
+2014/05/01 18:54:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -997,7 +1582,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:31:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:57:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -1006,7 +1595,11 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:41:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/01 18:57:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
@@ -1015,6 +1608,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/04/19 17:42:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -1025,57 +1619,99 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:43:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+2014/05/02 16:07:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/02 16:10:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:43:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/setup/customers
+---
+2014/05/02 16:10:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:44:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/home/signin/
+---
+2014/05/02 16:13:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:44:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/setup/customers
+---
+2014/05/02 16:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:45:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/home/signin/
+---
+2014/05/02 16:16:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:46:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+=======
+HTTP_REFERER=http://pos.local/setup/customers
+---
+2014/05/02 16:16:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
 #2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
 #3 {main}
 REQUEST_URI=/fonts/font.css
+<<<<<<< HEAD
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 2014/04/19 17:46:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
@@ -10370,3 +11006,7 @@ REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
 >>>>>>> 5c044c8714ba6ff1c1d0b6a0e60b9599d931032b
+=======
+HTTP_REFERER=http://pos.local/home/signin/
+---
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6

@@ -107,6 +107,7 @@ class UserInterface extends CApplicationComponent{
 				$roleIds = $session->get('roles');
 			}
 			$dataReader = $this->getMenu($model->id, $roleIds, AppConstant::MENU_VERTICAL_MENU);
+<<<<<<< HEAD
 			foreach($dataReader as $row){
 				$help = '';
 				//if($row['descr'] == $selected)
@@ -115,6 +116,13 @@ class UserInterface extends CApplicationComponent{
 							    'label' => $row['name'],
 							    'url' => "javascript:addTab('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');",
 							    'itemOptions' => array('class' => $help)
+=======
+			foreach($dataReader as $row){ 
+				$menu[] = array(
+							    'label' => $row['name'],
+							    'url' => "javascript:addTab('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');",
+							    'itemOptions' => array('class' => '')
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 							);
 			}
 		}

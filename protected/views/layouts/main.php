@@ -8,7 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/pages/style-responsive.css" />
+<<<<<<< HEAD
 	
+=======
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 	<title><?php echo CHtml::encode($this->pageTitle); ?></title>
 </head>
 
@@ -43,6 +46,7 @@
 		</div>
 	</div>
 	<!-- END FOOTER -->
+<<<<<<< HEAD
 
 </body>
 <script>
@@ -59,6 +63,19 @@
 			win.show();
 	function test(){
 		alert("dsfsdf");
+=======
+<div id="win"></div>
+</body>
+<script>
+	
+	function test(url){
+		var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
+	    $('#win').window({
+		    width:400,
+		    modal:true,
+		    content: content
+	    });
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 	}
 </script>
 </html>

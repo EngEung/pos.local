@@ -11,6 +11,7 @@ The action belongs to the controller "<?php echo get_class($this); ?>" in the "<
 </p>
 <p>
 You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
+<<<<<<< HEAD
 </p>
 
 <?php 
@@ -22,3 +23,6 @@ var_dump($authenticated);
 var_dump($firstName);
 var_dump(Yii::app()->session->get('last_name'));
 ?>
+=======
+</p>
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6

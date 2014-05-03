@@ -28,11 +28,17 @@ class Controller extends CController
 			//$url = Yii::app()->getRequest()->requestUri;
 			//$this->redirect($this->createUrl('/home/index1',
 				//	array('q'=>'sign_in','auth'=>0,'q_url'=>$url)));
+<<<<<<< HEAD
 			
 			$urls = Yii::app()->getBaseUrl(true).'/home/signin/';	
 			$cs = Yii::app()->clientScript;
 			$cs->registerScript('my_script', "test('{$urls}');", CClientScript::POS_READY);
 			return false;
+=======
+			$urls = Yii::app()->getBaseUrl(true).'/home/signin/';	
+			$cs = Yii::app()->clientScript;
+			$cs->registerScript('my_script', "test('{$urls}');", CClientScript::POS_READY);
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 		}
 	}
 	

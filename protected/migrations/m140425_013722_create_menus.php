@@ -22,6 +22,10 @@ class m140425_013722_create_menus extends CDbMigration
 			'active' => 'boolean default true',
 		));
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 	public function safeDown()
 	{
 		$this->dropTable('menus');

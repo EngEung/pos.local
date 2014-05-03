@@ -19,6 +19,7 @@ class CustomerProcess extends CApplicationComponent {
 	    		WHERE c.active = true";
 		return Utils::exprotData($sql);
 	}
+<<<<<<< HEAD
 	
 	public function getTestLists($order = 'asc'){
 		$dataReader = null;
@@ -72,6 +73,8 @@ class CustomerProcess extends CApplicationComponent {
 	}
 	
 	
+=======
+>>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 
 	public function create($model){
 		if($model->firstName == null || $model->lastName == null) return null;

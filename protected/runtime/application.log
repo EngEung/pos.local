@@ -11210,3 +11210,155 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/05/03 07:57:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 07:57:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 07:59:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "shipping".' in D:\wamp\www\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\framework\web\CController.php(270): CController->missingAction('shipping')
+#1 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('shipping')
+#2 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/pos.local/setup/customers/shipping/
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/03 07:59:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:00:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "shipping".' in D:\wamp\www\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\framework\web\CController.php(270): CController->missingAction('shipping')
+#1 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('shipping')
+#2 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/pos.local/setup/customers/shipping/
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/03 08:00:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:16:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:43:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:45:16 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\fileupload\vendor\jquery-ui-1.9.1.custom.min.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#2 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#3 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#4 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#5 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#6 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#7 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#8 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#9 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#10 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#11 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#12 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#13 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#14 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#15 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#16 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#18 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#19 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#20 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/03 08:45:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "shipping".' in D:\wamp\www\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\framework\web\CController.php(270): CController->missingAction('shipping')
+#1 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('shipping')
+#2 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/pos.local/setup/customers/shipping/
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/03 08:45:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/03 08:59:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

@@ -46,6 +46,12 @@ class CustomersController extends Controller{
 	public function actionUpdate(){
 		
 	}
+	
+	public function actionShipping(){
+		$this->authenticate();
+		$this->layout = 'setup_layout';
+		$this->render('shipping');
+	}
 }
 
 

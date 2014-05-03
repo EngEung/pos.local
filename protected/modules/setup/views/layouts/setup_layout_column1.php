@@ -93,7 +93,11 @@
 			{title:"Type",field:"customer_type_name",width:80,sortable:true},
 			{title:"Phone",field:"phone1",width:120,sortable:true},
 			
-		]]
+		]],
+		onDblClickRow:function(index,row,value){
+			title = 'Customer: ' + row.first_name + ' ' + row.last_name;
+			addTab(title, '/setup/customers/general')
+		}
 	});
 
 	function addTab(title, url){

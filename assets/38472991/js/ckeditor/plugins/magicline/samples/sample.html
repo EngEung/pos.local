@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<!--
+Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+-->
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Magicline muddy trenches &ndash; CKEditor Sample</title>
+	<script src="../../../ckeditor.js"></script>
+	<link href="../../../samples/sample.css" rel="stylesheet">
+	<style>
+		body {
+			margin: 0;
+		}
+		#editors {
+			width: 800px;
+		}
+		#dev {
+			position: fixed;
+			right: 0px;
+			top: 0px;
+			bottom: 0px;
+			width: 350px;
+			padding: 30px;
+			background: #ddd;
+			background: rgba(220, 220, 220, 0.8);
+			font-size: 15px;
+		}
+		#dev .hl {
+			color: red;
+		}
+		#tr_upper, #tr_lower {
+			padding: 3px 6px;
+		}
+		#tr_upper {
+			background: rgba(255,0,0,.3);
+		}
+		#tr_lower {
+			background: rgba(0,255,0,.3);
+		}
+	</style>
+</head>
+<body>
+	<h1 class="samples">
+		CKEditor Sample &mdash; magicline muddy trenches
+	</h1>
+	<div id="editors">
+		<textarea cols="80" id="editor1" name="editor1" rows="10">
+			<div style="padding: 20px; background: gray; width: 300px" class="1">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.</div>
+			<div style="background: violet; padding: 30px" class="static">Position static</div>
+			<dl class="2">
+				<dt>Key</dt><dd>Value</dd>
+			</dl>
+			<div>Whatever</div>
+			<hr id="hr">
+			<div style="
+				display: block;
+				cursor: pointer;
+				background: green;
+				height: 50px; width: 50px;" >aasd
+			</div>
+			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+			<hr>
+			<hr>
+			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+			<table border="1" class="first">
+				<tbody><tr>
+					<td>
+						Table Cell 1
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Table Cell 2<br>
+						Table Cell 2<br>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<div style="border: 1px solid red; padding: 50px">
+				Parent
+				<div style="border: 10px solid green; padding: 10px">Child</div>
+			</div>
+			I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body.
+			I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body. I'm in a body.
+			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+			<table border="1" style="margin: 15px 0 100px"  class="outer">
+				<tbody>
+				<tr>
+					<td>Table Cell 1</td>
+					<td>Table Cell 1</td>
+				</tr>
+				<tr>
+					<td>
+						<table border="10" class="inner">
+							<tbody>
+								<tr>
+									<td>Table Cell 1</td>
+								</tr>
+								<tr>
+									<td>Table Cell 2<br> Table Cell 2<br></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<table border="1" style="margin: 15px"  class="third">
+				<tbody><tr>
+					<td>
+						Table Cell 1
+					</td>
+					<td>
+						Table Cell 1
+					</td>
+					<td>
+						Table Cell 1
+					</td>
+					<td>
+						Table Cell 1
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Table Cell 2
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<table border="1" style="margin: 15px"  class="fourth">
+				<tbody><tr>
+					<td>
+						Table Cell 1
+					</td>
+					<td>
+						Table Cell 1
+					</td>
+					<td>
+						Table Cell 1
+					</td>
+					<td>
+						Table Cell 1
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Table Cell 2
+					</td>
+				</tr>
+				</tbody>
+			</table>
+			<ul style=""  class="fifth">
+				<li name="ul_first">List item</li>
+				<li name="ul_second">
+					<ol style="">
+						<li name="ol_first">Nested item</li>
+						<li>Nested item</li>
+						<li>Nested item</li>
+					</ol>
+				</li>
+				<li>List item</li>
+			</ul>
+			<table border="1" class="table#123">
+				<tbody>
+					<tr>
+						<td>Table Cell 1</td>
+					</tr>
+					<tr>
+						<td>Table Cell 2<br> Table Cell 2<br></td>
+					</tr>
+				</tbody>
+			</table>
+			<table border="1" align="right"  class="aligned">
+				<tbody>
+					<tr>
+						<td>Table Cell 1</td>
+					</tr>
+					<tr>
+						<td>Table Cell 2<br> Table Cell 2<br></td>
+					</tr>
+				</tbody>
+			</table>
+			<table border="1" style="float: right" class="floated">
+				<tbody>
+					<tr>
+						<td>Table Cell 1</td>
+					</tr>
+					<tr>
+						<td>Table Cell 2<br> Table Cell 2<br></td>
+					</tr>
+				</tbody>
+			</table>
+			<table border="1" align=""class="table#124">
+				<tbody>
+					<tr>
+						<td>Table Cell 1</td>
+					</tr>
+					<tr>
+						<td>Table Cell 2<br> Table Cell 2<br></td>
+					</tr>
+				</tbody>
+			</table>
+			<table border="1"class="table#125">
+				<tbody>
+					<tr>
+						<td>Table Cell 1</td>
+					</tr>
+					<tr>
+						<td>Table Cell 2<br> Table Cell 2<br></td>
+					</tr>
+				</tbody>
+			</table>
+			<p> enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas male</p>
+			<table border="1"class="table#126">
+				<tbody>
+					<tr>
+						<td>Table Cell 1</td>
+					</tr>
+					<tr>
+						<td>Table Cell 2<br> Table Cell 2<br></td>
+					</tr>
+				</tbody>
+			</table>
+			<div style="background: orange; margin: 20px">Upper div</div>
+			<table style="background: blue; margin: 20px"><tr><td>Lower table</td></tr></table>
+			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+			<div><strong>I'm a div. Let me stay here.</strong></div><dl>
+				<dt>Key</dt>
+				<dd>pendisse a pellentesque dui, non felis</dd>
+				<dt>Key</dt>
+				<dd>pendisse a pellentesque dui, non felis</dd>
+			</dl>
+			<div class="11" style="padding: 20px; background: pink; width: 400px">
+				Parent
+				<div class="12" style="padding: 20px; background: orange">
+					<!-- comment -->
+					<!-- another comment -->
+					<div class="13" style="padding: 20px; background: green">
+						Child#2
+					</div>
+				</div>
+			</div>
+		</textarea>
+		<textarea cols="80" id="editor2" name="editor1a" rows="10">
+			<table border="1" style="width: 300px">
+				<tbody>
+					<tr>
+						<td>
+							Test</td>
+					</tr>
+				</tbody>
+			</table>
+		</textarea>
+		<textarea id="editor3">
+			<p>Test</p>
+		</textarea>
+		<textarea name="editor4">
+			<p>Â </p><h1 id="mainHeader" style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; font-weight: normal; font-size: 26px; color: rgb(7, 130, 193); font-family: Arial, Helvetica, sans-serif; background-color: rgb(226, 226, 226); ">Jobs</h1><div id="node-438" class="node node-type-page" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 18px; color: rgb(85, 85, 85); font-family: Arial, Helvetica, sans-serif; background-color: rgb(226, 226, 226); "><div class="node-inner" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><div class="meta" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Â </div><div class="content" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><div class="contentBox" style="margin-top: 0px; margin-right: 0px; margin-bottom: 20px; margin-left: 0px; padding-top: 15px; padding-right: 15px; padding-bottom: 1px; padding-left: 15px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; background-color: rgb(239, 239, 239); border-top-style: solid; border-right-style: solid; border-bottom-style: solid; border-left-style: solid; border-top-color: rgb(226, 226, 226); border-right-color: rgb(226, 226, 226); border-bottom-color: rgb(226, 226, 226); border-left-color: rgb(226, 226, 226); position: relative; "><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">CKSource is a successful company with thousands of customers all around the world, including top names like IBM and Oracle. Our company is growing fast, with impressive sales results. This strong growth expands our range of opportunities, followed by the growth of our team. Take this chance and&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">join us!</strong></p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Working in a&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">successful Open Source project&nbsp;</strong>is certainly a lot of fun. CKEditor is one of the most frequently used text editors out there, and this success means new responsibilities. We are providing a key component for the software that is powering the Web today. It is downloaded daily by thousands of people all around the world and used by hundreds of thousands out there.</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">We are constantly looking for top-notch, creative, and enthusiastic professionals ready to join our international team.</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">We offer a work culture where ideas are free to fly and diversity is our everyday life.</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">There is no need to relocate. No matter where you are, as long as you love what you do, you are the right person for us!</p><div class="post joboffer" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 10px; padding-right: 0px; padding-bottom: 5px; padding-left: 0px; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; border-top-style: solid; border-top-color: rgb(229, 230, 231); " id=""><h2 style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; font-size: 15px; color: rgb(0, 0, 0); ">AJD - Advanced JavaScript Developer</h2><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Location:&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Europe and Its Neighbourhood</strong>&nbsp;(from GMT 0 to GMT +2).</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Employment type:&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Full time</strong>.</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">We are looking for talented people to join our team. Ideal candidates will have:</p><ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-right: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Several years of experience with professional JavaScript programming, which we consider is;<ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-right: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Writing pure, object-oriented JavaScript applications.</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Ability to create complex JavaScript applications based on your own skills only (excluding usage of external libraries such as jQuery, Prototype, Dojo, or MooTools).</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Being aware and able to solving asynchronous issues.</li></ul></li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">In-depth knowledge of core Web standards, like HTML, XML, DOM, and CSS â€” including their intrinsic implementation differences among browsers (with IE6 also);</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Ability to understand and fix complicated DOM manipulation problems.</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Good (enough) English speaking and writing skills. This is the language used in the company.</li></ul><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">"Wow" candidates will also have (not required though):</p><ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-right: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Experience with CKEditor or FCKeditor, having possibly collaborated with the project;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Experience with rich text editors;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Experience with HTML5, CSS3 development;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Experience with Test Cases (like YUI Test);</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">A Bachelor's or Master's degree in Computer Science;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Passion for Open Source.</li></ul></div><div class="post" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 10px; padding-right: 0px; padding-bottom: 30px; padding-left: 0px; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; border-top-style: solid; border-top-color: rgb(229, 230, 231); " id=""><h3 style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; font-size: 14px; ">In return we offer:</h3><ul style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-right: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Permanent full time employment contract;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Flexible working hours;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Competitive salary;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; "><strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Work&nbsp;</strong>from&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">home</strong>&nbsp;(you will forget what a traffic jam is);</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Working with smart and motivated&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">professionals</strong>;</li><li style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 40px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Becoming a&nbsp;<strong style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">part of great team</strong>&nbsp;who delivers worldwide known software.</li></ul><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Let us start talking. Tell us about the projects you have worked on and your role in them; point to your experience and anything you think might make you a perfect candidate. Contact us with your CV at:&nbsp;<a href="" title="jobs at (spam protection) cksource dot com" id="jobmail1" style="color: rgb(24, 157, 225); ">jobs@cksource.com</a>&nbsp;now!</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">We are sure you will enjoy it!</p></div><div class="post" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 10px; padding-right: 0px; padding-bottom: 30px; padding-left: 0px; border-top-width: 1px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; border-top-style: solid; border-top-color: rgb(229, 230, 231); "><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">Please note we only accept CV's in English. Your application must include the following note:</p><p style="margin-top: 0px; margin-right: 0px; margin-bottom: 15px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; border-top-width: 0px; border-right-width: 0px; border-bottom-width: 0px; border-left-width: 0px; border-style: initial; border-color: initial; border-image: initial; line-height: 1.5em; ">"I hereby authorize you to process my personal data included in my job application for the needs of the recruitment process (in accordance to the Personal Data Protection Act 29.08.1997 no 133 position 883).â€�</p></div></div></div></div></div><dl></dl>
+		</textarea>
+		<div id="hood">
+			<h1>
+				<img alt="" src="http://a.cksource.com/c/1/inc/img/demo-little-red.jpg" style="margin-left: 10px; margin-right: 10px; float: left; width: 120px; height: 168px;" />Little Red Riding Hood</h1>
+			<p>
+				&quot;<b>Little Red Riding Hood</b>&quot; is a famous <a href="http://en.wikipedia.org/wiki/Fairy_tale" title="Fairy tale">fairy tale</a> about a young girl&#39;s encounter with a wolf. The story has been changed considerably in its history and subject to numerous modern adaptations and readings.</p>
+			<table align="right" border="1" cellpadding="1" cellspacing="1" style="width: 200px;">
+				<caption>
+					<strong>International Names</strong></caption>
+				<tbody>
+					<tr>
+						<td>
+							Chinese</td>
+						<td>
+							<i>å°�ç´…å¸½</i></td>
+					</tr>
+					<tr>
+						<td>
+							Italian</td>
+						<td>
+							<i>Cappuccetto Rosso</i></td>
+					</tr>
+					<tr>
+						<td>
+							Spanish</td>
+						<td>
+							<i>Caperucita Roja</i></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr>
+			<hr>
+			<p>
+				The version most widely known today is based on the <a href="http://en.wikipedia.org/wiki/Brothers_Grimm" title="Brothers Grimm">Brothers Grimm</a> variant. It is about a girl called Little Red Riding Hood, after the red <a href="http://en.wikipedia.org/wiki/Hood_%28headgear%29" title="Hood (headgear)">hooded</a> <a href="http://en.wikipedia.org/wiki/Cape" title="Cape">cape</a> or <a href="http://en.wikipedia.org/wiki/Cloak" title="Cloak">cloak</a> she wears. The girl walks through the woods to deliver food to her sick grandmother.</p>
+			<p>
+				A wolf wants to eat the girl but is afraid to do so in public. He approaches the girl, and she na&iuml;vely tells him where she is going. He suggests the girl pick some flowers, which she does. In the meantime, he goes to the grandmother&#39;s house and gains entry by pretending to be the girl. He swallows the grandmother whole, and waits for the girl, disguised as the grandmother.</p>
+			<p>
+				When the girl arrives, she notices he looks very strange to be her grandma. In most retellings, this eventually culminates with Little Red Riding Hood saying, &quot;My, what big teeth you have!&quot;<br />
+				To which the wolf replies, &quot;The better to eat you with,&quot; and swallows her whole, too.</p>
+			<p>
+				A <a href="http://en.wikipedia.org/wiki/Hunter" title="Hunter">hunter</a>, however, comes to the rescue and cuts the wolf open. Little Red Riding Hood and her grandmother emerge unharmed. They fill the wolf&#39;s body with heavy stones, which drown him when he falls into a well. Other versions of the story have had the grandmother shut in the closet instead of eaten, and some have Little Red Riding Hood saved by the hunter as the wolf advances on her rather than after she is eaten.</p>
+			<p>
+				The tale makes the clearest contrast between the safe world of the village and the dangers of the <a href="http://en.wikipedia.org/wiki/Enchanted_forest" title="Enchanted forest">forest</a>, conventional antitheses that are essentially medieval, though no written versions are as old as that.</p>
+		</div>
+		<div id="interpret" contenteditable="true" style="left: 123px; outline: 1px solid red; border: 15px solid green; position: relative; top: 30; left: 55px;">
+			<div style="padding: 20px; background: gray; width: 300px" class="1">Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna. Vestibulum commodo volutpat a, convallis ac, laoreet enim.</div>
+			<div style="background: violet; padding: 30px;" class="static">
+				Position static
+				<div style="background: green; padding: 30px;  border: 14px solid orange">foo</div>
+			</div>
+			<dl class="2">
+				<dt>Key</dt><dd>Value</dd>
+			</dl>
+			<div>Whatever</div>
+			<hr id="hr">
+			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+			<hr>
+			<hr>
+			<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+			<div style="background: green; padding: 30px; width: 200px">foo</div></div>
+		<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+		<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+		<p>Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies</p>
+	</div>
+	<div id="dev">
+		<h2>Debug &#9829</h2>
+		<p>
+			<span>Mouse over: <span id="over"></span></span>
+			<span style="float: right">Mouse Y-pos.: <span id="my"></span></span>
+		</p>
+		<hr>
+		<dl>
+			<dt>Trigger:</dt>
+			<dd>
+				<span id="tr_type"></span>
+				<span id="tr_upper"></span>
+				<span id="tr_lower"></span>
+				<span id="tr_edge"></span>
+			</dd>
+		</dl>
+		<hr>
+		<p>Hidden state: <span id="hid"></span></p>
+		<hr>
+		<p>Exec time: <span id="time"></span></p>
+	</div>
+	<script>
+
+		'use strict';
+
+		var DEBUG = {
+				log: function()
+				{
+					return;
+					var args = [];
+					for( var i = 0; i < arguments.length ; i++ )
+						args.push( arguments[ i ] );
+
+					console.log.apply( console, args );
+				},
+
+				startTimer : function()
+				{
+					DEBUG.timer = new Date().getTime();
+				},
+
+				stopTimer : (function()
+				{
+					var label = CKEDITOR.document.getById( 'time' ),
+						max = 0,
+						count = 0,
+						values = [],
+						mean = 0,
+						time = 0;
+
+					return function()
+					{
+						time = new Date().getTime() - DEBUG.timer;
+						max = Math.max( time, max );
+
+						values.unshift( time );
+						( 20 in values ) && values.pop();
+						mean = 0;
+
+						for( var i = 0 ; i < values.length ; i++ )
+							mean += values[ i ];
+
+						mean = mean / i;
+
+						label.setText( time + ' ms, mean: ' + ( 0 | mean ) + ' ms, max: ' + max + ' ms' )
+						count++;
+					}
+				})(),
+
+				mousePos : (function( y, element )
+				{
+					var	my = CKEDITOR.document.getById( 'my' ),
+						over = CKEDITOR.document.getById( 'over' ),
+						name;
+
+					return function( y, element )
+					{
+						if( !( name = element.getName() ) )
+							return;
+
+						my.setText( y );
+
+						if( element.type == CKEDITOR.NODE_ELEMENT )
+							over.setText( name + '.' + element.getAttribute( 'class' ) );
+						else
+							over.setText( '-' );
+					}
+				})(),
+
+				showTrigger: (function( trigger )
+				{
+					var tr_type = CKEDITOR.document.getById( 'tr_type' ),
+						tr_upper = CKEDITOR.document.getById( 'tr_upper' ),
+						tr_lower = CKEDITOR.document.getById( 'tr_lower' ),
+						tr_edge = CKEDITOR.document.getById( 'tr_edge' ),
+						tup, tbo, upper, lower;
+
+					return function( trigger )
+					{
+						tup && tup.removeAttribute('id') && ( tup = null );
+						tbo && tbo.removeAttribute('id') && ( tbo = null );
+
+						if ( !trigger )
+							return 	tr_type.setText( '-' ) &&
+									tr_upper.setText( '-' ) &&
+									tr_lower.setText( '-' ) &&
+									tr_edge.setText( '-' );
+
+						upper = trigger.upper,
+						lower = trigger.lower;
+
+						tr_type.setText( trigger.type == 2 ? 'EXPAND' : 'EDGE' );
+						tr_upper.setText( upper ? upper.getName() + '.' + upper.getAttribute( 'class' ) : 'NULL' );
+						tr_lower.setText( lower ? lower.getName() + '.' + lower.getAttribute( 'class' ) : 'NULL' );
+						tr_edge.setText( trigger.edge ? [ 'EDGE_TOP', 'EDGE_BOTTOM', 'EDGE_MIDDLE' ][ trigger.edge - 1 ] : 'NULL' );
+
+						upper && ( tup = upper ) && tup.setAttribute( 'id', 'tup' );
+						lower && ( tbo = lower ) && tbo.setAttribute( 'id', 'tbo' );
+					}
+				})(),
+
+				showHidden : (function( state )
+				{
+					var	cnt = CKEDITOR.document.getById( 'hid' );
+
+					return function( state )
+					{
+						cnt[ state ? 'addClass' : 'removeClass' ]( 'hl' );
+						cnt.setText( state ? 'enabled' : 'disabled' );
+					}
+				})(),
+
+				logElements : function( elements, labels, info )
+				{
+					var log = {};
+
+					for ( var i = 0 ; i < elements.length; i++ )
+						log[ labels ? labels [ i ] : i ] = {
+							'name' :  isHtml( elements[ i ] ) ? elements[ i ].getName() : 'null',
+							'class' : isHtml( elements[ i ] ) ? elements[ i ].getAttribute( 'class' ) : 'null'
+						}
+
+					typeof JSON != 'undefined' && DEBUG.log( ( info ? info.toUpperCase() + ' ' : '' ) + JSON.stringify( log ) );
+				},
+
+				markElement : function( element )
+				{
+					if( !isHtml( element ))
+						return;
+
+					DEBUG.marked && DEBUG.marked.setStyles( {
+						'outline': 'none'
+					} );
+
+					DEBUG.marked = element;
+
+					element.setStyles( {
+						'outline': 'red solid 2px'
+					} );
+				},
+
+				groupStart : function( label )
+				{
+					return;
+					console.group( label );
+				},
+
+				groupEnd : function()
+				{
+					return;
+					console.groupEnd();
+				},
+
+				logEnd : function()
+				{
+					return;
+					DEBUG.log.apply( null, arguments );
+					DEBUG.groupEnd();
+				},
+
+				logElementsEnd : function()
+				{
+					return;
+					DEBUG.logElements.apply( null, arguments );
+					DEBUG.groupEnd();
+				}
+			};
+
+		// CKEDITOR.addCss('\
+			// 	#tup { outline: #FEB2B2 solid 2px; box-shadow: 3px 3px 0 #FEB2B2; } \
+			// 	#tbo { outline: #B2FEB2 solid 2px; box-shadow: 3px 3px 0 #B2FEB2; } \
+			// 	p { background: pink }\
+		// ');
+
+		CKEDITOR.config.height = 600;
+		CKEDITOR.config.width = 800;
+
+		CKEDITOR.replace( 'editor1', {
+			on : {
+				// Gain inner methods of an editor
+				'instanceReady' : function( event ) {
+					CKEDITOR.tools.extend( window, event.editor.plugins.magicline.backdoor );
+				}
+			}
+		} );
+
+		CKEDITOR.replace( 'editor2', { height: 150 } );
+		CKEDITOR.replace( 'editor3', {
+			magicline_everywhere : 1,
+			magicline_holdDistance : .2,
+			language : 'pl'
+		} );
+		CKEDITOR.replace( 'editor4' );
+		CKEDITOR.replace( 'hood', {
+			magicline_color : 'green',
+			magicline_opacity : .3
+		} );
+	</script>
+</body>
+</html>

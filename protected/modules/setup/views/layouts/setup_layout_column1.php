@@ -13,11 +13,8 @@
 				    	
 				   	 	?>
 				    </div>
-<<<<<<< HEAD
-				    <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
-=======
+
 				    <div data-options="region:'center',title:'Welcome'" style="padding:5px;background:#eee;">
->>>>>>> 3933f5d16a38708c95979b8367751dfc17a921a6
 				    	<div id="tt" class="easyui-tabs" style="width:auto; height:540px;">
 							<div title="Customer Lists">
 								<div class="pus" style="margin-top: 20px;">

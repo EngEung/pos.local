@@ -311,6 +311,7 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+<<<<<<< HEAD
 2014/05/05 16:32:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
@@ -329,6 +330,194 @@ Stack trace:
 REQUEST_URI=/favicon.ico
 ---
 2014/05/05 16:32:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+=======
+2014/05/05 02:51:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/05 02:51:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/05 02:51:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/05 02:52:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/
+---
+2014/05/05 02:52:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/home/
+---
+2014/05/05 02:52:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/dashboard
+---
+2014/05/05 02:53:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/05 02:58:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/05 02:58:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/img/remove-icon-small.png
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/05 03:02:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/05 04:15:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/home/index?q=sign_in&auth=0&q_url=%2Fpos.local%2Fsetup%2Fcustomers
+---
+2014/05/05 07:43:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/home/index?q=sign_in&auth=0&q_url=%2Fpos.local%2Fsetup%2Fcustomers%2Fgeneral%2F
+---
+2014/05/05 07:43:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/dashboard
+---
+2014/05/05 07:43:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/05 08:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/05 08:59:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/home/index?q=sign_in&auth=0&q_url=%2Fpos.local%2Fsetup%2Fcustomers%2Fgeneral
+---
+2014/05/05 08:59:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/home/index?q=sign_in&auth=0&q_url=%2Fpos.local%2Fsetup%2Fcustomers%2Fgeneral
+---
+2014/05/05 08:59:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/home/index?q=sign_in&auth=0&q_url=%2Fpos.local%2Fsetup%2Fcustomers
+>>>>>>> 6b07e396f4d101900f06a23530c48ac2e01c3782
+---
+2014/05/10 16:57:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/05/10 16:57:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/05/10 16:57:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
 Stack trace:
 #0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
 #1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()

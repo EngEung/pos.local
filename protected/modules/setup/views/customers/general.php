@@ -18,20 +18,50 @@
 <script>
 
     $('#ddd').tabs({
-		  
+		   onSelect:function(title){
+		   		if(title == 'Customer Info'){
+		   			win = $.messager.progress({title:'Please waiting',msg:'Loading data...'});
+		   			$.ajax({
+		   			
+		   			});
+		   		}
+	       }
     });
 	    // add a new tab panel
    
     $('#ddd').tabs('add',{
-    		id:"#customer-info",
-	       title:'Customer Information',
+    	   id:"#customer-info",
+	       title:'Customer Info',
+	       selected : true,
 	       content:'Tab Body',
+	      
     	}
     );
     $('#ddd').tabs('add',{
     		id:"#customer-shipping",
 	       title:'Customer shipping',
+	       selected : false,
 	       content:'Tab Body',
     	}
     );
+    
+    $('#ddd').tabs('add',{
+    	   id:"#customer-purchase-history",
+	       title:'Purchase History',
+	       selected : false,
+	       content:'Tab Body',
+    	}
+    );
+    
+     $('#ddd').tabs('add',{
+    	   id:"#customer-purchase-history",
+	       title:'Account Recievable',
+	       selected : false,
+	       content:'Tab Body',
+    	}
+    );
+    
+    function loadContentCustomerInfo(){
+    	
+    }
 </script>

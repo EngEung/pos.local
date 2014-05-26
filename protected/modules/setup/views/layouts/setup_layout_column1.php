@@ -96,7 +96,7 @@
 		]],
 		onDblClickRow:function(index,row,value){
 			title = 'Customer: ' + row.first_name + ' ' + row.last_name;
-			addTab(title, "<?php echo $this->createUrl('/setup/customers/general');?>")
+			addTab(title, "<?php echo $this->createUrl('/setup/customers/general/?cust_id=');?>" + row.id);
 		}
 	});
 

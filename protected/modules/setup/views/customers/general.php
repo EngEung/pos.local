@@ -24,6 +24,7 @@
 		   			$.ajax({
 		   			
 		   			});
+		   			$.messager.progress('close');	
 		   		}
 	       }
     });
@@ -33,7 +34,7 @@
     	   id:"#customer-info",
 	       title:'Customer Info',
 	       selected : true,
-	       content:'Tab Body',
+	       content:'<iframe scrolling="auto" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/create/?custId=$custId");?>" style="width:100%;height:100%;"></iframe>',
 	      
     	}
     );

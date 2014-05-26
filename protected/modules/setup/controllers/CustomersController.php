@@ -57,7 +57,10 @@ class CustomersController extends Controller{
 	public function actionGeneral(){
 		$this->authenticate();
 		$this->layout = 'setup_layout';
-		$this->render('general');
+		$custId = null;
+		if(isset($_GET['cust_id']))
+			$custId = $_GET['cust_id'];
+		$this->render('general', array('custId' => $custId));
 	}
 }
 

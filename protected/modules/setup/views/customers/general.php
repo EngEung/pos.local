@@ -20,11 +20,11 @@
     $('#ddd').tabs({
 		   onSelect:function(title){
 		   		if(title == 'Customer Info'){
-		   			win = $.messager.progress({title:'Please waiting',msg:'Loading data...'});
-		   			$.ajax({
+		   		//	win = $.messager.progress({title:'Please waiting',msg:'Loading data...'});
+		   			//$.ajax({
 		   			
-		   			});
-		   			$.messager.progress('close');	
+		   		//	});
+		   			//$.messager.progress('close');	
 		   		}
 	       }
     });
@@ -38,6 +38,7 @@
 	      
     	}
     );
+    
     $('#ddd').tabs('add',{
     		id:"#customer-shipping",
 	       title:'Customer shipping',

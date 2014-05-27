@@ -1699,3 +1699,254 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/05/27 03:16:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/
+---
+2014/05/27 03:16:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/dashboard
+---
+2014/05/27 03:16:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/27 03:17:05 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\ckeditor\plugins\placeholder\lang\he.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#2 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#3 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#4 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#5 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#6 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#7 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#8 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#9 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#10 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#11 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#12 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#13 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#14 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#15 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#16 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#17 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#18 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#19 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#20 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#21 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#22 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#23 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/?custId=1
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/27 03:21:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/setup/customers
+---
+2014/05/27 03:22:02 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\bootstrap-editable.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#2 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#3 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#4 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#5 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#6 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#7 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#8 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#9 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#10 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#11 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#12 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#13 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#14 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#15 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#16 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#17 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#18 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#19 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/?custId=1
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/27 03:23:34 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\ckeditor\ckeditor.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#2 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#3 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#4 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#5 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#6 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#7 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#8 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#9 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#10 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#11 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#12 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#13 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#14 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#15 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#17 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#18 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#19 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/?custId=2
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/27 03:23:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/27 03:24:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/27 03:24:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/27 03:24:55 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\ckeditor\ckeditor.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#2 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#3 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#4 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#5 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#6 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#7 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#8 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#9 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#10 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#11 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#12 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#13 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#14 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#15 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#17 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#18 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#19 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/?custId=1
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/27 03:25:46 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\ckeditor\ckeditor.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#2 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#3 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#4 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#5 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#6 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#7 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#8 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#9 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#10 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#11 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#12 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#13 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#14 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#15 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#17 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#18 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#19 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/?custId=1
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/27 03:26:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/05/27 03:26:22 [error] [php] copy(D:\wamp\www\pos.local\assets\38472991\js\ckeditor\ckeditor.js) [<a href='function.copy'>function.copy</a>]: failed to open stream: Invalid argument (D:\wamp\www\framework\utils\CFileHelper.php:152)
+Stack trace:
+#0 D:\wamp\www\framework\utils\CFileHelper.php(157): copyDirectoryRecursive()
+#1 D:\wamp\www\framework\utils\CFileHelper.php(63): copyDirectoryRecursive()
+#2 D:\wamp\www\framework\web\CAssetManager.php(251): copyDirectory()
+#3 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(447): CAssetManager->publish()
+#4 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(157): Bootstrap->getAssetsUrl()
+#5 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(118): Bootstrap->registerAssetCss()
+#6 D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php(96): Bootstrap->registerCoreCss()
+#7 D:\wamp\www\framework\base\CModule.php(387): Bootstrap->init()
+#8 D:\wamp\www\framework\base\CModule.php(103): CWebApplication->getComponent()
+#9 D:\wamp\www\pos.local\protected\modules\setup\views\layouts\setup_layout.php(7): CWebApplication->__get()
+#10 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#11 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#12 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#13 D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php(43): CustomersController->render()
+#14 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionCreate()
+#15 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#17 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#18 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#19 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/setup/customers/create/?custId=1
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (447)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (157)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\components\Bootstrap.php (118)
+2014/05/27 03:29:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

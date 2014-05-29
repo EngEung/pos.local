@@ -20,11 +20,11 @@
     $('#ddd').tabs({
 		   onSelect:function(title){
 		   		if(title == 'Customer Info'){
-		   			win = $.messager.progress({title:'Please waiting',msg:'Loading data...'});
-		   			$.ajax({
+		   		//	win = $.messager.progress({title:'Please waiting',msg:'Loading data...'});
+		   			//$.ajax({
 		   			
-		   			});
-		   			$.messager.progress('close');	
+		   		//	});
+		   			//$.messager.progress('close');	
 		   		}
 	       }
     });
@@ -34,15 +34,17 @@
     	   id:"#customer-info",
 	       title:'Customer Info',
 	       selected : true,
-	       content:'<iframe scrolling="auto" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/create/?custId=$custId");?>" style="width:100%;height:100%;" scrolling="no"></iframe>',
+	       content:'<iframe scrolling="no" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/create/?custId=$custId");?>" style="width:100%;height:100%;"></iframe>',
 	      
     	}
     );
+    
     $('#ddd').tabs('add',{
     		id:"#customer-shipping",
 	       title:'Customer shipping',
 	       selected : false,
-	       content:'Tab Body',
+	          content:'<iframe scrolling="no" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/shipping/?custId=$custId");?>" style="width:100%;height:100%;"></iframe>',
+	    
     	}
     );
     

@@ -66,6 +66,14 @@ class CustomersController extends Controller{
 			$custId = $_GET['cust_id'];
 		$this->render('general', array('custId' => $custId));
 	}
+	
+	public function actionGetCustomerShipping(){
+		$cusShipping = new CustomerShippingProcess();
+		$custId = 0;
+		if(isset($_GET['custId']))
+			$custId = $_GET['custId'];
+		echo CJSON::encode($cusShipping->getCustomerShippingLists($custId));
+	}
 }
 
 

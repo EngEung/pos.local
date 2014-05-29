@@ -10,6 +10,24 @@ class CustomerProcess extends CApplicationComponent {
 	public function __construct() {
 		
 	}
+	public function getCustomerByID($id){
+		$cus = Customers::model()->findByPK($id);
+		$model = new CustomerForm;
+		if($cus != null){
+			$model->firstName = $cus->first_name;
+			$model->lastName = $cus->last_name;
+			$model->titleId = $cus->title;
+			$model->locationId = $cus->location_id;
+			$model->address = $cus->address;
+			$model->phone1 = $cus->phone1;
+			$model->phone2 = $cus->phone2;
+			$model->fax = $cus->fax;
+			$model->email1 = $cus->email1;
+			$model->customerTypeId = $cus->customer_type;
+			$model->note = $cus->note;
+		}
+		return $model;
+	}
 	
 	public function getCustomerLists(){
 		$sql = "SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 

@@ -19,6 +19,10 @@ class CustomersController extends Controller{
 		$this->layout = 'setup_layout';
 		$model = new CustomerForm();
 		$cp = new CustomerProcess();
+		if(isset($_GET['custId'])){
+			$model = $cp->getCustomerByID($_GET['custId']);
+		}
+		
 		if(isset($_POST['CustomerForm'])){
 			$model->attributes = $_POST['CustomerForm'];
 			$validated=$model->validate();

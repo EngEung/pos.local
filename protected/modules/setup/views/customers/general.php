@@ -34,7 +34,7 @@
     	   id:"#customer-info",
 	       title:'Customer Info',
 	       selected : true,
-	       content:'<iframe scrolling="auto" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/create/?custId=$custId");?>" style="width:100%;height:100%;"></iframe>',
+	       content:'<iframe scrolling="no" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/create/?custId=$custId");?>" style="width:100%;height:100%;"></iframe>',
 	      
     	}
     );
@@ -43,7 +43,8 @@
     		id:"#customer-shipping",
 	       title:'Customer shipping',
 	       selected : false,
-	       content:'Tab Body',
+	          content:'<iframe scrolling="no" frameborder="0"  src="<?php echo $this->createUrl("/setup/customers/shipping/?custId=$custId");?>" style="width:100%;height:100%;"></iframe>',
+	    
     	}
     );
     

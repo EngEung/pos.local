@@ -24,14 +24,6 @@ class CustomerShippingProcess extends CApplicationComponent {
 		if($model->firstName == null || $model->lastName == null) return null;
 		$c = new Customers();
 		$c->setAttributes(array(
-			'first_name' => $model->firstName,
-			'last_name' => $model->lastName,
-			'title' => $model->titleId,
-			'phone1' => $model->phone1,
-			'phone2' => $model->phone2,
-			'email1' => $model->email1,
-			'country_id' => $model->countryId,
-			'province_id' => $model->provinceId,
 			'commune_id' => $model->communeId,
 			'district_id' => $model->districtId,
 			'customer_type' => $model->customerTypeId,

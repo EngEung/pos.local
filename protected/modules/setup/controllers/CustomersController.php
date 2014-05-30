@@ -54,7 +54,8 @@ class CustomersController extends Controller{
 	public function actionShipping(){
 		$this->authenticate();
 		$this->layout = 'setup_layout';
-		$this->render('shipping');
+                $model = new ShippingForm();
+		$this->render('shipping', array('model' => $model));
 	}
 	
 	

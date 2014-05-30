@@ -55,12 +55,12 @@
 <?php 
 $this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 	'id'=> 'windowForm',
-	'style'=> 'width:300px',
+	'style'=> 'width:500px',
 	'closed' => true,
 	'modal' => true,
 	'buttons' => '#dlg-buttons'	// for button save
 ));
-	//$this->renderPartial('_form', array('model'=>$model));
+	$this->renderPartial('_formShipping', array('model'=>$model));
 	
 $this->endWidget();  
 ?>

@@ -22,16 +22,14 @@ class CustomerShippingProcess extends CApplicationComponent {
 
 	public function create($model){
 		if($model->firstName == null || $model->lastName == null) return null;
-		$c = new Customers();
+		$c = new CustomerShipping();
 		$c->setAttributes(array(
-			'commune_id' => $model->communeId,
-			'district_id' => $model->districtId,
-			'customer_type' => $model->customerTypeId,
-			'address'=> $model->address,
-			'location_id' => $model->locationId,
-			'note' => $model->note,
-			'picture_id' => $model->pictureId,
-			'note' => $model->note
+                    'customer_id' => $model->customerId,
+                    'shipping_to' => $model->shippingTo,
+                    'shipping_address' => $model->shippingAddress,
+                    'address'=> $model->address,
+                    'note' => $model->note,
+                    'created_by' => '',
 		));
 		$c->save(false);
 	}

@@ -3,9 +3,165 @@ $(function(){
 	var button ='btn-save';
 	
 	
+	/**
+	 * Traning Record
+	 */
+		$("#traingRecordForm").submit(function(e){
+			submitForm('traingRecordForm', button, $('#windowForm'), $("#dg"));
+			e.preventDefault(); //Prevent Default action.
+			$("#traingRecordForm").unbind;
+		});
 	
+		$('#btn-save').click(function(){
+			if(onVlidateFormTraining()){
+				button = 'btn-save';
+				$("#traingRecordForm").submit();
+			}
+		});
+		$('#btn-save-close').click(function(){
+			if(onVlidateFormTraining()){
+				button = 'btn-save-close';
+				$("#traingRecordForm").trigger('submit');
+			}
+		});
 	
-
+	/**
+	 * Work Experience
+	 * 
+	 */
+		$("#WorkExperienceForm").submit(function(e){
+			submitForm('WorkExperienceForm', button, $('#windowForm'), $("#dg"));
+			e.preventDefault(); //Prevent Default action.
+			$("#WorkExperienceForm").unbind;
+		});
+		
+		$('#btn-save-work').click(function(){
+			if(onValidateFormWorkExperience()){
+				button = 'btn-save';
+				$("#WorkExperienceForm").submit();
+			}
+		});
+		
+		$('#btn-save-close-work').click(function(){
+			if(onValidateFormWorkExperience()){
+				button = 'btn-save-close';
+				$("#WorkExperienceForm").submit();
+			}
+		});
+	
+	/**
+	 * Education 
+	 */
+		$("#educationForm").submit(function(e){
+			submitForm('educationForm', button, $('#windowForm'), $("#dg"));
+			e.preventDefault(); //Prevent Default action.
+			$("#educationForm").unbind;
+		});
+	
+		$('#btn-save-edu').click(function(){
+			if(onVlidateFormEducation()){
+				button = 'btn-save';
+				$("#educationForm").submit();
+			}
+		});
+		
+		$('#btn-save-close-edu').click(function(){
+			if(onVlidateFormEducation()){
+				button = 'btn-save-close';
+				$("#educationForm").submit();
+			}
+		});
+	
+	/**
+	 * Language
+	 */
+		$("#languageForm").submit(function(e){
+			submitForm('languageForm', button, $('#windowFormLang'), $("#dtlang"));
+			e.preventDefault(); //Prevent Default action.
+			$("#languageForm").unbind;
+		});
+	
+		$('#btn-save-lang').click(function(){
+			//if(onVlidateFormEducation()){
+				button = 'btn-save';
+				$("#languageForm").submit();
+			//}
+		});
+		
+		$('#btn-save-close-lang').click(function(){
+			//if(onVlidateFormEducation()){
+				button = 'btn-save-close';
+				$("#languageForm").submit();
+			//}
+		});
+		
+	/**
+	 * Language
+	 */
+		$("#awardForm").submit(function(e){
+			submitForm('awardForm', button, $('#windowFormAward'), $("#dgAward"));
+			e.preventDefault(); //Prevent Default action.
+			$("#awardForm").unbind;
+		});
+	
+		$('#btn-save-award').click(function(){
+			//if(onVlidateFormEducation()){
+				button = 'btn-save';
+				$("#awardForm").submit();
+			//}
+		});
+		
+		$('#btn-save-close-award').click(function(){
+			//if(onVlidateFormEducation()){
+				button = 'btn-save-close';
+				$("#awardForm").submit();
+			//}
+		});		
+		
+		
+		/**
+		 * Benefit
+		 */
+		$("#benifitForm").submit(function(e){
+			submitForm('benifitForm', button, $('#windowFormBenifit'), $('#dgGeneral'));
+			e.preventDefault(); //Prevent Default action.
+			$("#benifitForm").unbind;
+		});
+		$('#btn-save-benifit').click(function(){
+			if(onVlidateFormBenifit()){
+				button = 'btn-save';
+				$("#benifitForm").submit();
+			}
+		});
+		$('#btn-save-close-benifit').click(function(){
+			if(onVlidateFormBenifit()){
+				button = 'btn-save-close';
+				$("#benifitForm").submit();
+			}
+		});
+		
+		
+		/**
+		 * Property
+		 */
+		$("#propertyForm").submit(function(e){
+			submitForm('propertyForm', button, $('#windowFormProperty'), $('#dgProperty'));
+			e.preventDefault(); //Prevent Default action.
+			$("#propertyForm").unbind;
+		});
+		$('#btn-save-pro').click(function(){
+		//	if(onVlidateFormBenifit()){
+				button = 'btn-save';
+				$("#propertyForm").submit();
+			//}
+		});
+		$('#btn-save-close-pro').click(function(){
+			//if(onVlidateFormBenifit()){
+				button = 'btn-save-close';
+				$("#propertyForm").submit();
+			//}
+		});
+		
 	/**
 	 * Submit Form
 	 * @param string form, selector #id of tag form
@@ -41,7 +197,7 @@ $(function(){
 		    
 		        	 	refreshGrid(n);
 		        	}else{
-		        	 	$.messager.alert('Warning','Save training record has not been successfully!','warning');
+		        	 	$.messager.alert('Warning','The action has not been successfully!','warning');
 		        	}
 		    	}else {
 		    		$.messager.alert('Error','Error occured.please try again.','warning');
@@ -91,14 +247,13 @@ $(function(){
 			if(fsize>1048576) 
 			{
 				$("#output").notice("<b>"+bytesToSize(fsize) +"</b> Too big Image file! <br />Please reduce the size of your photo using an image editor.");
-				$("#imageInput").val("");
 				return false;
 			}
 			
-			//$("#alerter .alert").alert("close");
-			//var file = '<a target="_blank" id="file_link" href="/hr/staff/empTraining/viewFile/?id="><i class="icon-file"> </i>' + fileName +'</a>';
-			//file = file + '<a id="file_delete" href="#" onclick="onDeleteFile()" ><i class="icon-remove"> </i></a>';
-			//$("#output").html(file);
+			$("#alerter .alert").alert("close");
+			var file = '<a target="_blank" id="file_link" href="/hr/staff/empTraining/viewFile/?id="><i class="icon-file"> </i>' + fileName +'</a>';
+			file = file + '<a id="file_delete" href="#" onclick="onDeleteFile()" ><i class="icon-remove"> </i></a>';
+			$("#output").html(file);
 		}
 		else
 		{
@@ -206,6 +361,21 @@ function onVlidateFormEducation(){
 	}
 	return true;
 }
+
+/**
+ * validate form benifit
+ * @returns {Boolean}
+ */
+function onVlidateFormBenifit(){
+	var limit = validationEmpty($("#BenifitForm_creditLimited"));
+    var frequency = validationEmpty($("#BenifitForm_frequencyId"));
+    var type = validationEmpty($("#BenifitForm_allowanceTypeId"));
+	if( limit != "" || frequency != "" || type != ""){
+		return false;	
+	}
+	return true;
+}
+
 
 //function to format bites bit.ly/19yoIPO
 function bytesToSize(bytes) {

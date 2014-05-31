@@ -24,10 +24,9 @@ class CustomerShippingProcess extends CApplicationComponent {
 		if($model->shippingTo == null || $model->shippingAddress == null) return false;
 		$c = new CustomerShipping();
 		$c->setAttributes(array(
-                    'customer_id' => $model->customerId,
+                    'customer_id' => $model->custId,
                     'shipping_to' => $model->shippingTo,
                     'shipping_address' => $model->shippingAddress,
-                    'address'=> $model->address,
                     'note' => $model->note,
                     'created_by' => '',
 		));

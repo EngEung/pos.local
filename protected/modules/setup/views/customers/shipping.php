@@ -1,8 +1,7 @@
+
+<br/>
 <?php 
-	$this->pageTitle=Yii::app()->name . ' - Customers';
-	$this->breadcrumbs=array(
-		'Create Customer',
-	);
+	$this->pageTitle=Yii::app()->name . ' - Customer Shippings';
 	/** Client Script**/
 	Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;						
@@ -10,8 +9,8 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jasny-bootstrap/css/jasny-bootstrap.min.css' );
 	
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js', CClientScript::POS_HEAD);
-	$cs->registerScriptFile(Yii::app()->baseUrl . '/js/masktextbox/masktextbox.js',CClientScript::POS_HEAD );
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/common.js');
+        $cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.crud.js');	
 ?>
 <table id="dgShipping"></table>
 
@@ -57,11 +56,11 @@ $this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 	'id'=> 'windowForm',
 	'style'=> 'width:500px',
 	'closed' => true,
-	'modal' => true,
+	//'modal' => true,
 	'buttons' => '#dlg-buttons'	// for button save
-));
+)); 
 	$this->renderPartial('_formShipping', array('model'=>$model));
-	
+	        
 $this->endWidget();  
 ?>
 
@@ -93,17 +92,18 @@ $this->endWidget();
 
 
 <style>
+    .datagrid-toolbar .btn{margin-left: 5px;}
 </style>
 <script>
 	dgShipping = $("#dgShipping");
-	
+	form = $("#windowForm");
 	dgShipping.datagrid({
 		title:'Shipping',
 		height:400,
 		singleSelect:true,
 		nowrap:false,
 		fitColumns:true,
-		url:'<?php echo $this->createUrl('getCustomerShipping');?>',
+		url:'<?php echo $this->createUrl('getCustomerShipping', array('custId' => $model->custId));?>',
 		toolbar: '#tb',
 		idField: 'id',		
 		pagination: true,
@@ -118,13 +118,22 @@ $this->endWidget();
 			{title:"Created At",field:"created_at",width:80,sortable:true},
 		]],
 		onLoadSuccess:function(data){
-           	showGridMessage(dgShipping);
+                    showGridMessage(dgShipping);
    		},
 	});
 
+var crud = new Crud({
+	route: '<?php echo $this->createUrl('index');?>',
+	grid: dgShipping,
+	window: form	
+});
 $('#btn-add').click(function(){
-	//resetForm();
-	$('#windowForm').window({title:'Add Customer\'s Shipping',iconCls:'icon-share'});
-	$('#windowForm').window('open')
+    crud.add('createShipping', 'New Shipping');
+	//form.window({title:'New Shipping',iconCls:'icon-share'});
+	//$('#windowForm').window('open')
 });	
+
+$('#btn-save').click(function(){
+    crud.save('createShipping');
+});
 </script>

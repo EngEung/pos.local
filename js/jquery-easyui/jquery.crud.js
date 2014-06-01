@@ -107,12 +107,13 @@ $.extend(Crud.prototype, {
 		}
 	 },
 	
-	 add: function() { 
+	 add: function(url, title, clear) { 
 		var that = this;
-		that.clearForm();
-		that.form.attr('action', that.route+'/create');
+                if(clear) that.clearForm();
+		that.form.attr('action', that.route+"/"+url);
 		that.options.onBeforeEdit(true, {});
-		that.options.window.dialog('open');    
+		that.options.window.dialog('open'); 
+                that.options.window.dialog('setTitle',title);
 		that.options.onAfterEdit(true);
 	 },
 	

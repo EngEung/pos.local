@@ -54,7 +54,10 @@ class CustomersController extends Controller{
 	public function actionShipping(){
 		$this->authenticate();
 		$this->layout = 'setup_layout';
-		$this->render('shipping');
+                $model = new ShippingForm();
+                if(isset($_GET['custId']))
+                     $model->custId = $_GET['custId'];
+		$this->render('shipping', array('model' => $model));
 	}
 	
 	
@@ -73,6 +76,39 @@ class CustomersController extends Controller{
 		if(isset($_GET['custId']))
 			$custId = $_GET['custId'];
 		echo CJSON::encode($cusShipping->getCustomerShippingLists($custId));
+	}
+        
+        public function actionCreateShipping(){
+            $shipping = new CustomerShippingProcess();
+            $model=new ShippingForm();		
+            $this->performAjaxValidation($model);
+            if(isset($_POST['ShippingForm'])){
+                $model->attributes=$_POST['ShippingForm'];
+                $model->custId = $_POST['ShippingForm']['custId'];
+                $resutl = $shipping->create($model);
+                if($resutl)
+                        echo CJSON::encode(array('success'=>true));
+                else 
+                        echo CJSON::encode(array('success'=>false));	
+            }
+        }
+        
+        
+        /**
+	 * Performs the AJAX validation.
+	 * @param Country $model the model to be validated
+	 */
+	protected function performAjaxValidation($model)
+	{								
+		if(isset($_POST['ajax']) && $_POST['ajax']==='shippingForm')
+		{			
+			$errors = CActiveForm::validate($model);
+			if (is_array($errors) && !empty($errors))
+			{
+				echo $errors;	
+				Yii::app()->end();
+			}
+		}
 	}
 }
 

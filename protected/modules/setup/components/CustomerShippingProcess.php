@@ -28,7 +28,7 @@ class CustomerShippingProcess extends CApplicationComponent {
                     'shipping_to' => $model->shippingTo,
                     'shipping_address' => $model->shippingAddress,
                     'note' => $model->note,
-                    'created_by' => '',
+                    'created_by' => Utils::getUserName(),
 		));
 		return $c->save(false);
 	}
@@ -39,14 +39,13 @@ class CustomerShippingProcess extends CApplicationComponent {
 		if ($cs == null ) return false;
 		if ($model->shippingTo != null) $cs->shipping_to = $model->shippingTo;
 		if ($model->shipping_address != null) $cs->shipping_address = $model->shipping_address;
-		$cs->address = $model->note;
                 $cs->modified_at = "";
-                $cs->modified_by ="";
+                $cs->modified_by =Utils::getUserName();
 		$cs->note = $model->note;
 		return $c->save(false);
 	}
 	
 	public function removeShipping($id){
-
+            
 	}
 }

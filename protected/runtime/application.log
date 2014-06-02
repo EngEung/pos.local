@@ -52,3 +52,51 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/06/02 03:42:27 [warning] [application] Failed to set unsafe attribute "id" of "ShippingForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (105)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (84)
+in D:\wamp\www\pos.local\index.php (13)
+2014/06/02 03:42:27 [warning] [application] Failed to set unsafe attribute "custId" of "ShippingForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (105)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (84)
+in D:\wamp\www\pos.local\index.php (13)
+2014/06/02 03:42:27 [warning] [application] Failed to set unsafe attribute "note" of "ShippingForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (105)
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (84)
+in D:\wamp\www\pos.local\index.php (13)
+2014/06/02 03:42:27 [warning] [application] Failed to set unsafe attribute "id" of "ShippingForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (86)
+in D:\wamp\www\pos.local\index.php (13)
+2014/06/02 03:42:27 [warning] [application] Failed to set unsafe attribute "custId" of "ShippingForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (86)
+in D:\wamp\www\pos.local\index.php (13)
+2014/06/02 03:42:27 [warning] [application] Failed to set unsafe attribute "note" of "ShippingForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\CustomersController.php (86)
+in D:\wamp\www\pos.local\index.php (13)
+2014/06/02 06:22:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/06/02 06:22:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/06/02 06:44:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

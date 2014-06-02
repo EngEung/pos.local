@@ -46,7 +46,7 @@ class CustomerShippingProcess extends CApplicationComponent {
 		return $c->save(false);
 	}
 	
-	public function removeShjpping($id){
+	public function removeShipping($id){
 
 	}
 }

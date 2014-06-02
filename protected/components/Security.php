@@ -1106,8 +1106,7 @@ class Security extends CApplicationComponent {
 		$str = substr($str, 0, -2);
 		return $str;
 	}
-        
-        
+	
 }
 
 

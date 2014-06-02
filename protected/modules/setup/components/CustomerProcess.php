@@ -35,7 +35,7 @@ class CustomerProcess extends CApplicationComponent {
 	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
 	    		INNER JOIN locations l ON l.id = c.location_id 
 	    		WHERE c.active = true";
-		return Utils::exprotData($sql);
+		return DAO::exprotData($sql);
 	}
 
 

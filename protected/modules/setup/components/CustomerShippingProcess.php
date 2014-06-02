@@ -16,7 +16,7 @@ class CustomerShippingProcess extends CApplicationComponent {
 	    		FROM customer_shipping cs 
 	    		INNER JOIN customers c ON c.id = cs.customer_id
 	    		WHERE c.active = true and cs.active = true and cs.customer_id = $custId";
-		return Utils::exprotData($sql);
+		return DAO::exprotData($sql);
 	}
 
 

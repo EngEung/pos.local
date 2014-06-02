@@ -157,81 +157,23 @@ class Utils extends CApplicationComponent {
    public static function getSaltedPasswd($passwd){
    	return crypt($passwd, self::createSaltedPassword($passwd));
    }
-   
-   
-   
-   /**
-	 * Applies LIMIT, OFFSET and ORDER to the specified query criteria.
-	 * @param CDbCriteria $criteria The query criteria that should be applied restrictions
-	 * @param CActiveRecord $model The model that will execute criteria 
-	 */
-	protected static function prepareList()
-	{
-		$params = array();
-		if (isset($_REQUEST['rows']))
-		{
-			$limit = $_REQUEST['rows'];
-			$params = array('limit' => $limit, 'offset' => ($_REQUEST['page']-1) * $limit);
-		}
-	
-		if (isset($_REQUEST['sort']))
-		{
-			$sort = $_REQUEST['sort'];
-			$direction = (isset($_REQUEST['order'])) ? $_REQUEST['order'] : "";
-			$params['order'] = $sort .' '. $direction;
-		}
-		return $params; 
-	}
-	
-	/**
-     * Exports an array to a special readable JSON object.     
-     * <p>The $total parameter indicates the total number of records. This is useful is case of pagination where
-     * the total number of records is needed by the control to create the correct pagination<br/>     
-     * @param string $sql 
-     * @param int $total total number of records in the entire data-source
-     * @return array  Data representation in JSON format
-     */
-	public static function exprotData($sql){
-		if($sql == null) return null;
-		$arr = array();
-		$arr1 = array();
-		$str = array();
-		
-		$total = self::getTotalNumberofRecord($sql);
-		# get params
-		$params = self::prepareList();
-		if($params == null) return null;
-		
-		# query with order by
-		if(isset($params['order']))
-			$sql .= " order by {$params['order']}";
 
-		
-		# query with limit and offset
-		if($params['limit'] != null && $params['offset'] != null)
-	    	$sql .= " limit {$param['limit']} offset {$params['offset']}";
-		try{
-			$cnc = Yii::app()->db;
-    		$cmd = new CDbCommand($cnc);
-    		$cmd = $cnc->createCommand($sql);
-    		$dataReader = $cmd->query();
-			$total = count($dataReader);
-			foreach($dataReader as $row ){
-				foreach($row as $key => $value){
-					$arr1 =array($key=> $value);
-					$arr = array_merge($arr, $arr1);
-				}
-				$str[] = $arr;
-			}
-		}catch(CException $e){
-			echo $e;
-		}
-		return array('total'=>"$total", 'rows' => $str);
+        
+        public static function getUserInfo(){
+		$guid=Yii::app()->session->get('guid');
+		$criteria = new CDbCriteria();
+		$criteria->condition =" t.active = true and t.guid = '$guid'";
+		//$criteria->params = array(':guid' => $guid);
+		return Users::model()->find($criteria);
 	}
 	
-	public static function getTotalNumberofRecord($sql){
-		return Yii::app()->db->createCommand($sql)->queryScalar();
+	public static function getUserID(){
+		return self::getUserInfo()->id;
 	}
+        
+        public static function getUserName(){
+            return self::getUserInfo()->username;
+        }
 }
 
 

@@ -112,10 +112,12 @@ $this->endWidget();
 		ctrlSelect: true,
 		collapsible:true,
 		columns:[[
-			{title:"ID",field:"id",width:10,sortable:true},
+			{title:"ID",field:"id",width:10,sortable:true, hidden:true},
 			{title:"Shipping To",field:"shipping_to",width:100,sortable:true},
 			{title:"Shipping Address",field:"shipping_address",width:100,sortable:true},
-			{title:"Created At",field:"created_at",width:80,sortable:true},
+                        {title:"Note",field:"note",width:100,sortable:true},		
+                        {title:"Created At",field:"created_at",width:50},
+                        {title:"Created By",field:"created_by",width:50},
 		]],
 		onLoadSuccess:function(data){
                     showGridMessage(dgShipping);
@@ -135,5 +137,8 @@ $('#btn-add').click(function(){
 
 $('#btn-save').click(function(){
     crud.save('createShipping');
+});
+$("#btn-edit").click(function(){
+   crud.edit(); 
 });
 </script>

@@ -54,7 +54,7 @@ class CustomersController extends Controller{
 	public function actionShipping(){
 		$this->authenticate();
 		$this->layout = 'setup_layout';
-                $model = new ShippingForm();
+                $model = new CustomerShippingForm();
                 if(isset($_GET['custId']))
                      $model->custId = $_GET['custId'];
 		$this->render('shipping', array('model' => $model));
@@ -80,11 +80,12 @@ class CustomersController extends Controller{
         
         public function actionCreateShipping(){
             $shipping = new CustomerShippingProcess();
-            $model=new ShippingForm();		
+            $model=new CustomerShippingForm();		
             $this->performAjaxValidation($model);
-            if(isset($_POST['ShippingForm'])){
-                $model->attributes=$_POST['ShippingForm'];
-                $model->custId = $_POST['ShippingForm']['custId'];
+            if(isset($_POST['CustomerShippingForm'])){
+                $model->attributes=$_POST['CustomerShippingForm'];
+                $model->custId = $_POST['CustomerShippingForm']['custId'];
+				$model->note = $_POST['CustomerShippingForm']['note'];
                 $resutl = $shipping->create($model);
                 if($resutl)
                         echo CJSON::encode(array('success'=>true));
@@ -93,7 +94,36 @@ class CustomersController extends Controller{
             }
         }
         
+        public function actionGetShipping($id){
+            $oShipping = new CustomerShippingProcess();
+            echo CJSON::encode($oShipping->getShpppingToExportJSON($id));
+        }
         
+        public function actionUpdateShipping(){
+            $shipping = new CustomerShippingProcess();
+            $model=new CustomerShippingForm();		
+            $this->performAjaxValidation($model);
+            if(isset($_POST['CustomerShippingForm'])){
+                $model->attributes=$_POST['CustomerShippingForm'];
+                $model->id = $_POST['CustomerShippingForm']['id'];
+                $model->note = $_POST['CustomerShippingForm']['note'];
+                $result = $shipping->update($model);
+                if($result)
+                        echo CJSON::encode(array('success'=>true));
+                else 
+                        echo CJSON::encode(array('success'=>false));	
+            }
+        }
+        
+		
+		public function actionRemoveShipping($id){
+			$oShipping = new CustomerShippingProcess;
+			$result = $oShipping->removeShipping($id);
+			if (!$result)
+				echo CJSON::encode(array('success' => false, 'error'=> Yii::t('base', 'Your action has not been succesfully')));
+			else		
+				echo CJSON::encode(array('success' => true));
+		}
         /**
 	 * Performs the AJAX validation.
 	 * @param Country $model the model to be validated

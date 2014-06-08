@@ -131,14 +131,16 @@ var crud = new Crud({
 });
 $('#btn-add').click(function(){
     crud.add('createShipping', 'New Shipping');
-	//form.window({title:'New Shipping',iconCls:'icon-share'});
-	//$('#windowForm').window('open')
 });	
+
+$('#btn-remove').click(function(){
+	crud.remove('/removeShipping');
+});
 
 $('#btn-save').click(function(){
     crud.save('createShipping');
 });
 $("#btn-edit").click(function(){
-   crud.edit(); 
+   crud.edit("/getShipping", "/updateShipping/"); 
 });
 </script>

@@ -89,5 +89,62 @@ class DAO extends  CApplicationComponent{
 		$total = count($dataReader);
 		return $total;
 	}
+    /**
+	 * Exports an model to a special readable JSON to work with formulÃ¡rios
+	 * @param CModel $model
+	 * @return string JSON string representation of model
+	 */
+	public static function exportModel($model)
+	{
+		$data = self::encodeData($model);
+		foreach ($data as $k => $v)
+		{
+			$className = get_class($model);
+			$data[$className.'['.$k.']'] = $v;
+			unset($data[$k]);
+		}
+		return CJSON::encode($data);
+	}    
+        
+        
+        
+        /**
+     * Convert model to array for export JSON format
+     * @param $model the model to encode
+     * @param boolean $hidePk whether to export primary key attribute
+     * @param array $exports attribute names of export
+     */
+    private static function encodeData($model, $alias=null, $hidePk=false, $exports=array())
+    {
+    	$data = array();    	
+    	foreach ($model as $key => $value)    	  		   
+    	{    		
+    		if ($hidePk && $key == $model->getTableSchema()->primaryKey)    		    		
+    			continue;    			    		
+
+    		if (empty($exports) || in_array($key, $exports))    		
+    		{    			    		
+    			$key = ($alias) ? strtolower($alias).'_'.$key : $key;
+	    		$data[$key] = $value;
+    		}
+    	}    	
+    	
+    	if ($model instanceof CActiveRecord)
+    	{    	
+    		foreach ($model->relations() as $k => $relation)
+    		{    		
+    			if ($relation[0] === CActiveRecord::BELONGS_TO)    		
+    			{    			    		    			
+    				$fk = $model->{$k};    				    				
+    				if ((empty($exports) || in_array($k, $exports)) && $fk !== null){
+    					$cls = get_class($fk);
+    					$alias = ($alias !== null) ? $alias.'_'.$cls : $cls; 
+    					$data = array_merge($data, self::encodeData($fk, $alias, true, $exports));
+    				}    				
+    			}
+    		}    		    	
+    	}
+    	return $data;
+    }
 }
 ?>

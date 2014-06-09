@@ -12,6 +12,8 @@ return array(
 		'modified_by' => '',
 		'active' => '',
 		'note' => '',
+		'phone' => '',
+		'primary' => '',
 	),
 	'sample2'=>array(
 		'customer_id' => '',
@@ -23,6 +25,8 @@ return array(
 		'modified_by' => '',
 		'active' => '',
 		'note' => '',
+		'phone' => '',
+		'primary' => '',
 	),
 	*/
 );

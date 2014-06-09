@@ -92,6 +92,7 @@
 			{title:"Last Name",field:"last_name",width:100,sortable:true},
 			{title:"Type",field:"customer_type_name",width:80,sortable:true},
 			{title:"Phone",field:"phone1",width:120,sortable:true},
+			{title:"Address",field:"address",width:120,sortable:true},
 			
 		]],
 		onDblClickRow:function(index,row,value){

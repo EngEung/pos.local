@@ -14,9 +14,20 @@
  * @property string $modified_by
  * @property integer $active
  * @property string $note
+ * @property string $phone
+ * @property integer $primary
  */
 class CustomerShipping extends CActiveRecord
 {
+	/**
+	 * Returns the static model of the specified AR class.
+	 * @return CustomerShipping the static model class
+	 */
+	public static function model($className=__CLASS__)
+	{
+		return parent::model($className);
+	}
+
 	/**
 	 * @return string the associated database table name
 	 */
@@ -34,14 +45,15 @@ class CustomerShipping extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('customer_id, shipping_to, shipping_address, created_at', 'required'),
-			array('customer_id, active', 'numerical', 'integerOnly'=>true),
+			array('customer_id, active, primary', 'numerical', 'integerOnly'=>true),
 			array('shipping_to', 'length', 'max'=>65),
 			array('shipping_address, note', 'length', 'max'=>255),
 			array('created_by, modified_by', 'length', 'max'=>30),
+			array('phone', 'length', 'max'=>15),
 			array('modified_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, customer_id, shipping_to, shipping_address, created_at, modified_at, created_by, modified_by, active, note', 'safe', 'on'=>'search'),
+			array('id, customer_id, shipping_to, shipping_address, created_at, modified_at, created_by, modified_by, active, note, phone, primary', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -73,18 +85,13 @@ class CustomerShipping extends CActiveRecord
 			'modified_by' => 'Modified By',
 			'active' => 'Active',
 			'note' => 'Note',
+			'phone' => 'Phone',
+			'primary' => 'Primary',
 		);
 	}
 
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
-	 *
-	 * Typical usecase:
-	 * - Initialize the model fields with values from filter form.
-	 * - Execute this method to get CActiveDataProvider instance which will filter
-	 * models according to data in model fields.
-	 * - Pass data provider to CGridView, CListView or any similar widget.
-	 *
 	 * @return CActiveDataProvider the data provider that can return the models based on the search/filter conditions.
 	 */
 	public function search()
@@ -114,17 +121,12 @@ class CustomerShipping extends CActiveRecord
 
 		$criteria->compare('note',$this->note,true);
 
+		$criteria->compare('phone',$this->phone,true);
+
+		$criteria->compare('primary',$this->primary);
+
 		return new CActiveDataProvider('CustomerShipping', array(
 			'criteria'=>$criteria,
 		));
-	}
-
-	/**
-	 * Returns the static model of the specified AR class.
-	 * @return CustomerShipping the static model class
-	 */
-	public static function model($className=__CLASS__)
-	{
-		return parent::model($className);
 	}
 }

@@ -45,6 +45,8 @@ class CustomerShippingProcess extends CApplicationComponent {
                     'shipping_to' => $model->shippingTo,
                     'shipping_address' => $model->shippingAddress,
                     'note' => $model->note,
+                    'phone' => $model->phone,
+                    'primary' => $model->primary,
                     'created_by' => Utils::getUserName(),
 		));
 		return $c->save(false);

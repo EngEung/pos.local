@@ -11,6 +11,23 @@ class CustomerShippingProcess extends CApplicationComponent {
 		
 	}
 	
+        public function getShippingbyID($id){
+            return CustomerShipping::model()->findByPK($id);
+        }
+        
+        
+        public function getShpppingToExportJSON($id){
+            $data = $this->getShippingbyID($id);
+            $arr = array();
+            if($data != null){
+                $arr = array( 'CustomerShippingForm[id]' => $data->id,
+                              'CustomerShippingForm[shippingTo]' => $data->shipping_to , 
+                              'CustomerShippingForm[shippingAddress]' => $data->shipping_address,
+                              'CustomerShippingForm[note]'=> $data->note);
+            }
+            return $arr;
+        }
+        
 	public function getCustomerShippingLists($custId){
 		$sql = "SELECT cs.*
 	    		FROM customer_shipping cs 
@@ -38,14 +55,17 @@ class CustomerShippingProcess extends CApplicationComponent {
 		$cs = CustomerShipping::model()->findByPk($model->id);
 		if ($cs == null ) return false;
 		if ($model->shippingTo != null) $cs->shipping_to = $model->shippingTo;
-		if ($model->shipping_address != null) $cs->shipping_address = $model->shipping_address;
-                $cs->modified_at = "";
-                $cs->modified_by =Utils::getUserName();
+		if ($model->shippingAddress != null) $cs->shipping_address = $model->shippingAddress;
+        $cs->modified_at = "";
+        $cs->modified_by =Utils::getUserName();
 		$cs->note = $model->note;
-		return $c->save(false);
+		return $cs->save(false);
 	}
 	
 	public function removeShipping($id){
-            
+        if($id == null) return false;
+		$cs = CustomerShipping::model()->findByPk($id);
+		$cs->active =false;
+		return $cs->save(false); 
 	}
 }

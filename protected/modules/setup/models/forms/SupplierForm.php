@@ -14,10 +14,28 @@
 class SupplierForm extends CFormModel
 {
 	public $id;
-        public $custId;
-        public $shippingTo;
-        public $shippingAddress;
-        public $note;
+    public $name;
+    public $code;
+    public $address1;
+    public $address2;
+	
+	public $cityId;
+	public $cities;
+	
+	public $stateProvinceId;
+	public $stateProvinces;
+	
+	public $countryId;
+	public $countries;
+	
+	public $contact;
+	public $phone;
+	public $fax;
+	public $email;
+	public $website;
+	
+	
+    public $note;
 	
 	public function __construct(){
 		

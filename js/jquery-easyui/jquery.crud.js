@@ -117,15 +117,15 @@ $.extend(Crud.prototype, {
 		that.options.onAfterEdit(true);
 	 },
 	
-	 edit: function() {                        		
+	 edit: function(urlGet, urlUpdate) {                        		
 		var that = this;			
 		
 		if (that.validate(true)) {
 			$.messager.progress();
 			
 			var selected = that.options.grid.datagrid('getSelected'),
-				url = that.route+"/view?id="+selected.id,
-				action = that.route+"/update?id="+selected.id;
+				url = that.route+urlGet+"?id="+selected.id,
+				action = that.route+ urlUpdate+"?id="+selected.id;
 			
 			that.form.attr('action', action);			
 			that.form.form('reset');                
@@ -133,7 +133,7 @@ $.extend(Crud.prototype, {
         }
 	 },
 	
-	 remove: function(){                                	
+	 remove: function(url){                                	
 		var that = this;
 		
 		if (!that.validate()) 
@@ -144,14 +144,14 @@ $.extend(Crud.prototype, {
         		var row = that.options.grid.datagrid('getSelected');        		               
                 that.options.onBeforeRemove(row);
                 
-                $.ajax({type: "POST", url: that.route +'/delete/?id='+row.id,                	  
+                $.ajax({type: "POST", url: that.route +url+'/?id='+row.id,                	  
                 	  success: function(data) {                      	
                 		  data = $.parseJSON(data);                	
                 		  if (!data.success) {
                 			  $.messager.alert(that.alertTitle, data.error, 'error');
                 		  }
                 		  else {
-                			  alert(that.options);
+                			  //alert(that.options);
                 			  that.options.grid.datagrid('clearSelections');
                 			  that.options.grid.datagrid('reload');                    	
                 		  }

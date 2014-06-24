@@ -8,10 +8,12 @@
 class CustomerShippingForm extends CFormModel
 {
 	public $id;
-        public $custId;
-        public $shippingTo;
-        public $shippingAddress;
-        public $note;
+    public $custId;
+    public $shippingTo;
+    public $shippingAddress;
+    public $note;
+	public $phone;
+	public $primary;
 	
 	public function __construct(){
 		

@@ -102,15 +102,12 @@ Yii::app()->clientScript->registerScript('search', "
 		'columns' => array(
 					array('title'=>'', 'checkbox' => true),
 					array('title' =>'ID', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
-					array('title' => 'Course Title', 'field'=>'course_title', 'width'=> 30, 'sortable'=>true),
-					array('title' => 'Organizer', 'field'=>'organizer', 'width'=> 40, 'sortable'=>true),
-					array('title' => 'Place', 'field'=>'place', 'width'=> 30,'sortable'=>true),
-					array('title' => 'Sponsor By', 'field'=>'sponsor_by', 'width'=> 30,'sortable'=>true),
-					array('title' => 'Duration', 'field'=>'duration', 'width'=> 30,'sortable'=>true),
+					array('title' => 'Work Time', 'field'=>'work_time', 'width'=> 30, 'sortable'=>true),
+					array('title' => 'First Start', 'field'=>'off_start', 'width'=> 40, 'sortable'=>true),
+					array('title' => 'First Stop', 'field'=>'off_stop', 'width'=> 30,'sortable'=>true),
+					array('title' => 'Second Start', 'field'=>'w_start', 'width'=> 30,'sortable'=>true),
+					array('title' => 'Second Stop', 'field'=>'w_stop', 'width'=> 30,'sortable'=>true),
 					array('title' => 'Created Date', 'field'=>'created_date', 'width'=> 50,'sortable'=>true),
-					array('title' => 'Last Update', 'field'=>'modified_date', 'width'=> 50,'sortable'=>true),
-					array('title' => 'File', 'field'=>'file_id', 'width'=> 1, 'hidden' => true, 'sortable'=>true),
-					array('title' => 'File name', 'field'=>'file_name', 'width'=> 1, 'hidden' => true, 'sortable'=>true),
 		)	
 	));
 	?>

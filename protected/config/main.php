@@ -1,5 +1,5 @@
 <?php
-
+$serverName = "(local)";
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
@@ -69,16 +69,6 @@ return array(
 		),
 		
 		// uncomment the following to use a MySQL database
-		
-		// Server 	
-		/*
-		'db'=>array(
-					'connectionString' => 'mysql:host=192.168.17.11;dbname=hrms',
-					'emulatePrepare' => true,
-					'username' => 'root',
-					'password' => 'ipcx',
-					'charset' => 'utf8',
-				),*/
 	
 		// localhost mysql
 		'db'=>array(
@@ -91,12 +81,13 @@ return array(
 	
 		// localhost sql server 2008
 		/*
-		'dbsql'=>array(
-			'connectionString' => 'sqlsrv:Server=EngEung-LP\SQLEXPRESS;Database=posmango',
-			'emulatePrepare' => true,
-			'username' => 'EngEung-LP',
-			'password' => '@lak@eng',
-			'charset' => 'utf8',
+		'db'=>array(
+			'connectionString' => "sqlsrv:Server=localhost;Database=POS",
+			'username' => 'sa',
+			'password' => '123456',
+			'emulatePrepare' => false,
+			
+			//'charset' => 'utf8',
 		),
 		*/
 		// Yii session

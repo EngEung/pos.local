@@ -1,5 +1,5 @@
 <?php
-
+$serverName = "(local)";
 // This is the configuration for yiic console application.
 // Any writable CConsoleApplication properties can be configured here.
 return array(
@@ -22,6 +22,14 @@ return array(
 					'password' => '',
 					'charset' => 'utf8',
 				),
+		 /*
+		'db'=>array(
+			'connectionString' => "mssql:host=localhost; Database=POS",
+			'emulatePrepare' => false,
+			'username' => 'sa',
+			'password' => '123456',
+			//'charset' => 'utf8',
+		),*/
 		'log'=>array(
 			'class'=>'CLogRouter',
 			'routes'=>array(

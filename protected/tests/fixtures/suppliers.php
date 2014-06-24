@@ -1,0 +1,48 @@
+<?php
+
+return array(
+	/*
+	'sample1'=>array(
+		'name' => '',
+		'code' => '',
+		'address1' => '',
+		'address2' => '',
+		'city' => '',
+		'state_province_id' => '',
+		'postal_code' => '',
+		'country_id' => '',
+		'account_number' => '',
+		'contact' => '',
+		'phone' => '',
+		'email' => '',
+		'fax' => '',
+		'website' => '',
+		'created_at' => '',
+		'modified_at' => '',
+		'created_by' => '',
+		'modified_by' => '',
+		'active' => '',
+	),
+	'sample2'=>array(
+		'name' => '',
+		'code' => '',
+		'address1' => '',
+		'address2' => '',
+		'city' => '',
+		'state_province_id' => '',
+		'postal_code' => '',
+		'country_id' => '',
+		'account_number' => '',
+		'contact' => '',
+		'phone' => '',
+		'email' => '',
+		'fax' => '',
+		'website' => '',
+		'created_at' => '',
+		'modified_at' => '',
+		'created_by' => '',
+		'modified_by' => '',
+		'active' => '',
+	),
+	*/
+);

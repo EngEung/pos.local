@@ -89,6 +89,7 @@ class UserInterface extends CApplicationComponent{
 			if($selected == $row['descr'])
 				$help = true;
 			$arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>Yii::app()->baseUrl.$row['url'], 'active'=>$help);
+                        $help = false;
 		}
 		return $arr;
 	}

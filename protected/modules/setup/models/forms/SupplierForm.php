@@ -14,10 +14,10 @@
 class SupplierForm extends CFormModel
 {
 	public $id;
-    public $name;
-    public $code;
-    public $address1;
-    public $address2;
+        public $name;
+        public $code;
+        public $address1;
+        public $address2;
 	
 	public $cityId;
 	public $cities;

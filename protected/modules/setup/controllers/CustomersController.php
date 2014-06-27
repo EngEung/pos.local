@@ -3,7 +3,8 @@ class CustomersController extends Controller{
 	
 	public function actionIndex(){
 		$this->authenticate();
-		$this->layout = 'setup_layout_column1';	
+		//$this->layout = 'setup_layout_column1';
+                $this->layout = 'layout_setup_main';
 		$this->render('index');
 	}
 	

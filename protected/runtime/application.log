@@ -1448,3 +1448,1041 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/06/28 15:39:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 15:39:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/28 15:39:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/28 15:39:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 15:39:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/remove-icon-small.png
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 15:39:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 15:39:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/img/remove-icon-small.png
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 15:40:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:26:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:26:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:27:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:30:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:30:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:30:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "supplier".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('supplier')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('supplier')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/customers/supplier/
+HTTP_REFERER=http://pos.local/dashboard
+---
+2014/06/28 16:30:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:32:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:32:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:32:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "supplier".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('supplier')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('supplier')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/customers/supplier/
+HTTP_REFERER=http://pos.local/dashboard
+---
+2014/06/28 16:32:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:33:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:34:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:35:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:35:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:35:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:35:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:35:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "supplier".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('supplier')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('supplier')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/customers/supplier/
+HTTP_REFERER=http://pos.local/setup/customers/
+---
+2014/06/28 16:36:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:39:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:41:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 16:41:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:05:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "supplier".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('supplier')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('supplier')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/customers/supplier/
+HTTP_REFERER=http://pos.local/setup/customers
+---
+2014/06/28 17:05:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:06:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "supplier".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('supplier')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('supplier')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/customers/supplier/
+---
+2014/06/28 17:06:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:06:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:06:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:07:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:09:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:09:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:09:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:09:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:13:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:13:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:13:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:14:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:14:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:14:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:15:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:16:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:16:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:27:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:27:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:27:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:50:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:50:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:50:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:52:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:53:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:56:28 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:56:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 17:56:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 17:57:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 18:06:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 18:06:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 18:07:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 18:09:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 18:51:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 18:51:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 18:52:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 18:53:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 18:55:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/28 19:02:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/28 19:19:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 04:07:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:13:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:13:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/29 17:13:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/06/29 17:13:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:15:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:25:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:26:02 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4. The SQL statement executed was: SELECT cs.*
+	    		FROM customer_shipping cs 
+	    		INNER JOIN customers c ON c.id = cs.customer_id
+	    		WHERE c.active = true and cs.active = true and cs.customer_id = .
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (88)
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (46)
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\CustomerShippingProcess.php (36)
+2014/06/29 17:26:02 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 4. The SQL statement executed was: SELECT cs.*
+	    		FROM customer_shipping cs 
+	    		INNER JOIN customers c ON c.id = cs.customer_id
+	    		WHERE c.active = true and cs.active = true and cs.customer_id = ' in C:\xampp\htdocs\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(88): CDbCommand->query()
+#2 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(46): DAO::countTotal('SELECT cs.*??? ...')
+#3 C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\CustomerShippingProcess.php(36): DAO::exprotData('SELECT cs.*??? ...')
+#4 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\CustomersController.php(79): CustomerShippingProcess->getCustomerShippingLists('')
+#5 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionGetCustomerShipping()
+#6 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomership...')
+#10 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/customers...')
+#11 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/setup/customers/getCustomerShipping/custId
+HTTP_REFERER=http://pos.local/setup/customers/shipping/
+---
+2014/06/29 17:31:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:36:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:38:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:40:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:41:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:43:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:43:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:44:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:46:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:47:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:48:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:51:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:52:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 17:52:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:52:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:55:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 17:55:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getcustomerlists".' in C:\xampp\htdocs\www\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(270): CController->missingAction('getcustomerlist...')
+#1 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getcustomerlist...')
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#3 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/setup/supplier/getCustomerLists
+HTTP_REFERER=http://pos.local/setup/supplier/
+---
+2014/06/29 18:08:45 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 18:10:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 18:12:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 18:14:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 18:15:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/06/29 18:20:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---

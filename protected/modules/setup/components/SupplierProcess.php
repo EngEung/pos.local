@@ -30,12 +30,8 @@ class SupplierProcess extends CApplicationComponent {
 		return $model;
 	}
 	
-	public function getCustomerLists(){
-		$sql = "SELECT c.*, l.name AS 'location_name', ct.name AS 'customer_type_name' 
-	    		FROM customers c 
-	    		INNER JOIN customer_types ct ON c.customer_type = ct.id
-	    		INNER JOIN locations l ON l.id = c.location_id 
-	    		WHERE c.active = true";
+	public function getSupplierLists(){
+		$sql = "SELECT s.* FROM suppliers s ";
 		return DAO::exprotData($sql);
 	}
 

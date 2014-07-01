@@ -18,7 +18,13 @@ class SupplierController extends Controller{
 		$this->authenticate();
 		$this->layout = 'setup_layout';
 		$model = new SupplierForm();
-		$cp = new SupplierProcess();
+		$sp = new SupplierProcess();
+		if(isset($_POST['SupplierForm'])){
+			$model->attributes = $_POST['SupplierForm'];
+			if($model->validate()){
+				$flage = $sp->createSupplier($model);	
+			}
+		}
 		$this->render('create', array('model' => $model));
 	}
 

@@ -69,8 +69,8 @@
 ?>
 <style>
 
-	.form-horizontal #left_col .control-label { width:100px;}
-	.form-horizontal #left_col .controls {margin-left: 120px; }
+	.form-horizontal #left_col .control-label { width:110px;}
+	.form-horizontal #left_col .controls {margin-left: 130px; }
 
 	.form-horizontal .control-label { width:120px;}
 	.form-horizontal .controls {margin-left: 140px;}

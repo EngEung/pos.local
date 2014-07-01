@@ -46,7 +46,7 @@ class SupplierForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('shippingTo, shippingAddress', 'required',),
+			array('name, code, phone, address1, accountNum', 'required',),
 		
 		);
 	}

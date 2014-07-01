@@ -20,7 +20,7 @@
                                     'label' => 'Add',
                                     'icon' => 'plus-sign',
                                     'size' => 'small',
-                                    'url' => "javascript:addTab('New Customer','/setup/customers/create/');"
+                                    'url' => "javascript:addTab('New Supplier','".Yii::app()->request->baseUrl. "/setup/supplier/create/');"
                             ));
 
                             $this->widget('bootstrap.widgets.TbButton',array(
@@ -67,12 +67,14 @@
 		//ctrlSelect: true,
 		//collapsible:true,
 		columns:[[
-			{title:"ID",field:"id",width:30,sortable:true},
-			{title:"Name",field:"name",width:100,sortable:true},
-			{title:"Contact",field:"contact",width:100,sortable:true},
-			{title:"Code",field:"code",width:80,sortable:true},
-			{title:"Phone",field:"phone",width:120,sortable:true},
-			{title:"Address",field:"address",width:120,sortable:true},
+			{title:"ID",field:"id",width:40,sortable:true},
+                        {title:"Account Number",field:"account_number",width:100,sortable:true},
+			{title:"Name",field:"name",width:150,sortable:true},
+                        {title:"Code",field:"code",width:100,sortable:true},
+			{title:"Contact",field:"contact",width:150,sortable:true},
+			{title:"Phone",field:"phone",width:100,sortable:true},
+                        {title:"Email",field:"email",width:140,sortable:true},
+			{title:"Address",field:"address1",width:300,sortable:true},
 			
 		]],
 		/*onDblClickRow:function(index,row,value){

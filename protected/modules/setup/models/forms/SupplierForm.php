@@ -1,9 +1,3 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 <?php
 
 /**
@@ -14,10 +8,10 @@
 class SupplierForm extends CFormModel
 {
 	public $id;
-        public $name;
-        public $code;
-        public $address1;
-        public $address2;
+    public $name;
+    public $code;
+    public $address1;
+    public $address2;
 	
 	public $cityId;
 	public $cities;
@@ -33,9 +27,11 @@ class SupplierForm extends CFormModel
 	public $fax;
 	public $email;
 	public $website;
-	
-	
-    public $note;
+	public $postalCode;
+    public $accountNum;
+
+
+        public $note;
 	
 	public function __construct(){
 		
@@ -59,6 +55,12 @@ class SupplierForm extends CFormModel
 	 * Declares attribute labels.
 	 */
 	public function attributeLabels(){
+		return array(
+			'accountNum' => 'Account Number',
+			'countryId' => 'Country',
+			'cityId' => 'City',
+			'stateProvinceId' => 'State/Province'
+		);
 	}
 
 }

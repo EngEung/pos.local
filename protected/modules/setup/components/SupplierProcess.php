@@ -1,11 +1,4 @@
 <?php
-
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 class SupplierProcess extends CApplicationComponent {
 	
 	public function __construct() {
@@ -37,12 +30,12 @@ class SupplierProcess extends CApplicationComponent {
 
 
 	public function createSupplier($model){
-            if($model->firstName == null || $model->lastName == null) return null;
+            if($model == null) return null;
             $s = new Suppliers();
             $s->name = $model->name;
             $s->address1 = $model->address1;
             $s->address2 = $model->address2;
-            $s->city = $model->city;
+            $s->city = $model->cityId;
             $s->code = $model->code;
             $s->contact = $model->contact;
             $s->country_id = $model->countryId;
@@ -52,6 +45,7 @@ class SupplierProcess extends CApplicationComponent {
             $s->postal_code = $model->postalCode;
             $s->state_province_id = $model->stateProvinceId;
             $s->website = $model->website;
+            $s->account_number = $model->accountNum;
 
             return $s->save(false);
 	}

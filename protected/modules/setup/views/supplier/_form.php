@@ -16,49 +16,24 @@
 ?>		
 	<div style=" width: 345px; margin: 0; padding:0; float: left;">
 		<?php echo $form->hiddenField($model, 'id'); ?>
-		<?php echo $form->textFieldRow($model, 'firstName', array('placeholder' => '')); ?>
-		<?php echo $form->textFieldRow($model, 'lastName', array('placeholder' => '')); ?>
-		<?php echo $form->dropDownListRow($model,'titleId', $model->titles,
-						array('empty'=>'--Select--','style'=>'margin-left:00px;')); 
-				?>
-		<span style="margin-left:10px; color: #003BB3; font-weight: bold;">Phone Numbers</span><hr style="margin:-8px 0 0 110px;"/>
-		<br />
-		<?php echo $form->textFieldRow($model, 'phone1', array('placeholder' => '')); ?>
-		<?php echo $form->textFieldRow($model, 'phone2', array('placeholder' => '')); ?>
-		<?php echo $form->textFieldRow($model, 'fax', array('placeholder' => '')); ?>
-		
-		<span style="margin-left:10px; color: #003BB3; font-weight: bold;">Address</span><hr style="margin:-8px 0 0 70px;">
-		<br />
-		<?php echo $form->dropDownListRow($model,'locationId', $model->locations,
-						array('empty'=>'--Select--','style'=>'margin-left:00px;')); 
-				?>
-		<?php echo $form->textAreaRow($model, 'address', array('placeholder' => '', 'style' => 'width:210px; height:48px;')); ?>
+		<?php echo $form->textFieldRow($model, 'name', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'code', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'address1', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'address2', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'cityId', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'stateProvinceId', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'postalCode', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'countryId', array('placeholder' => '')); ?>
 	</div>
 	
 
 	<div id="left_col" style="width: 320px; margin: 0; padding:0; float: left;">
-		<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '', 'labelOptions'=>array('id'=>'label_'))); ?>
-		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left: 100px; padding-bottom: 5px;">
-		  <div class="fileinput-new thumbnail" style="width: 205px; height: 145px;">
-		    <img  alt="">
-		    <div id="output"></div> 
-		  </div>
-		  <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"></div>
-		  <div>
-		    <span class="btn btn-default btn-file"><span class="fileinput-new"><i class="icon-picture"></i> Select picture</span><span class="fileinput-exists">Change</span>
-		    <?php echo $form->fileField($model,'picture',array('id'=>'imageInput', 'style' => 'width:300px;')); ?></span>
-		    <a id="remove_image" onclick="onRemoveImage();" href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">Remove</a>
-		  </div>
-		</div>
-		<br/>
-		<span style="margin-left:25px; color: #003BB3; font-weight: bold;">Customer Options</span><hr style="margin:-8px 0 0 140px;">
-		<br />
-		 <?php echo $form->radioButtonListRow($model,'customerTypeId',$model->customerTypes, array('labelOptions'=>array('style'=> 'display:none;'), 'separator'=>'  ', 'divOptions'=>array('class'=>'div-customer-type'))); ?>
-		
-		<span style="margin-left:25px; color: #003BB3; font-weight: bold;">Note</span><hr style="margin:-8px 0 0 60px;">
-		<br />
-		<?php echo $form->textAreaRow($model, 'note', array('style' => 'width:250px;', 'divOptions'=>array('class'=>'div-customer-note'))); ?>
-		
+		<?php echo $form->textFieldRow($model, 'accountNum', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'contact', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'phone', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'fax', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'email', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'website', array('placeholder' => '')); ?>
 	</div>
 	<div style="clear:both;"></div>
 	

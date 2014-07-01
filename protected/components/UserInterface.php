@@ -64,8 +64,8 @@ class UserInterface extends CApplicationComponent{
 				$url 		= $row['url'];
 				$tooltip 	= $row['tooltip'];
 				$selected 	= false;
-				if($moduleSelected == $row['descr']) $selected = true;
-				$menuArrayLeft[] = array('label' => $name, 'url'=> Yii::app()->baseUrl.$url, 'active'=>$selected,
+				//if($moduleSelected == $row['descr']) $selected = true;
+				$menuArrayLeft[] = array('label' => $name, 'url'=> "javascript:addTabDashboard('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');", 'active'=>$selected,
 									'items' => $this->getSubHorizontalMenu($id, $roleIds, $controllerSelected));
 		    }
 			$menuArrayLeft = array('class'=>'bootstrap.widgets.TbMenu', 'items'=>$menuArrayLeft);
@@ -86,9 +86,9 @@ class UserInterface extends CApplicationComponent{
 		$arr = array();
 		$help = false;
 		foreach($dataReader as $row){
-                    if($selected == $row['descr'])
-                            $help = true;
-                    $arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>"javascript:addTab12('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');", 'active'=>$help);
+                    //if($selected == $row['descr'])
+                     //       $help = true;
+                    $arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>"javascript:addTabDashboard('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');", 'active'=>$help);
                     //[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>Yii::app()->baseUrl.$row['url'] , 'active'=>$help);
                     
                     $help = false;

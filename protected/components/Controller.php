@@ -42,7 +42,7 @@ class Controller extends CController
 			$module = $this->module->getName();
 		# get controller name
 		$controller = get_class($this);
-		return $ui->getTopMenu($module, $controller);
+		return $ui->getTopMenu($module, "");
 	}
 	
 	public function getLeftMenu(){

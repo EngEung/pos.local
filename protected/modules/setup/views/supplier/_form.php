@@ -1,4 +1,4 @@
-
+<br/>
 <?php 
     /** @var TbActiveForm $form */
     $form = $this->beginWidget(
@@ -14,7 +14,7 @@
    		'htmlOptions' => array('class' => 'well-small','enctype' => 'multipart/form-data'), // for inset effect
    ));
 ?>		
-	<div style=" width: 345px; margin: 0; padding:0; float: left;">
+	<div style=" width: 380px; margin: 0; padding:0; float: left;">
 		<?php echo $form->hiddenField($model, 'id'); ?>
 		<?php echo $form->textFieldRow($model, 'name', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'code', array('placeholder' => '')); ?>
@@ -27,7 +27,7 @@
 	</div>
 	
 
-	<div id="left_col" style="width: 320px; margin: 0; padding:0; float: left;">
+	<div id="left_col" style="width: 400px; margin: 0; padding:0; float: left;">
 		<?php echo $form->textFieldRow($model, 'accountNum', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'contact', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'phone', array('placeholder' => '')); ?>
@@ -69,11 +69,11 @@
 ?>
 <style>
 
-	.form-horizontal #left_col .control-label { width:80px;}
-	.form-horizontal #left_col .controls {margin-left: 100px; }
+	.form-horizontal #left_col .control-label { width:100px;}
+	.form-horizontal #left_col .controls {margin-left: 120px; }
 
-	.form-horizontal .control-label { width:100px;}
-	.form-horizontal .controls {margin-left: 120px;}
+	.form-horizontal .control-label { width:120px;}
+	.form-horizontal .controls {margin-left: 140px;}
 	.form-horizontal .radio label{margin-right: 10px;}
 	.form-horizontal .div-customer-type{margin-left: -40px;}
 	.form-horizontal .div-customer-note{margin-left: -40px;}

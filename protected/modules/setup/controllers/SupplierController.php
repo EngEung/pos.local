@@ -3,8 +3,7 @@ class SupplierController extends Controller{
 	
 	public function actionIndex(){
 		//$this->authenticate();
-		$this->layout = 'layout_test';	
-                //$this->layout = 'setup_layout_column1';
+		$this->layout = 'layout_setup_master';
 		$this->render('index');
 	}
 	

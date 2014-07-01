@@ -114,4 +114,17 @@
 			});
 		}
 	}
+        
+        function addTab12(title, url){
+		if ($('#tt12').tabs('exists', title)){
+			$('#tt12').tabs('select', title);
+		} else {
+			var content ='<iframe scrolling="yes" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
+			$('#tt12').tabs('add',{
+                            title:'Dashboard',
+                            content:content,
+                            closable:true
+			});
+		}
+        } 
 </script>

@@ -22,7 +22,18 @@ class SupplierController extends Controller{
 		if(isset($_POST['SupplierForm'])){
 			$model->attributes = $_POST['SupplierForm'];
 			if($model->validate()){
-				$flage = $sp->createSupplier($model);	
+				$model->address2 = $_POST['SupplierForm']['address2'];
+				$model->cityId = $_POST['SupplierForm']['cityId'];
+				$model->stateProvinceId = $_POST['SupplierForm']['stateProvinceId'];
+				$model->postalCode = $_POST['SupplierForm']['postalCode'];
+				$model->countryId = $_POST['SupplierForm']['countryId'];
+				$model->contact = $_POST['SupplierForm']['contact'];
+				$model->fax = $_POST['SupplierForm']['fax'];
+				$model->email = $_POST['SupplierForm']['email'];
+				$model->website = $_POST['SupplierForm']['website'];
+				$flage = $sp->createSupplier($model);
+				if($flage) Yii::app()->user->setFlash('suc_message', 'Your action has been sucessfully.');
+				else Yii::app()->user->setFlash('error_message', 'Your action has not been sucessfully.');
 			}
 		}
 		$this->render('create', array('model' => $model));

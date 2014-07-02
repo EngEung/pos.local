@@ -1,6 +1,17 @@
 <?php
 class SupplierProcess extends CApplicationComponent {
 	
+	
+	public $_message;
+	
+	public function setMessage($value){
+		if($value == null) return null;
+		$this->_message = $value;
+	}
+	
+	public function getMessage(){
+		return $this->_message;
+	}
 	public function __construct() {
 		
 	}

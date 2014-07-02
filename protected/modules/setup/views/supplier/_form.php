@@ -14,6 +14,23 @@
    		'htmlOptions' => array('class' => 'well-small','enctype' => 'multipart/form-data'), // for inset effect
    ));
 ?>		
+
+	<div class="row-fluid">
+		<?php if(Yii::app()->user->hasFlash('error_message')): ?>
+			<div class="alert alert-warning alert-dismissable">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			  <strong>Warning!</strong> <?php echo Yii::t('translation',Yii::app()->user->getFlash('error_message')); ?>.
+			</div>
+		<?php endif; ?>
+		
+		<?php if(Yii::app()->user->hasFlash('error_message')): ?>
+			<div class="alert in fade alert-success">
+			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+			  <strong>Warning!</strong> <?php echo Yii::t('translation',Yii::app()->user->getFlash('error_message')); ?>.
+			</div>
+		<?php endif; ?>
+	</div>
+	
 	<div style=" width: 380px; margin: 0; padding:0; float: left;">
 		<?php echo $form->hiddenField($model, 'id'); ?>
 		<?php echo $form->textFieldRow($model, 'name', array('placeholder' => '')); ?>
@@ -39,13 +56,6 @@
 	
 	<div id="dlg-buttons" class="dialog-button" style=" margin-top: 15px;">
 		 <?php 	
-			  $this->widget('bootstrap.widgets.TbButton',array(
-						 'id' => 'btn-save',	
-						 'label' => 'Save & New',
-						 'size' => 'small',
-						 'buttonType'=>'submit',
-						 'htmlOptions' => array('style' => 'margin-left:5px;'),
-					  ));
 			   $this->widget('bootstrap.widgets.TbButton',array(
 				 'id' => 'btn-save-close',	
 				 'label' => 'Save & Close',
@@ -58,7 +68,6 @@
 						 'id' => 'btn-cancel',	
 						 'label' => 'Cancel',
 						 'size' => 'small',
-						 'buttonType'=>'submit',
 						 'htmlOptions' => array('style' => 'margin-left:5px;'),
 				));
 		?>
@@ -80,15 +89,10 @@
 	
 </style>
 <script>
-	function onRemoveImage(){
-		$("#output").html("");
-	}
-	
 	var defaultReload = function(){
 		$.mask.definitions['e']='[0-9]{1}';
-		$("#CustomerForm_phone1").mask("(999) 999-999?e");
-		$("#CustomerForm_phone2").mask("(999) 999-999?e");
-		$("#CustomerForm_fax").mask("(999) 999-999?e");
+		$("#SupplierForm_phone").mask("(999) 999-999?e");
+		$("#SupplierForm_fax").mask("(999) 999-999?e");
 	} 
 	defaultReload();
 </script>

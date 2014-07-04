@@ -47,7 +47,7 @@ class SupplierProcess extends CApplicationComponent {
 	 * Get Suppllier List
 	 */
 	public function getSupplierLists(){
-		$sql = "SELECT s.* FROM suppliers s ";
+		$sql = "SELECT s.* FROM suppliers s where s.active = true ";
 		return DAO::exprotData($sql);
 	}
 

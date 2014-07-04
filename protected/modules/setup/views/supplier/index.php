@@ -77,9 +77,41 @@
 			{title:"Address",field:"address1",width:300,sortable:true},
 			
 		]],
-		/*onDblClickRow:function(index,row,value){
-			title = 'Customer: ' + row.first_name + ' ' + row.last_name;
-			addTab(title, "<?php echo $this->createUrl('/setup/customers/general/?cust_id=');?>" + row.id);
-		}*/
+		onDblClickRow:function(index,row,value){
+			title = 'Update Supplier: ' + row.name;
+			addTab(title, "<?php echo $this->createUrl('/setup/supplier/update/?sup_id=');?>" + row.id);
+		}
 	});
+	
+	$("#btn-remove").click(function(){
+		onRemove();
+	});
+	
+	function onRemove(){
+		var row = dgSupplier.datagrid('getSelected');
+		if (row){
+			$.messager.confirm('Remove Supplier', 'Are you sure you want to remove?', function(r){
+			if (r){
+				$.ajax({
+					url: '<?php echo $this->createUrl('/setup/supplier/remove');?>',
+			        type: 'get',
+			        data: {id: row.id},
+			        dataType: 'json',
+			        success: function (response) {
+						if(response == false){
+							$.messager.alert('Error','Error occured.please try again.','warning');
+						}else{
+							crud.refresh();	
+						}
+			       },
+			       erorr: function (){
+			       		$.messager.alert('Error','Error occured.please try again.','warning');
+			       }
+				});
+			}
+			});
+		}else{
+			$.messager.alert('Alert','No records selected.', 'alert');
+		}
+	}
 </script>

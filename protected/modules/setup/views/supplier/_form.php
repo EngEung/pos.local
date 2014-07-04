@@ -23,10 +23,10 @@
 			</div>
 		<?php endif; ?>
 		
-		<?php if(Yii::app()->user->hasFlash('error_message')): ?>
+		<?php if(Yii::app()->user->hasFlash('suc_message')): ?>
 			<div class="alert in fade alert-success">
 			  <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			  <strong>Warning!</strong> <?php echo Yii::t('translation',Yii::app()->user->getFlash('error_message')); ?>.
+			  <strong>Warning!</strong> <?php echo Yii::t('translation',Yii::app()->user->getFlash('suc_message')); ?>.
 			</div>
 		<?php endif; ?>
 	</div>

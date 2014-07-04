@@ -42,10 +42,10 @@ class SupplierController extends Controller{
 	public function actionUpdate(){
 		$this->authenticate();
 		$this->layout = 'setup_layout';
-		$model = new CustomerForm();
+		$model = new SupplierForm();
 		$sp = new SupplierProcess();
-		if(isset($_GET['supId'])){
-			$model = $sp->getSupplierByID($_GET['supId']);
+		if(isset($_GET['sup_id'])){
+			$model = $sp->getSupplierByID($_GET['sup_id']);
 		}
 		
 		if(isset($_POST['SupplierForm'])){
@@ -69,6 +69,14 @@ class SupplierController extends Controller{
 		$this->render('update', array('model' => $model));
 	}
 	
+	public function actionRemove(){
+		$sp = new SupplierProcess();
+		if(isset($_GET['id'])){
+			$id = $_GET['id'];
+			$flage = $sp->removeSupplier($id);
+			echo CJSON::encode($flage);
+		}
+	}
 }
 
 

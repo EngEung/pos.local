@@ -45,7 +45,7 @@ class SupplierController extends Controller{
 		$model = new CustomerForm();
 		$sp = new SupplierProcess();
 		if(isset($_GET['supId'])){
-			$model = $sp->getCustomerByID($_GET['supId']);
+			$model = $sp->getSupplierByID($_GET['supId']);
 		}
 		
 		if(isset($_POST['SupplierForm'])){

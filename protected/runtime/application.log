@@ -661,3 +661,228 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/07/03 09:41:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/03 09:41:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/03 09:51:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:52:19 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:20 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:24 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:55:25 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:31 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/03 09:56:53 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (23)
+in D:\wamp\www\pos.local\index.php (13)

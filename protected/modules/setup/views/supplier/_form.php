@@ -3,7 +3,7 @@
     /** @var TbActiveForm $form */
     $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',array(
-    	'id' => 'customerForm',
+    	'id' => 'supplierForm',
     	'type' => 'horizontal',
     	'enableClientValidation' => true,
 	    'clientOptions' => array(
@@ -51,14 +51,24 @@
 		<?php echo $form->textFieldRow($model, 'fax', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'email', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'website', array('placeholder' => '')); ?>
+		<?php echo $form->textAreaRow($model, 'note'); ?>
 	</div>
 	<div style="clear:both;"></div>
 	
 	<div id="dlg-buttons" class="dialog-button" style=" margin-top: 15px;">
-		 <?php 	
+		 <?php 
+		 
+		 	  $this->widget('bootstrap.widgets.TbButton',array(
+				 'id' => 'btn-new',	
+				 'label' => 'New',
+				 'size' => 'small',
+				 'buttonType'=>'submit',
+				 'htmlOptions' => array('style' => 'margin-left:5px;'),
+			  ));
+		 	
 			   $this->widget('bootstrap.widgets.TbButton',array(
 				 'id' => 'btn-save-close',	
-				 'label' => 'Save & Close',
+				 'label' => 'Save',
 				 'size' => 'small',
 				 'buttonType'=>'submit',
 				 'htmlOptions' => array('style' => 'margin-left:5px;'),
@@ -94,5 +104,14 @@
 		$("#SupplierForm_phone").mask("(999) 999-999?e");
 		$("#SupplierForm_fax").mask("(999) 999-999?e");
 	} 
+		
 	defaultReload();
+	
+	$("#btn-new").click(function(){
+		resetForm();
+	});
+	
+	function resetForm(){
+		$('#supplierForm')[0].reset();
+	}
 </script>

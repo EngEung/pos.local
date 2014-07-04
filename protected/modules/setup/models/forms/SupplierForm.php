@@ -29,9 +29,7 @@ class SupplierForm extends CFormModel
 	public $website;
 	public $postalCode;
     public $accountNum;
-
-
-        public $note;
+	public $note;
 	
 	public function __construct(){
 		

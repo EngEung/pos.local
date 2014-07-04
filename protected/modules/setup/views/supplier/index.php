@@ -82,4 +82,14 @@
 			addTab(title, "<?php echo $this->createUrl('/setup/customers/general/?cust_id=');?>" + row.id);
 		}*/
 	});
+	
+	$('#btn-refresh').click(function(){
+		refreshGrid();
+	});
+	
+
+	function refreshGrid(){
+		dgSupplier.datagrid('clearSelections');
+		dgSupplier.datagrid('reload');	
+	}
 </script>

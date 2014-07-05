@@ -21,9 +21,9 @@ class SupplierProcess extends CApplicationComponent {
 	 * @return objject $model 
 	 */
 	public function getSupplierByID($id){
-		$sp = Suppliers::model()->findByPK($id);
+		$sp = Suppliers::model()->findByAttributes(array('id' => $id));
 		$model = new SupplierForm;
-		if($cus != null){
+		if($sp != null){
 			$model->name = $sp->name;
 			$model->address1 = $sp->address1;
 			$model->address2 = $sp->address2;
@@ -47,7 +47,7 @@ class SupplierProcess extends CApplicationComponent {
 	 * Get Suppllier List
 	 */
 	public function getSupplierLists(){
-		$sql = "SELECT s.* FROM suppliers s ";
+		$sql = "SELECT s.* FROM suppliers s where s.active = true ";
 		return DAO::exprotData($sql);
 	}
 
@@ -112,7 +112,7 @@ class SupplierProcess extends CApplicationComponent {
 	 */
 	public function removeSupplier($id){
 		if($id == null) return false;
-		$s= Suppliers::model()->findByPK($id);
+		$s= Suppliers::model()->findByAttributes(array('id'=>$id));
 		if($s == null) return false;
 		$s->active = false;
 		$s->modified_at = new CDbExpression('NOW()');

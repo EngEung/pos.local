@@ -1641,3 +1641,491 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/07/05 07:06:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:16:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:17:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:18:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:19:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:19:44 [error] [exception.CException] exception 'CException' with message 'Property "Suppliers.note" is not defined.' in D:\wamp\www\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\wamp\www\framework\db\ar\CActiveRecord.php(145): CComponent->__get('note')
+#1 D:\wamp\www\pos.local\protected\modules\setup\components\SupplierProcess.php(40): CActiveRecord->__get('note')
+#2 D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php(48): SupplierProcess->getSupplierByID('3')
+#3 D:\wamp\www\framework\web\actions\CInlineAction.php(49): SupplierController->actionUpdate()
+#4 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#6 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('update')
+#8 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/supplier/...')
+#9 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/pos.local/setup/supplier/update/?sup_id=3
+HTTP_REFERER=http://localhost/pos.local/setup/supplier/
+---
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:21:52 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:22:26 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (52)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:23:53 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:24:14 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:01 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:20 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:45:23 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 07:50:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:51:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 07:57:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 08:01:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 08:01:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 08:06:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/validationform.js".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('js/validationfo...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/js/validationform.js
+HTTP_REFERER=http://localhost/pos.local/setup/supplier/
+---
+2014/07/05 08:06:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/maskinput.js".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('js/maskinput.js')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/js/maskinput.js
+HTTP_REFERER=http://localhost/pos.local/setup/supplier/
+---
+2014/07/05 08:06:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "js/validationform.js".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('js/validationfo...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/js/validationform.js
+HTTP_REFERER=http://localhost/pos.local/setup/supplier/
+---
+2014/07/05 08:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 08:53:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 08:53:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "id" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "address2" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "cityId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "stateProvinceId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "postalCode" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "countryId" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "contact" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "fax" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "email" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "website" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 08:55:18 [warning] [application] Failed to set unsafe attribute "note" of "SupplierForm".
+in D:\wamp\www\pos.local\protected\modules\setup\controllers\SupplierController.php (53)
+in D:\wamp\www\pos.local\index.php (13)
+2014/07/05 09:36:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 09:36:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 09:36:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 09:50:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 09:51:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 09:51:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/img/remove-icon-small.png
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/07/05 09:51:24 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

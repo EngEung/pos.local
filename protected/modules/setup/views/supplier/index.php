@@ -6,8 +6,8 @@
 	$cs = Yii::app()->clientscript;
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');	
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.crud.js');
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js', CClientScript::POS_HEAD);
+	
 ?>
   <div title="Suppliers">        
 	<div class="pus" style="margin-top: 20px;">
@@ -58,7 +58,7 @@
 		singleSelect:true,
 		//nowrap:false,
 		//fitColumns:true,
-		url:<?php echo "'".$this->createUrl('getSupplierLists')."'"?>,
+		url:'<?php echo $this->createUrl('getSupplierLists')?>',
 		toolbar: '#tb',
 		idField: 'id',		
 		//pagination: true,
@@ -88,10 +88,20 @@
 		refreshGrid();
 	});
 	
+	
+	$('#btn-edit').click(function(){
+		var row = dgSupplier.datagrid('getSelected');
+		if(row){
+			title = 'Update Supplier: ' + row.name;
+			addTab(title, "<?php echo $this->createUrl('/setup/supplier/update/?sup_id=');?>" + row.id);
+		}
+	});
+	
 
 	function refreshGrid(){
 		dgSupplier.datagrid('clearSelections');
 		dgSupplier.datagrid('reload');	
+	}
 		
 	$("#btn-remove").click(function(){
 		onRemove();
@@ -111,7 +121,7 @@
 						if(response == false){
 							$.messager.alert('Error','Error occured.please try again.','warning');
 						}else{
-							crud.refresh();	
+							refreshGrid();
 						}
 			       },
 			       erorr: function (){
@@ -123,6 +133,5 @@
 		}else{
 			$.messager.alert('Alert','No records selected.', 'alert');
 		}
->>>>>>> 4ca6995009e6850fc1b9b568aacd6a0b3c7ad8b1
 	}
 </script>

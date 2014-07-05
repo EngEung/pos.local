@@ -7,10 +7,10 @@ class m140630_083235_create_currecy extends CDbMigration
         $this->createTable('currency',
                 array(
                         'id' =>'pk',
-                        'name' => 'varchar(60) not null',
                         'exchange_rate' => 'varchar(60)',
-                        'address1' => 'varchar(255) not null',
-                        'address2' => 'varchar(255) not null',
+                        'name' => 'varchar(60) not null',
+                        'code' => 'varchar(255) not null',
+                        'local_id' => 'int',
                         'city' => 'varchar(50) not null',
                         'state_province_id' => 'int',
                         'postal_code' => 'varchar(255) not null',

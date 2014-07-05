@@ -24,6 +24,7 @@ class SupplierProcess extends CApplicationComponent {
 		$sp = Suppliers::model()->findByAttributes(array('id' => $id));
 		$model = new SupplierForm;
 		if($sp != null){
+			$model->id = $sp->id;
 			$model->name = $sp->name;
 			$model->address1 = $sp->address1;
 			$model->address2 = $sp->address2;
@@ -84,7 +85,7 @@ class SupplierProcess extends CApplicationComponent {
 	 */
 	public function updateSupplier($model) {
 		if ($model == null) return false;
-		$s = Suppliers::model()->findByPk($model->id);
+		$s = Suppliers::model()->findByAttributes(array('id'=>$model->id));
 		if ($s == null) return false;
 		$s->name = $model->name;
         $s->address1 = $model->address1;
@@ -102,7 +103,7 @@ class SupplierProcess extends CApplicationComponent {
         $s->account_number = $model->accountNum;
 		$s->note = $model->note;
 		$s->modified_at = new CDbExpression('NOW()');
-		return $c->save(false);
+		return $s->save(false);
 	}
 	
 	/**

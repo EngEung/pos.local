@@ -4,10 +4,9 @@
 	
 	Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;
-	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
-	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');	
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.crud.js');
+	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/icon.css' );							
+	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/bootstrap/easyui.css' );
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');	
 ?>
   <div title="Suppliers">        
 	<div class="pus" style="margin-top: 20px;">
@@ -20,7 +19,7 @@
                                     'label' => 'Add',
                                     'icon' => 'plus-sign',
                                     'size' => 'small',
-                                    'url' => "javascript:addTab('New Supplier','".Yii::app()->request->baseUrl. "/setup/supplier/create/');"
+                                    'url' => "javascript:addTab('New Supplier','".Yii::app()->request->baseUrl. "/inventorycenter/supplier/create/');"
                             ));
 
                             $this->widget('bootstrap.widgets.TbButton',array(
@@ -58,7 +57,7 @@
 		singleSelect:true,
 		//nowrap:false,
 		//fitColumns:true,
-		url:<?php echo "'".$this->createUrl('getSupplierLists')."'"?>,
+		url:'<?php echo $this->createUrl('getSupplierLists')?>',
 		toolbar: '#tb',
 		idField: 'id',		
 		//pagination: true,
@@ -71,18 +70,38 @@
                         {title:"Account Number",field:"account_number",width:100,sortable:true},
 			{title:"Name",field:"name",width:150,sortable:true},
                         {title:"Code",field:"code",width:100,sortable:true},
-			{title:"Contact",field:"contact",width:150,sortable:true},
+			{title:"Contact",field:"contact",width:100,sortable:true},
 			{title:"Phone",field:"phone",width:100,sortable:true},
-                        {title:"Email",field:"email",width:140,sortable:true},
-			{title:"Address",field:"address1",width:300,sortable:true},
+                        {title:"Email",field:"email",width:150,sortable:true},
+			{title:"Address",field:"address1",width:250,sortable:true},
 			
 		]],
 		onDblClickRow:function(index,row,value){
 			title = 'Update Supplier: ' + row.name;
-			addTab(title, "<?php echo $this->createUrl('/setup/supplier/update/?sup_id=');?>" + row.id);
+			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
 		}
 	});
 	
+
+	$('#btn-refresh').click(function(){
+		refreshGrid();
+	});
+	
+	
+	$('#btn-edit').click(function(){
+		var row = dgSupplier.datagrid('getSelected');
+		if(row){
+			title = 'Update Supplier: ' + row.name;
+			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
+		}
+	});
+	
+
+	function refreshGrid(){
+		dgSupplier.datagrid('clearSelections');
+		dgSupplier.datagrid('reload');	
+	}
+		
 	$("#btn-remove").click(function(){
 		onRemove();
 	});
@@ -93,7 +112,7 @@
 			$.messager.confirm('Remove Supplier', 'Are you sure you want to remove?', function(r){
 			if (r){
 				$.ajax({
-					url: '<?php echo $this->createUrl('/setup/supplier/remove');?>',
+					url: '<?php echo $this->createUrl('/inventorycenter/supplier/remove');?>',
 			        type: 'get',
 			        data: {id: row.id},
 			        dataType: 'json',
@@ -101,7 +120,7 @@
 						if(response == false){
 							$.messager.alert('Error','Error occured.please try again.','warning');
 						}else{
-							crud.refresh();	
+							refreshGrid();
 						}
 			       },
 			       erorr: function (){

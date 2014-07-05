@@ -31,6 +31,7 @@ class SupplierController extends Controller{
 				$model->fax = $_POST['SupplierForm']['fax'];
 				$model->email = $_POST['SupplierForm']['email'];
 				$model->website = $_POST['SupplierForm']['website'];
+				$model->note = $_POST['SupplierForm']['note'];
 				$flage = $sp->createSupplier($model);
 				if($flage) Yii::app()->user->setFlash('suc_message', 'Your action has been sucessfully.');
 				else Yii::app()->user->setFlash('error_message', 'Your action has not been sucessfully.');
@@ -51,6 +52,7 @@ class SupplierController extends Controller{
 		if(isset($_POST['SupplierForm'])){
 			$model->attributes = $_POST['SupplierForm'];
 			if($model->validate()){
+				$model->id =$_POST['SupplierForm']['id']; 
 				$model->address2 = $_POST['SupplierForm']['address2'];
 				$model->cityId = $_POST['SupplierForm']['cityId'];
 				$model->stateProvinceId = $_POST['SupplierForm']['stateProvinceId'];
@@ -60,7 +62,8 @@ class SupplierController extends Controller{
 				$model->fax = $_POST['SupplierForm']['fax'];
 				$model->email = $_POST['SupplierForm']['email'];
 				$model->website = $_POST['SupplierForm']['website'];
-				$flage = $sp->createSupplier($model);
+				$model->note = $_POST['SupplierForm']['note'];
+				$flage = $sp->updateSupplier($model);
 				if($flage) Yii::app()->user->setFlash('suc_message', 'Your action has been sucessfully.');
 				else Yii::app()->user->setFlash('error_message', 'Your action has not been sucessfully.');
 			}

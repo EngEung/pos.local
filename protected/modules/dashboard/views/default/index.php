@@ -3,7 +3,7 @@ $this->breadcrumbs=array(
 	$this->module->id,
 );
 
-        Yii::app()->clientScript->registerCoreScript('jquery');
+    Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;
 
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/icon.css' );							

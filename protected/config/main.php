@@ -24,7 +24,9 @@ return array(
 		'application.extensions.*',
 		'application.modules.*',
 		'application.modules.setup.models.forms.*',
-		'application.modules.setup.components.*'
+		'application.modules.setup.components.*',
+		'application.modules.inventorycenter.models.forms.*',
+		'application.modules.inventorycenter.components.*'
 
 	),
 
@@ -41,6 +43,8 @@ return array(
 		'saleOrder',
 		'setup',
 		'dashboard',
+		'inventorycenter',
+		'inventory'
 	),
 
 	// application components

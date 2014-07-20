@@ -1,5 +1,5 @@
 <?php
-class CurrencyController extends Controller{
+class ItemTypeController extends Controller{
 	
 	public function actionIndex(){
 		$this->authenticate();        

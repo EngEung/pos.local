@@ -63,14 +63,12 @@
 						 	$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
 								'id' => 'btn-save',		
 								'text' => 'Save',
-								'iconCls' => 'iconsave',
 								'plain' => false
 							));
 						
 							$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
 								'id' => 'btn-cancel',		
 								'text' => 'Cancel',
-								'iconCls' => 'iconcancel',
 								'plain' => false				
 							));
 						?>	

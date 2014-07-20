@@ -1,12 +1,6 @@
 <?php
 class CategoryController extends Controller{
 	
-	 public function beforeAction($action){
-        CHtml::$errorCss = 'dsddddddddd';
-        return true;
-    }
-	
-	
 	public function actionIndex(){
 		$this->authenticate();        
         $this->layout = 'setup_layout';

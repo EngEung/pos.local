@@ -270,3 +270,9 @@ Footer
 .footer .footer-tools .go-top i {
   color: #8a8a8a;
 }
+.errorMessage
+{
+	color: red;
+	font-size: 1em;
+}
+.btn{margin-left: 5px;}

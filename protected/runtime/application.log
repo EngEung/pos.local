@@ -324,3 +324,123 @@ Stack trace:
 REQUEST_URI=/pos.local/setup/currency/getSupplierLists
 HTTP_REFERER=http://localhost/pos.local/setup/currency/
 ---
+2014/07/20 17:58:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/07/20 17:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/07/20 18:07:31 [error] [php] Undefined variable: data (C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php:14)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(286): ItemTypeController->runAction()
+#1 C:\xampp\htdocs\www\framework\web\CController.php(265): ItemTypeController->runActionWithFilters()
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): ItemTypeController->run()
+#3 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/itemtype/getItemTypes
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php (14)
+in C:\xampp\htdocs\www\pos.local\index.php (13)
+2014/07/20 18:08:09 [error] [php] Undefined variable: data (C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php:15)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(286): ItemTypeController->runAction()
+#1 C:\xampp\htdocs\www\framework\web\CController.php(265): ItemTypeController->runActionWithFilters()
+#2 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): ItemTypeController->run()
+#3 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#4 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#5 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/itemtype/getItemTypes
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php (15)
+in C:\xampp\htdocs\www\pos.local\index.php (13)
+2014/07/20 18:27:41 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pos_dev.category' doesn't exist. The SQL statement executed was: select t.id, t.name, t.category_id, c.name as category_name, t.code, t.descr, t.created_at from item_types t
+		inner join category c on c.id = t.category_id where t.active = true.
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (88)
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (46)
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php (15)
+2014/07/20 18:27:41 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'pos_dev.category' doesn't exist. The SQL statement executed was: select t.id, t.name, t.category_id, c.name as category_name, t.code, t.descr, t.created_at from item_types t
+		inner join category c on c.id = t.category_id where t.active = true' in C:\xampp\htdocs\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(88): CDbCommand->query()
+#2 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(46): DAO::countTotal('select t.id, t....')
+#3 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php(15): DAO::exprotData('select t.id, t....')
+#4 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): ItemTypeController->actionGetItemTypes()
+#5 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#7 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getitemtypes')
+#9 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemtype/...')
+#10 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/setup/itemtype/getItemTypes
+HTTP_REFERER=http://pos.local/setup/itemType/
+---
+2014/07/20 18:59:04 [error] [php] Undefined variable: model (C:\xampp\htdocs\www\pos.local\protected\modules\setup\views\itemType\index.php:55)
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CController.php(869): ItemTypeController->renderFile()
+#1 C:\xampp\htdocs\www\framework\web\CController.php(782): ItemTypeController->renderPartial()
+#2 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php(7): ItemTypeController->render()
+#3 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): ItemTypeController->actionIndex()
+#4 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\www\framework\web\CController.php(286): ItemTypeController->runAction()
+#6 C:\xampp\htdocs\www\framework\web\CController.php(265): ItemTypeController->runActionWithFilters()
+#7 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): ItemTypeController->run()
+#8 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/itemType/
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\views\itemType\index.php (55)
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php (7)
+in C:\xampp\htdocs\www\pos.local\index.php (13)
+2014/07/20 19:33:06 [error] [php] Object of class Category could not be converted to string (C:\xampp\htdocs\www\framework\web\helpers\CHtml.php:2071)
+Stack trace:
+#0 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(117): TbActiveForm->dropDownList()
+#1 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\input\TbInput.php(211): TbInputHorizontal->dropDownList()
+#2 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php(28): TbInputHorizontal->run()
+#3 C:\xampp\htdocs\www\framework\web\CBaseController.php(173): TbInputHorizontal->run()
+#4 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbActiveForm.php(620): ItemTypeController->widget()
+#5 C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\TbActiveForm.php(124): TbActiveForm->inputRow()
+#6 C:\xampp\htdocs\www\pos.local\protected\modules\setup\views\itemType\_form.php(21): TbActiveForm->dropDownListRow()
+#7 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#8 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): ItemTypeController->renderInternal()
+#9 C:\xampp\htdocs\www\framework\web\CController.php(869): ItemTypeController->renderFile()
+#10 C:\xampp\htdocs\www\pos.local\protected\modules\setup\views\itemType\index.php(55): ItemTypeController->renderPartial()
+#11 C:\xampp\htdocs\www\framework\web\CBaseController.php(126): require()
+#12 C:\xampp\htdocs\www\framework\web\CBaseController.php(95): ItemTypeController->renderInternal()
+#13 C:\xampp\htdocs\www\framework\web\CController.php(869): ItemTypeController->renderFile()
+#14 C:\xampp\htdocs\www\framework\web\CController.php(782): ItemTypeController->renderPartial()
+#15 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\ItemTypeController.php(10): ItemTypeController->render()
+#16 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): ItemTypeController->actionIndex()
+#17 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#18 C:\xampp\htdocs\www\framework\web\CController.php(286): ItemTypeController->runAction()
+#19 C:\xampp\htdocs\www\framework\web\CController.php(265): ItemTypeController->runActionWithFilters()
+#20 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): ItemTypeController->run()
+#21 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#22 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/setup/itemType/
+in C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php (117)
+in C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\input\TbInput.php (211)
+in C:\xampp\htdocs\www\pos.local\protected\extensions\bootstrap\widgets\input\TbInputHorizontal.php (28)
+2014/07/20 19:53:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---

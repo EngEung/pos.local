@@ -17,142 +17,19 @@ class Common extends CApplicationComponent {
 	}
 	
 	
-	public function getQuestionAnswerAnswerTypes($order = 'asc'){
+	public function getCategories($order = 'asc'){
 		$criteria = new CDbCriteria(); 
 		//$criteria->select = 'id, name';
 		$criteria->order = 'name ' . $order;
-		return  QuestionAnswerAnswerTypes::model()->findAll($criteria);
+		return  Category::model()->findAll($criteria);
 	}
 	
-	public function getQuestionAnswerMultipleAnswers($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		//$criteria->select = 'id, name';
-		//$criteria->order = 'name ' . $order;
-		return  QuestionAnswerMultipleAnswers::model()->findAll($criteria);
-	}
-	/*
-	 * Get All Questionnaire Questions
-	 * return array
-	 */
-	public function getQuestionnaireQuestions($typeId){
-		return QuestionnaireQuestions::model()->findAll(
-				array('condition'=>'active=:active and questionnaire_type_id =:typeId',
-				'params'=>array(':active'=> true, ':typeId' => $typeId)));
-	}
-	
-	
-	public function getQuestionMulitiple($questionId, $order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		//$criteria->select = 'id, name';
-		$criteria->condition = 'question_id =:questionId';
-		$criteria->params = array(':questionId' => $questionId);
-	//	$criteria->order = 'name ' . $order;
-		return QuestionMultipleChoices::model()->findAll($criteria);
-	}
-	
-	/**
-	 * get sections
-	 */
-	public function getSections($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		//$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Sections::model()->findAll($criteria);
-	}
-	
-	/**
-	 * Get questionnaire types
-	 */
-	public function getQuestionnaireTypes($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return QuestionnaireTypes::model()->findAll($criteria);
-	}
-	
-	public function getProgramByChannelId($channelId) {
-		if($channelId == null || $channelId < 0)
-			throw new CHttpException('Channel id is a required parameter');
-		$cnc = Yii::app()->db;
-		$cmd = new CDbCommand($cnc);
-		$sql = "select distinct p.id, p.name "
- 			 . "from programs p inner join program_channels pc " 
- 			 . "on p.id = pc.program_id " 
- 			 . "where pc.channel_id = :channel_id "
- 			 . "order by p.name ";
-		$cmd = $cnc->createCommand($sql);
-		$cmd->bindParam(":channel_id", $channelId, PDO::PARAM_INT);
-		return $cmd->queryAll();
-	}
-	
-	public function getPrograms($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Programs::model()->findAll($criteria);
-	}
-    
-    public function getRespondentCode($order = 'asc'){
-        $criteria = new CDbCriteria(); 
-        $criteria->select = 'id, respondent_code';
-        $criteria->order = 'respondent_code ' . $order;
-	    return Respondents::model()->findAll($criteria);
-    }
-	
-	public function getDays($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Days::model()->findAll($criteria);
-	}
-	
-	public function getTimeslots($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Timeslots::model()->findAll($criteria);
-	}
 	
 	public function getGenders($order = 'asc'){
 		$criteria = new CDbCriteria(); 
 		$criteria->select = 'id, name';
 		$criteria->order = 'name ' . $order;
 		return Genders::model()->findAll($criteria);
-	}
-	
-	public function getIncomeRange($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Incomes::model()->findAll($criteria);
-	}
-	
-	public function getMeanofTransportation($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return MeanofTransportations::model()->findAll($criteria);
-	}
-	
-	public function getOccupations($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Occupations::model()->findAll($criteria);
-	}
-	
-	public function getChannels($order = 'asc'){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		$criteria->order = 'name ' . $order;
-		return Channels::model()->findAll($criteria);
-	}
-	
-	
-	public function getWeeks(){
-		$criteria = new CDbCriteria(); 
-		$criteria->select = 'id, name';
-		return Weeks::model()->findAll($criteria);
 	}
 	
 	public function getAges($order = 'asc'){

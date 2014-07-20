@@ -32,11 +32,12 @@ class ItemTypeController extends Controller{
 	 */
 	public function actionCreate()
 	{						
-		$model = new ItemTypes();		
-		$this->performAjaxValidation($model);
-		if(isset($_POST['ItemTypes']))
-		{
-			$model->attributes = $_POST['ItemTypes'];			
+		$model = new ItemTypes();
+		if(isset($_POST['ItemTypes'])){
+			$model->attributes = $_POST['ItemTypes'];
+			//$model->category_id = $_POST['ItemTypes']['category_id'];
+			$this->performAjaxValidation($model);
+					
 			if($model->save())
 				echo CJSON::encode(array('success'=>true));
 			else 
@@ -53,7 +54,6 @@ class ItemTypeController extends Controller{
 	{
 		$model = $this->loadModel($id);					
 		$this->performAjaxValidation($model);
-		echo 'dsafd';
 		if(isset($_POST['Category']))
 		{
 			$model->attributes=$_POST['Category'];
@@ -90,7 +90,7 @@ class ItemTypeController extends Controller{
 	 */
 	public function loadModel($id)
 	{		
-		$model=ItemTypes::model()->findByPk($id);
+		$model = ItemTypes::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');	
 		return $model;
@@ -105,9 +105,8 @@ class ItemTypeController extends Controller{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='ItemTypeForm')
 		{		
 			$errors = CActiveForm::validate($model);
-			if (!empty($errors))
-			{
-				echo $errors;	
+			if (is_array($errors) && !empty($errors))
+			{	echo $errors;	
 				Yii::app()->end();
 			}
 		}

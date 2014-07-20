@@ -10,7 +10,7 @@ class m140713_161526_create_item_types extends CDbMigration
 			array(
 				'id' =>'pk',
 				'category_id' => 'int not null',
-				'name' => 'int not null',
+				'name' => 'varchar(60)',
 				'code' => 'varchar(65) not null',
 				'descr' => 'varchar(255) not null',
 				'created_at' => 'timestamp not null default now()',

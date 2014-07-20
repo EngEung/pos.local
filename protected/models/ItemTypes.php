@@ -6,7 +6,7 @@
  * The followings are the available columns in table 'item_types':
  * @property integer $id
  * @property integer $category_id
- * @property integer $name
+ * @property string $name
  * @property string $code
  * @property string $descr
  * @property string $created_at
@@ -42,9 +42,9 @@ class ItemTypes extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('category_id, name, code, descr, created_at', 'required'),
-			array('category_id, name, active', 'numerical', 'integerOnly'=>true),
-			array('code', 'length', 'max'=>65),
+			array('category_id, name, code', 'required'),
+			array('category_id, active', 'numerical', 'integerOnly'=>true),
+			array('name, code', 'length', 'max'=>65),
 			array('descr', 'length', 'max'=>255),
 			array('created_by, modified_by', 'length', 'max'=>30),
 			array('modified_at', 'safe'),
@@ -62,7 +62,7 @@ class ItemTypes extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'category' => array(self::BELONGS_TO, 'Categories', 'category_id'),
+			'category' => array(self::BELONGS_TO, 'Category', 'category_id'),
 		);
 	}
 
@@ -76,7 +76,7 @@ class ItemTypes extends CActiveRecord
 			'category_id' => 'Category',
 			'name' => 'Name',
 			'code' => 'Code',
-			'descr' => 'Descr',
+			'descr' => 'Description',
 			'created_at' => 'Created At',
 			'modified_at' => 'Modified At',
 			'created_by' => 'Created By',
@@ -100,7 +100,7 @@ class ItemTypes extends CActiveRecord
 
 		$criteria->compare('category_id',$this->category_id);
 
-		$criteria->compare('name',$this->name);
+		$criteria->compare('name',$this->name,true);
 
 		$criteria->compare('code',$this->code,true);
 

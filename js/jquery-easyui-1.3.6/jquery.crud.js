@@ -150,7 +150,7 @@ $.extend(Crud.prototype, {
                 			  $.messager.alert(that.alertTitle, data.error, 'error');
                 		  }
                 		  else {
-                			  alert(that.options);
+                			  //alert(that.options);
                 			  that.options.grid.datagrid('clearSelections');
                 			  that.options.grid.datagrid('reload');                    	
                 		  }

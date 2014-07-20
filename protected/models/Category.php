@@ -41,11 +41,12 @@ class Category extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name, code, descr, created_at', 'required'),
+			array('name, code', 'required'),
 			array('active', 'numerical', 'integerOnly'=>true),
 			array('name, code, descr', 'length', 'max'=>60),
 			array('created_by, modified_by', 'length', 'max'=>30),
 			array('modified_at', 'safe'),
+			array('code', 'unique', 'attributeName' => 'code', 'className' => 'Category'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, code, descr, created_at, modified_at, created_by, modified_by, active', 'safe', 'on'=>'search'),
@@ -73,7 +74,7 @@ class Category extends CActiveRecord
 			'id' => 'Id',
 			'name' => 'Name',
 			'code' => 'Code',
-			'descr' => 'Descr',
+			'descr' => 'Description',
 			'created_at' => 'Created At',
 			'modified_at' => 'Modified At',
 			'created_by' => 'Created By',

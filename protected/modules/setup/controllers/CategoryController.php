@@ -1,6 +1,12 @@
 <?php
 class CategoryController extends Controller{
 	
+	 public function beforeAction($action){
+        CHtml::$errorCss = 'dsddddddddd';
+        return true;
+    }
+	
+	
 	public function actionIndex(){
 		$this->authenticate();        
         $this->layout = 'setup_layout';
@@ -21,7 +27,7 @@ class CategoryController extends Controller{
 	 */
 	public function actionView($id)
 	{
-		echo $this->exportModel($this->loadModel($id));
+		echo DAO::exportModel($this->loadModel($id));
 	}
 
 	/**
@@ -30,7 +36,7 @@ class CategoryController extends Controller{
 	 */
 	public function actionCreate()
 	{						
-		$model=new Category();		
+		$model = new Category();		
 		$this->performAjaxValidation($model);
 		if(isset($_POST['Category']))
 		{
@@ -49,13 +55,14 @@ class CategoryController extends Controller{
 	 */
 	public function actionUpdate($id)
 	{
-		$model=$this->loadModel($id);								
+		$model = $this->loadModel($id);					
 		$this->performAjaxValidation($model);
-				
-		if(isset($_POST['Nationality']))
+		echo 'dsafd';
+		if(isset($_POST['Category']))
 		{
-			$model->attributes=$_POST['Nationality'];
-			if($model->save())
+			$model->attributes=$_POST['Category'];
+			
+			if($model->save(false))
 				echo CJSON::encode(array('success'=>true));			
 		}
 	}
@@ -68,8 +75,10 @@ class CategoryController extends Controller{
 	public function actionDelete($id)
 	{
 		
-		$model = $this->loadModel($id);			
-		if (!$model->delete())
+		$model = $this->loadModel($id);	
+		$model->active = 0;
+		//$model->modified_at = new CDbExpression('NOW()');		
+		if (!$model->save())
 			echo CJSON::encode(array('success' => false, 'error'=> Yii::t('base', 'Registro não encontrado')));
 		else		
 			echo CJSON::encode(array('success' => true));
@@ -85,7 +94,7 @@ class CategoryController extends Controller{
 	 */
 	public function loadModel($id)
 	{		
-		$model=Nationality::model()->findByPk($id);
+		$model=Category::model()->findByPk($id);
 		if($model===null)
 			throw new CHttpException(404,'The requested page does not exist.');	
 		return $model;
@@ -97,10 +106,10 @@ class CategoryController extends Controller{
 	 */
 	protected function performAjaxValidation($model)
 	{								
-		if(isset($_POST['ajax']) && $_POST['ajax']==='nationality-form')
-		{			
+		if(isset($_POST['ajax']) && $_POST['ajax']==='categoryForm')
+		{		
 			$errors = CActiveForm::validate($model);
-			if (is_array($errors) && !empty($errors))
+			if (!empty($errors))
 			{
 				echo $errors;	
 				Yii::app()->end();

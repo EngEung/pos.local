@@ -1,12 +1,6 @@
 <?php
 class CategoryController extends Controller{
 	
-	 public function beforeAction($action){
-        CHtml::$errorCss = 'dsddddddddd';
-        return true;
-    }
-	
-	
 	public function actionIndex(){
 		$this->authenticate();        
         $this->layout = 'setup_layout';
@@ -57,11 +51,10 @@ class CategoryController extends Controller{
 	{
 		$model = $this->loadModel($id);					
 		$this->performAjaxValidation($model);
-		echo 'dsafd';
 		if(isset($_POST['Category']))
 		{
 			$model->attributes=$_POST['Category'];
-			
+			$model->modified_at = new CDbExpression('NOW()');
 			if($model->save(false))
 				echo CJSON::encode(array('success'=>true));			
 		}
@@ -109,8 +102,9 @@ class CategoryController extends Controller{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='categoryForm')
 		{		
 			$errors = CActiveForm::validate($model);
-			if (!empty($errors))
-			{
+			$validated =  $model->validate();
+			if(!$validated){
+    			//$errors = $model->getErrors();
 				echo $errors;	
 				Yii::app()->end();
 			}

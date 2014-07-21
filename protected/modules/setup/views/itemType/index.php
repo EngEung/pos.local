@@ -5,9 +5,10 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/icon.css' );							
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/bootstrap/easyui.css' );
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');	
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.crud.js');	
 ?>       
 	<div class="pus" style="margin-top: 20px;">
-		<table id="dgCurrency"></table>
+		<table id="dgItemType"></table>
                 <div id="tb" style="padding:5px;height:auto">
                     <div style="margin-bottom:5px">
                             <?php 
@@ -16,7 +17,6 @@
                                     'label' => 'Add',
                                     'icon' => 'plus-sign',
                                     'size' => 'small',
-                                    'url' => "javascript:addTab('New Supplier','".Yii::app()->request->baseUrl. "/inventorycenter/supplier/create/');"
                             ));
 
                             $this->widget('bootstrap.widgets.TbButton',array(
@@ -42,91 +42,88 @@
                     ?>    	
                     </div>
                 </div>
+                <?php 
+						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
+							'id'=> 'itemtype-win',
+							'title'=> 'Add Item Type',
+							'style'=> 'width:400px;',
+							'closed' => true,
+							'modal' => false,
+							'shadow'=> false,
+							'buttons' => '#dlg-buttons'	
+						));
+						
+						$this->renderPartial('_form', array('model'=>$model));
+						
+						$this->endWidget(); 
+						?>
+						 <div id="dlg-buttons">
+						 <?php 
+						 	$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+								'id' => 'btn-save',		
+								'text' => 'Save',
+								'plain' => false
+							));
+						
+							$this->widget('ext.yii-easyui.widgets.EuiLinkbutton', array(
+								'id' => 'btn-cancel',		
+								'text' => 'Cancel',
+								'plain' => false				
+							));
+						?>	
 	</div>
+<style>
+	.btn{margin-left:5px;}
+</style>
 <script>
    
     /** easyui gridView Javascript */
-	dgCurrency = $("#dgCurrency");
-	dgCurrency.datagrid({
-		title:'Currencies List',
+	dgItemType = $("#dgItemType");
+	dgItemType.datagrid({
+		title:'Item Types List',
 		height:400,
 		singleSelect:true,
-		//nowrap:false,
-		//fitColumns:true,
-		url:'<?php echo $this->createUrl('getSupplierLists')?>',
+		nowrap:false,
+		fitColumns:true,
+		url:'<?php echo $this->createUrl('getItemTypes')?>',
 		toolbar: '#tb',
 		idField: 'id',		
-		//pagination: true,
-		//rownumbers: true,
-		//scrollbarSize: 5,
-		//ctrlSelect: true,
-		//collapsible:true,
+		pagination: true,
+		rownumbers: true,
+		scrollbarSize: 5,
+		ctrlSelect: true,
+		collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:40,sortable:true},
-                        {title:"Account Number",field:"account_number",width:100,sortable:true},
-			{title:"Name",field:"name",width:150,sortable:true},
-                        {title:"Code",field:"code",width:100,sortable:true},
-			{title:"Contact",field:"contact",width:100,sortable:true},
-			{title:"Phone",field:"phone",width:100,sortable:true},
-                        {title:"Email",field:"email",width:150,sortable:true},
-			{title:"Address",field:"address1",width:250,sortable:true},
-			
+            {title:"Category",field:"category_name",width:100,sortable:true},
+            {title:"Item Type",field:"name",width:100,sortable:true},
+			{title:"Code",field:"code",width:150,sortable:true},
+            {title:"Description",field:"descr",width:200,sortable:true},
+			{title:"Created At",field:"created_at",width:150,sortable:true}
 		]],
-		onDblClickRow:function(index,row,value){
-			title = 'Update Supplier: ' + row.name;
-			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
-		}
 	});
-	
 
-	$('#btn-refresh').click(function(){
-		refreshGrid();
+	var crud = new Crud({
+		route: '<?php echo $this->createUrl("index");?>',
+		grid: dgItemType,
+		window: $('#itemtype-win')	
 	});
-	
-	
+	$('#btn-add').click(function(){
+		crud.add();
+	});
 	$('#btn-edit').click(function(){
-		var row = dgCurrency.datagrid('getSelected');
-		if(row){
-			title = 'Update Supplier: ' + row.name;
-			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
-		}
+		crud.edit();
 	});
-	
-
-	function refreshGrid(){
-		dgCurrency.datagrid('clearSelections');
-		dgCurrency.datagrid('reload');	
-	}
-		
-	$("#btn-remove").click(function(){
-		onRemove();
+	$('#btn-remove').click(function(){
+		crud.remove();
 	});
-	
-	function onRemove(){
-		var row = dgCurrency.datagrid('getSelected');
-		if (row){
-			$.messager.confirm('Remove Supplier', 'Are you sure you want to remove?', function(r){
-			if (r){
-				$.ajax({
-					url: '<?php echo $this->createUrl('/inventorycenter/supplier/remove');?>',
-			        type: 'get',
-			        data: {id: row.id},
-			        dataType: 'json',
-			        success: function (response) {
-						if(response == false){
-							$.messager.alert('Error','Error occured.please try again.','warning');
-						}else{
-							refreshGrid();
-						}
-			       },
-			       erorr: function (){
-			       		$.messager.alert('Error','Error occured.please try again.','warning');
-			       }
-				});
-			}
-			});
-		}else{
-			$.messager.alert('Alert','No records selected.', 'alert');
-		}
-	}
+	$('#btn-refresh').click(function(){
+		crud.refresh();
+	});
+	$('#btn-save').click(function(){
+		crud.save();
+	});
+	$('#btn-cancel').click(function(){
+		$('#nationality-win').dialog('close');
+	});	
 </script>

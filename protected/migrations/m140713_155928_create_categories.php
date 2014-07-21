@@ -10,8 +10,8 @@ class m140713_155928_create_categories extends CDbMigration
                 array(
                         'id' =>'pk',
                         'name' => 'varchar(60) not null',
-                        'code' => 'varchar(60) not null',
-                        'descr' => 'varchar(60) not null',
+                        'code' => 'varchar(60)',
+                        'descr' => 'varchar(60)',
                         'created_at' => 'timestamp not null default now()',
                         'modified_at' => 'datetime',
                         'created_by' => 'varchar(30)',

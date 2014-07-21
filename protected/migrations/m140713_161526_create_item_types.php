@@ -12,7 +12,7 @@ class m140713_161526_create_item_types extends CDbMigration
 				'category_id' => 'int not null',
 				'name' => 'varchar(60)',
 				'code' => 'varchar(65) not null',
-				'descr' => 'varchar(255) not null',
+				'descr' => 'varchar(255)',
 				'created_at' => 'timestamp not null default now()',
 				'modified_at' => 'datetime',
 				'created_by' => 'varchar(30)',

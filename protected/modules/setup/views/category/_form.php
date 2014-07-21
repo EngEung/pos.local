@@ -12,7 +12,7 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 	             	'validateOnChange' => true,
 					'validateOnType' => true,
 		),
-   		'htmlOptions' => array('class' => 'well-small','enctype' => 'multipart/form-data'), // for inset effect
+   		'htmlOptions' => array('class' => 'well-small'), // for inset effect
    ));
    
 ?>		

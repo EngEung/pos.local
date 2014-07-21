@@ -105,6 +105,7 @@ class ItemTypeController extends Controller{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='ItemTypeForm')
 		{		
 			$errors = CActiveForm::validate($model);
+			echo $errors;
 			if (is_array($errors) && !empty($errors))
 			{	echo $errors;	
 				Yii::app()->end();

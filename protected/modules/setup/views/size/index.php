@@ -4,11 +4,11 @@
 	$cs = Yii::app()->clientscript;
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/icon.css' );							
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/bootstrap/easyui.css' );
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');	
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.crud.js');	
 ?>       
 	<div class="pus" style="margin-top: 20px;">
-		<table id="dgItemType"></table>
+		<table id="dgCategory"></table>
                 <div id="tb" style="padding:5px;height:auto">
                     <div style="margin-bottom:5px">
                             <?php 
@@ -16,7 +16,7 @@
                                     'id'=>"btn-add",
                                     'label' => 'Add',
                                     'icon' => 'plus-sign',
-                                    'size' => 'small',
+                                    'size' => 'small'
                             ));
 
                             $this->widget('bootstrap.widgets.TbButton',array(
@@ -42,14 +42,15 @@
                     ?>    	
                     </div>
                 </div>
+                
+                
                 <?php 
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
-							'id'=> 'itemtype-win',
-							'title'=> 'Add Item Type',
+							'id'=> 'category-win',
+							'title'=> 'Category',
 							'style'=> 'width:400px;',
 							'closed' => true,
 							'modal' => false,
-							'shadow'=> false,
 							'buttons' => '#dlg-buttons'	
 						));
 						
@@ -72,41 +73,43 @@
 							));
 						?>	
 	</div>
-<style>
-	.btn{margin-left:5px;}
-</style>
 <script>
    
     /** easyui gridView Javascript */
-	dgItemType = $("#dgItemType");
-	dgItemType.datagrid({
-		title:'Item Types List',
+	dgCategory = $("#dgCategory");
+	dgCategory.datagrid({
+		title:'Currencies List',
 		height:400,
 		singleSelect:true,
-		nowrap:false,
-		fitColumns:true,
-		url:'<?php echo $this->createUrl('getItemTypes')?>',
+		//nowrap:false,
+		//fitColumns:true,
+		url:'<?php echo $this->createUrl('getCategories')?>',
 		toolbar: '#tb',
 		idField: 'id',		
-		pagination: true,
-		rownumbers: true,
-		scrollbarSize: 5,
-		ctrlSelect: true,
-		collapsible:true,
+		//pagination: true,
+		//rownumbers: true,
+		//scrollbarSize: 5,
+		//ctrlSelect: true,
+		//collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:40,sortable:true},
-            {title:"Category",field:"category_name",width:100,sortable:true},
-            {title:"Item Type",field:"name",width:100,sortable:true},
+            {title:"Name",field:"name",width:100,sortable:true},
 			{title:"Code",field:"code",width:150,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
 			{title:"Created At",field:"created_at",width:150,sortable:true}
+			
 		]],
+		onDblClickRow:function(index,row,value){
+			title = 'Update Supplier: ' + row.name;
+			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
+		}
 	});
-
+	
+		
 	var crud = new Crud({
 		route: '<?php echo $this->createUrl("index");?>',
-		grid: dgItemType,
-		window: $('#itemtype-win')	
+		grid: dgCategory,
+		window: $('#category-win')	
 	});
 	$('#btn-add').click(function(){
 		crud.add();

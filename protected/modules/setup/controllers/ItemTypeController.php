@@ -54,10 +54,10 @@ class ItemTypeController extends Controller{
 	{
 		$model = $this->loadModel($id);					
 		$this->performAjaxValidation($model);
-		if(isset($_POST['Category']))
+		if(isset($_POST['ItemTypes']))
 		{
-			$model->attributes=$_POST['Category'];
-			
+			$model->attributes=$_POST['ItemTypes'];
+			$model->modified_at = new CDbExpression('NOW()');
 			if($model->save(false))
 				echo CJSON::encode(array('success'=>true));			
 		}
@@ -105,9 +105,10 @@ class ItemTypeController extends Controller{
 		if(isset($_POST['ajax']) && $_POST['ajax']==='ItemTypeForm')
 		{		
 			$errors = CActiveForm::validate($model);
-			echo $errors;
-			if (is_array($errors) && !empty($errors))
-			{	echo $errors;	
+			$validated =  $model->validate();
+			if(!$validated){
+    			//$errors = $model->getErrors();
+				echo $errors;	
 				Yii::app()->end();
 			}
 		}

@@ -4,7 +4,7 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
     /** @var TbActiveForm $form */
     $form = $this->beginWidget(
     'bootstrap.widgets.TbActiveForm',array(
-    	'id' => 'ItemTypeForm',
+    	'id' => 'unitForm',
     	'type' => 'horizontal',
     	'enableClientValidation' => true,
 	    'clientOptions' => array(
@@ -12,14 +12,12 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 	             	'validateOnChange' => true,
 					'validateOnType' => true,
 		),
-   		'htmlOptions' => array('class' => 'well-small','enctype' => 'multipart/form-data'), // for inset effect
+   		'htmlOptions' => array('class' => 'well-small'), // for inset effect
    ));
    
 ?>		
 
-		<?php echo $form->dropDownListRow($model,'category_id', $model->category_id,
-						array('empty'=>'--Select--','style'=>'margin-left:00px;')); 
-				?>
+	
 		<?php echo $form->textFieldRow($model, 'name', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'code', array('placeholder' => '')); ?>
 		<?php echo $form->textAreaRow($model, 'descr', array('placeholder' => '')); ?>
@@ -29,6 +27,3 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
     unset($form);
 ?>
 </div>
-<style>
-	.errorMessage{color: #b94a48;}
-</style>

@@ -1,15 +1,15 @@
 <?php
-class SizeController extends Controller{
+class UnitController extends Controller{
 	
 	public function actionIndex(){
 		$this->authenticate();        
         $this->layout = 'setup_layout';
-		$model = new SizeForm();
+		$model = new UnitForm();
 		$this->render('index', array('model' => $model));
 	}
 	
 	
-	public function actionGetSizeLists(){
+	public function actionGetCategories(){
 		$cateProcess = new CategoryProcess();
 		$data = $cateProcess->getCategories();
 		echo CJSON::encode($data);

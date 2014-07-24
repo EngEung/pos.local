@@ -9,9 +9,9 @@ class UnitController extends Controller{
 	}
 	
 	
-	public function actionGetCategories(){
-		$cateProcess = new CategoryProcess();
-		$data = $cateProcess->getCategories();
+	public function actionGetItemUnits(){
+		$unitProcess = new ItemUnitProcess();
+		$data = $unitProcess->getItemUnits();
 		echo CJSON::encode($data);
 	}
 
@@ -30,16 +30,15 @@ class UnitController extends Controller{
 	 */
 	public function actionCreate()
 	{						
-		$model = new Category();		
+		$model = new UnitForm();		
 		$this->performAjaxValidation($model);
-		if(isset($_POST['Category']))
+		if(isset($_POST['ItemUnit']))
 		{
-			$model->attributes = $_POST['Category'];			
-			if($model->save())
-				echo CJSON::encode(array('success'=>true));
-			else 
-				echo CJSON::encode(array('success'=>false));
-		}	
+			$model->attributes = $_POST['ItemUnit'];
+			
+		}
+		
+			echo CJSON::encode(array('success'=>true));	
 	}
 
 	/**

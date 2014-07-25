@@ -48,9 +48,9 @@
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 							'id'=> 'unit-win',
 							'title'=> 'Setup Item Unit',
-							'style'=> 'width:450px;',
+							'style'=> 'width:470px; height:460px;',
 							'closed' => true,
-							'modal' => true,
+							
 							'buttons' => '#dlg-buttons'	
 						));
 						

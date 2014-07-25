@@ -28,7 +28,48 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 			<?php echo $form->textFieldRow($model, 'unitDetailCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'unitDetailDescr', array('placeholder' => '')); ?>
 			<div style="margin-left: 80px;">
-				<table id="dgGroupDetail"></table>
+				<div style="float: left; width: 300px;">
+					<table id="dgGroupDetail"></table>
+				</div>
+				<div style="float: left; width: 70px; margin-left: 360px;">
+					<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-add",
+							'label' => 'Add',
+							'size' => 'mini',
+								'htmlOptions' => array('style' => 'margin-top:5px; width:40px;')
+						));?>
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-edit",
+							'label' => 'Edit',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-remove",
+							'label' => 'Remove',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+						
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-cancel",
+							'label' => 'Cancel',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+						
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-save",
+							'label' => 'Save',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+				</div>
 			</div>
 		</fieldset>
 		

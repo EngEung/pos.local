@@ -8,7 +8,7 @@
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.crud.js');	
 ?>       
 	<div class="pus" style="margin-top: 20px;">
-		<table id="dgCategory"></table>
+		<table id="dgItemUnit"></table>
                 <div id="tb" style="padding:5px;height:auto">
                     <div style="margin-bottom:5px">
                             <?php 
@@ -46,11 +46,11 @@
                 
                 <?php 
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
-							'id'=> 'category-win',
-							'title'=> 'Category',
-							'style'=> 'width:400px;',
+							'id'=> 'unit-win',
+							'title'=> 'Setup Item Unit',
+							'style'=> 'width:450px;',
 							'closed' => true,
-							'modal' => false,
+							'modal' => true,
 							'buttons' => '#dlg-buttons'	
 						));
 						
@@ -76,14 +76,14 @@
 <script>
    
     /** easyui gridView Javascript */
-	dgCategory = $("#dgCategory");
-	dgCategory.datagrid({
-		title:'Currencies List',
+	dgItemUnit = $("#dgItemUnit");
+	dgItemUnit.datagrid({
+		title:'Item Units List',
 		height:400,
 		singleSelect:true,
 		//nowrap:false,
 		//fitColumns:true,
-		url:'<?php echo $this->createUrl('getCategories')?>',
+		url:'<?php echo $this->createUrl('getItemUnits')?>',
 		toolbar: '#tb',
 		idField: 'id',		
 		//pagination: true,
@@ -93,10 +93,10 @@
 		//collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:40,sortable:true},
-            {title:"Name",field:"name",width:100,sortable:true},
-			{title:"Code",field:"code",width:150,sortable:true},
+           	{title:"Code",field:"code",width:150,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
-			{title:"Created At",field:"created_at",width:150,sortable:true}
+			{title:"Created At",field:"created_at",width:150,sortable:true},
+			{title:"Created By",field:"created_by",width:150,sortable:true}	
 			
 		]],
 		onDblClickRow:function(index,row,value){
@@ -108,8 +108,8 @@
 		
 	var crud = new Crud({
 		route: '<?php echo $this->createUrl("index");?>',
-		grid: dgCategory,
-		window: $('#category-win')	
+		grid: dgItemUnit,
+		window: $('#unit-win')	
 	});
 	$('#btn-add').click(function(){
 		crud.add();
@@ -127,6 +127,6 @@
 		crud.save();
 	});
 	$('#btn-cancel').click(function(){
-		$('#nationality-win').dialog('close');
+		$('#unit-win').dialog('close');
 	});	
 </script>

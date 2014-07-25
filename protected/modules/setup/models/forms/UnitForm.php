@@ -8,46 +8,13 @@
 class UnitForm extends CFormModel
 {
 	public $id;
-	public $firstName;
-	public $lastName;
-
-	public $customerTypeId;
-	public $customerTypes;
-	public $phone1;
-	public $phone2;
-	public $email1;
-	public $email2;
-	public $address;
-	
-	public $titles;
-	public $titleId;
-	
-	public $countries;
-	public $countryId;
-	
-	public $provinces;
-	public $provinceId;
-
-	public $communeId;
-	public $communes;
-	
-	public $districtId;
-	public $districts;
-	
-	public $locations;
-	public $locationId;
-	public $note;
-	public $fax;
-	public $picture;
-	public $pictureId;
-	public $descr;
+	public $unitCode;
+	public $unitDescr;
+	public $unitDetailCode;
+	public $unitDetailDescr;
 	
 	public function __construct(){
-		$common = new Common();
-		$this->locations = CHtml::listData($common->getLocations(),'id', 'name');
-		$this->titles = CHtml::listData($common->getTitles(), 'id', 'name');
-		$this->customerTypes = CHtml::listData($common->getCustomerTypes(), 'id', 'name');
-		$this->customerTypeId = 1;
+
 	}
 	
 	/**
@@ -59,7 +26,7 @@ class UnitForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('firstName, lastName, locationId, phone1, address', 'required',),
+			array('unitCode, unitDetailCode, unitDetailDescr, unitDescr', 'required',),
 		
 		);
 	}
@@ -69,11 +36,10 @@ class UnitForm extends CFormModel
 	 */
 	public function attributeLabels(){
 		return array(
-			'locationId' => 'Location',
-			'titleId' => 'Title',
-			'customerTypeId' => '',
-			'descr' => '',
-			'note' => ''
+			'unitCode' => 'Group Code',
+			'unitDescr' => 'Descripition',
+			'unitDetailCode' => 'Unit Code',
+			'unitDetailDescr' => 'Descripition'
 		);
 	}
 

@@ -41,7 +41,7 @@ class SizeController extends Controller{
 				echo CJSON::encode(array('success'=>false));
 		}	
 	}
-
+	
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

@@ -48,7 +48,15 @@ class ItemSizeProcess extends CApplicationComponent{
 			echo $e;
 		}
 	}
+	
+	
+	public function updateItemSize($model){
 		
+	}
+	
+	public function deleteItemSize($model){
+		
+	}
 }
 
 ?>

@@ -15,6 +15,10 @@ class UnitController extends Controller{
 		echo CJSON::encode($data);
 	}
 
+
+	public function actionAddItemUnit(){
+		
+	}
 	/**
 	 * Displays a particular model.
 	 * @param integer $id the ID o'model'=>$model,f the model to be displayed

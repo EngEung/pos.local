@@ -27,9 +27,52 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 			<legend style="margin: 0 0 0 80px;font-weight:bold; font-size: 14px; width:420px;">Unit Details</legend>
 			<?php echo $form->textFieldRow($model, 'unitDetailCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'unitDetailDescr', array('placeholder' => '')); ?>
-			<div style="margin-left: 80px;">
-				<table id="dgGroupDetail"></table>
+			<div style="margin-left: 80px; width: 430px;">
+				<div style="float: left; width: 360px;">
+					<table id="dgGroupDetail"></table>
+				</div>
+				<div style="float: left; width: 60px; margin: -125px 0 0  360px;">
+					<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-add-detail",
+							'label' => 'Add',
+							'size' => 'mini',
+								'htmlOptions' => array('style' => 'margin-top:5px; width:40px;')
+						));?>
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-edit-detail",
+							'label' => 'Edit',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-remove-detail",
+							'label' => 'Remove',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+						
+						<?php 
+						$this->widget('bootstrap.widgets.TbButton',array(
+							'id'=>"btn-cancel-detail",
+							'label' => 'Cancel',
+							'size' => 'mini',
+							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+						));?>
+				</div>
+				<div style="clear: both; margin-left: 180px;">
+					<?php 
+				$this->widget('bootstrap.widgets.TbButton',array(
+					'id'=>"btn-save-detail",
+					'label' => 'Save',
+					'size' => 'mini',
+					'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
+				));?>
+				</div>
 			</div>
+			
 		</fieldset>
 		
 <?php    
@@ -38,10 +81,11 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 ?>
 </div>
 <script>
+var dgRowIndex = undefined;
 	/** easyui gridView Javascript */
 	dgGroupDetail = $("#dgGroupDetail");
 	dgGroupDetail.datagrid({
-		height:150,
+		height:120,
 		width:350,
 		singleSelect:true,
 		//url:'<?php echo $this->createUrl('getCategories')?>',
@@ -51,8 +95,8 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 		collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:20,sortable:true},
-            {title:"Name",field:"name",width:60,sortable:true},
-            {title:"Description",field:"descr",width:100,sortable:true},
+            {title:"Name",field:"name",width:100,sortable:true},
+            {title:"Description",field:"descr",width:200,sortable:true},
 			
 		]],
 		onDblClickRow:function(index,row,value){
@@ -60,6 +104,137 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
 		}
 	});
+
+$("#btn-save-detail").click(function(){
+	var count = dgGroupDetail.datagrid('getData').total;
+	if(count > 0){
+		var ss = [];
+		var rows = dgGroupDetail.datagrid('getRows');
+		for(i=0;i<rows.length;i++){
+			items = {'name':rows[i].name, 'descr':rows[i].descr};
+			ss.push(items);
+		}
+		$.ajax({
+				url: '<?php echo $this->createUrl('addItemUnit');?>',
+		        type: 'post',
+		       	data: {unitGroupCode: $("#UnitForm_unitCode").val(), unitGroupDescr: $("#UnitForm_unitDescr").val(), items : JSON.stringify(ss), totalHour : $("#OverTimeForm_totalHour").val()},
+		        dataType: 'json',
+		        success: function (response) {
+		      		$.messager.alert('Sucess','Your action has been successfully.');
+		      		refreshGrid(dg);
+		      		resetForm($("#OverTimeForm"));
+		       	},
+		       erorr: function (){
+		       		$.messager.alert('Error','Error occured.please try again.','warning');
+		       }
+		});
+	}else{
+		$.messager.alert('Error','Please insert data.','warning');
+	}
+});
+
+$("#btn-add-detail").click(function(){
+	//if(onValidateForm()){	
+		var help = false;
+		var help = checkInsertRowAlready($("#UnitForm_unitDetailCode").val(), $("#UnitForm_unitDetailDescr").val());
+		
+		if(help){
+			$.messager.alert('Error','This data has been inserted already.','warning');
+		}else{
+			var column = {
+					name: $("#UnitForm_unitDetailCode").val(),
+					descr: $("#UnitForm_unitDetailDescr").val()
+				};
+			if(dgRowIndex != undefined){
+				dgGroupDetail.datagrid('deleteRow', dgRowIndex);
+				dgGroupDetail.datagrid('insertRow', {
+					index: dgRowIndex,
+					row:column
+				});
+			}else{
+				dgGroupDetail.datagrid('appendRow',column);
+			}
+		}
+		toggleButton('add');
+	//	}
+	dgRowIndex = undefined;
+});	
+
+$("#btn-remove-detail").click(function(){
+	var selectedrow = dgGroupDetail.datagrid("getSelected");
+    var rowIndex = dgGroupDetail.datagrid("getRowIndex", selectedrow);
+	deleterow(rowIndex);
+});
+
+function deleterow(index){
+	$.messager.confirm('Confirm','Are you sure?',function(r){
+		if (r){
+			dgGroupDetail	.datagrid('deleteRow', index);
+		}
+	});
+}
+
+$("#btn-edit-detail").click(function(){
+	var row = dgGroupDetail.datagrid('getSelected');
+	dgRowIndex = dgGroupDetail.datagrid("getRowIndex", row);
 	
+	if (row){
+		$("#UnitForm_unitDetailCode").val(row.name);
+		$("#UnitForm_unitDetailDescr").val(row.descr);
+		toggleButton("edit");
+	}else{
+		$.messager.alert('Error','No seleted.','warning');
+	}
+});
+
+$("#btn-cancel-detail").click(function(){
+	toggleButton('cancel');
+});
+
+function checkInsertRowAlready(name, descr){
+	var help = false;
+	var count = dgGroupDetail.datagrid('getData').total;
+	
+	if(count ==0) return false;
+	var rows = dgGroupDetail.datagrid('getRows');
+	for(i=0;i<rows.length;i++){
+		if(i != dgRowIndex){
+			if(rows[i].name == name && rows[i].descr == descr){
+				help = true;
+				break;
+			}
+		}
+	}
+	return help;
+	
+}
+
+
+function toggleButton(toggle){
+	switch(toggle){
+		case "edit":
+			$("#btn-edit-detail").attr('disabled', 'disabled');
+			$("#btn-remove-detail").attr('disabled', 'disabled');
+			$("#btn-save-detail").attr('disabled', 'disabled');
+			$("#btn-add-detail").removeAttr('disabled');
+		break;
+		case "cancel":
+			$("#btn-edit-detail").removeAttr('disabled');
+			$("#btn-remove-detail").removeAttr('disabled');
+			$("#btn-add-detail").removeAttr('disabled');
+			$("#btn-save-detail").removeAttr('disabled');
+			dgRowIndex = undefined;
+		break;
+		case "add":
+			$("#btn-edit-detail").removeAttr('disabled');
+			$("#btn-remove-detail").removeAttr('disabled');
+			$("#btn-add-detail").removeAttr('disabled');
+			dgRowIndex = undefined;
+			//resetForm($("#OverTimeForm"));
+		break;
+	}
+}
+
+
 	
 </script>

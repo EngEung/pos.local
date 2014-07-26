@@ -8,7 +8,7 @@
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.crud.js');	
 ?>       
 	<div class="pus" style="margin-top: 20px;">
-		<table id="dgCategory"></table>
+		<table id="dgSize"></table>
                 <div id="tb" style="padding:5px;height:auto">
                     <div style="margin-bottom:5px">
                             <?php 
@@ -47,7 +47,7 @@
                 <?php 
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 							'id'=> 'category-win',
-							'title'=> 'Category',
+							'title'=> 'Item Sizes',
 							'style'=> 'width:400px;',
 							'closed' => true,
 							'modal' => false,
@@ -76,14 +76,14 @@
 <script>
    
     /** easyui gridView Javascript */
-	dgCategory = $("#dgCategory");
-	dgCategory.datagrid({
-		title:'Currencies List',
+	dgSize = $("#dgSize");
+	dgSize.datagrid({
+		title:'Item Sizes List',
 		height:400,
 		singleSelect:true,
 		//nowrap:false,
 		//fitColumns:true,
-		url:'<?php echo $this->createUrl('getCategories')?>',
+		url:'<?php echo $this->createUrl('getSizeLists')?>',
 		toolbar: '#tb',
 		idField: 'id',		
 		//pagination: true,
@@ -98,17 +98,13 @@
             {title:"Description",field:"descr",width:200,sortable:true},
 			{title:"Created At",field:"created_at",width:150,sortable:true}
 			
-		]],
-		onDblClickRow:function(index,row,value){
-			title = 'Update Supplier: ' + row.name;
-			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
-		}
+		]]
 	});
 	
 		
 	var crud = new Crud({
 		route: '<?php echo $this->createUrl("index");?>',
-		grid: dgCategory,
+		grid: dgSize,
 		window: $('#category-win')	
 	});
 	$('#btn-add').click(function(){

@@ -10,8 +10,8 @@ class SizeController extends Controller{
 	
 	
 	public function actionGetSizeLists(){
-		$cateProcess = new CategoryProcess();
-		$data = $cateProcess->getCategories();
+		$cateProcess = new ItemSizeProcess();
+		$data = $cateProcess->getItemSizes();
 		echo CJSON::encode($data);
 	}
 

@@ -10,8 +10,8 @@ class SizeController extends Controller{
 	
 	
 	public function actionGetSizeLists(){
-		$cateProcess = new CategoryProcess();
-		$data = $cateProcess->getCategories();
+		$cateProcess = new ItemSizeProcess();
+		$data = $cateProcess->getItemSizes();
 		echo CJSON::encode($data);
 	}
 
@@ -41,7 +41,7 @@ class SizeController extends Controller{
 				echo CJSON::encode(array('success'=>false));
 		}	
 	}
-
+	
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

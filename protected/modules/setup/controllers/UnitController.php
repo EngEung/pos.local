@@ -16,8 +16,17 @@ class UnitController extends Controller{
 	}
 
 
-	public function actionAddItemUnit(){
-		
+	public function actionCreateItemUnit(){
+		$unitProcess = new ItemUnitProcess();
+		$flage = false;
+		$model = new UnitForm();
+		$model->unitCode = $_POST['unitGroupCode'];
+		$model->unitDescr = $_POST['unitGroupDescr'];
+		$model->createdBy = Yii::app()->session->get('guid');
+		$items = CJSON::decode($_POST['items']);
+		$flage = $unitProcess->createItemUnit($model, $items);
+			
+		echo CJSON::encode($flage);
 	}
 	/**
 	 * Displays a particular model.
@@ -26,23 +35,6 @@ class UnitController extends Controller{
 	public function actionView($id)
 	{
 		echo DAO::exportModel($this->loadModel($id));
-	}
-
-	/**
-	 * Creates a new model.
-	 * If creation is successful, the browser will be redirected to the 'view' page.
-	 */
-	public function actionCreate()
-	{						
-		$model = new UnitForm();		
-		$this->performAjaxValidation($model);
-		if(isset($_POST['ItemUnit']))
-		{
-			$model->attributes = $_POST['ItemUnit'];
-			
-		}
-		
-			echo CJSON::encode(array('success'=>true));	
 	}
 
 	/**

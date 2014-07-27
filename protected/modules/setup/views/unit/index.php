@@ -81,52 +81,66 @@
 		title:'Item Units List',
 		height:400,
 		singleSelect:true,
-		//nowrap:false,
-		//fitColumns:true,
+		nowrap:false,
+		fitColumns:true,
 		url:'<?php echo $this->createUrl('getItemUnits')?>',
 		toolbar: '#tb',
 		idField: 'id',		
-		//pagination: true,
-		//rownumbers: true,
-		//scrollbarSize: 5,
-		//ctrlSelect: true,
-		//collapsible:true,
+		pagination: true,
+		rownumbers: true,
+		scrollbarSize: 5,
+		ctrlSelect: true,
+		collapsible:true,
 		columns:[[
-			{title:"ID",field:"id",width:40,sortable:true},
+			{title:"ID",field:"id",width:20,sortable:true},
            	{title:"Code",field:"code",width:150,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
 			{title:"Created At",field:"created_at",width:150,sortable:true},
 			{title:"Created By",field:"created_by",width:150,sortable:true}	
 			
 		]],
-		onDblClickRow:function(index,row,value){
-			title = 'Update Supplier: ' + row.name;
-			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
-		}
 	});
 	
 		
-	var crud = new Crud({
-		route: '<?php echo $this->createUrl("index");?>',
-		grid: dgItemUnit,
-		window: $('#unit-win')	
-	});
+	
 	$('#btn-add').click(function(){
-		crud.add();
-	});
-	$('#btn-edit').click(function(){
-		crud.edit();
-	});
-	$('#btn-remove').click(function(){
-		crud.remove();
-	});
-	$('#btn-refresh').click(function(){
-		crud.refresh();
-	});
-	$('#btn-save').click(function(){
-		crud.save();
+		$('#unit-win').dialog('open');
 	});
 	$('#btn-cancel').click(function(){
 		$('#unit-win').dialog('close');
 	});	
+	
+	
+$("#btn-save").click(function(){
+	var count = dgGroupDetail.datagrid('getData').total;
+	if(count > 0){
+		var ss = [];
+		var rows = dgGroupDetail.datagrid('getRows');
+		for(i=0;i<rows.length;i++){
+			items = {'name':rows[i].name, 'descr':rows[i].descr};
+			ss.push(items);
+		}
+		$.ajax({
+				url: '<?php echo $this->createUrl('createItemUnit');?>',
+		        type: 'post',
+		       	data: {unitGroupCode: $("#UnitForm_unitCode").val(), unitGroupDescr: $("#UnitForm_unitDescr").val(), items : JSON.stringify(ss), totalHour : $("#OverTimeForm_totalHour").val()},
+		        dataType: 'json',
+		        success: function (response) {
+		      		$.messager.alert('Sucess','Your action has been successfully.');
+		      		refreshGrid();
+		       	},
+		       erorr: function (){
+		       		$.messager.alert('Error','Error occured.please try again.','warning');
+		       }
+		});
+	}else{
+		$.messager.alert('Error','Please insert data.','warning');
+	}
+});	
+
+function refreshGrid(){
+	dgItemUnit.datagrid('clearSelections');
+	dgItemUnit.datagrid('reload');
+}
+		
 </script>

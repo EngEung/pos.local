@@ -62,15 +62,6 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
 						));?>
 				</div>
-				<div style="clear: both; margin-left: 180px;">
-					<?php 
-				$this->widget('bootstrap.widgets.TbButton',array(
-					'id'=>"btn-save-detail",
-					'label' => 'Save',
-					'size' => 'mini',
-					'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
-				));?>
-				</div>
 			</div>
 			
 		</fieldset>
@@ -105,33 +96,6 @@ var dgRowIndex = undefined;
 		}
 	});
 
-$("#btn-save-detail").click(function(){
-	var count = dgGroupDetail.datagrid('getData').total;
-	if(count > 0){
-		var ss = [];
-		var rows = dgGroupDetail.datagrid('getRows');
-		for(i=0;i<rows.length;i++){
-			items = {'name':rows[i].name, 'descr':rows[i].descr};
-			ss.push(items);
-		}
-		$.ajax({
-				url: '<?php echo $this->createUrl('addItemUnit');?>',
-		        type: 'post',
-		       	data: {unitGroupCode: $("#UnitForm_unitCode").val(), unitGroupDescr: $("#UnitForm_unitDescr").val(), items : JSON.stringify(ss), totalHour : $("#OverTimeForm_totalHour").val()},
-		        dataType: 'json',
-		        success: function (response) {
-		      		$.messager.alert('Sucess','Your action has been successfully.');
-		      		refreshGrid(dg);
-		      		resetForm($("#OverTimeForm"));
-		       	},
-		       erorr: function (){
-		       		$.messager.alert('Error','Error occured.please try again.','warning');
-		       }
-		});
-	}else{
-		$.messager.alert('Error','Please insert data.','warning');
-	}
-});
 
 $("#btn-add-detail").click(function(){
 	//if(onValidateForm()){	

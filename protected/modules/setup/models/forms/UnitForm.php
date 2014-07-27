@@ -12,7 +12,7 @@ class UnitForm extends CFormModel
 	public $unitDescr;
 	public $unitDetailCode;
 	public $unitDetailDescr;
-	
+	public $createdBy;
 	public function __construct(){
 
 	}

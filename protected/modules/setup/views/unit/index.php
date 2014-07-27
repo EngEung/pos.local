@@ -138,6 +138,22 @@ $("#btn-save").click(function(){
 	}
 });	
 
+
+$("#btn-edit").click(function(){
+	$('#unit-win').dialog('open');
+	var row = dgItemUnit.datagrid('getSelected');
+	if (row){
+		$("#UnitForm_groupId").val(row.id);
+		$("#UnitForm_unitCode").val(row.code);
+		$("#UnitForm_unitDescr").val(row.descr);
+		dgGroupDetail.datagrid({url: 'unit/getItemUnitDetail'});
+		dgGroupDetail.datagrid('load',{code: row.code});
+	}else{
+		$.messager.alert('Error','No seleted.','warning');
+	}
+});	
+
+
 function refreshGrid(){
 	dgItemUnit.datagrid('clearSelections');
 	dgItemUnit.datagrid('reload');

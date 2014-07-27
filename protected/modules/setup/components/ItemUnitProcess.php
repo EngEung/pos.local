@@ -24,6 +24,11 @@ class ItemUnitProcess extends CApplicationComponent{
 		return DAO::exprotData($sql);
 	}
 	
+	public function getItemUnitDetail($code){
+		$sql = "select * from item_unit_details i where i.unit_group_code = '$code'";
+		return DAO::exprotData($sql);
+	}
+	
 	/**
 	 * 
 	 */

@@ -2786,3 +2786,103 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+2014/07/27 16:41:20 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/07/27 16:41:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/GetItemUnitDetail".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/GetItemUn...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/setup/GetItemUnitDetail
+HTTP_REFERER=http://pos.local/setup/unit
+---
+2014/07/27 16:41:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "setup/GetItemUnitDetail".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/GetItemUn...')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/setup/GetItemUnitDetail
+HTTP_REFERER=http://pos.local/setup/unit
+---
+2014/07/27 16:42:25 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CTN' in 'where clause'. The SQL statement executed was: select * from item_unit_details i where i.unit_group_code = CTN.
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (88)
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (46)
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\ItemUnitProcess.php (29)
+2014/07/27 16:42:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'CTN' in 'where clause'. The SQL statement executed was: select * from item_unit_details i where i.unit_group_code = CTN' in C:\xampp\htdocs\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(88): CDbCommand->query()
+#2 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(46): DAO::countTotal('select * from i...')
+#3 C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\ItemUnitProcess.php(29): DAO::exprotData('select * from i...')
+#4 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\UnitController.php(36): ItemUnitProcess->getItemUnitDetail('CTN')
+#5 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): UnitController->actionGetItemUnitDetail()
+#6 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getitemunitdeta...')
+#10 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/unit/getI...')
+#11 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/setup/unit/getItemUnitDetail
+HTTP_REFERER=http://pos.local/setup/unit
+---
+2014/07/27 16:42:25 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: select * from item_unit_details i where i.unit_group_code = .
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (88)
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (46)
+in C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\ItemUnitProcess.php (29)
+2014/07/27 16:42:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: select * from item_unit_details i where i.unit_group_code = ' in C:\xampp\htdocs\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(88): CDbCommand->query()
+#2 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(46): DAO::countTotal('select * from i...')
+#3 C:\xampp\htdocs\www\pos.local\protected\modules\setup\components\ItemUnitProcess.php(29): DAO::exprotData('select * from i...')
+#4 C:\xampp\htdocs\www\pos.local\protected\modules\setup\controllers\UnitController.php(36): ItemUnitProcess->getItemUnitDetail('')
+#5 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): UnitController->actionGetItemUnitDetail()
+#6 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('getitemunitdeta...')
+#10 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/unit/getI...')
+#11 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/setup/unit/getItemUnitDetail
+HTTP_REFERER=http://pos.local/setup/unit
+---
+2014/07/27 16:45:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/07/27 16:52:52 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/07/27 17:09:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---

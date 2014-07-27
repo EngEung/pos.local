@@ -14,8 +14,7 @@ class UnitController extends Controller{
 		$data = $unitProcess->getItemUnits();
 		echo CJSON::encode($data);
 	}
-
-
+	
 	public function actionCreateItemUnit(){
 		$unitProcess = new ItemUnitProcess();
 		$flage = false;
@@ -28,15 +27,15 @@ class UnitController extends Controller{
 			
 		echo CJSON::encode($flage);
 	}
-	/**
-	 * Displays a particular model.
-	 * @param integer $id the ID o'model'=>$model,f the model to be displayed
-	 */
-	public function actionView($id)
-	{
-		echo DAO::exportModel($this->loadModel($id));
+	
+	public function actionGetItemUnitDetail(){
+		$unitProcess = new ItemUnitProcess();
+		$code = '';
+		if(isset($_POST['code']))
+			$code = $_POST['code'];
+		$data = $unitProcess->getItemUnitDetail($code);
+		echo CJSON::encode($data);
 	}
-
 	/**
 	 * Updates a particular model.
 	 * If update is successful, the browser will be redirected to the 'view' page.

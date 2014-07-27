@@ -7,9 +7,11 @@
  */
 class UnitForm extends CFormModel
 {
-	public $id;
+	public $groupId;
 	public $unitCode;
 	public $unitDescr;
+	
+	public $detailId;
 	public $unitDetailCode;
 	public $unitDetailDescr;
 	public $createdBy;

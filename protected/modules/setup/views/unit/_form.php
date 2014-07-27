@@ -21,10 +21,13 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 			<legend style="margin: 0 0 0 80px;font-weight:bold; font-size: 14px; width:420px;">Unit Group Details</legend>
 			<?php echo $form->textFieldRow($model, 'unitCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'unitDescr', array('placeholder' => '')); ?>
+			<?php echo $form->hiddenField($model, 'groupId', array('placeholder' => '')); ?>
+			
 		</fieldset>
 		
 		<fieldset>
 			<legend style="margin: 0 0 0 80px;font-weight:bold; font-size: 14px; width:420px;">Unit Details</legend>
+			
 			<?php echo $form->textFieldRow($model, 'unitDetailCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'unitDetailDescr', array('placeholder' => '')); ?>
 			<div style="margin-left: 80px; width: 430px;">
@@ -63,7 +66,7 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 						));?>
 				</div>
 			</div>
-			
+			<?php echo $form->hiddenField($model, 'detailId', array('placeholder' => '')); ?>
 		</fieldset>
 		
 <?php    
@@ -79,14 +82,12 @@ var dgRowIndex = undefined;
 		height:120,
 		width:350,
 		singleSelect:true,
-		//url:'<?php echo $this->createUrl('getCategories')?>',
-		toolbar: '#tb',
 		idField: 'id',		
 		scrollbarSize: 5,
 		collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:20,sortable:true},
-            {title:"Name",field:"name",width:100,sortable:true},
+            {title:"Code",field:"code",width:100,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
 			
 		]],
@@ -106,7 +107,8 @@ $("#btn-add-detail").click(function(){
 			$.messager.alert('Error','This data has been inserted already.','warning');
 		}else{
 			var column = {
-					name: $("#UnitForm_unitDetailCode").val(),
+					id: $("#UnitForm_detailId").val(),
+					code: $("#UnitForm_unitDetailCode").val(),
 					descr: $("#UnitForm_unitDetailDescr").val()
 				};
 			if(dgRowIndex != undefined){
@@ -143,7 +145,8 @@ $("#btn-edit-detail").click(function(){
 	dgRowIndex = dgGroupDetail.datagrid("getRowIndex", row);
 	
 	if (row){
-		$("#UnitForm_unitDetailCode").val(row.name);
+		$("#UnitForm_detailId").val(row.id);
+		$("#UnitForm_unitDetailCode").val(row.code);
 		$("#UnitForm_unitDetailDescr").val(row.descr);
 		toggleButton("edit");
 	}else{
@@ -163,7 +166,7 @@ function checkInsertRowAlready(name, descr){
 	var rows = dgGroupDetail.datagrid('getRows');
 	for(i=0;i<rows.length;i++){
 		if(i != dgRowIndex){
-			if(rows[i].name == name && rows[i].descr == descr){
+			if(rows[i].code == name && rows[i].descr == descr){
 				help = true;
 				break;
 			}

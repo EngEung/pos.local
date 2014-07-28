@@ -52,7 +52,7 @@ class ItemUnitProcess extends CApplicationComponent{
 					$i += 1;
 					$unitDetail = new ItemUnitDetails();
 					$unitDetail->setAttributes(array(
-						'code' => $row['name'],
+						'code' => $row['code'],
 						'descr' => $row['descr'],
 						'unit_group_code' => $unitGroup->code,
 						'main_unit' => $i,

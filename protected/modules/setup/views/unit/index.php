@@ -105,6 +105,8 @@
 	
 	$('#btn-add').click(function(){
 		$('#unit-win').dialog('open');
+		resetForm($("#itemUnitForm"));
+		clearGrid(dgGroupDetail);
 	});
 	$('#btn-cancel').click(function(){
 		$('#unit-win').dialog('close');
@@ -117,7 +119,7 @@ $("#btn-save").click(function(){
 		var ss = [];
 		var rows = dgGroupDetail.datagrid('getRows');
 		for(i=0;i<rows.length;i++){
-			items = {'name':rows[i].name, 'descr':rows[i].descr};
+			items = {'code':rows[i].code, 'descr':rows[i].descr};
 			ss.push(items);
 		}
 		$.ajax({
@@ -126,8 +128,9 @@ $("#btn-save").click(function(){
 		       	data: {unitGroupCode: $("#UnitForm_unitCode").val(), unitGroupDescr: $("#UnitForm_unitDescr").val(), items : JSON.stringify(ss), totalHour : $("#OverTimeForm_totalHour").val()},
 		        dataType: 'json',
 		        success: function (response) {
-		      		$.messager.alert('Sucess','Your action has been successfully.');
+		      		//$.messager.alert('Sucess','Your action has been successfully.');
 		      		refreshGrid();
+		      		$('#unit-win').dialog('close');
 		       	},
 		       erorr: function (){
 		       		$.messager.alert('Error','Error occured.please try again.','warning');
@@ -158,5 +161,16 @@ function refreshGrid(){
 	dgItemUnit.datagrid('clearSelections');
 	dgItemUnit.datagrid('reload');
 }
-		
+
+function clearGrid(dgGroupDetail){
+	dgGroupDetail.datagrid('loadData', {"total":0,"rows":[]});
+}
+
+function resetForm(e){
+	$(':input',e)
+	 .val('')
+ 	.removeAttr('checked')
+ 	.removeAttr('selected');
+ 	e[0].reset(); 
+}		
 </script>

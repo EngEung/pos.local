@@ -23,8 +23,15 @@ class UnitController extends Controller{
 		$model->unitDescr = $_POST['unitGroupDescr'];
 		$model->createdBy = Yii::app()->session->get('guid');
 		$items = CJSON::decode($_POST['items']);
-		$flage = $unitProcess->createItemUnit($model, $items);
-			
+		$model->groupId = $_POST['unitGroupId'];
+		if($model->groupId != null){
+			$model->modifedBy = Yii::app()->session->get('guid');
+			$flage = $unitProcess->updateItemUnit($model, $items);
+		}
+		else{
+			$model->createdBy = Yii::app()->session->get('guid');
+			$flage = $unitProcess->createItemUnit($model, $items);
+		}	
 		echo CJSON::encode($flage);
 	}
 	

@@ -86,14 +86,19 @@ var dgRowIndex = undefined;
 		scrollbarSize: 5,
 		collapsible:true,
 		columns:[[
-			{title:"ID",field:"id",width:20,sortable:true},
+			{title:"ID",field:"id",width:30,sortable:true},
             {title:"Code",field:"code",width:100,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
-			
+			{title:"deleted",field:"deleted",width:50,sortable:true},
 		]],
 		onDblClickRow:function(index,row,value){
 			title = 'Update Supplier: ' + row.name;
 			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
+		},
+		rowStyler: function(index,row){
+			if (row.deleted == 'deleted'){
+				return 'display:none';
+			}
 		}
 	});
 
@@ -106,18 +111,25 @@ $("#btn-add-detail").click(function(){
 		if(help){
 			$.messager.alert('Error','This data has been inserted already.','warning');
 		}else{
-			var column = {
+			
+			if(dgRowIndex != undefined){
+				var column = {
 					id: $("#UnitForm_detailId").val(),
 					code: $("#UnitForm_unitDetailCode").val(),
-					descr: $("#UnitForm_unitDetailDescr").val()
+					descr: $("#UnitForm_unitDetailDescr").val(),
+					deleted: 'edit'
 				};
-			if(dgRowIndex != undefined){
 				dgGroupDetail.datagrid('deleteRow', dgRowIndex);
 				dgGroupDetail.datagrid('insertRow', {
 					index: dgRowIndex,
 					row:column
 				});
 			}else{
+				var column = {
+					id: $("#UnitForm_detailId").val(),
+					code: $("#UnitForm_unitDetailCode").val(),
+					descr: $("#UnitForm_unitDetailDescr").val()
+				};
 				dgGroupDetail.datagrid('appendRow',column);
 			}
 		}
@@ -129,13 +141,28 @@ $("#btn-add-detail").click(function(){
 $("#btn-remove-detail").click(function(){
 	var selectedrow = dgGroupDetail.datagrid("getSelected");
     var rowIndex = dgGroupDetail.datagrid("getRowIndex", selectedrow);
-	deleterow(rowIndex);
+	deleterow(selectedrow, rowIndex);
 });
 
-function deleterow(index){
+function deleterow(selectedrow, index){
 	$.messager.confirm('Confirm','Are you sure?',function(r){
-		if (r){
-			dgGroupDetail	.datagrid('deleteRow', index);
+		if(r){
+			if(selectedrow.id == "")
+				dgGroupDetail.datagrid('deleteRow', index);
+			else{
+				var column = {
+					id: selectedrow.id,
+					code: selectedrow.code,
+					descr: selectedrow.descr,
+					deleted: 'deleted'	
+				};
+				dgGroupDetail.datagrid('deleteRow', index);
+				dgGroupDetail.datagrid('insertRow', {
+					index: index,
+					row:column
+				});
+				//refreshGrid(dgGroupDetail);
+			}
 		}
 	});
 }
@@ -173,10 +200,7 @@ function checkInsertRowAlready(name, descr){
 		}
 	}
 	return help;
-	
 }
-
-
 function toggleButton(toggle){
 	switch(toggle){
 		case "edit":
@@ -203,5 +227,4 @@ function toggleButton(toggle){
 }
 
 
-	
 </script>

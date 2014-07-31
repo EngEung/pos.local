@@ -42,8 +42,6 @@
                     ?>    	
                     </div>
                 </div>
-                
-                
                 <?php 
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 							'id'=> 'unit-win',
@@ -101,8 +99,6 @@
 		]],
 	});
 	
-		
-	
 	$('#btn-add').click(function(){
 		$('#unit-win').dialog('open');
 		resetForm($("#itemUnitForm"));
@@ -119,17 +115,17 @@ $("#btn-save").click(function(){
 		var ss = [];
 		var rows = dgGroupDetail.datagrid('getRows');
 		for(i=0;i<rows.length;i++){
-			items = {'code':rows[i].code, 'descr':rows[i].descr};
+			items = {'id': rows[i].id, 'code':rows[i].code, 'descr':rows[i].descr, 'deleted':rows[i].deleted};
 			ss.push(items);
 		}
 		$.ajax({
 				url: '<?php echo $this->createUrl('createItemUnit');?>',
 		        type: 'post',
-		       	data: {unitGroupCode: $("#UnitForm_unitCode").val(), unitGroupDescr: $("#UnitForm_unitDescr").val(), items : JSON.stringify(ss), totalHour : $("#OverTimeForm_totalHour").val()},
+		       	data: {unitGroupId : $("#UnitForm_groupId").val(),unitGroupCode: $("#UnitForm_unitCode").val(), unitGroupDescr: $("#UnitForm_unitDescr").val(), items : JSON.stringify(ss), totalHour : $("#OverTimeForm_totalHour").val()},
 		        dataType: 'json',
 		        success: function (response) {
 		      		//$.messager.alert('Sucess','Your action has been successfully.');
-		      		refreshGrid();
+		      		refreshGrid(dgItemUnit);
 		      		$('#unit-win').dialog('close');
 		       	},
 		       erorr: function (){
@@ -157,7 +153,7 @@ $("#btn-edit").click(function(){
 });	
 
 
-function refreshGrid(){
+function refreshGrid(dgItemUnit){
 	dgItemUnit.datagrid('clearSelections');
 	dgItemUnit.datagrid('reload');
 }

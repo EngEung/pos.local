@@ -12,6 +12,10 @@ class SizeForm extends CFormModel
 	public $sizeDescr;
 	public $sizeDetailCode;
 	public $sizeDetailDescr;
+	public $unitGroupDetailCode;
+	public $unitGroupDetailDescr;
+	public $unit;
+	
 	
 	public function __construct(){
 
@@ -36,10 +40,12 @@ class SizeForm extends CFormModel
 	 */
 	public function attributeLabels(){
 		return array(
-			'sizeCode' => 'Group Code',
+			'sizeCode' => 'Size Group Code',
 			'sizeDescr' => 'Descripition',
 			'sizeDetailCode' => 'size Code',
-			'sizeDetailDescr' => 'Descripition'
+			'sizeDetailDescr' => 'Descripition',
+			'unitGroupDetailDescr' => 'Description',
+			'$unitGroupDetailCode' => 'Unit Group Code',
 		);
 	}
 }

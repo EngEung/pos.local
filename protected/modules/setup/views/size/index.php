@@ -48,7 +48,7 @@
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
 							'id'=> 'category-win',
 							'title'=> 'Item Sizes',
-							'style'=> 'width:470px; height:460px;',
+							'style'=> 'width:580px; height:460px;',
 							'closed' => true,
 							'modal' => false,
 							'buttons' => '#dlg-buttons'	

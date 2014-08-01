@@ -12,19 +12,26 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 	             	'validateOnChange' => true,
 					'validateOnType' => true,
 		),
-   		'htmlOptions' => array('class' => 'well-small'), // for inset effect
+   		'htmlOptions' => array('class' => 'well-small', 'style' => 'margin-left:80px;'), // for inset effect
    ));
    
 ?>		
-
+		
 		<fieldset>
-			<legend style="margin: 0 0 0 80px;font-weight:bold; font-size: 14px; width:420px;">size Group Details</legend>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:550px;">Unit Group Details</legend>
+			<?php echo $form->textFieldRow($model, 'unitGroupDetailCode', array('placeholder' => '')); ?>
+			<?php echo $form->textFieldRow($model, 'unitGroupDetailDescr', array('placeholder' => '')); ?>
+			<?php echo $form->textFieldRow($model, 'unit', array('placeholder' => '')); ?>
+		</fieldset>
+		
+		<fieldset>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:550px;">size Group Details</legend>
 			<?php echo $form->textFieldRow($model, 'sizeCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDescr', array('placeholder' => '')); ?>
 		</fieldset>
 		
 		<fieldset>
-			<legend style="margin: 0 0 0 80px;font-weight:bold; font-size: 14px; width:420px;">size Details</legend>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:550px;">size Details</legend>
 			<?php echo $form->textFieldRow($model, 'sizeDetailCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDetailDescr', array('placeholder' => '')); ?>
 			<div style="margin-left: 80px; width: 430px;">

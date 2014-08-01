@@ -62,15 +62,6 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
 						));?>
 				</div>
-				<div style="clear: both; margin-left: 180px;">
-					<?php 
-				$this->widget('bootstrap.widgets.TbButton',array(
-					'id'=>"btn-save-detail",
-					'label' => 'Save',
-					'size' => 'mini',
-					'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
-				));?>
-				</div>
 			</div>
 			
 		</fieldset>
@@ -88,21 +79,15 @@ var dgRowIndex = undefined;
 		height:120,
 		width:350,
 		singleSelect:true,
-		//url:'<?php echo $this->createUrl('getCategories')?>',
-		toolbar: '#tb',
 		idField: 'id',		
 		scrollbarSize: 5,
 		collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:20,sortable:true},
-            {title:"Name",field:"name",width:100,sortable:true},
+            {title:"Code",field:"code",width:100,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
 			
-		]],
-		onDblClickRow:function(index,row,value){
-			title = 'Update Supplier: ' + row.name;
-			addTab(title, "<?php echo $this->createUrl('/inventorycenter/supplier/update/?sup_id=');?>" + row.id);
-		}
+		]]
 	});
 
 $("#btn-save-detail").click(function(){
@@ -199,7 +184,7 @@ function checkInsertRowAlready(name, descr){
 	var rows = dgGroupDetail.datagrid('getRows');
 	for(i=0;i<rows.length;i++){
 		if(i != dgRowIndex){
-			if(rows[i].name == name && rows[i].descr == descr){
+			if(rows[i].code == name && rows[i].descr == descr){
 				help = true;
 				break;
 			}

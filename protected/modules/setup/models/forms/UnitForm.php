@@ -15,6 +15,7 @@ class UnitForm extends CFormModel
 	public $unitDetailCode;
 	public $unitDetailDescr;
 	public $createdBy;
+	public $modifiedBy;
 	public function __construct(){
 
 	}
@@ -29,6 +30,7 @@ class UnitForm extends CFormModel
 		return array(
 			// username and password are required
 			array('unitCode, unitDetailCode, unitDetailDescr, unitDescr', 'required',),
+			array('unitCode', 'unique', 'attributeName' => 'code', 'className' => 'ItemUnitGroups')
 		
 		);
 	}

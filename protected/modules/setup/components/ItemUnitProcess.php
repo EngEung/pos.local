@@ -24,13 +24,19 @@ class ItemUnitProcess extends CApplicationComponent{
 		return DAO::exprotData($sql);
 	}
 	
+	/**
+	 * 
+	 */
 	public function getItemUnitDetail($code){
 		$sql = "select * from item_unit_details i where i.unit_group_code = '$code'";
 		return DAO::exprotData($sql);
 	}
 	
 	/**
-	 * 
+	 * Create Item Unit
+	 * @param object $model, UnitForm,
+	 * @param array $items
+	 * @return boolean
 	 */
 	public function createItemUnit($model, $items){
 		$result = -1;
@@ -60,6 +66,55 @@ class ItemUnitProcess extends CApplicationComponent{
 					));
 					$unitDetail->save(false);
 					$i  = -1;
+				}
+			}
+			
+			$result =true;
+			$tran->commit();
+		}catch(CException $ex) {
+			//$this->_errorLogProc->($ex, $comments);
+			$result = -1;
+			$tran->rollBack();
+		}
+		return $result;
+	}
+	
+	public function updateItemUnit($model, $items){
+		$result = -1;
+		$cnc = Yii::app()->db;	
+		$tran = $cnc->beginTransaction();
+		try{
+			$unitGroup = ItemUnitGroups::model()->findByPK($model->groupId);
+			$unitGroup->setAttributes(array(
+				'code' => $model->unitCode,
+				'descr' => $model->unitDescr,
+				'modified_at' => new CDbExpression('NOW()'),
+				'modified_by' => $model->modifiedBy
+			));
+			
+			$unitGroup->save(false);
+			if($unitGroup->id <0) $tran->rollBack();
+			if($items != null){
+				foreach($items as $row){
+					if(isset($row['deleted'])){
+						$unitDetail = ItemUnitDetails::model()->findByPK($row['id']);
+						if($row['deleted'] === "edit"){
+							$unitDetail->setAttributes(array(
+								'code' => $row['code'],
+								'descr' => $row['descr'],
+								'unit_group_code' => $unitGroup->code,
+								'modified_at' => new CDbExpression('NOW()'),
+								'modified_by' => $model->modifiedBy
+							));
+						}else if($row['deleted'] === "deleted"){
+							$unitDetail->setAttributes(array(
+								'active' => false,
+								'modified_at' => new CDbExpression('NOW()'),
+								'modified_by' => $model->modifiedBy
+							));
+						}
+						$unitDetail->save(false);
+					}
 				}
 			}
 			

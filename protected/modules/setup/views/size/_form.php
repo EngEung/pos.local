@@ -18,58 +18,21 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 ?>		
 		
 		<fieldset>
-			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:550px;">Unit Group Details</legend>
-			<?php echo $form->textFieldRow($model, 'unitGroupDetailCode', array('placeholder' => '')); ?>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:540px;">Unit Group Details</legend>
+			<?php echo $form->textFieldRow($model, 'unitGroupDetailCode', array('placeholder' => '', 'style' => 'width:120px;')); ?>
 			<?php echo $form->textFieldRow($model, 'unitGroupDetailDescr', array('placeholder' => '')); ?>
-			<?php echo $form->textFieldRow($model, 'unit', array('placeholder' => '')); ?>
 		</fieldset>
 		
 		<fieldset>
-			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:550px;">size Group Details</legend>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:540px;">size Group Details</legend>
 			<?php echo $form->textFieldRow($model, 'sizeCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDescr', array('placeholder' => '')); ?>
 		</fieldset>
 		
 		<fieldset>
-			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:550px;">size Details</legend>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:540px;">size Details</legend>
 			<?php echo $form->textFieldRow($model, 'sizeDetailCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDetailDescr', array('placeholder' => '')); ?>
-			<div style="margin-left: 80px; width: 430px;">
-				<div style="float: left; width: 360px;">
-					<table id="dgGroupDetail"></table>
-				</div>
-				<div style="float: left; width: 60px; margin: -125px 0 0  360px;">
-					<?php 
-						$this->widget('bootstrap.widgets.TbButton',array(
-							'id'=>"btn-add-detail",
-							'label' => 'Add',
-							'size' => 'mini',
-								'htmlOptions' => array('style' => 'margin-top:5px; width:40px;')
-						));?>
-						<?php 
-						$this->widget('bootstrap.widgets.TbButton',array(
-							'id'=>"btn-edit-detail",
-							'label' => 'Edit',
-							'size' => 'mini',
-							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
-						));?>
-						<?php 
-						$this->widget('bootstrap.widgets.TbButton',array(
-							'id'=>"btn-remove-detail",
-							'label' => 'Remove',
-							'size' => 'mini',
-							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
-						));?>
-						
-						<?php 
-						$this->widget('bootstrap.widgets.TbButton',array(
-							'id'=>"btn-cancel-detail",
-							'label' => 'Cancel',
-							'size' => 'mini',
-							'htmlOptions' => array('style' => 'margin-top:5px;width:40px;')
-						));?>
-				</div>
-			</div>
 			
 		</fieldset>
 		
@@ -79,24 +42,6 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 ?>
 </div>
 <script>
-var dgRowIndex = undefined;
-	/** easyui gridView Javascript */
-	dgGroupDetail = $("#dgGroupDetail");
-	dgGroupDetail.datagrid({
-		height:120,
-		width:350,
-		singleSelect:true,
-		idField: 'id',		
-		scrollbarSize: 5,
-		collapsible:true,
-		columns:[[
-			{title:"ID",field:"id",width:20,sortable:true},
-            {title:"Code",field:"code",width:100,sortable:true},
-            {title:"Description",field:"descr",width:200,sortable:true},
-			
-		]]
-	});
-
 $("#btn-save-detail").click(function(){
 	var count = dgGroupDetail.datagrid('getData').total;
 	if(count > 0){

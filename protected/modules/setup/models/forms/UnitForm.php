@@ -16,6 +16,8 @@ class UnitForm extends CFormModel
 	public $unitDetailDescr;
 	public $createdBy;
 	public $modifiedBy;
+	public $mainUnit;
+	
 	public function __construct(){
 
 	}

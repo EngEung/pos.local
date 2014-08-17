@@ -25,7 +25,7 @@ class UnitController extends Controller{
 		$items = CJSON::decode($_POST['items']);
 		$model->groupId = $_POST['unitGroupId'];
 		if($model->groupId != null){
-			$model->modifedBy = Yii::app()->session->get('guid');
+			$model->modifiedBy = Yii::app()->session->get('guid');
 			$flage = $unitProcess->updateItemUnit($model, $items);
 		}
 		else{

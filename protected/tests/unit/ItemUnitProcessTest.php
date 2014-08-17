@@ -28,10 +28,10 @@ class ItemUnitProcessTest extends CTestCase {
 		$this->assertTrue($id > 0);
 	}
 	
-	public function testUpdateSupplier() {
-		$supplier = new SupplierForm();
-		$supplier->id = '11';
-		$supplier->name = 'engeung';
+	public function testUpdateItemUnit() {
+		$unit = new UnitForm();
+		$unit->id = '11';
+		$unit->name = 'engeung';
         $supplier->address1 = 'Kompong Chhange';
         $supplier->address2 = 'Kompong Chhange';
         $supplier->cityId = 1;
@@ -45,7 +45,7 @@ class ItemUnitProcessTest extends CTestCase {
         $supplier->postalCode = '12322';
         $supplier->accountNum = '232232';
 		$supplier->note = 'note';
-		$flag = $this->supProc->updateSupplier($supplier);
+		$flag = $this->unit->updateItemUnit($model, $items);
 		print_r($flag);
 		$this->assertTrue($flag);
 	}

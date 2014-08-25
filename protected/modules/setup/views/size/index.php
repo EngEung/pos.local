@@ -7,6 +7,7 @@
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.crud.js');	
 ?>       
+
 	<div class="pus" style="margin-top: 20px;">
 		<table id="dgSize"></table>
                 <div id="tb" style="padding:5px;height:auto">
@@ -51,6 +52,8 @@
 							'style'=> 'width:580px; height:460px;',
 							'closed' => true,
 							'modal' => false,
+							'resizable' => true, 
+							'maximizable' => true,
 							'buttons' => '#dlg-buttons'	
 						));
 						
@@ -125,4 +128,8 @@
 	$('#btn-cancel').click(function(){
 		$('#nationality-win').dialog('close');
 	});	
+	
+	$("#btn-search").click(function(){
+		$("#dlg").dialog('open');
+	})
 </script>

@@ -16,21 +16,61 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
    ));
    
 ?>		
-		
+	
+<div id="dlg" class="easyui-dialog" title="Basic Dialog" style="width:600px;height:400px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'icon-save',toolbar: '#dlg-toolbar',buttons: '#dlg-buttons'">
+	<?php echo $this->renderPartial('_formSearchUnit');?>
+</div>
+
+<div id="dlg-toolbar" style="padding:0">
+	<table cellpadding="0" cellspacing="0" style="width:100%">
+		<tr>
+			<td style="text-align:right;padding-right:2px">
+			<input class="easyui-searchbox" data-options="prompt:'Please input somthing'" style="width:150px"></input>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="dlg-buttons">
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Save</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Close</a>
+</div>
+
+
 		<fieldset>
-			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:540px;">Unit Group Details</legend>
-			<?php echo $form->textFieldRow($model, 'unitGroupDetailCode', array('placeholder' => '', 'style' => 'width:120px;')); ?>
+			<legend style="margin: 0 0 10px -5px;font-weight:bold; font-size: 14px; width:100%;">Unit Group Details</legend>
+			<ul id="navlist">
+				<li>
+					<?php echo $form->textFieldRow($model, 'unitGroupDetailCode', array('placeholder' => '', 'style' => 'width:130px;')); ?>
+				</li>
+				<li>
+					<?php   $this->widget('bootstrap.widgets.TbButton',array(
+		                                    'id'=>"btn-search",
+		                                    'label' => '',
+		                                    'icon' => 'search',
+		                                    'size' => 'small',
+		                                    'htmlOptions' => array('style' => 'padding:7px;')
+		                            ));?>
+		             <?php   $this->widget('bootstrap.widgets.TbButton',array(
+		                                    'id'=>"btn-add",
+		                                    'label' => '',
+		                                    'icon' => 'remove',
+		                                    'size' => 'small',
+		                                    'htmlOptions' => array('style' => 'padding:7px;', 'disabled' => 'disabled')
+		                            ));?>
+	             </li>
+      		</ul>
+      		<div style="clear: both;"></div>
 			<?php echo $form->textFieldRow($model, 'unitGroupDetailDescr', array('placeholder' => '')); ?>
 		</fieldset>
 		
 		<fieldset>
-			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:540px;">size Group Details</legend>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:100%;">Size Group Details</legend>
 			<?php echo $form->textFieldRow($model, 'sizeCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDescr', array('placeholder' => '')); ?>
 		</fieldset>
 		
 		<fieldset>
-			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:540px;">size Details</legend>
+			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:100%;">Size Details</legend>
 			<?php echo $form->textFieldRow($model, 'sizeDetailCode', array('placeholder' => '')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDetailDescr', array('placeholder' => '')); ?>
 			
@@ -41,6 +81,18 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
     unset($form);
 ?>
 </div>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+} 
+#navlist li{
+	display: inline;
+	list-style-type: none;
+	float: left;
+}
+</style>
 <script>
 $("#btn-save-detail").click(function(){
 	var count = dgGroupDetail.datagrid('getData').total;

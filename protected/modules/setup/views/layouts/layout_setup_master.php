@@ -22,7 +22,7 @@
 				   	 	?>
 				    </div>
 
-				    <div data-options="region:'center',title:'Welcome'" style="padding:5px;background:#eee;">
+				    <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
 				    	<div id="tt" class="easyui-tabs" style="width:auto; height:500px;">
                              <?php echo $content; ?>
 					</div>

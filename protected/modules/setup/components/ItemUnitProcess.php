@@ -7,14 +7,22 @@
  */
  
 class ItemUnitProcess extends CApplicationComponent{
-		private $_errorLogProc;
+	private $_errorLogProc;
+	private $_message;
+	
+	public function setMessage($value){
+		return $this->_message = $value;
+	}
+	public function getMessage(){
+		return $this->_message;
+	}
 	
 	public function __construct() {
 		//$this->_errorLogProc = new ErrorLogProcess();	
 	} 
 	
 	/**
-	 * Get categories
+	 * Get item unit
 	 */
 	public function getItemUnits(){
 		$sql= "select i.id, i.code, i.descr, i.created_at, i.modified_at, u.username as 'created_by' 
@@ -25,10 +33,11 @@ class ItemUnitProcess extends CApplicationComponent{
 	}
 	
 	/**
-	 * 
+	 * Get Item Unit Detials
+	 * @param string $code
 	 */
 	public function getItemUnitDetail($code){
-		$sql = "select * from item_unit_details i where i.unit_group_code = '$code'";
+		$sql = "select * from item_unit_details i where i.unit_group_code = '{$code}' and i.active = true;";
 		return DAO::exprotData($sql);
 	}
 	
@@ -56,15 +65,11 @@ class ItemUnitProcess extends CApplicationComponent{
 				$i = 0;
 				foreach($items as $row){
 					$i += 1;
-					$unitDetail = new ItemUnitDetails();
-					$unitDetail->setAttributes(array(
-						'code' => $row['code'],
-						'descr' => $row['descr'],
-						'unit_group_code' => $unitGroup->code,
-						'main_unit' => $i,
-						'created_by' => $model->createdBy
-					));
-					$unitDetail->save(false);
+					$model->unitDetailCode = $row['code'];
+					$model->unitDetailDescr = $row['descr'];
+					$model->unitCode = $unitGroup->code;
+					$model->mainUnit = $i;
+					$this->createItemUnitDetail($model);
 					$i  = -1;
 				}
 			}
@@ -96,8 +101,12 @@ class ItemUnitProcess extends CApplicationComponent{
 			if($unitGroup->id <0) $tran->rollBack();
 			if($items != null){
 				foreach($items as $row){
+					$model->unitDetailCode = $row['code'];
+					$model->unitDetailDescr = $row['descr'];
+					$model->unitCode = $unitGroup->code;
 					if(isset($row['deleted'])){
 						$unitDetail = ItemUnitDetails::model()->findByPK($row['id']);
+						
 						if($row['deleted'] === "edit"){
 							$unitDetail->setAttributes(array(
 								'code' => $row['code'],
@@ -106,7 +115,7 @@ class ItemUnitProcess extends CApplicationComponent{
 								'modified_at' => new CDbExpression('NOW()'),
 								'modified_by' => $model->modifiedBy
 							));
-						}else if($row['deleted'] === "deleted"){
+						}elseif($row['deleted'] == "deleted"){
 							$unitDetail->setAttributes(array(
 								'active' => false,
 								'modified_at' => new CDbExpression('NOW()'),
@@ -114,6 +123,8 @@ class ItemUnitProcess extends CApplicationComponent{
 							));
 						}
 						$unitDetail->save(false);
+					}elseif(empty($row['id']) && empty($row['deleted'])){
+						$this->createItemUnitDetail($model);
 					}
 				}
 			}
@@ -126,6 +137,22 @@ class ItemUnitProcess extends CApplicationComponent{
 			$tran->rollBack();
 		}
 		return $result;
+	}
+	/**
+	 * create item unit detail
+	 * @param object $model
+	 * 
+	 */
+	public function createItemUnitDetail($model){
+		$unitDetail = new ItemUnitDetails();
+		$unitDetail->setAttributes(array(
+			'code' =>$model->unitDetailCode,
+			'descr' => $model->unitDetailDescr,
+			'unit_group_code' => $model->unitCode,
+			'main_unit' => $model->mainUnit,
+			'created_by' => $model->createdBy
+		));
+		 $unitDetail->save(false);
 	}
 }
 

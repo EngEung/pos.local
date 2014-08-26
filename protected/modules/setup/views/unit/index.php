@@ -139,9 +139,10 @@ $("#btn-save").click(function(){
 
 
 $("#btn-edit").click(function(){
-	$('#unit-win').dialog('open');
+	
 	var row = dgItemUnit.datagrid('getSelected');
 	if (row){
+		$('#unit-win').dialog('open');
 		$("#UnitForm_groupId").val(row.id);
 		$("#UnitForm_unitCode").val(row.code);
 		$("#UnitForm_unitDescr").val(row.descr);

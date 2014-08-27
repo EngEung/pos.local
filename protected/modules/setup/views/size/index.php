@@ -54,7 +54,8 @@
 							'modal' => false,
 							'resizable' => true, 
 							'maximizable' => true,
-							'buttons' => '#dlg-buttons'	
+							'buttons' => '#dlg-buttons'	,
+							'iconCls'=>'icon-th-large'
 						));
 						
 						$this->renderPartial('_form', array('model'=>$model));

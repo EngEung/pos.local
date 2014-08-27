@@ -1,27 +1,38 @@
 <table id="dgUnit"></table>
+<div id="dlg-toolbar" style="padding:0">
+	<table cellpadding="0" cellspacing="0" style="width:100%">
+		<tr>
+			<td style="text-align:right;padding-right:2px">
+			<input class="easyui-searchbox" data-options="prompt:'សូមPlease input somthing'" style="width:150px"></input>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="dlg-buttons">
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Save</a>
+	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Close</a>
+</div>
 <script>
 	dgUnit = $("#dgUnit");
 	dgUnit.datagrid({
-		title:'Item Sizes List',
 		height:200,
-		width:300,
+		width:500,
 		singleSelect:true,
 		fitColumns:true,
-		url:'<?php echo $this->createUrl('getSizeLists')?>',
+		url:'<?php echo $this->createUrl('GetUnitGroupLists')?>',
 		toolbar: '#tb',
-		idField: 'id',		
-		//pagination: true,
-		//rownumbers: true,
-		//scrollbarSize: 5,
-		//ctrlSelect: true,
-		//collapsible:true,
+		idField: 'id',
+		rownumbers: true,
 		columns:[[
-			{title:"ID",field:"id",width:40,sortable:true},
-            {title:"Name",field:"name",width:100,sortable:true},
-			{title:"Code",field:"code",width:150,sortable:true},
-            {title:"Description",field:"descr",width:200,sortable:true},
-			{title:"Created At",field:"created_at",width:150,sortable:true}
+			{title:"No",field:"id",width:10,sortable:true, hidden:true,},
+            {title:"Groups",field:"unit_group_code",width:50,sortable:true},
+			{title:"Description",field:"descr",width:50,sortable:true},
+            {title:"Unit Details",field:"group_detail",width:200,sortable:true},
 			
-		]]
+		]],
+		onDblClickCell: function(index,field,value){
+			alert('dsfdf');
+		}
 	});
+	
 </script>

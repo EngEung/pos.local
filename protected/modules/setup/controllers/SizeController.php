@@ -19,11 +19,11 @@ class SizeController extends Controller{
 	 * Displays a particular model.
 	 * @param integer $id the ID o'model'=>$model,f the model to be displayed
 	 */
-	public function actionView($id)
-	{
-		echo DAO::exportModel($this->loadModel($id));
+	public function actionGetUnitGroupLists(){
+		$size = new ItemSizeProcess();
+		echo CJSON::encode($size->geItemUnitGroups());
 	}
-
+	
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.

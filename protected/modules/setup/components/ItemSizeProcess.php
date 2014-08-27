@@ -104,11 +104,12 @@ class ItemSizeProcess extends CApplicationComponent{
 		
 	}
 	
-	public function geItemUnitGroups(){
+	public function geItemUnitGroups($keyword){
 		$sql ="select g.id as unit_group_id, d.unit_group_code,g.descr,
 			   group_concat(d.code separator ' > ') as 'group_detail'
 			   from item_unit_groups g
 			   inner join  item_unit_details d on g.code = d.unit_group_code
+			   where d.unit_group_code like '%{$keyword}%'
 			   GROUP BY d.unit_group_code";
 		return DAO::exprotData($sql);
 	}

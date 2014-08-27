@@ -17,12 +17,7 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
    
 ?>		
 	
-<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'icon-th-large',toolbar: '#dlg-toolbar',buttons: '#dlg-buttons'">
 	<?php echo $this->renderPartial('_formSearchUnit');?>
-</div>
-
-
-
 
 		<fieldset>
 			<legend style="margin: 0 0 10px -5px;font-weight:bold; font-size: 14px; width:100%;">Unit Group Details</legend>

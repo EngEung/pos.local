@@ -1,16 +1,18 @@
-<table id="dgUnit"></table>
-<div id="dlg-toolbar" style="padding:0">
-	<table cellpadding="0" cellspacing="0" style="width:100%">
-		<tr>
-			<td style="text-align:right;padding-right:2px">
-			<input class="easyui-searchbox" data-options="prompt:'សូមPlease input somthing'" style="width:150px"></input>
-			</td>
-		</tr>
-	</table>
-</div>
-<div id="dlg-buttons">
-	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Save</a>
-	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Close</a>
+<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'icon-th-large',toolbar: '#dlg-toolbar',buttons: '#dlg-buttons'">
+	<table id="dgUnit"></table>
+	<div id="dlg-toolbar" style="padding:0">
+		<table cellpadding="0" cellspacing="0" style="width:100%">
+			<tr>
+				<td style="text-align:right;padding-right:2px">
+				<input class="easyui-searchbox" data-options="prompt:'សូមPlease input somthing'" style="width:150px"></input>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div id="dlg-buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Save</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Close</a>
+	</div>
 </div>
 <script>
 	dgUnit = $("#dgUnit");
@@ -30,9 +32,14 @@
             {title:"Unit Details",field:"group_detail",width:200,sortable:true},
 			
 		]],
-		onDblClickCell: function(index,field,value){
-			alert('dsfdf');
+		onDblClickRow: function(index,field){
+			onGetUnitGroup(field);
 		}
 	});
 	
+	function onGetUnitGroup(field){
+		$("#SizeForm_unitGroupDetailCode").val(field.unit_group_code);
+		$("#SizeForm_unitGroupDetailDescr").val(field.descr);
+		$("#dlg").dialog('close');
+	}
 </script>

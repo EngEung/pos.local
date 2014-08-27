@@ -21,7 +21,10 @@ class SizeController extends Controller{
 	 */
 	public function actionGetUnitGroupLists(){
 		$size = new ItemSizeProcess();
-		echo CJSON::encode($size->geItemUnitGroups());
+		$keyword = null;
+		if(isset($_POST['keyword']))
+			$keyword = $_POST['keyword']; 
+		echo CJSON::encode($size->geItemUnitGroups($keyword));
 	}
 	
 	/**

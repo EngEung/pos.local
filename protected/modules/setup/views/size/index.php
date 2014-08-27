@@ -132,5 +132,6 @@
 	
 	$("#btn-search").click(function(){
 		$("#dlg").dialog('open');
+		dgUnit.datagrid('load',{keyword: $("#SizeForm_unitGroupDetailCode").val()});
 	})
 </script>

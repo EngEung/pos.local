@@ -1,4 +1,4 @@
-<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'icon-th-large',toolbar: '#dlg-toolbar',buttons: '#dlg-buttons'">
+<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'icon-th-large',toolbar: '#dlg-toolbar',buttons: '#dlg-search-buttons'">
 	<table id="dgUnit"></table>
 	<div id="dlg-toolbar" style="padding:0">
 		<table cellpadding="0" cellspacing="0" style="width:100%">
@@ -9,9 +9,9 @@
 			</tr>
 		</table>
 	</div>
-	<div id="dlg-buttons">
-		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Save</a>
-		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Close</a>
+	<div id="dlg-search-buttons">
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Ok</a>
+		<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
 	</div>
 </div>
 <script>
@@ -38,8 +38,11 @@
 	});
 	
 	function onGetUnitGroup(field){
-		$("#SizeForm_unitGroupDetailCode").val(field.unit_group_code);
-		$("#SizeForm_unitGroupDetailDescr").val(field.descr);
+		$("#SizeForm_unitGroupCode").val(field.unit_group_code);
+		$("#SizeForm_unitGroupDescr").val(field.descr);
+		$("#SizeForm_sizeDetailCode").val(field.group_detail);
+		$("#btn-search").attr('disabled', 'disabled');
+		$("#btn-search-cancel").removeAttr('disabled');
 		$("#dlg").dialog('close');
 	}
 </script>

@@ -31,88 +31,22 @@ class SizeController extends Controller{
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
-	public function actionCreate()
-	{						
-		$model = new Category();		
-		$this->performAjaxValidation($model);
-		if(isset($_POST['Category']))
-		{
-			$model->attributes = $_POST['Category'];			
-			if($model->save())
-				echo CJSON::encode(array('success'=>true));
-			else 
-				echo CJSON::encode(array('success'=>false));
-		}	
-	}
-	
-	/**
-	 * Updates a particular model.
-	 * If update is successful, the browser will be redirected to the 'view' page.
-	 * @param integer $id the ID of the model to be updated
-	 */
-	public function actionUpdate($id)
-	{
-		$model = $this->loadModel($id);					
-		$this->performAjaxValidation($model);
-		if(isset($_POST['Category']))
-		{
-			$model->attributes=$_POST['Category'];
-			$model->modified_at = new CDbExpression('NOW()');
-			if($model->save(false))
-				echo CJSON::encode(array('success'=>true));			
-		}
-	}
-
-	/**
-	 * Deletes a particular model.
-	 * If deletion is successful, the browser will be redirected to the 'admin' page.
-	 * @param integer $id the ID of the model to be deleted
-	 */
-	public function actionDelete($id)
-	{
-		
-		$model = $this->loadModel($id);	
-		$model->active = 0;
-		//$model->modified_at = new CDbExpression('NOW()');		
-		if (!$model->save())
-			echo CJSON::encode(array('success' => false, 'error'=> Yii::t('base', 'Registro não encontrado')));
-		else		
-			echo CJSON::encode(array('success' => true));
-	}
-	
-
-	/**
-	 * Returns the data model based on the primary key given in the GET variable.
-	 * If the data model is not found, an HTTP exception will be raised.
-	 * @param integer $id the ID of the model to be loaded
-	 * @return Product the loaded model
-	 * @throws CHttpException
-	 */
-	public function loadModel($id)
-	{		
-		$model=Category::model()->findByPk($id);
-		if($model===null)
-			throw new CHttpException(404,'The requested page does not exist.');	
-		return $model;
-	}
-
-	/**
-	 * Performs the AJAX validation.
-	 * @param Product $model the model to be validated
-	 */
-	protected function performAjaxValidation($model)
-	{								
-		if(isset($_POST['ajax']) && $_POST['ajax']==='categoryForm')
-		{		
-			$errors = CActiveForm::validate($model);
-			$validated =  $model->validate();
-			if(!$validated){
-    			//$errors = $model->getErrors();
-				echo $errors;	
-				Yii::app()->end();
+	public function actionCreateItemSize(){
+		$sizeProcess = new ItemSizeProcess();
+		$flage = false;
+		$model = new SizeForm;
+		if(isset($_POST['SizeForm'])){
+			$model->attributes = $_POST['SizeForm'];
+			if($model->validate()){
+				$model->unitGroupCode = $_POST['SizeForm']['unitGroupCode'];
+				$flage = $sizeProcess->createItemSize($model);
 			}
 		}
+		echo CJSON::encode($flage);
 	}
+	
+	
+	
 }
 
 

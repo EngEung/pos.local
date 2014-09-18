@@ -47,7 +47,7 @@
                 
                 <?php 
 						$this->beginWidget('ext.yii-easyui.widgets.EuiWindow', array(
-							'id'=> 'category-win',
+							'id'=> 'size-win',
 							'title'=> 'Item Sizes',
 							'style'=> 'width:580px; height:460px;',
 							'closed' => true,
@@ -104,34 +104,29 @@
 			
 		]]
 	});
-	
-		
-	var crud = new Crud({
-		route: '<?php echo $this->createUrl("index");?>',
-		grid: dgSize,
-		window: $('#category-win')	
-	});
-	$('#btn-add').click(function(){
-		crud.add();
-	});
-	$('#btn-edit').click(function(){
-		crud.edit();
-	});
-	$('#btn-remove').click(function(){
-		crud.remove();
-	});
-	$('#btn-refresh').click(function(){
-		crud.refresh();
-	});
-	$('#btn-save').click(function(){
-		crud.save();
-	});
-	$('#btn-cancel').click(function(){
-		$('#nationality-win').dialog('close');
-	});	
-	
-	$("#btn-search").click(function(){
-		$("#dlg").dialog('open');
-		dgUnit.datagrid('load',{keyword: $("#SizeForm_unitGroupDetailCode").val()});
+$("#btn-add").click(function(){
+	$('#size-win').window('open');
+})
+
+$("#btn-search").click(function(){
+	$('#dlg').window('open');
+})
+$("#btn-save").click(function(){
+	var data = $("#itemSizeForm").serialize();
+	$.ajax({
+			url: '<?php echo $this->createUrl('createItemSize');?>',
+	        type: 'post',
+	       	data: data,
+	        dataType: 'json',
+	        success: function (response) {
+	      		//$.messager.alert('Sucess','Your action has been successfully.');
+	      		refreshGrid(dgItemUnit);
+	      		$('#unit-win').dialog('close');
+	       	},
+	       erorr: function (){
+	       		$.messager.alert('Error','Error occured.please try again.','warning');
+	       }
 	})
+});	
+
 </script>

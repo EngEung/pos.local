@@ -12,10 +12,10 @@ class SizeForm extends CFormModel
 	public $sizeDescr;
 	public $sizeDetailCode;
 	public $sizeDetailDescr;
-	public $unitGroupDetailCode;
-	public $unitGroupDetailDescr;
+	public $unitGroupCode;
+	public $unitGroupDescr;
 	public $unit;
-	
+	public $createdBy;
 	
 	public function __construct(){
 
@@ -42,7 +42,7 @@ class SizeForm extends CFormModel
 		return array(
 			'sizeCode' => 'Size Group Code',
 			'sizeDescr' => 'Descripition',
-			'sizeDetailCode' => 'size Code',
+			'sizeDetailCode' => 'Sample',
 			'sizeDetailDescr' => 'Descripition',
 			'unitGroupDetailDescr' => 'Description',
 			'$unitGroupDetailCode' => 'Unit Group Code',

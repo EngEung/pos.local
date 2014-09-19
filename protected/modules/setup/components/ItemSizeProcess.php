@@ -36,20 +36,23 @@ class ItemSizeProcess extends CApplicationComponent{
 			
 			$sizeGroup->save(false);
 			
-			if($model->items != null){
-				foreach($model->items as $row){
-					$sizeDetail = new ItemSizeDetails();
-					$sizeDetail->setAttributes(array(
-						'code'=>$row[''],
-						'qty_per_unit' => $row[''],
-						'unit_code' => $row[''],
-						'size_group_code' => $row[''],
-						'created_by' => $row[''],
+			$units = ItemUnitDetails::model()->findAll(array(
+						'condition' => 'unit_group_code=:code',
+						'params' => array(":code" => 'Ctn') 
 					));
-					$sizeDetail->save(false);
-				}
+			$qty = explode("x", $model->sizeCode);
+			$i = 0;
+			foreach($units as $row){
+				$sizeDetail = new ItemSizeDetails();
+				$sizeDetail->setAttributes(array(
+					'qty_per_unit' => $qty[$i],
+					'unit_code' => $row['code'],
+					'size_group_code' => $model->sizeCode,
+					'created_by' => $model->createdBy
+				));
+				$sizeDetail->save(false);
+				$i++;
 			}
-			
 			$result = 1;
 			$tran->commit();
 		}catch(CExecption $e){

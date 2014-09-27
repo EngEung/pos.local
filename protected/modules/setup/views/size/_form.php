@@ -45,7 +45,7 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 	             </li>
       		</ul>
       		<div style="clear: both;"></div>
-			<?php echo $form->textFieldRow($model, 'unitGroupDescr', array('placeholder' => '')); ?>
+			<?php echo $form->textFieldRow($model, 'unitGroupDescr', array('disabled' => 'disabled')); ?>
 		</fieldset>
 		
 		<fieldset>
@@ -56,9 +56,9 @@ CHtml::$errorCss = 'fsgdfsgdfsfdsadgfqweas';
 		
 		<fieldset>
 			<legend style="margin: 0 0 0 -5px;font-weight:bold; font-size: 14px; width:100%;">Size Details</legend>
-			<?php echo $form->textFieldRow($model, 'sizeDetailCode', array('placeholder' => '')); ?>
+			<?php echo $form->textFieldRow($model, 'sizeDetailCode', array('disabled' => 'disabled')); ?>
 			<?php echo $form->textFieldRow($model, 'sizeDetailDescr', array('placeholder' => '')); ?>
-			
+			<div class="hint" style="margin:-10px 0 0 180px; font-size: 10px; padding: 0px;">Example: 5x10 or 5x10x20</div>
 		</fieldset>
 		
 <?php    

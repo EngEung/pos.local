@@ -8,7 +8,7 @@
 class ItemCodeForm extends CFormModel
 {
 	public $itemTypeId;
-	public $itemTypeId;
+	public $itemTypes;
 	
 	public $categories;
 	public $categoryId;

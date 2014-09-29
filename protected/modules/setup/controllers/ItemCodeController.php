@@ -6,7 +6,12 @@ class ItemCodeController extends Controller
 	{
 		$this->authenticate();        
         $this->layout = 'setup_layout';
-		$model = new SizeForm();
+		$model = new ItemCodeForm();
 		$this->render('index', array('model' => $model));
+	}
+	
+	public function actionGetItemCodes(){
+		$itemCodePro = new ItemCodeProcess();
+		echo CJSON::encode($itemCodePro->getItemCodes());
 	}
 }

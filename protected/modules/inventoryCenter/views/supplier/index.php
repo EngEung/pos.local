@@ -4,11 +4,11 @@
 	
 	Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;
-	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/icon.css' );							
-	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/bootstrap/easyui.css' );
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');	
+	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
+	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');	
 ?>
-  <div title="Suppliers">        
+ <div title="Suppliers">   
 	<div class="pus" style="margin-top: 20px;">
 		<table id="dgSupplier"></table>
                 <div id="tb" style="padding:5px;height:auto">
@@ -46,13 +46,13 @@
                     </div>
                 </div>
 	</div>
-    </div>
+</div>
 <script>
    
     /** easyui gridView Javascript */
 	dgSupplier = $("#dgSupplier");
 	dgSupplier.datagrid({
-		title:'Supplier List',
+		title:'Supplier Lists',
 		height:400,
 		singleSelect:true,
 		//nowrap:false,
@@ -64,7 +64,7 @@
 		//rownumbers: true,
 		//scrollbarSize: 5,
 		//ctrlSelect: true,
-		//collapsible:true,
+		collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:40,sortable:true},
                         {title:"Account Number",field:"account_number",width:100,sortable:true},

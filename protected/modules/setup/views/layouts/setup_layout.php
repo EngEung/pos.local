@@ -9,7 +9,8 @@
 </head>
 
 <body>
-
-	<?php echo $content; ?>
+    <div id="tt" class="easyui-panel" style="width:auto;">
+             <?php echo $content; ?>
+	</div>
 </body>
 </html>

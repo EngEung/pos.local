@@ -1,5 +1,8 @@
 <div class="pus" style="margin-top: 20px;">
 	<table id="dg"></table>
+	<div id="ttAcc">
+		<a href="javascript:void(0)" class="iconreload" onclick="javascript:dg.datagrid('reload');"></a>
+	</div>
 </div>
 	
 <div id="tb" style="padding:5px;height:auto">
@@ -25,18 +28,6 @@
 	                'icon' => 'remove-sign',
 	                'size' => 'small',
 	        ));
-	
-	        $this->widget('bootstrap.widgets.TbButton',array(
-	                'id'=>"btn-refresh",
-	                'label' => 'Refresh',
-	                'icon' => 'refresh',
-	                'size' => 'small',
-	        ));
 	?>    	
 	</div>
 </div>
-
-
-<script>
-	
-</script>

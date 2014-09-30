@@ -44,17 +44,4 @@
 	<!-- END FOOTER -->
 <div id="win"></div>
 </body>
-<script>
-	
-	function test(url){
-		var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
-	    $('#win').window({
-		    width:400,
-		    modal:true,
-		    content: content
-	    });
-
-	}
- 
-</script>
 </html>

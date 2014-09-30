@@ -25,7 +25,7 @@
 				    <div data-options="region:'center',title:''" style="padding:5px;background:#eee;">
 				    	<div id="tt" class="easyui-tabs" style="width:auto; height:500px;">
                              <?php echo $content; ?>
-					</div>
+						</div>
 				    </div>
 				</div>
 				

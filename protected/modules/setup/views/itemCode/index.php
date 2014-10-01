@@ -11,8 +11,8 @@
 <script>
    
     /** easyui gridView Javascript */
-	dgItemUnit = $("#dg");
-	dgItemUnit.datagrid({
+	dg = $("#dg");
+	dg.datagrid({
 		title:'Item Codes List',
 		height:400,
 		singleSelect:true,

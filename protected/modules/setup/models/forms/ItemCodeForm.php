@@ -7,6 +7,7 @@
  */
 class ItemCodeForm extends CFormModel
 {
+	public $id;
 	public $itemTypeId;
 	public $itemTypes;
 	
@@ -19,6 +20,10 @@ class ItemCodeForm extends CFormModel
 	public $unitGroupId;
 	public $unitGroups;
 	
+	public $description;
+	public $barcodeNumber;
+	public $itemCode;
+	public $note;
 	public function __construct(){
 
 	}

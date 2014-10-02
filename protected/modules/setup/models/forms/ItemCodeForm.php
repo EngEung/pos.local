@@ -21,9 +21,10 @@ class ItemCodeForm extends CFormModel
 	public $unitGroups;
 	
 	public $description;
-	public $barcodeNumber;
+	public $barcode;
 	public $itemCode;
 	public $note;
+	
 	public function __construct(){
 
 	}
@@ -36,8 +37,7 @@ class ItemCodeForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			// username and password are required
-			array('sizeCode, sizeDetailCode, sizeDetailDescr, sizeDescr', 'required',),
+			array('unitGroupId, itemCode, description, categoryId, itemTypeId, sizeGroupId', 'required',),
 		
 		);
 	}
@@ -47,12 +47,11 @@ class ItemCodeForm extends CFormModel
 	 */
 	public function attributeLabels(){
 		return array(
-			'sizeCode' => 'Size Group Code',
-			'sizeDescr' => 'Descripition',
-			'sizeDetailCode' => 'Sample',
-			'sizeDetailDescr' => 'Descripition',
-			'unitGroupDetailDescr' => 'Description',
-			'$unitGroupDetailCode' => 'Unit Group Code',
+			'sizeGroupId' => 'Size Group',
+			'itemTypeId' => 'Item Type',
+			'categoryId' => 'Category',
+			'unitGroupId' => 'Unit Group'
+			
 		);
 	}
 }

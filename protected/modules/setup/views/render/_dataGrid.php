@@ -34,7 +34,7 @@
 </div>
 
 <div id="win-form" class="easyui-dialog" title="Basic Window" 
-	data-options="buttons:'#dlg-buttons', resizable:false, closed: true, iconCls:'icon-save'" style="width:850px;height:400px;padding:10px;">
+	data-options="buttons:'#dlg-buttons', resizable:false, closed: true, iconCls:'icon-save'" style="width:850px;height:350px;padding:10px;">
 </div>
 <div id="dlg-buttons" class="dialog-button" style="">
 	 <?php 

@@ -34,17 +34,17 @@
 	<div style=" width: 380px; margin: 0; padding:0; float: left;">
 		<?php echo $form->hiddenField($model, 'id'); ?>
 		<?php echo $form->textFieldRow($model, 'itemCode', array('placeholder' => '')); ?>
-		<?php echo $form->textFieldRow($model, 'barcodeNumber', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'description', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'unitGroupId', array('placeholder' => '')); ?>
-		<?php echo $form->textFieldRow($model, 'sizeGroups', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'sizeGroupId', array('placeholder' => '')); ?>
+		<?php echo $form->textFieldRow($model, 'barcode', array('placeholder' => '')); ?>
 	</div>
 	
 
 	<div id="left_col" style="width: 400px; margin: 0; padding:0; float: left;">
 		<ul id="navlist">
 				<li>
-					<?php echo $form->textFieldRow($model, 'categories', array('placeholder' => '', 'style' => 'width:130px;')); ?>
+					<?php echo $form->textFieldRow($model, 'categoryId', array('placeholder' => '', 'style' => 'width:130px;')); ?>
 				</li>
 				<li>
 					<?php   $this->widget('bootstrap.widgets.TbButton',array(
@@ -68,7 +68,7 @@
       		
       		<ul id="navlist">
 				<li>
-					<?php echo $form->textFieldRow($model, 'itemTypes', array('placeholder' => '', 'style' => 'width:130px;')); ?>
+					<?php echo $form->textFieldRow($model, 'itemTypeId', array('placeholder' => '', 'style' => 'width:130px;')); ?>
 				</li>
 				<li>
 					<?php   $this->widget('bootstrap.widgets.TbButton',array(
@@ -122,9 +122,9 @@ ul {
 </style>
 <script>
 	var defaultReload = function(){
-		$.mask.definitions['e']='[0-9]{1}';
-		$("#SupplierForm_phone").mask("(999) 999-999?e");
-		$("#SupplierForm_fax").mask("(999) 999-999?e");
+		//$.mask.definitions['e']='[0-9]{1}';
+		//$("#SupplierForm_phone").mask("(999) 999-999?e");
+		//$("#SupplierForm_fax").mask("(999) 999-999?e");
 	} 
 		
 	defaultReload();

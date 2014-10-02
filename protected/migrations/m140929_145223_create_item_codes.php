@@ -14,11 +14,13 @@ class m140929_145223_create_item_codes extends CDbMigration
 				'descr' => 'varchar(128)',
 				'barcode' => 'varchar(25)',
 				'unit_group_code' => 'varchar(16)',
+				'note' => 'varchar(255)',
 				'created_at' => 'timestamp not null default now()',
 				'modified_at' => 'datetime',
 				'created_by' => 'varchar(30)',
 				'modified_by' => 'varchar(30)',
 				'active' => 'boolean default true',
+				
 			)
 		);
 	}

@@ -17,44 +17,26 @@ class ItemCodeProcess extends CApplicationComponent{
 	}
 	
 	/**
-	 * Create Item Size
+	 * Create Item Code
 	 * @param object $model, SizeForm
 	 * @return boolean
 	 */
-	public function createItemSize($model){
+	public function createItemCode($model){
 		$result = -1;
-		$cnc = Yii::app()->db;	
-		$tran = $cnc->beginTransaction();
 		try{
-			$sizeGroup = new ItemSizeGroups();
-			$sizeGroup->setAttributes(array(
-				'code' => $model->sizeCode,
+			$itemCode = new ItemCodes();
+			$itemCode->setAttributes(array(
+				'category_id' => $model->categoryId,
+				'item_type_id' => $model->itemTypeId,
+				'item_code' => $model->itemCode,
 				'descr' => $model->sizeDescr,
+				'barcode' => $model->barcode,
 				'unit_group_code' => $model->unitGroupCode,
+				'note' => $model->unitGroupCode,
 				'created_by' =>$model->createdBy
 			));
+			$result = $itemCode->save(false);
 			
-			$sizeGroup->save(false);
-			
-			$units = ItemUnitDetails::model()->findAll(array(
-						'condition' => 'unit_group_code=:code',
-						'params' => array(":code" => 'Ctn') 
-					));
-			$qty = explode("x", $model->sizeCode);
-			$i = 0;
-			foreach($units as $row){
-				$sizeDetail = new ItemSizeDetails();
-				$sizeDetail->setAttributes(array(
-					'qty_per_unit' => $qty[$i],
-					'unit_code' => $row['code'],
-					'size_group_code' => $model->sizeCode,
-					'created_by' => $model->createdBy
-				));
-				$sizeDetail->save(false);
-				$i++;
-			}
-			$result = 1;
-			$tran->commit();
 		}catch(CExecption $e){
 			echo $e;
 		}

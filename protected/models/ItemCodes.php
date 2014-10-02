@@ -11,6 +11,7 @@
  * @property string $descr
  * @property string $barcode
  * @property string $unit_group_code
+ * @property string $note
  * @property string $created_at
  * @property string $modified_at
  * @property string $created_by
@@ -50,11 +51,12 @@ class ItemCodes extends CActiveRecord
 			array('descr', 'length', 'max'=>128),
 			array('barcode', 'length', 'max'=>25),
 			array('unit_group_code', 'length', 'max'=>16),
+			array('note', 'length', 'max'=>255),
 			array('created_by, modified_by', 'length', 'max'=>30),
 			array('modified_at', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, catgory_id, item_type_id, item_code, descr, barcode, unit_group_code, created_at, modified_at, created_by, modified_by, active', 'safe', 'on'=>'search'),
+			array('id, catgory_id, item_type_id, item_code, descr, barcode, unit_group_code, note, created_at, modified_at, created_by, modified_by, active', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -82,6 +84,7 @@ class ItemCodes extends CActiveRecord
 			'descr' => 'Descr',
 			'barcode' => 'Barcode',
 			'unit_group_code' => 'Unit Group Code',
+			'note' => 'Note',
 			'created_at' => 'Created At',
 			'modified_at' => 'Modified At',
 			'created_by' => 'Created By',
@@ -114,6 +117,8 @@ class ItemCodes extends CActiveRecord
 		$criteria->compare('barcode',$this->barcode,true);
 
 		$criteria->compare('unit_group_code',$this->unit_group_code,true);
+
+		$criteria->compare('note',$this->note,true);
 
 		$criteria->compare('created_at',$this->created_at,true);
 

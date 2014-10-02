@@ -40,6 +40,7 @@
 		<?php echo $form->textFieldRow($model, 'barcode', array('placeholder' => '')); ?>
 	</div>
 	
+	<?php echo $this->renderPartial('/dialog/_category');?>
 
 	<div id="left_col" style="width: 400px; margin: 0; padding:0; float: left;">
 		<ul id="navlist">
@@ -48,20 +49,12 @@
 				</li>
 				<li>
 					<?php   $this->widget('bootstrap.widgets.TbButton',array(
-		                                    'id'=>"btn-search",
+		                                    'id'=>"btn-search-cat",
 		                                    'label' => '',
 		                                    'icon' => 'search',
 		                                    'size' => 'small',
 		                                    'buttonType' => 'button',
 		                                    'htmlOptions' => array('style' => 'padding:7px;')
-		                            ));?>
-		             <?php   $this->widget('bootstrap.widgets.TbButton',array(
-		                                    'id'=>"btn-search-cancel",
-		                                    'label' => '',
-		                                    'icon' => 'remove',
-		                                    'size' => 'small',
-		                                    'buttonType' => 'button',
-		                                    'htmlOptions' => array('style' => 'padding:7px;', 'disabled' => 'disabled')
 		                            ));?>
 	             </li>
       		</ul>
@@ -78,14 +71,6 @@
 		                                    'size' => 'small',
 		                                    'buttonType' => 'button',
 		                                    'htmlOptions' => array('style' => 'padding:7px;')
-		                            ));?>
-		             <?php   $this->widget('bootstrap.widgets.TbButton',array(
-		                                    'id'=>"btn-search-cancel",
-		                                    'label' => '',
-		                                    'icon' => 'remove',
-		                                    'size' => 'small',
-		                                    'buttonType' => 'button',
-		                                    'htmlOptions' => array('style' => 'padding:7px;', 'disabled' => 'disabled')
 		                            ));?>
 	             </li>
       		</ul>
@@ -136,4 +121,8 @@ ul {
 	function resetForm(){
 		$('#supplierForm')[0].reset();
 	}
+	
+	$("#btn-search-cat").click(function(){
+			
+	})
 </script>

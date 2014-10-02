@@ -20,3 +20,16 @@ $this->breadcrumbs=array(
 	<p>
 	You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
 </div>
+
+<?php $value = rand(10, 90);
+$this->widget('ext.chart.Dialog', array(
+'title' => 'Do you like it?',
+'data' => array(
+$value, 100-$value
+),
+'labels' => array(
+'No',
+'Yes',
+),
+));
+?>

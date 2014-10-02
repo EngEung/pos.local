@@ -40,7 +40,7 @@
 		<?php echo $form->textFieldRow($model, 'barcode', array('placeholder' => '')); ?>
 	</div>
 	
-	<?php echo $this->renderPartial('/dialog/_category');?>
+	<?php echo $this->renderPartial(Yii::app()->baseUrl. '/dialog/_category/');?>
 
 	<div id="left_col" style="width: 400px; margin: 0; padding:0; float: left;">
 		<ul id="navlist">
@@ -124,5 +124,5 @@ ul {
 	
 	$("#btn-search-cat").click(function(){
 			
-	})
+	});
 </script>

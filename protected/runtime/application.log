@@ -356,3 +356,313 @@ Stack trace:
 REQUEST_URI=/pos.local/fonts/font.css
 HTTP_REFERER=http://localhost/pos.local/css/style.css
 ---
+2014/10/02 02:01:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 02:01:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 02:01:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 02:01:14 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 02:01:25 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/dialog/_catego...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412215285342
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 02:01:36 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/dialog/_catego...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412215296137
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 02:01:36 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/dialog/_catego...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412215296150
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 03:20:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 06:24:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 06:28:49 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/dialog/_catego...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412231329448
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 06:30:10 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/pos.local/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/pos.local/dial...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412231410724
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 06:30:26 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/pos.local/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/pos.local/dial...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412231426804
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 06:30:26 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/pos.local/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/pos.local/dial...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412231426821
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 06:30:40 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/pos.local/dialog/_category".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/pos.local/dial...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412231440216
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 06:31:13 [error] [exception.CException] exception 'CException' with message 'ItemCodeController cannot find the requested view "/pos.local/dialog/_category/".' in D:\wamp\www\framework\web\CController.php:878
+Stack trace:
+#0 D:\wamp\www\pos.local\protected\modules\setup\views\itemCode\_form.php(43): CController->renderPartial('/pos.local/dial...')
+#1 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#2 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', Array, true)
+#3 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', Array, true)
+#4 D:\wamp\www\pos.local\protected\modules\setup\controllers\ItemCodeController.php(20): CController->renderPartial('_form', Array)
+#5 D:\wamp\www\framework\web\actions\CInlineAction.php(49): ItemCodeController->actionOpenForm()
+#6 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('openform')
+#10 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('setup/itemcode/...')
+#11 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/pos.local/setup/itemcode/openForm?_=1412231473466
+HTTP_REFERER=http://localhost/pos.local/setup/itemCode/
+---
+2014/10/02 09:02:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 09:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 09:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "img/remove-icon-small.png".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('img/remove-icon...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/img/remove-icon-small.png
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 09:02:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---
+2014/10/02 09:03:01 [error] [php] Undefined variable: value (D:\wamp\www\pos.local\protected\modules\dashboard\views\default\index.php:28)
+Stack trace:
+#0 D:\wamp\www\framework\web\CController.php(869): DefaultController->renderFile()
+#1 D:\wamp\www\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 D:\wamp\www\pos.local\protected\modules\dashboard\controllers\DefaultController.php(8): DefaultController->render()
+#3 D:\wamp\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#4 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 D:\wamp\www\framework\web\CController.php(286): DefaultController->runAction()
+#6 D:\wamp\www\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#7 D:\wamp\www\framework\web\CWebApplication.php(282): DefaultController->run()
+#8 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/dashboard
+in D:\wamp\www\pos.local\protected\modules\dashboard\views\default\index.php (28)
+in D:\wamp\www\pos.local\protected\modules\dashboard\controllers\DefaultController.php (8)
+in D:\wamp\www\pos.local\index.php (13)
+2014/10/02 09:03:21 [error] [exception.CException] exception 'CException' with message 'Alias "ext.chart.EChartWidget" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\wamp\www\framework\YiiBase.php:322
+Stack trace:
+#0 D:\wamp\www\framework\web\CWidgetFactory.php(146): YiiBase::import('ext.chart.EChar...', true)
+#1 D:\wamp\www\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(DefaultController), 'ext.chart.EChar...', Array)
+#2 D:\wamp\www\framework\web\CBaseController.php(172): CBaseController->createWidget('ext.chart.EChar...', Array)
+#3 D:\wamp\www\pos.local\protected\modules\dashboard\views\default\index.php(34): CBaseController->widget('ext.chart.EChar...', Array)
+#4 D:\wamp\www\framework\web\CBaseController.php(126): require('D:\wamp\www\pos...')
+#5 D:\wamp\www\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\wamp\www\pos...', NULL, true)
+#6 D:\wamp\www\framework\web\CController.php(869): CBaseController->renderFile('D:\wamp\www\pos...', NULL, true)
+#7 D:\wamp\www\framework\web\CController.php(782): CController->renderPartial('index', NULL, true)
+#8 D:\wamp\www\pos.local\protected\modules\dashboard\controllers\DefaultController.php(8): CController->render('index')
+#9 D:\wamp\www\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#10 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 D:\wamp\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 D:\wamp\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('')
+#14 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('dashboard')
+#15 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/pos.local/dashboard
+HTTP_REFERER=http://localhost/pos.local/home/index
+---
+2014/10/02 09:04:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/fonts/font.css
+HTTP_REFERER=http://localhost/pos.local/css/style.css
+---

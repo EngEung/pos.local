@@ -20,6 +20,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+		'application.components.data.*',
 		'application.models.forms.*',
 		'application.extensions.*',
 		'application.modules.*',

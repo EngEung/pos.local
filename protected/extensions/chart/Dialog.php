@@ -2,36 +2,55 @@
 
 class Dialog extends  CWidget{
 	
-	public $tag = '<table>';
 	public $url = "";
-	public $id = "";
-
+	public $id= "";
+	public $title ="";
+	public $columns = array();
 	public function init()
 	{
-		if( empty($this->items) )
-			return;
-		$menuClass = 'accordion-menu';
-		$cs = Yii::app()->clientScript;
-
-		$dirname = basename(dirname(__FILE__));
-		$js = $assetUrl . '/assets/js/script.js';
-
-		Yii::app()->clientScript->registerScriptFile( $js );
-
 		$content = '';
-		$content = $this->renderTag($item);
-
-		$htmlOptions = array(
-			'id' => empty($this->id) ? null : $this->id,
-			'class' => $menuClass
-		);
-
-		echo CHtml::tag($this->tag, $htmlOptions, $content);
+		$content = $this->renderTag();
+		$this->clientChange();
+		echo $content;
+	}
+	protected  function clientChange()
+	{
+		$cs=Yii::app()->getClientScript();
+		$cs->registerCoreScript('jquery');
+		$handler = $this->javascript();
+		$cs->registerScript('Yii.CHtml.#' . $this->id,"{$handler}");
 	}
 
-	private function renderTag($item, $level=1)
+	
+	private function renderTag()
 	{
-		return '<table id="dg"></table>';
+		$content = '<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="closed: true">
+					 <table id="dg"></table>
+					</div>';
+					$content = '<table id="dg"></table>';
+		return $content;
+	}
+	
+	private function javascript(){
+		$javacript = "dg = $('#dg');
+		dg.datagrid({
+			title:'{$this->title}',
+			height:400,
+			singleSelect:true,
+			nowrap:false,
+			fitColumns:true,
+			url:'{$this->url}',
+			toolbar: '#tb',
+			idField: 'id',		
+			pagination: true,
+			//rownumbers: true,
+			scrollbarSize: 5,
+			ctrlSelect: true,
+			collapsible:true,
+			tools:'#ttAcc',
+			columns:[". CJSON::encode($this->columns) ."],
+		});";
+		return $javacript;
 	}
 }
 ?>

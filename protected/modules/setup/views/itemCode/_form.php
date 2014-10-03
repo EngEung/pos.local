@@ -39,8 +39,6 @@
 		<?php echo $form->textFieldRow($model, 'sizeGroupId', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'barcode', array('placeholder' => '')); ?>
 	</div>
-	
-	<?php echo $this->renderPartial(Yii::app()->baseUrl. '/dialog/_category/');?>
 
 	<div id="left_col" style="width: 400px; margin: 0; padding:0; float: left;">
 		<ul id="navlist">
@@ -78,7 +76,19 @@
 		<?php echo $form->textAreaRow($model, 'note'); ?>
 	</div>
 	<div style="clear:both;"></div>
-	
+		
+	<?php 
+	$this->widget('ext.chart.Dialog', array(
+	'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
+	'id' => 'dddd',
+	'title' => 'Categories',
+	'columns' => array(
+		array('title' => 'dd', 'field'=>'idd', 'width'=> 10, 'sortable'=>true),
+		array('title' => 'Descr', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+			)
+	));
+	?> 
+
 <?php    
     $this->endWidget();
     unset($form);
@@ -123,6 +133,6 @@ ul {
 	}
 	
 	$("#btn-search-cat").click(function(){
-			
+			$("#dlg").dialog('open');
 	});
 </script>

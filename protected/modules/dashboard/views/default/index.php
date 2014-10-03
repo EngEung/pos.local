@@ -19,17 +19,17 @@ $this->breadcrumbs=array(
 	</p>
 	<p>
 	You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
+<?php 
+	$this->widget('ext.chart.Dialog', array(
+	'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
+	'id' => 'dddd',
+	'title' => 'Categories',
+	'columns' => array(
+		array('title' => 'dd', 'field'=>'idd', 'width'=> 10, 'sortable'=>true),
+		array('title' => 'Descr', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+			)
+	));
+	?> 
 </div>
 
-<?php $value = rand(10, 90);
-$this->widget('ext.chart.Dialog', array(
-'title' => 'Do you like it?',
-'data' => array(
-$value, 100-$value
-),
-'labels' => array(
-'No',
-'Yes',
-),
-));
-?>
+

@@ -8,11 +8,6 @@ class Dialog extends  CWidget{
 
 	public function init()
 	{
-		if( empty($this->items) )
-			return;
-		$menuClass = 'accordion-menu';
-		$cs = Yii::app()->clientScript;
-
 		$dirname = basename(dirname(__FILE__));
 		$js = $assetUrl . '/assets/js/script.js';
 

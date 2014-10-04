@@ -25,8 +25,8 @@ $this->breadcrumbs=array(
 	'id' => 'dddd',
 	'title' => 'Categories',
 	'columns' => array(
-		array('title' => 'dd', 'field'=>'idd', 'width'=> 10, 'sortable'=>true),
-		array('title' => 'Descr', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+		array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+		array('title' => 'Descr', 'field'=>'name', 'width'=> 10, 'sortable'=>true),
 			)
 	));
 	?> 

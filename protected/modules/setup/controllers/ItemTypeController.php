@@ -11,8 +11,10 @@ class ItemTypeController extends Controller{
 	}
 
 	public function actionGetItemTypes(){
-		$sql ="select t.id, t.name, t.category_id, c.name as category_name, t.code, t.descr, t.created_at from item_types t
-		inner join categories c on c.id = t.category_id where t.active = true";
+		$sql ="select t.id, t.name, t.category_id, c.name as category_name, t.code, t.descr, t.created_at 
+				from item_types t
+				inner join categories c on c.id = t.category_id 
+				where t.active = true";
 		$data = DAO::exprotData($sql);
 		echo CJSON::encode($data);
 	}
@@ -37,7 +39,7 @@ class ItemTypeController extends Controller{
 			$model->attributes = $_POST['ItemTypes'];
 			//$model->category_id = $_POST['ItemTypes']['category_id'];
 			$this->performAjaxValidation($model);
-					
+			$model->name = $_POST['ItemTypes']['name'];		
 			if($model->save())
 				echo CJSON::encode(array('success'=>true));
 			else 

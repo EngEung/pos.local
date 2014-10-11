@@ -9,9 +9,9 @@ class ItemCodeForm extends CFormModel
 {
 	public $id;
 	public $itemTypeId;
-	public $itemTypes;
+	public $itemType;
 	
-	public $categories;
+	public $category;
 	public $categoryId;
 	
 	public $sizeGroupId;
@@ -37,7 +37,7 @@ class ItemCodeForm extends CFormModel
 	public function rules()
 	{
 		return array(
-			array('unitGroupId, itemCode, description, categoryId, itemTypeId, sizeGroupId', 'required',),
+			array('unitGroupId, itemCode, description, category, itemTypeId, sizeGroupId', 'required',),
 		
 		);
 	}
@@ -49,7 +49,6 @@ class ItemCodeForm extends CFormModel
 		return array(
 			'sizeGroupId' => 'Size Group',
 			'itemTypeId' => 'Item Type',
-			'categoryId' => 'Category',
 			'unitGroupId' => 'Unit Group'
 			
 		);

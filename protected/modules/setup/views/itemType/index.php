@@ -2,10 +2,10 @@
 	$this->pageTitle=Yii::app()->name;
 	Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;
-	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/icon.css' );							
-	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/themes/bootstrap/easyui.css' );
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.easyui.min.js');	
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui-1.3.6/jquery.crud.js');	
+	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
+	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');	
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.crud.js');	
 ?>       
 	<div class="pus" style="margin-top: 20px;">
 		<table id="dgItemType"></table>
@@ -84,7 +84,6 @@
 		height:400,
 		singleSelect:true,
 		nowrap:false,
-		fitColumns:true,
 		url:'<?php echo $this->createUrl('getItemTypes')?>',
 		toolbar: '#tb',
 		idField: 'id',		
@@ -94,12 +93,12 @@
 		ctrlSelect: true,
 		collapsible:true,
 		columns:[[
-			{title:"ID",field:"id",width:40,sortable:true},
+			{title:"ID",field:"id",width:20,sortable:true},
             {title:"Category",field:"category_name",width:100,sortable:true},
             {title:"Item Type",field:"name",width:100,sortable:true},
-			{title:"Code",field:"code",width:150,sortable:true},
-            {title:"Description",field:"descr",width:200,sortable:true},
-			{title:"Created At",field:"created_at",width:150,sortable:true}
+			{title:"Code",field:"code",width:100,sortable:true},
+            {title:"Description",field:"descr",width:100,sortable:true},
+			{title:"Created At",field:"created_at",width:200,sortable:true}
 		]],
 	});
 

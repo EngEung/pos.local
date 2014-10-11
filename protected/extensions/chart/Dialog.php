@@ -27,7 +27,7 @@ class Dialog extends  CWidget{
 		$content = '<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="closed: true">
 					 <table id="dg"></table>
 					</div>';
-					$content = '<table id="dg"></table>';
+					//$content = '<table id="dg"></table>';
 		return $content;
 	}
 	
@@ -35,17 +35,14 @@ class Dialog extends  CWidget{
 		$javacript = "dg = $('#dg');
 		dg.datagrid({
 			title:'{$this->title}',
-			height:400,
+			height:200,
 			singleSelect:true,
 			nowrap:false,
 			fitColumns:true,
 			url:'{$this->url}',
 			toolbar: '#tb',
 			idField: 'id',		
-			pagination: true,
-			//rownumbers: true,
-			scrollbarSize: 5,
-			ctrlSelect: true,
+			scrollbarSize: 4,
 			collapsible:true,
 			tools:'#ttAcc',
 			columns:[". CJSON::encode($this->columns) ."],

@@ -76,19 +76,22 @@
 		<?php echo $form->textAreaRow($model, 'note'); ?>
 	</div>
 	<div style="clear:both;"></div>
-		
-	<?php 
-	$this->widget('ext.chart.Dialog', array(
-	'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
-	'id' => 'dddd',
-	'title' => 'Categories',
-	'columns' => array(
-		array('title' => 'dd', 'field'=>'idd', 'width'=> 10, 'sortable'=>true),
-		array('title' => 'Descr', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
-			)
-	));
-	?> 
-
+<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="closed: true">
+				
+	<?php $this->widget('ext.yii-easyui.widgets.EuiDataGrid', array(
+		'id' => 'product-grid',
+		'style' => 'width:auto; height: 200px',
+		'url' =>Yii::app()->baseUrl. '/dialog/DialogCategory',
+		'singleSelect' => false,
+		'pagination' => true,
+		'columns' => array(
+			array('title' => 'dd', 'field'=>'idd', 'width'=> 10, 'sortable'=>true),
+			array('title' => 'Descr', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+				)
+		));
+	
+	?>
+</div>
 <?php    
     $this->endWidget();
     unset($form);

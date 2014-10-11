@@ -30,6 +30,13 @@ $this->breadcrumbs=array(
 			)
 	));
 	?> 
+	
+	<button id="click">click me</button>
 </div>
-
+<script>
+	$("#click").click(function(){
+		$("#dlg").dialog('open');
+	});
+	
+</script>
 

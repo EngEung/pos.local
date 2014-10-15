@@ -36,13 +36,13 @@ class TextBoxWithSearch extends CInputWidget{
 		if (isset($this->htmlOptions['name']))
 			$name = $this->htmlOptions['name'];
 		
-	
+		$openDialogBox = $this->openDialogBox($id);
 		if ($this->hasModel()){
 			$tag = "<div class='control-group'>";
 			$tag .= CHtml::activeLabelEx($this->model, $this->attribute, array('class' => 'control-label'));
 			$tag .= "<div class='controls'>";
 			$tag .= CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
-			$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$('#edl$id').dialog('open');"));
+			$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$openDialogBox;"));
 			$tag .="</div>";
 			$tag .= $this->dialogBox($id) ."</div>";
 			echo $tag;
@@ -58,7 +58,6 @@ class TextBoxWithSearch extends CInputWidget{
 			
 		//$options = !empty($this->options) ? CJavaScript::encode($this->options) : '';
 		//Yii::app()->clientScript->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').typeahead({''});");
-			$this->clientChange($id);
 	}
 	
 	
@@ -97,14 +96,13 @@ EOD;
 
 	}
 	
-	private function javascript($id){
-		$javacript = "
-		$('#btn{$id}').click(function(){
-			alert('tttttttttttttt');
-		});
-		
-		";
+	protected function openDialogBox($id){
+		$javacript="$('#edl$id').dialog('open');$('#edg$id').datagrid({url: '$this->url',});";
 		return $javacript;
+	}
+
+	public function onDbClickRow(){
+		
 	}
 }
 ?>

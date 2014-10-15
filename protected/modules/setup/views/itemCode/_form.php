@@ -107,6 +107,7 @@
 	$this->widget('ext.chart.TextBoxWithSearch', array(
 	'model' => $model,
 	'attribute' => 'test',
+	'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
 	'dialogTitle' => 'Unit Type',
 	'iconCls' => 'icon-th-large',
 	'htmlOptions' => array('style' => 'width:170px;'),

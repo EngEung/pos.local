@@ -24,6 +24,7 @@ class ItemCodeForm extends CFormModel
 	public $barcode;
 	public $itemCode;
 	public $note;
+	public $test;
 	
 	public function __construct(){
 

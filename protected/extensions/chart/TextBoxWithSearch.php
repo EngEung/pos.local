@@ -6,6 +6,8 @@ class TextBoxWithSearch extends CInputWidget{
 	public $title ="";
 	public $dialogTitle = "";
 	public $iconCls = "";
+	public $columns = array();
+	
 	public function init()
 	{
 		/*$content = '';
@@ -14,12 +16,12 @@ class TextBoxWithSearch extends CInputWidget{
 		echo $content;*/
 	}
 	
-	protected  function clientChange()
+	protected  function clientChange($id)
 	{
 		$cs=Yii::app()->getClientScript();
 		$cs->registerCoreScript('jquery');
-		$handler = $this->javascript();
-		$cs->registerScript('Yii.CHtml.#' . $this->id,"{$handler}");
+		$handler = $this->javascript($id);
+		$cs->registerScript('Yii.CHtml.#' . $id,"{$handler}");
 	}
 	
 	public function run()
@@ -30,12 +32,15 @@ class TextBoxWithSearch extends CInputWidget{
 			$id = $this->htmlOptions['id'];
 		else
 			$this->htmlOptions['id'] = $id;
-
+		
 		if (isset($this->htmlOptions['name']))
 			$name = $this->htmlOptions['name'];
-
+		
+	
 		if ($this->hasModel()){
-			$tag = "<div class='control-group'><div class='controls'>";
+			$tag = "<div class='control-group'>";
+			$tag .= CHtml::activeLabelEx($this->model, $this->attribute, array('class' => 'control-label'));
+			$tag .= "<div class='controls'>";
 			$tag .= CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
 			$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}"));
 			$tag .="</div>";
@@ -45,6 +50,7 @@ class TextBoxWithSearch extends CInputWidget{
 		}
 		else{
 			$tag = "<div class='control-group'><div class='controls'>";
+			$tag .= CHtml::label($this->model, $this->attribute, array('class' => 'control-label'));
 			$tag .= CHtml::textField($name, $this->value, $this->htmlOptions).CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}"));
 			$tag .="</div>";
 			$tag .= $this->dialogBox($id) ."</div>";
@@ -52,7 +58,8 @@ class TextBoxWithSearch extends CInputWidget{
 		}
 			
 		//$options = !empty($this->options) ? CJavaScript::encode($this->options) : '';
-		//Yii::app()->clientScript->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').typeahead({$options});");
+		//Yii::app()->clientScript->registerScript(__CLASS__.'#'.$id, "jQuery('#{$id}').typeahead({''});");
+			$this->clientChange($id);
 	}
 	
 	
@@ -60,46 +67,44 @@ class TextBoxWithSearch extends CInputWidget{
 	{
 		$dg = new EuiDataGrid();
 		$dialogId = "edl$id";
-		$dialogBox=<<<EOD
+		$dagridId = "edg$id";
+		echo <<<EOD
 				<div id="$dialogId" class="easyui-dialog" title="Category Lists" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'$this->iconCls',toolbar: '#dlg-toolbar1',buttons: '#dlg-search-buttons1'">
-					
-				<div id="dlg-toolbar1" style="padding:0">
+				
+EOD;
+			
+		EuiDataGrid::widget('ext.yii-easyui.widgets.EuiDataGrid', array(
+			'id' => $dagridId,
+			'style' => 'width:auto; height: 200px',
+			'singleSelect' => true,
+			'showFooter' => true,
+			'columns' => $this->columns
+			
+		));
+		echo '<div id="dlg-toolbar1" style="padding:0">
 				<table cellpadding="0" cellspacing="0" style="width:100%">
 					<tr>
 						<td style="text-align:right;padding-right:2px">
-						<input class="easyui-searchbox" data-options="prompt:'សូមPlease input somthing'" style="width:150px"></input>
+						<input class="easyui-searchbox" data-options="prompt:\'សូមPlease input somthing\'" style="width:150px"></input>
 						</td>
 					</tr>
 				</table>
 			</div>
 			<div id="dlg-search-buttons1">
-				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert('save')">Ok</a>
-				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$('#dlg').dialog('close')">Cancel</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert(\'save\')">Ok</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$(\'#dlg\').dialog(\'close\')">Cancel</a>
 			</div>
-				</div>
-EOD;
-		return $dialogBox;
+				</div>';
+
 	}
 	
-	private function javascript(){
-		$javacript = "dg = $('#dg');
-		dg.datagrid({
-			title:'{$this->title}',
-			height:400,
-			singleSelect:true,
-			nowrap:false,
-			fitColumns:true,
-			url:'{$this->url}',
-			toolbar: '#tb',
-			idField: 'id',		
-			pagination: true,
-			//rownumbers: true,
-			scrollbarSize: 5,
-			ctrlSelect: true,
-			collapsible:true,
-			tools:'#ttAcc',
-			columns:[". CJSON::encode($this->columns) ."],
-		});";
+	private function javascript($id){
+		$javacript = "
+		$('#btn{$id}').click(function(){
+			alert('tttttttttttttt');
+		});
+		
+		";
 		return $javacript;
 	}
 }

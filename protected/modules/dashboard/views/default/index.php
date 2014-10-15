@@ -20,7 +20,7 @@ $this->breadcrumbs=array(
 	<p>
 	You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
 <?php 
-/*	$this->widget('ext.chart.Dialog', array(
+	/*$this->widget('ext.chart.Dialog', array(
 	'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
 	'id' => 'dddd',
 	'title' => 'Categories',
@@ -30,21 +30,19 @@ $this->breadcrumbs=array(
 			)
 	));*/
 	?>
-	<?php /*
+	<?php 
+
 	$this->widget('ext.chart.TextBoxWithSearch', array(
-	'model' => 'textBox',
-	'id' => 'dddd',
-	'title' => 'Categories',
+	'model' => $model,
+	'attribute' => 'itemTypeId',
 	'dialogTitle' => 'Unit Type',
-	'iconCls' => 'icon-th-large'
-	));*/
-	$test = new Test();
-	$test->showGrid();
+	'iconCls' => 'icon-th-large',
+	'htmlOptions' => array('style' => 'width:170px;'),
+	'columns' => array(
+				array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+				array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
+				array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
+			),
+	));
 	?> 
 </div>
-
-<script>
-	$("#btntextBox").click(function(){
-		$("#edldddd").dialog('open');
-	});
-</script>

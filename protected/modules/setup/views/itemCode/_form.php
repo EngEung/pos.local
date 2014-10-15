@@ -106,10 +106,15 @@
       			<?php 
 	$this->widget('ext.chart.TextBoxWithSearch', array(
 	'model' => $model,
-	'attribute' => 'itemTypeId',
+	'attribute' => 'test',
 	'dialogTitle' => 'Unit Type',
 	'iconCls' => 'icon-th-large',
-	'htmlOptions' => array('style' => 'width:170px;')
+	'htmlOptions' => array('style' => 'width:170px;'),
+	'columns' => array(
+				array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+				array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
+				array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
+			),
 	));
 	?> 
 		<div style="clear: both;"></div>
@@ -247,7 +252,7 @@ ul {
 		}
 	});
 	
-	$("#btnItemCodeForm_itemTypeId").click(function(){
-		$("#edlItemCodeForm_itemTypeId").dialog('open');
-	});
+	//$("#btnItemCodeForm_itemTypeId").click(function(){
+	//	$("#edlItemCodeForm_itemTypeId").dialog('open');
+	//});
 </script>

@@ -13,6 +13,7 @@ class Dialog extends  CWidget{
 		$this->clientChange();
 		echo $content;
 	}
+	
 	protected  function clientChange()
 	{
 		$cs=Yii::app()->getClientScript();

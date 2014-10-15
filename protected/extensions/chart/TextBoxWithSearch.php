@@ -42,11 +42,10 @@ class TextBoxWithSearch extends CInputWidget{
 			$tag .= CHtml::activeLabelEx($this->model, $this->attribute, array('class' => 'control-label'));
 			$tag .= "<div class='controls'>";
 			$tag .= CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
-			$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}"));
+			$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$('#edl$id').dialog('open');"));
 			$tag .="</div>";
 			$tag .= $this->dialogBox($id) ."</div>";
 			echo $tag;
-			
 		}
 		else{
 			$tag = "<div class='control-group'><div class='controls'>";
@@ -69,7 +68,7 @@ class TextBoxWithSearch extends CInputWidget{
 		$dialogId = "edl$id";
 		$dagridId = "edg$id";
 		echo <<<EOD
-				<div id="$dialogId" class="easyui-dialog" title="Category Lists" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'$this->iconCls',toolbar: '#dlg-toolbar1',buttons: '#dlg-search-buttons1'">
+				<div id="$dialogId" class="easyui-dialog" title="$this->dialogTitle" style="width:535px;height:350px;padding:10px" data-options="resizable:true, maximizable:true,  modal: true, closed: true,iconCls:'$this->iconCls',toolbar: '#dlg-toolbar-$id',buttons: '#dlg-search-buttons-$id'">
 				
 EOD;
 			
@@ -81,7 +80,7 @@ EOD;
 			'columns' => $this->columns
 			
 		));
-		echo '<div id="dlg-toolbar1" style="padding:0">
+		echo '<div id="dlg-toolbar-'.$id.'" style="padding:0">
 				<table cellpadding="0" cellspacing="0" style="width:100%">
 					<tr>
 						<td style="text-align:right;padding-right:2px">
@@ -90,7 +89,7 @@ EOD;
 					</tr>
 				</table>
 			</div>
-			<div id="dlg-search-buttons1">
+			<div id="dlg-search-buttons-'.$id.'">
 				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert(\'save\')">Ok</a>
 				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$(\'#dlg\').dialog(\'close\')">Cancel</a>
 			</div>

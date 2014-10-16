@@ -89,10 +89,10 @@ EOD;
 				</table>
 			</div>
 			<div id="dlg-search-buttons-'.$id.'">
-				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:alert(\'save\')">Ok</a>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:'.$this->onDbClickRow($id).'">Ok</a>
 				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$(\'#dlg\').dialog(\'close\')">Cancel</a>
 			</div>
-				</div>';
+		</div>';
 
 	}
 	
@@ -101,8 +101,13 @@ EOD;
 		return $javacript;
 	}
 
-	public function onDbClickRow(){
-		
+	public function onDbClickRow($id){
+		$javacript="var row = $('#edg$id').datagrid('getSelected');
+				 	if (row){
+						$('#ItemCodeForm_test').val(row.name);
+						$('#edl$id').dialog('close')
+					}";
+		return $javacript;
 	}
 }
 ?>

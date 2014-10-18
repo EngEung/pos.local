@@ -6,8 +6,8 @@ class DialogProcess extends CApplicationComponent{
 	 * Category
 	 * @return array()
 	 */
-	public static function getCategory(){
-		$sql = "select * from categories where active = true";
+	public static function getCategory($keyword){
+		$sql = "select * from categories where active = true and name like '%{$keyword}%'";
     	return DAO::exprotData($sql);
 	}
 	

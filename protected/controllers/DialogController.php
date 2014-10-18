@@ -4,7 +4,8 @@ class DialogController extends Controller
 {
 	
 	public function actionDialogCategory(){
-		echo CJSON::encode(DialogProcess::getCategory());
+		$keyword = $_POST['keyword'];
+		echo CJSON::encode(DialogProcess::getCategory($keyword));
 	}
 	
 	public function actionDialogItemType(){

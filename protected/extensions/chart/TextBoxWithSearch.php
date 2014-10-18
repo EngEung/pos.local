@@ -7,7 +7,8 @@ class TextBoxWithSearch extends CInputWidget{
 	public $dialogTitle = "";
 	public $iconCls = "";
 	public $columns = array();
-	
+	public $keyword = "";
+	public $attributeHiddenField = "";
 	public function init()
 	{
 		/*$content = '';
@@ -39,16 +40,19 @@ class TextBoxWithSearch extends CInputWidget{
 		$openDialogBox = $this->openDialogBox($id);
 		if ($this->hasModel()){
 			$tag = "<div class='control-group'>";
-			$tag .= CHtml::activeLabelEx($this->model, $this->attribute, array('class' => 'control-label'));
-			$tag .= "<div class='controls'>";
-			$tag .= CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
-			$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$openDialogBox;"));
+				$tag .= CHtml::activeLabelEx($this->model, $this->attribute, array('class' => 'control-label'));
+				$tag .= "<div class='controls'>";
+					$tag .= CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
+					$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$openDialogBox;"));
+				$tag .="</div>";
+				$tag .= $this->dialogBox($id);
+				$tag .= CHtml::activeHiddenField($this->model, $this->attributeHiddenField);
 			$tag .="</div>";
-			$tag .= $this->dialogBox($id) ."</div>";
 			echo $tag;
 		}
 		else{
 			$tag = "<div class='control-group'><div class='controls'>";
+		//	$tag .= CHtml::activeHiddenField($this->model, $this->attributeHidden, $this->htmlOptions);
 			$tag .= CHtml::label($this->model, $this->attribute, array('class' => 'control-label'));
 			$tag .= CHtml::textField($name, $this->value, $this->htmlOptions).CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}"));
 			$tag .="</div>";
@@ -76,14 +80,15 @@ EOD;
 			'style' => 'width:auto; height: 200px',
 			'singleSelect' => true,
 			'showFooter' => true,
-			'columns' => $this->columns
+			'columns' => $this->columns,
+			'queryParams' => array('dd' => $this->keyword)
 			
 		));
 		echo '<div id="dlg-toolbar-'.$id.'" style="padding:0">
 				<table cellpadding="0" cellspacing="0" style="width:100%">
 					<tr>
 						<td style="text-align:right;padding-right:2px">
-						<input class="easyui-searchbox" data-options="prompt:\'សូមPlease input somthing\'" style="width:150px"></input>
+						<input class="easyui-searchbox" data-options="prompt:\'សូមPlease input somthing\', searcher:function(value,name){alert(value);}" style="width:150px"></input>
 						</td>
 					</tr>
 				</table>
@@ -97,14 +102,20 @@ EOD;
 	}
 	
 	protected function openDialogBox($id){
-		$javacript="$('#edl$id').dialog('open');$('#edg$id').datagrid({url: '$this->url',});";
+		$javacript="$('#edl$id').dialog('open');$('#edg$id').datagrid({url: '$this->url', queryParams:{keyword:$('#$id').val()}});";
 		return $javacript;
 	}
 
+	protected function closeDialogBox($id){
+		$javacript ="$('#edl$id').dialog('close');$('#$id').val('');$('#$this->attributeHiddenField').val('')";
+	}
+
 	public function onDbClickRow($id){
+		$idHiddenField = $this->getIdByName($this->model);
 		$javacript="var row = $('#edg$id').datagrid('getSelected');
 				 	if (row){
-						$('#ItemCodeForm_test').val(row.name);
+						$('#$id').val(row.name);
+						$('#$idHiddenField').val(row.id);
 						$('#edl$id').dialog('close')
 					}";
 		return $javacript;

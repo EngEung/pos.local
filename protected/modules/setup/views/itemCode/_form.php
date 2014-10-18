@@ -106,7 +106,9 @@
       			<?php 
 	$this->widget('ext.chart.TextBoxWithSearch', array(
 	'model' => $model,
+	'attributeHiddenField' => 'testId',
 	'attribute' => 'test',
+	
 	'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
 	'dialogTitle' => 'Unit Type',
 	'iconCls' => 'icon-th-large',
@@ -118,6 +120,7 @@
 			),
 	));
 	?> 
+	
 		<div style="clear: both;"></div>
 		<?php echo $form->textAreaRow($model, 'note'); ?>
 	</div>

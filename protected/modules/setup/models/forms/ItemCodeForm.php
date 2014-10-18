@@ -25,6 +25,7 @@ class ItemCodeForm extends CFormModel
 	public $itemCode;
 	public $note;
 	public $test;
+	public $testId;
 	
 	public function __construct(){
 

@@ -31,7 +31,7 @@ $this->breadcrumbs=array(
 	));*/
 	?>
 	<?php 
-
+/*
 	$this->widget('ext.chart.TextBoxWithSearch', array(
 	'model' => $model,
 	'attribute' => 'itemTypeId',
@@ -43,6 +43,6 @@ $this->breadcrumbs=array(
 				array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
 				array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
 			),
-	));
+	));*/
 	?> 
 </div>

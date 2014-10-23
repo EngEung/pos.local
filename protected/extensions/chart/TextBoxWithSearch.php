@@ -92,11 +92,11 @@ EOD;
 						</td>
 					</tr>
 				</table>
-			</div>
-			<div id="dlg-search-buttons-'.$id.'">
+			 </div>
+			 <div id="dlg-search-buttons-'.$id.'">
 				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:'.$this->onDbClickRow($id).'">Ok</a>
-				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:$(\'#dlg\').dialog(\'close\')">Cancel</a>
-			</div>
+				<a href="javascript:void(0)" class="easyui-linkbutton" onclick="javascript:'. $this->closeDialogBox($id) .'">Cancel</a>
+			 </div>
 		</div>';
 
 	}
@@ -107,11 +107,15 @@ EOD;
 	}
 
 	protected function closeDialogBox($id){
-		$javacript ="$('#edl$id').dialog('close');$('#$id').val('');$('#$this->attributeHiddenField').val('')";
+		$name=CHtml::activeName($this->model,$this->attributeHiddenField);
+		$idHiddenField = CHtml::getIdByName($name);
+		$javacript ="$('#edl$id').dialog('close');$('#$id').val('');$('#$idHiddenField').val('')";
+		return $javacript;
 	}
 
 	public function onDbClickRow($id){
-		$idHiddenField = $this->getIdByName($this->model);
+		$name=CHtml::activeName($this->model,$this->attributeHiddenField);
+		$idHiddenField = CHtml::getIdByName($name);
 		$javacript="var row = $('#edg$id').datagrid('getSelected');
 				 	if (row){
 						$('#$id').val(row.name);

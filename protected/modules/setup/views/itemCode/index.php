@@ -7,7 +7,7 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
 ?>      
-<?php echo $this->renderPartial('/render/_dataGrid');?>
+<?php echo $this->renderPartial('/render/_dataGrid', array('model' => $model));?>
 <script>
    
     /** easyui gridView Javascript */

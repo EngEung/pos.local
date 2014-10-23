@@ -35,6 +35,7 @@
 
 <div id="win-form" class="easyui-dialog" title="Basic Window" 
 	data-options="buttons:'#dlg-buttons', resizable:false, closed: true, iconCls:'icon-save'" style="width:850px;height:350px;padding:10px;">
+	<?php $this->renderPartial('_form', array('model' => $model));?>
 </div>
 <div id="dlg-buttons" class="dialog-button" style="">
 	 <?php 
@@ -65,12 +66,13 @@
 </div>
 <script>
 	$("#btn-add").click(function(){
+
 		$("#win-form").dialog('open');
-		$('#win-form').dialog('refresh', '<?php echo $this->createUrl('openForm');?>');
+		//$('#win-form').dialog('refresh', '<?php //echo $this->createUrl('openForm');?>');
 	});
 	
 	$("#btn-cancel").click(function(){
 		$("#win-form").dialog('close');
-	})
+	});
 </script>
 

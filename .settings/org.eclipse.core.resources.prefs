@@ -1,6 +1,7 @@
 eclipse.preferences.version=1
 encoding//protected/extensions/chart/Dialog.php=UTF-8
 encoding//protected/extensions/chart/TextBoxWithSearch.php=UTF-8
+encoding//protected/extensions/chart/TextBoxWithSearchIndependent.php=UTF-8
 encoding//protected/modules/setup/views/itemCode/_form.php=UTF-8
 encoding//protected/modules/setup/views/size/_form.php=UTF-8
 encoding//protected/modules/setup/views/size/_formSearchUnit.php=UTF-8

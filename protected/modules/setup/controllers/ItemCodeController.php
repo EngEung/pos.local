@@ -6,8 +6,8 @@ class ItemCodeController extends Controller
 	{
 		$this->authenticate();        
         $this->layout = 'setup_layout';
-		
-		$this->render('index');
+		$model = new ItemCodeForm();
+		$this->render('index', array('model' => $model));
 	}
 	
 	public function actionGetItemCodes(){

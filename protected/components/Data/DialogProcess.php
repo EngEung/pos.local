@@ -27,8 +27,8 @@ class DialogProcess extends CApplicationComponent{
 	 * @return array()
 	 */
 	public static function geItemUnitGroups($keyword){
-		$sql ="select g.id as unit_group_id, d.unit_group_code,g.descr,
-			   group_concat(d.code separator ' > ') as 'group_detail'
+		$sql ="select g.id as unit_group_id, d.unit_group_code as name,g.descr,
+			   group_concat(d.code separator ' > ') as 'group_detail', d.unit_group_code as id
 			   from item_unit_groups g
 			   inner join  item_unit_details d on g.code = d.unit_group_code
 			   where d.unit_group_code like '%{$keyword}%'

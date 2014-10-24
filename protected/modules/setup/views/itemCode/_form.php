@@ -41,7 +41,7 @@
 				'attributeHiddenField' => 'unitGroupId',
 				'attribute' => 'unitGroups',
 				'url' => Yii::app()->baseUrl. '/dialog/DialogUnitGroup',
-				'dialogTitle' => 'Size Group Lists',
+				'dialogTitle' => 'Unit Group Lists',
 				'iconCls' => 'icon-th-large',
 				'htmlOptions' => array('style' => 'width:170px;'),
 				'columns' => array(
@@ -82,7 +82,7 @@
 				'iconCls' => 'icon-th-large',
 				'htmlOptions' => array('style' => 'width:170px;'),
 				'columns' => array(
-							array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+							array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true, 'checkbox' => true),
 							array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
 							array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
 						),
@@ -95,12 +95,12 @@
 				'attributeHiddenField' => 'itemTypeId',
 				'attribute' => 'itemType',
 				'requireField' => 'categoryId', 
-				'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
+				'url' => Yii::app()->baseUrl. '/dialog/DialogItemType',
 				'dialogTitle' => 'Item Type Lists',
 				'iconCls' => 'icon-th-large',
 				'htmlOptions' => array('style' => 'width:170px;'),
 				'columns' => array(
-							array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+							array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true,  'checkbox' => true),
 							array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
 							array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
 						),

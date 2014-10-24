@@ -956,3 +956,92 @@ Stack trace:
 REQUEST_URI=/fonts/font.css
 HTTP_REFERER=http://pos.local/css/style.css
 ---
+2014/10/24 18:09:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/10/24 18:09:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/24 18:09:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "favicon.ico".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('favicon.ico')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/favicon.ico
+---
+2014/10/24 18:17:30 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/10/24 18:44:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "fonts/font.css".' in C:\xampp\htdocs\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('fonts/font.css')
+#1 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/fonts/font.css
+HTTP_REFERER=http://pos.local/css/style.css
+---
+2014/10/24 19:07:36 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: select * from item_types where active = true and category_id = .
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (88)
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (46)
+in C:\xampp\htdocs\www\pos.local\protected\components\Data\DialogProcess.php (21)
+2014/10/24 19:07:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: select * from item_types where active = true and category_id = ' in C:\xampp\htdocs\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(88): CDbCommand->query()
+#2 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(46): DAO::countTotal('select * from i...')
+#3 C:\xampp\htdocs\www\pos.local\protected\components\Data\DialogProcess.php(21): DAO::exprotData('select * from i...')
+#4 C:\xampp\htdocs\www\pos.local\protected\controllers\DialogController.php(13): DialogProcess::getItemType('')
+#5 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): DialogController->actionDialogItemType()
+#6 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('dialogitemtype')
+#10 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('dialog/DialogIt...')
+#11 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/dialog/DialogItemType
+HTTP_REFERER=http://pos.local/setup/itemCode/
+---
+2014/10/24 19:08:39 [error] [system.db.CDbCommand] CDbCommand::() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: select * from item_types where active = true and category_id = .
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (88)
+in C:\xampp\htdocs\www\pos.local\protected\components\DAO.php (46)
+in C:\xampp\htdocs\www\pos.local\protected\components\Data\DialogProcess.php (21)
+2014/10/24 19:08:39 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1. The SQL statement executed was: select * from item_types where active = true and category_id = ' in C:\xampp\htdocs\www\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\www\framework\db\CDbCommand.php(376): CDbCommand->queryInternal('', 0, Array)
+#1 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(88): CDbCommand->query()
+#2 C:\xampp\htdocs\www\pos.local\protected\components\DAO.php(46): DAO::countTotal('select * from i...')
+#3 C:\xampp\htdocs\www\pos.local\protected\components\Data\DialogProcess.php(21): DAO::exprotData('select * from i...')
+#4 C:\xampp\htdocs\www\pos.local\protected\controllers\DialogController.php(13): DialogProcess::getItemType('')
+#5 C:\xampp\htdocs\www\framework\web\actions\CInlineAction.php(49): DialogController->actionDialogItemType()
+#6 C:\xampp\htdocs\www\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\www\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\www\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 C:\xampp\htdocs\www\framework\web\CWebApplication.php(282): CController->run('dialogitemtype')
+#10 C:\xampp\htdocs\www\framework\web\CWebApplication.php(141): CWebApplication->runController('dialog/DialogIt...')
+#11 C:\xampp\htdocs\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#12 C:\xampp\htdocs\www\pos.local\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/dialog/DialogItemType
+HTTP_REFERER=http://pos.local/setup/itemCode/
+---

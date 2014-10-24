@@ -16,8 +16,8 @@ class DialogProcess extends CApplicationComponent{
 	 * @param int $categoryId
 	 * @return array()
 	 */
-	public static function getItemType($categoryId){
-		$sql = "select * from item_types where active = true and category_id = $categoryId";
+	public static function getItemType($require, $keyword){
+		$sql = "select * from item_types where active = true and (category_id = $require or 0= $require) and name like '%{$keyword}%'";
 		return DAO::exprotData($sql);
 	}
 	

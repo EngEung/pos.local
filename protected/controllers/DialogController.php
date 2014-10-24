@@ -9,8 +9,9 @@ class DialogController extends Controller
 	}
 	
 	public function actionDialogItemType(){
-		$categoryId = $_POST['category_id'];
-		echo CJSON::encode(DialogProcess::getItemType($categoryId));
+		$keyword = $_POST['keyword'];
+		$require = intval($_POST['require']);
+		echo CJSON::encode(DialogProcess::getItemType($require, $keyword));
 	}
 	
 	public function actionDialogUnitGroup(){

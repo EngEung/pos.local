@@ -45,9 +45,10 @@
 				'iconCls' => 'icon-th-large',
 				'htmlOptions' => array('style' => 'width:170px;'),
 				'columns' => array(
-							array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
-							array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
-							array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
+							array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true, 'hidden' => true),
+							array('title' => 'Groups', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
+							array('title' => 'Description', 'field'=>'descr', 'width'=> 100, 'sortable'=>true),
+							array('title' => 'Unit Details', 'field'=>'group_detail', 'width'=> 100, 'sortable'=>true),
 						),
 				));
 				?> 

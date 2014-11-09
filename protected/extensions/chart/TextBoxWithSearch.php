@@ -9,6 +9,8 @@ class TextBoxWithSearch extends CInputWidget{
 	public $columns = array();
 	public $keyword = "";
 	public $attributeHiddenField = "";
+    public $disabledSearch = false;
+    public $enabledSearch = "";
 	public function init()
 	{
 		/*$content = '';
@@ -43,7 +45,7 @@ class TextBoxWithSearch extends CInputWidget{
 				$tag .= CHtml::activeLabelEx($this->model, $this->attribute, array('class' => 'control-label'));
 				$tag .= "<div class='controls'>";
 					$tag .= CHtml::activeTextField($this->model, $this->attribute, $this->htmlOptions);
-					$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array('style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$openDialogBox;"));
+					$tag .= CHtml::htmlButton('<i class="icon-search"></i>',  array( 'disabled'=> $this->disabledSearch, 'style' => 'padding:7px;','class' => "btn btn-small",'id' => "btn{$id}", 'onclick' => "javascript:$openDialogBox;"));
 				$tag .="</div>";
 				$tag .= $this->dialogBox($id);
 				$tag .= CHtml::activeHiddenField($this->model, $this->attributeHiddenField);
@@ -120,7 +122,8 @@ EOD;
 				 	if (row){
 						$('#$id').val(row.name);
 						$('#$idHiddenField').val(row.id);
-						$('#edl$id').dialog('close')
+						$('#edl$id').dialog('close');
+						$('#$this->enabledSearch').removeAttr('disabled');
 					}";
 		return $javacript;
 	}

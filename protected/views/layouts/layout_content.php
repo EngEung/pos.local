@@ -4,10 +4,11 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="language" content="en" />
-
-	<?php Yii::app()->bootstrap->registerAssetCss("bootstrap.css");?>	
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/js/jquery-easyui/themes/bootstrap/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 </head>
-<body >
-	<?php echo $content; ?>
+
+<body class="" style="text-align: left;">
+	     <?php echo $content; ?>
 </body>
 </html>

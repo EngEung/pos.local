@@ -6,6 +6,7 @@ class HomeController extends Controller{
 	}
 	public function actionIndex(){
 		$signInForm = new SignInForm();
+        $this->layout='//layouts/main_login';
 		# Collect Sign In Form input data
         if (isset($_POST['SignInForm'])) {
             $signInForm->attributes = $_POST['SignInForm'];
@@ -41,7 +42,7 @@ class HomeController extends Controller{
 	}
 
 	public function actionSignIn(){
-		$this->layout='//layouts/login_layout';
+		$this->layout='//layouts/main_login';
 		$signInForm = new SignInForm();
 		# Collect Sign In Form input data
         if (isset($_POST['SignInForm'])) {

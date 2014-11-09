@@ -50,7 +50,9 @@
 							array('title' => 'Description', 'field'=>'descr', 'width'=> 100, 'sortable'=>true),
 							array('title' => 'Unit Details', 'field'=>'group_detail', 'width'=> 100, 'sortable'=>true),
 						),
+				'enabledSearch' => '#btnItemCodeForm_itemType'
 				));
+               
 				?> 
 		
 		<?php 
@@ -87,6 +89,7 @@
 							array('title' => 'Name', 'field'=>'name', 'width'=> 50, 'sortable'=>true),
 							array('title' => 'Description', 'field'=>'name', 'width'=> 100, 'sortable'=>true),
 						),
+				'enabledSearch' => 'btnItemCodeForm_itemType'
 				));
 				?> 
 				

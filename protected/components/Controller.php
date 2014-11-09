@@ -5,11 +5,14 @@
  */
 class Controller extends CController
 {
+    
+   
 	/**
 	 * @var string the default layout for the controller view. Defaults to '//layouts/column1',
 	 * meaning using a single column layout. See 'protected/views/layouts/column1.php'.
 	 */
 	public $layout='//layouts/column1';
+    public $authenticated;
 	/**
 	 * @var array context menu items. This property will be assigned to {@link CMenu::items}.
 	 */
@@ -20,18 +23,32 @@ class Controller extends CController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
-	
-	
+    
+	 public function init(){
+	    $this->authenticated = (bool)Yii::app()->session->get('is_authenticated');
+        if(!$this->authenticated){
+              $this->widget('ext.chart.Dialog', array(
+                'url' => Yii::app()->baseUrl. '/dialog/DialogCategory',
+                'id' => 'dddd',
+                'title' => 'Categories',
+                'columns' => array(
+                    array('title' => 'id', 'field'=>'id', 'width'=> 10, 'sortable'=>true),
+                    array('title' => 'Descr', 'field'=>'name', 'width'=> 10, 'sortable'=>true),
+                        )
+                ));
+        }
+    }
+
 	public function authenticate(){
-		$authenticated=(bool)Yii::app()->session->get('is_authenticated');
-		if(!$authenticated) {
+		$this->authenticated=(bool)Yii::app()->session->get('is_authenticated');
+		if(!$this->authenticated) {
 			$url = Yii::app()->getRequest()->requestUri;
-			$this->redirect($this->createUrl('/home/index/',
-					array('q'=>'sign_in','auth'=>0,'q_url'=>$url)));
+		/*	$this->redirect($this->createUrl('/home/index/',
+					array('q'=>'sign_in','auth'=>0,'q_url'=>$url)));*/
 			//$urls = Yii::app()->getBaseUrl(true).'/home/signin/';	
 			//$cs = Yii::app()->clientScript;
 			//$cs->registerScript('my_script', "test('{$urls}');", CClientScript::POS_READY);
-
+          
 		}
 	}
 	
@@ -48,8 +65,6 @@ class Controller extends CController
 	public function getLeftMenu(){
 		$ui = new UserInterface();
 		# get controller name
-		$controller = get_class($this);
-		$view = Yii::app()->controller->action->id;
-		return $ui->getLeftVerticalMenu($controller, $view);
+	    $ui->getVerticalMenu();
 	}
 }

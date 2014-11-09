@@ -12,11 +12,7 @@ class DashboardModule extends CWebModule
 			'dashboard.models.*',
 			'dashboard.components.*',
 		));
-        $this->layoutPath = Yii::getPathOfAlias('setup.views.layouts');
-		$this->layout = 'setup_layout_column1';
-        $this->layout = 'layout_setup_main';
-	}
-
+    }
 	public function beforeControllerAction($controller, $action)
 	{
 		if(parent::beforeControllerAction($controller, $action))

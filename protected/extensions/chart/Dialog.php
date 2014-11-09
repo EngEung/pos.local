@@ -10,7 +10,7 @@ class Dialog extends  CWidget{
 	{
 		$content = '';
 		$content = $this->renderTag();
-		$this->clientChange();
+		//$this->clientChange();
 		echo $content;
 	}
 	
@@ -25,15 +25,27 @@ class Dialog extends  CWidget{
 	
 	private function renderTag()
 	{
-		$content = '<div id="dlg" class="easyui-dialog" title="Item Unit Groups" style="width:535px;height:350px;padding:10px" data-options="closed: true">
-					 <table id="dg"></table>
-					</div>';
-					//$content = '<table id="dg"></table>';
+		$content = '<div id="dlg" class="easyui-dialog" title="Sign In" style="width:400px;padding:10px" 
+		              data-options="collapsible:true, closable:false, modal:true, shadow:true, iconCls:\'icon-lock\',buttons: \'#dlg-buttons\'">';
+            $content .= CHtml::beginForm();
+                $content .=  '<div style="float:left; width:100px; text-align:right;">';
+                    $content .= CHtml::label('Username', 'user_name', array('class' => 'control-label required'));
+                    $content .= "<br/>" .CHtml::label('Password', 'passwd');
+                $content .= "</div>"; 
+                $content .=  '<div style="float:left; width:200px; margin-left:10px;">';
+                    $content .= CHtml::textField('user_name','', array('autocomplete'=> 'off','placeholder' => 'Username','style' => 'height:30px;'));
+                    $content .= CHtml::passwordField('passwd','', array('placeholder' => 'Password','style' => 'height:30px;'));
+                $content .= "</div>";
+            $content .= CHtml::endForm(); 
+		$content .=	'</div>';            
+        $content .= '<div id="dlg-buttons">
+                        <button id="btnSignins" class="btn btn-small" type="button" name="yt0" style="margin-left:5px;">Sign In</button>
+                    </div>';
 		return $content;
 	}
 	
 	private function javascript(){
-		$javacript = "dg = $('#dg');
+		/*$javacript = "dg = $('#dg');
 		dg.datagrid({
 			title:'{$this->title}',
 			height:200,
@@ -48,7 +60,7 @@ class Dialog extends  CWidget{
 			tools:'#ttAcc',
 			columns:[". CJSON::encode($this->columns) ."],
 		});";
-		return $javacript;
+		return $javacript;*/
 	}
 }
 ?>

@@ -39,129 +39,48 @@ class UserInterface extends CApplicationComponent{
 		$session = Yii::app()->session;
 		
     	$isAuthenticated = (bool)$session->get('is_authenticated');
-    	$fullName = '';
-    	$roleIds = 0;
+    	$fullName = "";
     	if($isAuthenticated){
     		$fullName 	= $session->get('full_name');
-			$roleIds = $session->get('roles');
 		}
-		$dataReader = $this->getMenu(0, $roleIds, AppConstant::MENU_HORIZONTAL_MENU);
-    	$menuArray = array();
+		$menu = "";
     	if(strlen($fullName) != 0 && $isAuthenticated == true){
-    		
-    		#menu top the right such as fullname and signout
-			$menuArrayRight= array('class'=>'bootstrap.widgets.TbMenu', 
-								'htmlOptions' => array('class' => 'pull-right'),
-								'items'=>array(array('label' => "Hello: $fullName", 'url'=>'#','itemOptions' => array('style' => 'margin-right:-25px;')),
-											   array('label' => "| sign out", 'url'=>Yii::app()->request->baseUrl.'/home/signout/'))
-						);
-						
-			#menu top the left
-    		$menuArrayLeft = array();
-			foreach($dataReader as $row){
-				$id 		= $row['id'];
-				$name 		= $row['name'];
-				$url 		= $row['url'];
-				$tooltip 	= $row['tooltip'];
-				$selected 	= false;
-				//if($moduleSelected == $row['descr']) $selected = true;
-				$menuArrayLeft[] = array('label' => $name, 'url'=> "javascript:addTabDashboard('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');", 'active'=>$selected,
-									'items' => $this->getSubHorizontalMenu($id, $roleIds, $controllerSelected));
-		    }
-			$menuArrayLeft = array('class'=>'bootstrap.widgets.TbMenu', 'items'=>$menuArrayLeft);
-			$menuArray = array($menuArrayLeft,$menuArrayRight);
-		}else{
-			# Interface for user login in web application
-			$menuArray = array(array('class'=>'bootstrap.widgets.TbMenu',
-								'htmlOptions' => array('class' => 'pull-right'),
-								'items'=>array(
-								array('label'=>'Sign in', 'url' => Yii::app()->baseUrl.'/home/'))));
-		}
-    	return $menuArray;
+    		$menu = '<li title=""><span>'. $fullName .'</span></li>';
+    		$menu .='<li title=""><span> |<a href="'.Yii::app()->request->getBaseUrl(true) .'/home/SignOut/'.'">Sign Out</a></span></li>';
+        }else{
+            $menu = '<li title=""><a><span>Sing In</span></a></li>';
+        }
+    	return $menu;
 	}	
 	
-	
-	public function getSubHorizontalMenu($parentId, $roleId, $selected){
-		$dataReader = $this->getMenu($parentId, $roleId, AppConstant::MENU_SUB_HORIZONTAL_MENU);
-		$arr = array();
-		$help = false;
-		foreach($dataReader as $row){
-                    //if($selected == $row['descr'])
-                     //       $help = true;
-                    $arr[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>"javascript:addTabDashboard('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');", 'active'=>$help);
-                    //[] = array('label'=>$row['name'],'icon'=>'home', 'url'=>Yii::app()->baseUrl.$row['url'] , 'active'=>$help);
-                    
-                    $help = false;
-		}
-		return $arr;
-	}
-
- /* Get left menu
-  * @return array 
-  */
-	public function getLeftVerticalMenu($descr = null, $selected = null){
-		$session = Yii::app()->session;	
-		$model = Menus::model()->findByAttributes(array('descr'=> $descr));
-		$menu = array();
-		if($model != null){
-			$isAuthenticated = (bool)$session->get('is_authenticated');
-	    	$roleIds = 0;
-	    	if($isAuthenticated){
-				$roleIds = $session->get('roles');
-			}
-			$dataReader = $this->getMenu($model->id, $roleIds, AppConstant::MENU_VERTICAL_MENU);
-
-			foreach($dataReader as $row){ 
-				$menu[] = array(
-							    'label' => $row['name'],
-							    'url' => "javascript:addTab('{$row['name']}','". Yii::app()->baseUrl.$row['url'] ."');",
-							    'itemOptions' => array('class' => '')
-							);
-			}
-		}
-		return $menu;
-	}
-	
-	public function getTabMenu($parentId,$menuId,$roleId,$empId){
-		$dataReader = $this->getMenu($parentId,$roleId);
-		$menu = array();
-		foreach($dataReader as $row){
-			$id			= $row['id'];
-			$name 		= $row['name'];
-			$url 		= $row['url'];
-			if($empId>0)
-			$url = $url."?empId=".$empId; 
-			
-			if($id==$menuId)
-			$active = true;
-			else 
-			$active = false;
-			$menu[] = array(
-							'label'=>$name,
-							'url'=>Yii::app()->baseUrl.$url,
-							'active'=>$active,
-							);
-		}
-		return $menu;
-	}
-	public function getTabMenu1($mChNodId,$smChNodId,$empId){
-		$dataReader = $this->getSubMenuChildNode($mChNodId);
-		$menu = array();
-		foreach($dataReader as $row){
-			$id			= $row['id'];
-			$name 		= $row['name'];
-			$url 		= $row['url'];
-			if($id==$smChNodId)
-			$active = true;
-			else 
-			$active = false;
-			$menu[] = array(
-							'label'=>$name,
-							'url'=>Yii::app()->baseUrl.$url.'?empId='.$empId,
-							'active'=>$active,
-							);
-		}
-		return $menu;
-	}
+    /**
+     * we need to show left menu 
+     * @return string
+     * @see getMenu()
+     * 
+     */
+    public function getVerticalMenu(){
+        $roleIds = 0;
+        $session = Yii::app()->session;
+        $isAuthenticated = (bool)$session->get('is_authenticated');
+        if($isAuthenticated){
+            $roleIds = $session->get('roles');
+        }
+        echo '<ul class="easyui-tree">';
+        $dataReader = $this->getMenu(0, $roleIds, AppConstant::MENU_HORIZONTAL_MENU);
+        foreach($dataReader as $row){
+            echo "<li><span>" . $row['name'] . "</span>";
+            $obj = $this->getMenu($row['id'], $roleIds, AppConstant::MENU_SUB_HORIZONTAL_MENU);
+            echo "<ul>";
+            foreach($obj as $key){
+                echo "<li><a href='#' onclick='addTabDashboard(\"".$key['name']."\",\"".Yii::app()->request->getBaseUrl(true). $key['url']."\")'>" . $key['name'] . "</a></li>";
+                
+               // echo "<li><a  href='".Yii::app()->request->getBaseUrl(true). $key['url']."'>" . $key['name'] . "</a></li>";    
+            }
+            echo "</ul></li>";
+        }
+        echo '</ul>';
+        //return $menu;
+    }   
 }
 ?>

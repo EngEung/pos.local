@@ -5,7 +5,7 @@
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');
-	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.crud.js');	
+	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/common.js');	
 ?>       
 
 	<div class="pus" style="margin-top: 20px;">
@@ -83,7 +83,7 @@
 	dgSize = $("#dgSize");
 	dgSize.datagrid({
 		title:'Item Sizes List',
-		height:400,
+		height:500,
 		singleSelect:true,
 		//nowrap:false,
 		//fitColumns:true,
@@ -97,11 +97,10 @@
 		//collapsible:true,
 		columns:[[
 			{title:"ID",field:"id",width:40,sortable:true},
-            {title:"Name",field:"name",width:100,sortable:true},
 			{title:"Code",field:"code",width:150,sortable:true},
             {title:"Description",field:"descr",width:200,sortable:true},
-			{title:"Created At",field:"created_at",width:150,sortable:true}
-			
+			{title:"Created At",field:"created_at",width:150,sortable:true},
+			{title:"Created By",field:"created_by",width:150,sortable:true}
 		]]
 	});
 $("#btn-add").click(function(){
@@ -120,8 +119,12 @@ $("#btn-save").click(function(){
 	        dataType: 'json',
 	        success: function (response) {
 	      		//$.messager.alert('Sucess','Your action has been successfully.');
-	      		refreshGrid(dgItemUnit);
-	      		$('#unit-win').dialog('close');
+	      		if(response){
+		      		refreshGrid(dgSize);
+		      		$('#size-win').dialog('close');
+	      		}else{
+	      			$.messager.alert('Error','Error occured.please try again.','warning');
+	      		}
 	       	},
 	       erorr: function (){
 	       		$.messager.alert('Error','Error occured.please try again.','warning');

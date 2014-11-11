@@ -35,7 +35,7 @@
                 <?php  UserInterfaceAdmin:: getVerticalMenu();?>
         </div>
         <div data-options="region:'center',title:'Main Title',iconCls:'icon-ok'">
-            <div id="tab_dashboard" class="easyui-tabs" style="width:auto; height:540px;">
+            <div id="tab_dashboard" class="easyui-tabs" style="width:auto;">
                 <?php // echo $content; ?>
             </div>
         

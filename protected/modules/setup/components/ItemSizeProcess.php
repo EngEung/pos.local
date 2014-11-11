@@ -34,7 +34,7 @@ class ItemSizeProcess extends CApplicationComponent{
 				'created_by' =>$model->createdBy
 			));
 			
-			$sizeGroup->save(false);
+		   $sizeGroup->save(false);
 			
 			$units = ItemUnitDetails::model()->findAll(array(
 						'condition' => 'unit_group_code=:code',

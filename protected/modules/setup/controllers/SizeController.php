@@ -39,6 +39,8 @@ class SizeController extends Controller{
 			$model->attributes = $_POST['SizeForm'];
 			if($model->validate()){
 				$model->unitGroupCode = $_POST['SizeForm']['unitGroupCode'];
+				$model->sizeCode = $_POST['SizeForm']['sizeCode'];
+				$model->sizeDescr = $_POST['SizeForm']['sizeDescr'];
 				$flage = $sizeProcess->createItemSize($model);
 			}
 		}

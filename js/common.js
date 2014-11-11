@@ -19,3 +19,12 @@
 	      	vc.children('div.datagrid-empty').remove();
 	    }
 	}
+	
+	function refreshGrid(dg){
+		dg.datagrid('clearSelections');
+		dg.datagrid('reload');
+	}
+
+	function clearGrid(dg){
+		dg.datagrid('loadData', {"total":0,"rows":[]});
+	}

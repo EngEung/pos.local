@@ -80,7 +80,7 @@
 		height:400,
 		singleSelect:true,
 		nowrap:false,
-		fitColumns:true,
+		//fitColumns:true,
 		url:'<?php echo $this->createUrl('getItemUnits')?>',
 		toolbar: '#tb',
 		idField: 'id',		
@@ -90,11 +90,11 @@
 		ctrlSelect: true,
 		collapsible:true,
 		columns:[[
-			{title:"ID",field:"id",width:20,sortable:true},
-           	{title:"Code",field:"code",width:150,sortable:true},
-            {title:"Description",field:"descr",width:200,sortable:true},
+			{title:"ID",field:"id",width:40,sortable:true},
+           	{title:"Code",field:"code",width:100,sortable:true},
+            {title:"Description",field:"descr",width:150,sortable:true},
 			{title:"Created At",field:"created_at",width:150,sortable:true},
-			{title:"Created By",field:"created_by",width:150,sortable:true}	
+			{title:"Created By",field:"created_by",width:200,sortable:true}	
 			
 		]],
 	});

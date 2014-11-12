@@ -924,3 +924,24 @@ Stack trace:
 REQUEST_URI=/pos.local/setup/size/createItemSize
 HTTP_REFERER=http://localhost/pos.local/setup/size/
 ---
+2014/11/11 04:23:58 [error] [php] Invalid argument supplied for foreach() (D:\wamp\www\pos.local\protected\extensions\bootstrap\widgets\TbBaseMenu.php:163)
+Stack trace:
+#0 D:\wamp\www\framework\web\CBaseController.php(147): TbMenu->init()
+#1 D:\wamp\www\framework\web\CBaseController.php(172): CustomersController->createWidget()
+#2 D:\wamp\www\pos.local\protected\modules\inventoryCenter\views\layouts\layout_setup_master.php(20): CustomersController->widget()
+#3 D:\wamp\www\framework\web\CBaseController.php(126): require()
+#4 D:\wamp\www\framework\web\CBaseController.php(95): CustomersController->renderInternal()
+#5 D:\wamp\www\framework\web\CController.php(784): CustomersController->renderFile()
+#6 D:\wamp\www\pos.local\protected\modules\inventoryCenter\controllers\CustomersController.php(7): CustomersController->render()
+#7 D:\wamp\www\framework\web\actions\CInlineAction.php(49): CustomersController->actionIndex()
+#8 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\wamp\www\framework\web\CController.php(286): CustomersController->runAction()
+#10 D:\wamp\www\framework\web\CController.php(265): CustomersController->runActionWithFilters()
+#11 D:\wamp\www\framework\web\CWebApplication.php(282): CustomersController->run()
+#12 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#13 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\wamp\www\pos.local\index.php(13): CWebApplication->run()
+REQUEST_URI=/pos.local/inventorycenter/customers
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\widgets\TbBaseMenu.php (163)
+in D:\wamp\www\pos.local\protected\extensions\bootstrap\widgets\TbMenu.php (46)
+in D:\wamp\www\pos.local\protected\modules\inventoryCenter\views\layouts\layout_setup_master.php (20)

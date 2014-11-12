@@ -36,8 +36,8 @@
         <div data-options="region:'west',split:true" title="Operations" style="width:250px;">
                  <?php echo $this->getLeftMenu();?>
         </div>
-        <div data-options="region:'center',title:'Welcome',iconCls:''">
-             <div id="tab_dashboard" class="easyui-tabs" style="width:auto; height:540px;">
+        <div data-options="region:'center',title:'Welcome',iconCls:'', height:570">
+             <div id="tab_dashboard" class="easyui-tabs" style="width:auto;height: 570px;">
                
              </div>
             
@@ -50,7 +50,7 @@
         if ($('#tab_dashboard').tabs('exists', title)){
             $('#tab_dashboard').tabs('select', title);
         } else {
-            var content ='<iframe scrolling="no" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
+            var content ='<iframe scrolling="yes" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
             $('#tab_dashboard').tabs('add',{
                             title:title,
                             content:content,

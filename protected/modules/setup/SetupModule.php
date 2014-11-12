@@ -13,9 +13,9 @@ class SetupModule extends CWebModule
 			'setup.components.*',
 		));
 	
-		$this->layoutPath = Yii::getPathOfAlias('setup.views.layouts');
-		$this->layout = 'setup_layout_column1';
-        $this->layout = 'layout_setup_main';
+		//$this->layoutPath = Yii::getPathOfAlias('setup.views.layouts');
+		//$this->layout = 'setup_layout_column1';
+        //$this->layout = 'layout_setup_main';
 	}
 	
 

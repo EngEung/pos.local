@@ -12,9 +12,9 @@ class InventorycenterModule extends CWebModule
 			'inventorycenter.models.*',
 			'inventorycenter.components.*',
 		));
-		$this->layoutPath = Yii::getPathOfAlias('inventorycenter.views.layouts');
-		$this->layout = 'setup_layout_column1';
-        $this->layout = 'layout_setup_main';
+		//$this->layoutPath = Yii::getPathOfAlias('inventorycenter.views.layouts');
+		//$this->layout = 'setup_layout_column1';
+        //$this->layout = 'layout_setup_main';
 	}
 
 	public function beforeControllerAction($controller, $action)

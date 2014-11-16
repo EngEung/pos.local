@@ -3,8 +3,10 @@ class CustomersController extends Controller{
 	
 	public function actionIndex(){
 		$this->authenticate();        
-        $this->layout = 'layout_setup_master';
-		$this->render('index');
+        //$this->layout = 'layout_setup_master';
+		$this->layout = 'setup_layout';
+        $model = new CustomerForm();
+		$this->render('index', array('model' => $model));
 	}
 	
 	public function actionGetCustomerLists(){
@@ -13,6 +15,14 @@ class CustomersController extends Controller{
 		$lists = $cp->getCustomerLists();
 		echo CJSON::encode($lists);
 	}
+    
+    public function actionGetDistrict(){
+        
+    }
+    
+    public function actionGetCommune(){
+        
+    }
 	
 	public function actionCreate(){
 		$this->authenticate();
@@ -20,7 +30,7 @@ class CustomersController extends Controller{
 		$model = new CustomerForm();
 		$cp = new CustomerProcess();
 		if(isset($_GET['custId'])){
-			$model = $cp->getCustomerByID($_GET['custId']);
+			//$model = $cp->getCustomerByID($_GET['custId']);
 		}
 		
 		if(isset($_POST['CustomerForm'])){

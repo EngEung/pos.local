@@ -30,7 +30,7 @@ class SizeForm extends CFormModel
 	{
 		return array(
 			// username and password are required
-			array('sizeCode, sizeDetailCode, sizeDetailDescr, sizeDescr', 'required',),
+			array('sizeCode, sizeDetailDescr, sizeDescr', 'required',),
 		
 		);
 	}

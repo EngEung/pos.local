@@ -1,13 +1,13 @@
 <?php 
 	$this->pageTitle=Yii::app()->name;
-	
-	
 	Yii::app()->clientScript->registerCoreScript('jquery');
 	$cs = Yii::app()->clientscript;
+    Yii::app()->bootstrap->registerAssetCss("bootstrap.css");
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/icon.css' );							
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
 	$cs->registerScriptFile( Yii::app()->baseUrl . '/js/jquery-easyui/jquery.easyui.min.js');	
 ?>
+<div id="ddd" class="easyui-tabs" style="width:auto;">
  <div title="Suppliers">   
 	<div class="pus" style="margin-top: 20px;">
 		<table id="dgSupplier"></table>
@@ -46,6 +46,7 @@
                     </div>
                 </div>
 	</div>
+</div>
 </div>
 <script>
    
@@ -133,4 +134,18 @@
 			$.messager.alert('Alert','No records selected.', 'alert');
 		}
 	}
+
+     function addTab(title, url){
+        if ($('#ddd').tabs('exists', title)){
+            $('#ddd').tabs('select', title);
+        } else {
+            var content ='<iframe scrolling="yes" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
+            $('#ddd').tabs('add',{
+                            title:title,
+                            content:content,
+                            closable:true
+            });
+        }
+     }
+
 </script>

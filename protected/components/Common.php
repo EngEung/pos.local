@@ -16,6 +16,9 @@ class Common extends CApplicationComponent {
 		$this->_error =  new ErrorLog();
 	}
 	
+    public function getProvinces($orderBy = 'asc'){
+        return Locations::model()->findAll(array('condition' => 'type = 2'));
+    }
 	
 	public function getCategories($order = 'asc'){
 		$criteria = new CDbCriteria(); 
@@ -49,6 +52,8 @@ class Common extends CApplicationComponent {
 		$criteria->order = 'name ' . $order;
 		return Locations::model()->findAll($criteria);
 	}
+
+
 
 	/**
 	 * Gets file upload types 

@@ -37,4 +37,29 @@
 			
 		]],
 	});
+	
+    /* 
+     *Cascading Drop Down on States/Provinces   
+     */ 
+    $('#cascade_dropdown_location_owner').cascadingDropdown({
+    selectBoxes: [
+        {
+            selector: '#AdBuilderOwnerFormOne_stateId',
+            paramName: 'stateId',
+           // url: '',
+            textKey: 'label',
+            valueKey: 'value',
+            defaultValue:'<?php echo $model->stateId;?>'
+        },
+        {
+            selector: '#AdBuilderOwnerFormOne_cityId',
+            requires: ['#AdBuilderOwnerFormOne_stateId'],
+            paramName: 'cityId',
+            url: '/cars/sell/getCity',
+            textKey: 'label',
+            valueKey: 'value',
+            defaultValue:'<?php echo $model->cityId;?>'
+        },
+    ]
+  }); 
 </script>

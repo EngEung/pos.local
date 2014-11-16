@@ -26,7 +26,7 @@ return array(
 		'application.modules.*',
 		'application.modules.setup.models.forms.*',
 		'application.modules.setup.components.*',
-		'application.modules.inventorycenter.models.forms.*',
+		'application.modules.inventorycenter.forms.*',
 		'application.modules.inventorycenter.components.*'
 
 	),

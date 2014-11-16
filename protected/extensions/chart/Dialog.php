@@ -10,7 +10,7 @@ class Dialog extends  CWidget{
 	{
 		$content = '';
 		$content = $this->renderTag();
-		//$this->clientChange();
+		$this->clientChange();
 		echo $content;
 	}
 	
@@ -59,8 +59,9 @@ class Dialog extends  CWidget{
 			collapsible:true,
 			tools:'#ttAcc',
 			columns:[". CJSON::encode($this->columns) ."],
-		});";
-		return $javacript;*/
+		});";*/
+		$javacript ="$('#dlg').dialog('move',{top:50});";
+		return $javacript;
 	}
 }
 ?>

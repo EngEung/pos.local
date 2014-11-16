@@ -1,4 +1,12 @@
+<?php 
 
+    $cs = Yii::app()->clientscript;
+    $cs->registerScriptFile(Yii::app()->baseUrl .'/js/jasny-bootstrap/js/jasny-bootstrap.min.js');
+    $cs->registerCssFile(Yii::app()->baseUrl . '/js/jasny-bootstrap/css/jasny-bootstrap.min.css');
+    $cs->registerScriptFile(Yii::app()->baseUrl .'/js/masktextbox/masktextbox.js',CClientScript::POS_HEAD );
+    $cs->registerScriptFile(Yii::app()->baseUrl .'/js/ajaxupload/processupload.js' );
+    Yii::app()->getClientScript()->registerScriptFile(Yii::app()->baseUrl . '/js/jquery.cascadingdropdown.js');
+?>
 <?php 
     /** @var TbActiveForm $form */
     $form = $this->beginWidget(
@@ -29,10 +37,11 @@
 		
 		<span style="margin-left:10px; color: #003BB3; font-weight: bold;">Address</span><hr style="margin:-8px 0 0 70px;">
 		<br />
-		<?php echo $form->dropDownListRow($model,'locationId', $model->locations,
-						array('empty'=>'--Select--','style'=>'margin-left:00px;')); 
-				?>
-		<?php echo $form->textAreaRow($model, 'address', array('placeholder' => '', 'style' => 'width:210px; height:48px;')); ?>
+		<div id="cascade_dropdown_location">
+		      <?php echo $form->dropDownListRow($model,'provinceId', $model->provinces,array('empty'=>'--Select--','style'=>'margin-left:00px;'));?>
+              <?php echo $form->dropDownListRow($model, 'districtId', array(), array('prompt' => '--Select--','style'=>'width:220px')); ?>
+              <?php echo $form->dropDownListRow($model, 'communeId', array(), array('prompt' => '--Select--','style'=>'width:220px')); ?>    
+        </div>
 	</div>
 	
 
@@ -59,34 +68,6 @@
 		<br />
 		<?php echo $form->textAreaRow($model, 'note', array('style' => 'width:250px;', 'divOptions'=>array('class'=>'div-customer-note'))); ?>
 		
-	</div>
-	<div style="clear:both;"></div>
-	
-	<div id="dlg-buttons" class="dialog-button" style=" margin-top: 15px;">
-		 <?php 	
-			  $this->widget('bootstrap.widgets.TbButton',array(
-						 'id' => 'btn-save',	
-						 'label' => 'Save & New',
-						 'size' => 'small',
-						 'buttonType'=>'submit',
-						 'htmlOptions' => array('style' => 'margin-left:5px;'),
-					  ));
-			   $this->widget('bootstrap.widgets.TbButton',array(
-				 'id' => 'btn-save-close',	
-				 'label' => 'Save & Close',
-				 'size' => 'small',
-				 'buttonType'=>'submit',
-				 'htmlOptions' => array('style' => 'margin-left:5px;'),
-			  ));
-			  
-			   $this->widget('bootstrap.widgets.TbButton',array(
-						 'id' => 'btn-cancel',	
-						 'label' => 'Cancel',
-						 'size' => 'small',
-						 'buttonType'=>'submit',
-						 'htmlOptions' => array('style' => 'margin-left:5px;'),
-				));
-		?>
 	</div>
 <?php    
     $this->endWidget();
@@ -116,4 +97,35 @@
 		$("#CustomerForm_fax").mask("(999) 999-999?e");
 	} 
 	defaultReload();
+	
+	$('#cascade_dropdown_location').cascadingDropdown({
+        selectBoxes: [
+            {
+                selector: '#CustomerForm_provinceId',
+                paramName: 'province_id',
+               // url: '',
+                textKey: 'label',
+                valueKey: 'value',
+                defaultValue:'<?php //echo $model->stateId;?>'
+            },
+            {
+                selector: '#CustomerForm_districtId',
+                requires: ['#CustomerForm_provinceId'],
+                paramName: 'cityId',
+                url: '/inventorycenter/customer/getDistrict',
+                textKey: 'label',
+                valueKey: 'value',
+                defaultValue:'<?php //echo $model->cityId;?>'
+            },
+            {
+                selector: '#CustomerForm_communeId',
+                requires: ['#CustomerForm_districtId'],
+                paramName: 'cityId',
+                url: '/inventorycenter/customer/getCommune',
+                textKey: 'label',
+                valueKey: 'value',
+                defaultValue:'<?php //echo $model->cityId;?>'
+            },
+        ]
+    }); 
 </script>

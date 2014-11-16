@@ -1,7 +1,9 @@
 <?php 
 	/** Client Script**/
 	Yii::app()->clientScript->registerCoreScript('jquery');
-	$cs = Yii::app()->clientscript;						
+	$cs = Yii::app()->clientscript;					
+    
+    Yii::app()->bootstrap->registerAssetCss("bootstrap.css");	
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jquery-easyui/themes/bootstrap/easyui.css' );
 	$cs->registerCssFile( Yii::app()->baseUrl . '/js/jasny-bootstrap/css/jasny-bootstrap.min.css' );
 	

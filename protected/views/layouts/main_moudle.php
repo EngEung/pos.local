@@ -34,8 +34,8 @@
         <div data-options="region:'west',split:true" title="Operations" style="width:250px;">
                 <?php  UserInterfaceAdmin:: getVerticalMenu();?>
         </div>
-        <div data-options="region:'center',title:'Main Title',iconCls:'icon-ok'">
-            <div id="tab_dashboard" class="easyui-tabs" style="width:auto; height:540px;">
+        <div data-options="region:'center',title:'Welcomes',iconCls:'icon-ok'">
+            <div id="tab_dashboard" class="easyui-tabs" style="width:auto;">
                 <?php // echo $content; ?>
             </div>
         

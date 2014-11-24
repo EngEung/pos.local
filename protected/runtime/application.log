@@ -1,0 +1,99 @@
+2014/11/24 01:58:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 02:05:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:48:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:49:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:50:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:51:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:55:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:58:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---
+2014/11/24 07:58:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "inventorycenter/tree_data1.json".' in D:\wamp\www\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('inventorycenter...')
+#1 D:\wamp\www\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\wamp\www\pos.local\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/pos.local/inventorycenter/tree_data1.json
+HTTP_REFERER=http://localhost/pos.local/inventorycenter/customers
+---

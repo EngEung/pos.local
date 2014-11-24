@@ -125,4 +125,8 @@ class CustomerProcess extends CApplicationComponent {
     	}
 		return $rc;
 	}
+	
+	public function deleteCustomer($id, $fileId){
+		
+	}
 }

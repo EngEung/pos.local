@@ -22,7 +22,7 @@
    		'htmlOptions' => array('class' => 'well-small','enctype' => 'multipart/form-data'), // for inset effect
    ));
 ?>		
-	<div style=" width: 345px; margin: 0; padding:0; float: left;">
+	<div style=" width: 450px; margin: 0; padding:0; float: left;">
 		<?php echo $form->hiddenField($model, 'id'); ?>
 		<?php echo $form->textFieldRow($model, 'firstName', array('placeholder' => '')); ?>
 		<?php echo $form->textFieldRow($model, 'lastName', array('placeholder' => '')); ?>
@@ -45,7 +45,7 @@
 	</div>
 	
 
-	<div id="left_col" style="width: 320px; margin: 0; padding:0; float: left;">
+	<div id="left_col" style="width: 450px; margin: 0; padding:0; float: left;">
 		<?php echo $form->textFieldRow($model, 'email1', array('placeholder' => '', 'labelOptions'=>array('id'=>'label_'))); ?>
 		<div class="fileinput fileinput-new" data-provides="fileinput" style="margin-left: 100px; padding-bottom: 5px;">
 		  <div class="fileinput-new thumbnail" style="width: 205px; height: 145px;">
